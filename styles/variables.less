@@ -1,0 +1,70 @@
+@color-bg: #fff;
+
+@color-main: #FFC71F;
+
+@color-txt: #333;
+@color-txt-secondary: #4D4D4D;
+@color-txt-grey: #9A9A9A;
+
+@color-btn-yellow: #FFC71F;
+@color-btn-yellow-txt: #725C18;
+
+@color-msg-error: #ED0E0E;
+
+@color-icon: #4D4D4D;
+
+//Fonts
+@font-face {
+  font-family: Open Sans;
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: PT Serif;
+  src: url("../fonts/static/PTSerif-Regular.ttf");
+
+  font-weight: 700; 
+  font-family: PT Serif;
+  src: url("../fonts/static/PTSerif-Bold.ttf");
+
+  font-weight: 400;
+  font-family: PT Serif;
+  src: url("../fonts/static/PTSerif-Regular.ttf");
+
+  font-weight: 700; 
+  font-family: PT Serif;
+  src: url("../fonts/static/PTSerif-Bold.ttf");
+}
+
+@font-01: 'Open Sans';
+@font-02: 'PT Serif';
+
+//Mixins
+.transition-properties(...) {
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-o-transition: @arguments;
+	transition: @arguments;
+}
+
+.transform-properties(...) {
+	webkit-transform: @arguments;
+	-moz-transform: @arguments;
+	-ms-transform: @arguments;
+	-o-transform: @arguments;
+	transform: @arguments;	
+}
+
+.clearfix {
+
+	&:before,
+	&:after {
+		display: table;
+		content: " ";
+	}
+
+	&:after {
+		clear: both;
+	}
+}

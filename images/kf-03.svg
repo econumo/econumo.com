@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="120px" height="96px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 4.086 3.269"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#1A1A1A;stroke-width:0.068;stroke-miterlimit:2.61313}
+    .str2 {stroke:#FCC730;stroke-width:0.102;stroke-linecap:round;stroke-miterlimit:2.61313}
+    .str1 {stroke:#1A1A1A;stroke-width:0.068;stroke-linecap:round;stroke-miterlimit:2.61313}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="4.086" height="3.269"/>
+  <circle class="fil0 str0" cx="1.082" cy="1.972" r="0.511"/>
+  <circle class="fil0 str0" cx="2.179" cy="0.821" r="0.511"/>
+  <circle class="fil0 str0" cx="2.747" cy="2.36" r="0.511"/>
+  <path class="fil0 str1" d="M2.338 0.709c0,-0.064 -0.071,-0.116 -0.159,-0.116 -0.089,0 -0.16,0.052 -0.16,0.116 0,0.064 0.071,0.115 0.16,0.115 0.088,0 0.159,0.052 0.159,0.116 0,0.063 -0.071,0.115 -0.159,0.115 -0.089,0 -0.16,-0.052 -0.16,-0.115"/>
+  <line class="fil0 str1" x1="2.179" y1="1.055" x2="2.179" y2= "1.124" />
+  <line class="fil0 str1" x1="2.179" y1="0.522" x2="2.179" y2= "0.593" />
+  <path class="fil0 str1" d="M1.267 2.151c-0.099,0.099 -0.259,0.099 -0.357,0 -0.099,-0.099 -0.099,-0.259 0,-0.357 0.098,-0.099 0.258,-0.099 0.357,0"/>
+  <line class="fil0 str1" x1="0.74" y1="1.9" x2="1.098" y2= "1.9" />
+  <line class="fil0 str1" x1="0.74" y1="2.04" x2="1.098" y2= "2.04" />
+  <path class="fil0 str2" d="M1.085 1.247c0.079,-0.196 0.213,-0.365 0.387,-0.486"/>
+  <path class="fil0 str2" d="M2.099 2.751c-0.218,0 -0.431,-0.065 -0.612,-0.187"/>
+  <path class="fil0 str2" d="M2.938 0.954c0.165,0.197 0.256,0.446 0.256,0.703 0,0.045 -0.003,0.089 -0.008,0.134"/>
+  <path class="fil0 str1" d="M2.666 2.609l0 -0.482 0.179 0c0.071,0 0.129,0.058 0.129,0.129l0 0c0,0.07 -0.058,0.127 -0.129,0.128l-0.26 0.004"/>
+  <line class="fil0 str1" x1="2.585" y1="2.521" x2="2.771" y2= "2.521" />
+ </g>
+</svg>

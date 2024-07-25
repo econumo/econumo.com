@@ -1,0 +1,13 @@
+<svg width="290" height="233" viewBox="0 0 290 233" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="82" width="278" height="150" rx="15" stroke="#4D4D4D" stroke-width="2"/>
+<rect x="10" y="90" width="260" height="134" rx="10" stroke="#4D4D4D" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 8"/>
+<circle cx="162" cy="157" r="27" stroke="white" stroke-width="6"/>
+<circle cx="162" cy="157" r="20" stroke="#FFC71F" stroke-width="8"/>
+<circle cx="122" cy="157" r="27" stroke="white" stroke-width="6"/>
+<circle cx="122" cy="157" r="20" stroke="#FFC71F" stroke-width="8"/>
+<circle cx="82" cy="157" r="27" stroke="white" stroke-width="6"/>
+<circle cx="82" cy="157" r="20" stroke="#FFC71F" stroke-width="8"/>
+<path d="M242 126H282C285.866 126 289 129.134 289 133V181C289 184.866 285.866 188 282 188H242C233.716 188 227 181.284 227 173V141C227 132.716 233.716 126 242 126Z" fill="white" stroke="#4D4D4D" stroke-width="2"/>
+<path d="M249.968 146.583C252.372 145.894 254.938 146.044 257.245 147.009C259.552 147.974 261.461 149.696 262.658 151.892C263.855 154.087 264.268 156.625 263.83 159.086C263.391 161.548 262.127 163.787 260.246 165.434C258.364 167.081 255.978 168.038 253.48 168.147C250.982 168.256 248.521 167.511 246.503 166.034C244.486 164.557 243.031 162.437 242.38 160.023C241.729 157.609 241.919 155.045 242.92 152.753" stroke="#4C4C4C" stroke-width="2" stroke-linecap="round"/>
+<circle cx="124" cy="24" r="20" stroke="#FFC71F" stroke-width="8"/>
+</svg>
