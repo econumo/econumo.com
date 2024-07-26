@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.style.display = 'flex';
             setTimeout(() => {
                 overlay.classList.add('show');
-            }, 10); // небольшой таймаут для срабатывания CSS перехода
+            }, 10);
         });
     });
 
