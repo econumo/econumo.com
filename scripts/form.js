@@ -1,7 +1,19 @@
 document.getElementById('send-mail').addEventListener('click', function (e) {
     e.preventDefault();
 
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
     let $form = $("#waiting-list-form");
+    if (!validateEmail($form.find('input[name=email]').val())) {
+        $form.find('.msg-error').css('visibility', 'visible');
+        return;
+    } else {
+        $form.find('.msg-error').attr('visibility', 'hidden');
+    }
+
     $.post($form.attr('action'), $form.serialize())
         .done(function () {
             const div1 = document.getElementById('signup-part-1');

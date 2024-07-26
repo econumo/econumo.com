@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.querySelector('.main-overlay');
 
     function slideDown(element) {
-        element.style.display = 'block'; // Устанавливаем display в block
+        element.style.display = 'block';
         const height = element.scrollHeight + 'px';
         element.style.maxHeight = height;
         element.style.visibility = 'visible';
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         element.addEventListener('transitionend', function handler() {
             element.style.visibility = 'hidden';
-            element.style.display = 'none'; // Устанавливаем display в none после завершения анимации
+            element.style.display = 'none';
             element.removeEventListener('transitionend', handler);
         });
     }
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent default anchor click behavior
+            event.preventDefault();
 
             const targetId = link.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);

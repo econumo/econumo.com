@@ -1,6 +1,9 @@
-document.querySelector('.lang-select-wrapper').addEventListener('click', function() {
-    this.querySelector('.lang-select').classList.toggle('open');
-});
+const $wrapper = document.querySelector('.lang-select-wrapper');
+if ($wrapper) {
+    document.querySelector('.lang-select-wrapper').addEventListener('click', function () {
+        this.querySelector('.lang-select').classList.toggle('open');
+    });
+}
 
 // for (const option of document.querySelectorAll(".lang-option")) {
 //     option.addEventListener('click', function() {

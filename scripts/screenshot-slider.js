@@ -1,40 +1,33 @@
-// Screenshots slider
 document.addEventListener('DOMContentLoaded', function () {
     const deviceSelector = document.querySelector('.device-selector');
     const devicePreview = document.getElementById('devicePreview');
     const screenshotSelector = document.querySelector('.screenshot-selector');
     let autoSlideInterval;
 
-    // Handle device tab change
     deviceSelector.addEventListener('click', function (e) {
         if (e.target.tagName === 'LI') {
             if (e.target.classList.contains('active')) {
-                return; // If the clicked tab is already active, do nothing
+                return;
             }
             const selectedDevice = e.target.getAttribute('data-device');
 
-            // Update active class for devices
             document.querySelector('.device-selector li.active').classList.remove('active');
             e.target.classList.add('active');
 
-            // Hide the current screenshot group
             const currentGroup = document.querySelector('.screenshot-group.active');
             currentGroup.classList.remove('active');
 
-            // Change the device preview size
             devicePreview.className = 'device-preview ' + selectedDevice;
 
-            // Show the new screenshot group after resizing
             setTimeout(() => {
                 const newGroup = document.querySelector(`.screenshot-group.screenshot-${selectedDevice}`);
                 newGroup.classList.add('active');
                 updateScreenshotSelector(selectedDevice);
                 showFirstScreenshot();
-            }, 500); // Match the transition duration in CSS
+            }, 500);
         }
     });
 
-    // Handle screenshot change
     screenshotSelector.addEventListener('click', function (e) {
         if (e.target.tagName === 'LI') {
             const screenshotIndex = e.target.getAttribute('data-screenshot');
