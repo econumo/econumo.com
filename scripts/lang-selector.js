@@ -18,7 +18,7 @@ if ($wrapper) {
 
 window.addEventListener('click', function(e) {
     const select = document.querySelector('.lang-select');
-    if (!select.contains(e.target)) {
+    if (select && !select.contains(e.target)) {
         select.classList.remove('open');
     }
 });
