@@ -77,4 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
     });
+
+    $("#menu-toggle").click(function() {
+        const $menuControl = document.getElementById('menu-control');
+        if ($menuControl) {
+            $menuControl.checked = !!$menuControl.checked;
+        }
+    });
 });

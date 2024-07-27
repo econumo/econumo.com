@@ -108,6 +108,16 @@ a.logo {
   background: transparent url('../images/logotype.svg') no-repeat;
   background-size: cover;
 }
+a.logo.with-text {
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+  background: transparent url('../images/logotype.svg') no-repeat;
+  background-size: contain;
+}
+a.logo.with-text:after {
+  padding-left: calc(150px + 18px);
+}
 .top-bar a.logo {
   width: 150px;
 }
@@ -1070,7 +1080,6 @@ p.sub-info {
 }
 .gold-input-wrappers .feedback.msg-error {
   color: #ED0E0E;
-  visibility: hidden;
 }
 input[type=submit] {
   border: none;
@@ -1109,18 +1118,18 @@ input[type=submit] {
   z-index: 10;
   cursor: pointer;
 }
-.lang-select-wrapper .lang-select .lang-options .lang-option {
+.lang-select-wrapper .lang-select .lang-options span {
   padding: 6px 8px;
   border-radius: 4px;
 }
-.lang-select-wrapper .lang-select .lang-options .lang-option:hover {
+.lang-select-wrapper .lang-select .lang-options span:hover {
   background-color: #E6E6E6;
   color: #725C18;
-  text-decoration: none;
 }
 .lang-select.open .lang-options {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
+/* -------------------------------------------------------------- Modal window */
 /*# sourceMappingURL=main.css.map */
