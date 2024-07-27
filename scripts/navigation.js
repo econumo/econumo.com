@@ -27,16 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     links.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
+            if (link.getAttribute('href').indexOf('#') === -1) {
+                return;
+            }
+            const href = link.getAttribute('href').split('#')[0];
+            if (href === window.location.pathname) {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').split('#')[1];
+                const targetSection = document.getElementById(targetId);
+                console.log(targetSection, targetId);
 
-            setActiveLink(link);
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+
+                setActiveLink(link);
+            }
         });
     });
 
