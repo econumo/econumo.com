@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /docs/
 Disallow: /posts/
+Disallow: /tags/
 Allow: /
