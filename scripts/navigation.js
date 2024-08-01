@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('.main-nav .menu-link');
+    const links = document.querySelectorAll('.menu-link');
     const sections = document.querySelectorAll('section');
     const reflex = document.querySelector('.reflex');
 
@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href').split('#')[1];
                 const targetSection = document.getElementById(targetId);
-                console.log(targetSection, targetId);
 
                 window.scrollTo({
                     top: targetSection.offsetTop,

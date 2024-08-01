@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileNav = document.getElementById('mobile-menu');
-    const navLinks = document.querySelectorAll('.mobile-nav .menu-link');
+    const navLinks = document.querySelectorAll('.mobile-menu-link');
     const overlay = document.querySelector('.main-overlay');
 
     function slideDown(element) {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
 
-            const targetId = link.getAttribute('href').substring(1);
+            const targetId = link.getAttribute('href').split('#')[1];
             const targetSection = document.getElementById(targetId);
 
             window.scrollTo({
