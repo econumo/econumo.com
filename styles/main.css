@@ -1080,6 +1080,7 @@ p.sub-info {
 }
 .gold-input-wrappers .feedback.msg-error {
   color: #ED0E0E;
+  visibility: hidden;
 }
 input[type=submit] {
   border: none;
