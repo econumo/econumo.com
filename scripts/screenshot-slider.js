@@ -2,7 +2,60 @@ document.addEventListener('DOMContentLoaded', function () {
     const deviceSelector = document.querySelector('.device-selector');
     const devicePreview = document.getElementById('devicePreview');
     const screenshotSelector = document.querySelector('.screenshot-selector');
+    const screenshotGroups = document.querySelectorAll('.screenshot-group');
     let autoSlideInterval;
+
+    function getDeviceType() {
+        const width = window.innerWidth;
+        if (width <= 768) {
+            return 'mobile';
+        } else if (width <= 1024) {
+            return 'tablet';
+        } else {
+            return 'desktop';
+        }
+    }
+
+    function setActiveScreenshotGroup(deviceType) {
+        document.querySelectorAll('.device-selector-item').forEach(item => {
+            item.classList.toggle('active', item.getAttribute('data-device') === deviceType);
+        });
+
+        screenshotGroups.forEach(group => {
+            group.classList.toggle('active', group.classList.contains(`screenshot-${deviceType}`));
+            // group.querySelectorAll('img').forEach(img => {
+            //     img.addEventListener('click', function () {
+            //         if (img.requestFullscreen) {
+            //             img.requestFullscreen();
+            //         } else if (img.mozRequestFullScreen) { // Firefox
+            //             img.mozRequestFullScreen();
+            //         } else if (img.webkitRequestFullscreen) { // Chrome, Safari and Opera
+            //             img.webkitRequestFullscreen();
+            //         } else if (img.msRequestFullscreen) { // IE/Edge
+            //             img.msRequestFullscreen();
+            //         }
+            //     });
+            // });
+        });
+
+        document.querySelectorAll('.screenshot-selector-item').forEach(item => {
+            item.classList.toggle('active', item.getAttribute('data-device') === deviceType);
+        });
+
+        devicePreview.className = `device-preview ${deviceType}`;
+
+        document.querySelector('.screenshot-selector li').remove();
+        screenshotGroups.forEach(group => {
+            if (!group.classList.contains(`screenshot-${deviceType}`)) {
+                return;
+            }
+            const screenshotCount = group.querySelectorAll('img').length;
+            const selectorHTML = Array.from({ length: screenshotCount }, (_, i) =>
+                `<li ${i === 0 ? 'class="active"' : ''} data-screenshot="${i + 1}"></li>`).join('');
+            screenshotSelector.innerHTML = selectorHTML;
+        });
+        resetAutoSlide();
+    }
 
     deviceSelector.addEventListener('click', function (e) {
         if (e.target.tagName === 'LI') {
@@ -10,21 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             const selectedDevice = e.target.getAttribute('data-device');
-
-            document.querySelector('.device-selector li.active').classList.remove('active');
-            e.target.classList.add('active');
-
-            const currentGroup = document.querySelector('.screenshot-group.active');
-            currentGroup.classList.remove('active');
-
-            devicePreview.className = 'device-preview ' + selectedDevice;
-
-            setTimeout(() => {
-                const newGroup = document.querySelector(`.screenshot-group.screenshot-${selectedDevice}`);
-                newGroup.classList.add('active');
-                updateScreenshotSelector(selectedDevice);
-                showFirstScreenshot();
-            }, 500);
+            setActiveScreenshotGroup(selectedDevice);
         }
     });
 
@@ -35,23 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
             resetAutoSlide();
         }
     });
-
-    function updateScreenshotSelector(device) {
-        const screenshotGroup = document.querySelector(`.screenshot-group.screenshot-${device}`);
-        const screenshotCount = screenshotGroup.querySelectorAll('img').length;
-        const selectorHTML = Array.from({ length: screenshotCount }, (_, i) => 
-            `<li ${i === 0 ? 'class="active"' : ''} data-screenshot="${i + 1}"></li>`).join('');
-        screenshotSelector.innerHTML = selectorHTML;
-    }
-
-    function showFirstScreenshot() {
-        const activeGroup = document.querySelector('.screenshot-group.active');
-        activeGroup.querySelector('img.active').classList.remove('active');
-        activeGroup.querySelector('img:first-child').classList.add('active');
-        screenshotSelector.querySelector('li.active').classList.remove('active');
-        screenshotSelector.querySelector('li:first-child').classList.add('active');
-        resetAutoSlide();
-    }
 
     function showScreenshot(index) {
         const activeGroup = document.querySelector('.screenshot-group.active');
@@ -73,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoSlideInterval = setInterval(autoSlide, 5000);
     }
 
-    updateScreenshotSelector('desktop');
+    const deviceType = getDeviceType();
+    setActiveScreenshotGroup(deviceType);
     resetAutoSlide();
 });
