@@ -734,12 +734,14 @@ ul.pricing-list li {
   flex-direction: column;
   align-items: center;
   width: 320px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 ul.pricing-list li .title {
   display: flex;
   align-items: center;
   color: #333;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 32px;
   text-transform: uppercase;
@@ -751,6 +753,7 @@ ul.pricing-list li .title:before {
   aspect-ratio: 21 / 4;
   content: '';
   background: transparent url(../images/logo-text.svg) no-repeat;
+  opacity: 0.5;
 }
 ul.pricing-list li .body-wrapper {
   width: 260px;
@@ -762,7 +765,7 @@ ul.pricing-list li .body-wrapper {
   padding-bottom: 32px;
   gap: 24px;
 }
-ul.pricing-list li .body-wrapper:before {
+ul.pricing-list li .body-wrapper .pricing-chip {
   font-family: 'Open Sans';
   text-transform: uppercase;
   font-size: 18px;
@@ -770,15 +773,14 @@ ul.pricing-list li .body-wrapper:before {
   padding: 6px 16px;
   border-radius: 6px;
   margin-top: -16px;
-  content: '';
-}
-ul.pricing-list li .body-wrapper.p-presale {
   border-color: #C1B69D;
-}
-ul.pricing-list li .body-wrapper.p-presale:before {
   color: #8E6B00;
   background-color: #FFE79F;
-  content: 'Pre-Sale';
+}
+ul.pricing-list li .body-wrapper .pricing-chip.-purple {
+  border-color: #C19DB7;
+  color: #93489F;
+  background-color: #F4CFFF;
 }
 ul.pricing-list li .body-wrapper.p-free {
   border-color: #C19DB7;
@@ -814,9 +816,17 @@ ul.pricing-list li .body-wrapper .price-old:after {
 }
 ul.pricing-list li .body-wrapper .details {
   font-size: 18px;
+  align-items: center;
+  text-align: center;
+}
+ul.pricing-list li .body-wrapper .details span:first-child {
+  font-weight: 600;
 }
 ul.pricing-list li .body-wrapper .details span {
-  font-weight: 600;
+  display: block;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 400;
 }
 ul.pricing-list li .btn {
   display: block;
@@ -839,6 +849,19 @@ ul.pricing-list li .description {
   text-align: center;
   font-size: 14px;
   color: #6F6F6F;
+}
+ul.pricing-list .pricing-list-main {
+  margin-top: 0;
+  flex-grow: 1;
+}
+ul.pricing-list .pricing-list-main .title:before {
+  width: 168px;
+  aspect-ratio: 21 / 4;
+  opacity: 1;
+}
+ul.pricing-list .pricing-list-main .body-wrapper {
+  width: 300px;
+  gap: 34px;
 }
 ul.footer-list {
   display: flex;

@@ -910,12 +910,14 @@ ul {
 			flex-direction: column;
 			align-items: center;
 			width: 320px;
+			margin-top: 20px;
+			margin-bottom: 20px;
 
 			.title {
 				display: flex;
 				align-items: center;
 				color: @color-txt;
-				font-size: 28px;
+				font-size: 14px;
 				font-weight: 600;
 				margin-bottom: 32px;
 				text-transform: uppercase;
@@ -927,6 +929,7 @@ ul {
 					aspect-ratio: 21 / 4;
 					content: '';
 					background: transparent url(../images/logo-text.svg) no-repeat;
+					opacity: 0.5;
 				}
 			}
 
@@ -940,7 +943,7 @@ ul {
 				padding-bottom: 32px;
 				gap: 24px;
 
-				&:before {
+				.pricing-chip {
 					font-family: @font-01;
 					text-transform: uppercase;
 					font-size: 18px;
@@ -948,18 +951,26 @@ ul {
 					padding: 6px 16px;
 					border-radius: 6px;
 					margin-top: -16px;
-					content: '';
-				}
-
-				&.p-presale {
 					border-color: #C1B69D;
+					color: #8E6B00;
+					background-color: #FFE79F;
 
-					&:before {
-						color: #8E6B00;
-						background-color: #FFE79F;
-						content: 'Pre-Sale';
+					&.-purple {
+						border-color: #C19DB7;
+						color: #93489F;
+						background-color: #F4CFFF;
 					}
 				}
+
+				//&.p-presale {
+				//	border-color: #C1B69D;
+				//
+				//	&:before {
+				//		color: #8E6B00;
+				//		background-color: #FFE79F;
+				//		content: 'Pre-Sale';
+				//	}
+				//}
 				&.p-free {
 					border-color: #C19DB7;
 
@@ -1000,9 +1011,17 @@ ul {
 
 				.details {
 					font-size: 18px;
+					align-items: center;
+					text-align: center;
 
-					span {
+					span:first-child {
 						.w600
+					}
+					span {
+						display: block;
+						margin-top: 8px;
+						font-size: 16px;
+						.w400
 					}
 				}
 			}
@@ -1030,6 +1049,23 @@ ul {
 				text-align: center;
 				font-size: 14px;
 				color: #6F6F6F;
+			}
+		}
+
+		.pricing-list-main {
+			margin-top: 0;
+			flex-grow: 1;
+
+			.title {
+				&:before {
+					width: 168px;
+					aspect-ratio: 21 / 4;
+					opacity: 1;
+				}
+			}
+			.body-wrapper {
+				width: 300px;
+				gap: 34px;
 			}
 		}
 	}
