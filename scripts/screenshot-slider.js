@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const screenshotSelector = document.querySelector('.screenshot-selector');
     const screenshotGroups = document.querySelectorAll('.screenshot-group');
     let autoSlideInterval;
+    let startX;
+    let currentX;
+    let touchThreshold = 50; // minimum distance to trigger slide
+    let isSwiping = false;
 
     function getDeviceType() {
         const width = window.innerWidth;
@@ -23,19 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         screenshotGroups.forEach(group => {
             group.classList.toggle('active', group.classList.contains(`screenshot-${deviceType}`));
-            // group.querySelectorAll('img').forEach(img => {
-            //     img.addEventListener('click', function () {
-            //         if (img.requestFullscreen) {
-            //             img.requestFullscreen();
-            //         } else if (img.mozRequestFullScreen) { // Firefox
-            //             img.mozRequestFullScreen();
-            //         } else if (img.webkitRequestFullscreen) { // Chrome, Safari and Opera
-            //             img.webkitRequestFullscreen();
-            //         } else if (img.msRequestFullscreen) { // IE/Edge
-            //             img.msRequestFullscreen();
-            //         }
-            //     });
-            // });
         });
 
         document.querySelectorAll('.screenshot-selector-item').forEach(item => {
@@ -54,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 `<li ${i === 0 ? 'class="active"' : ''} data-screenshot="${i + 1}"></li>`).join('');
             screenshotSelector.innerHTML = selectorHTML;
         });
+
+        addSwipeListeners();
+        addClickListener();
         resetAutoSlide();
     }
 
@@ -95,7 +89,76 @@ document.addEventListener('DOMContentLoaded', function () {
         autoSlideInterval = setInterval(autoSlide, 5000);
     }
 
+    function addSwipeListeners() {
+        const activeGroup = document.querySelector('.screenshot-group.active');
+        activeGroup.addEventListener('touchstart', handleTouchStart, false);
+        activeGroup.addEventListener('touchmove', handleTouchMove, false);
+        activeGroup.addEventListener('touchend', handleTouchEnd, false);
+    }
+
+    function addClickListener() {
+        const activeGroup = document.querySelector('.screenshot-group.active');
+        activeGroup.addEventListener('click', handleClick, false);
+    }
+
+    function handleClick(event) {
+        if (event.target.tagName === 'IMG') {
+            showNextScreenshot();
+            resetAutoSlide();
+        }
+    }
+
+    function handleTouchStart(event) {
+        startX = event.touches[0].clientX;
+        isSwiping = true;
+    }
+
+    function handleTouchMove(event) {
+        if (!isSwiping) return;
+        currentX = event.touches[0].clientX;
+        const diffX = startX - currentX;
+
+        // Prevent default to stop scrolling
+        if (Math.abs(diffX) > 10) {
+            event.preventDefault();
+        }
+    }
+
+    function handleTouchEnd(event) {
+        if (!isSwiping) return;
+        isSwiping = false;
+        const diffX = startX - currentX;
+
+        if (Math.abs(diffX) > touchThreshold) {
+            if (diffX > 0) {
+                // Swiped left
+                showNextScreenshot();
+            } else {
+                // Swiped right
+                showPreviousScreenshot();
+            }
+        }
+    }
+
+    function showNextScreenshot() {
+        const activeGroup = document.querySelector('.screenshot-group.active');
+        let currentIndex = Array.from(activeGroup.querySelectorAll('img')).findIndex(img => img.classList.contains('active'));
+        const nextIndex = (currentIndex + 1) % activeGroup.querySelectorAll('img').length + 1;
+        showScreenshot(nextIndex);
+        resetAutoSlide();
+    }
+
+    function showPreviousScreenshot() {
+        const activeGroup = document.querySelector('.screenshot-group.active');
+        let currentIndex = Array.from(activeGroup.querySelectorAll('img')).findIndex(img => img.classList.contains('active'));
+        const previousIndex = (currentIndex - 1 + activeGroup.querySelectorAll('img').length) % activeGroup.querySelectorAll('img').length + 1;
+        showScreenshot(previousIndex);
+        resetAutoSlide();
+    }
+
     const deviceType = getDeviceType();
     setActiveScreenshotGroup(deviceType);
     resetAutoSlide();
+    addSwipeListeners();
+    addClickListener();
 });
