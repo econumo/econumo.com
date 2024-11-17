@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: /posts/
-Disallow: /tags/
 Allow: /
