@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initialReflexState();
 
-    $("a[href='#top']").click(function() {
+    $(".navigate-top").click(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
     });
