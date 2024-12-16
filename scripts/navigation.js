@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     const reflex = document.querySelector('.reflex');
 
+    console.log(links)
+
     const initialReflexState = () => {
         reflex.style.width = '100%';
         reflex.style.left = '0';
