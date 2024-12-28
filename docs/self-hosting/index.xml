@@ -6,4 +6,5 @@ Econumo CE stores its data in SQLite, so it is easy to configure a regularly bac
 Regular Cron-based backups # For personal use, a regular cron-based backup may be sufficient. You can find a straightforward guide on setting this up here: https://litestream.</description></item><item><title>Multi-Currency support</title><link>https://econumo.com/docs/self-hosting/multi-currency/</link><pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate><guid>https://econumo.com/docs/self-hosting/multi-currency/</guid><description>Multi-Currency Support # Econumo offers multi-currency functionality. To get started, you need to:
 Load currencies into your Econumo instance. Set up a daily update for currency rates. To simplify this process, we have developed a tool that updates currencies and exchange rates using data from https://openexchangerates.org.
 You can find the tool and its documentation here: https://github.com/econumo/currency-loader
-Using Other Sources # Alternatively, you can use other sources for currencies and their exchange rates.</description></item></channel></rss>
+Note
+Base currency is not your default currency. It is only used for conversions.</description></item></channel></rss>
