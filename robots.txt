@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /categories/
 Sitemap: https://econumo.com/sitemap.xml
