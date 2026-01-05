@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    menuToggle.addEventListener('click', () => {
+    if (menuToggle && mobileNav && overlay) {
+        menuToggle.addEventListener('click', () => {
         if (mobileNav.classList.contains('active')) {
             slideUp(mobileNav);
             overlay.classList.remove('active');
@@ -42,19 +43,35 @@ document.addEventListener('DOMContentLoaded', () => {
             slideDown(mobileNav);
             overlay.classList.add('active');
         }
-    });
+        });
 
-    overlay.addEventListener('click', () => {
-        slideUp(mobileNav);
-        overlay.classList.remove('active');
-    });
+        overlay.addEventListener('click', () => {
+            slideUp(mobileNav);
+            overlay.classList.remove('active');
+        });
+    }
 
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
+            const href = link.getAttribute('href');
+            if (!href || href.indexOf('#') === -1) {
+                return;
+            }
+
+            const [basePath, hash] = href.split('#');
+            const currentPath = window.location.pathname.replace(/\/$/, '');
+            const targetPath = (basePath || '').replace(/\/$/, '');
+            const shouldScrollHere = !basePath || targetPath === currentPath;
+            if (!shouldScrollHere) {
+                return;
+            }
+
             event.preventDefault();
 
-            const targetId = link.getAttribute('href').split('#')[1];
-            const targetSection = document.getElementById(targetId);
+            const targetSection = document.getElementById(hash);
+            if (!targetSection) {
+                return;
+            }
 
             window.scrollTo({
                 top: targetSection.offsetTop,
