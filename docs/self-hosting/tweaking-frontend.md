@@ -25,7 +25,7 @@ In this guide, we'll inject the following script into your Econumo:
 
 Add the following environment variables to your `.env` file:
 
-```env
+```dotenv
 LILTAG_CONFIG_URL=liltag-config.json
 LILTAG_CACHE_TTL=3600
 ```

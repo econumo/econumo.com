@@ -227,7 +227,7 @@ The setup above follows the pattern described in [this production-grade PostgreS
 
 Your `.env` file can look like this:
 
-```env
+```dotenv
 POSTGRES_USER=financeuser
 POSTGRES_PASSWORD=securepass
 POSTGRES_DB=app_db
