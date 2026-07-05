@@ -25,8 +25,8 @@
 - [Contact Us](https://econumo.com/docs/contact-us.md)
 - [Privacy Policy](https://econumo.com/docs/legal/privacy-policy.md)
 - [Terms of Service](https://econumo.com/docs/legal/terms-of-service.md)
-- [Tweaking the backend](https://econumo.com/docs/self-hosting/tweaking-backend.md)
 - [Tweaking the frontend](https://econumo.com/docs/self-hosting/tweaking-frontend.md)
+- [Tweaking the backend](https://econumo.com/docs/self-hosting/tweaking-backend.md)
 
 ## Blog
 
