@@ -3,22 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     const reflex = document.querySelector('.reflex');
 
-    console.log(links)
-
     const initialReflexState = () => {
+        if (!reflex) return;
         reflex.style.width = '100%';
         reflex.style.left = '0';
     };
 
     const setActiveLink = (link) => {
         links.forEach(l => l.classList.remove('active'));
-        if (link) {
+        if (link && reflex) {
             link.classList.add('active');
-            
+
             // Calculate the position and width of the active link
             const linkRect = link.getBoundingClientRect();
             const topBarRect = document.querySelector('.top-bar').getBoundingClientRect();
-            const reflexWidth = 200; // ширина reflex
+            const reflexWidth = 200;
 
             reflex.style.width = `${reflexWidth}px`;
             reflex.style.left = `${linkRect.left - topBarRect.left + (linkRect.width / 2) - (reflexWidth / 2)}px`;
@@ -37,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href').split('#')[1];
                 const targetSection = document.getElementById(targetId);
+                if (!targetSection) {
+                    return;
+                }
 
                 window.scrollTo({
                     top: targetSection.offsetTop,
@@ -74,15 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initialReflexState();
 
-    $(".navigate-top").click(function() {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
+    document.querySelectorAll('.navigate-top').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     });
 
-    $("#menu-toggle").click(function() {
-        const $menuControl = document.getElementById('menu-control');
-        if ($menuControl) {
-            $menuControl.checked = !!$menuControl.checked;
-        }
-    });
+    const menuToggle = document.getElementById('menu-toggle');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            const menuControl = document.getElementById('menu-control');
+            if (menuControl) {
+                menuControl.checked = !menuControl.checked;
+            }
+        });
+    }
 });

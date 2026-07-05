@@ -2,4 +2,13 @@
   position: fixed !important;
   margin-top: 100px;
 }
+.book-post-article__back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+  font-size: 0.875rem;
+}
+.book-post-article__back:hover {
+  color: inherit;
+}
 /*# sourceMappingURL=custom.css.map */
