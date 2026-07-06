@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /categories/
+Disallow: /*.md$
 
 Sitemap: https://econumo.com/sitemap.xml

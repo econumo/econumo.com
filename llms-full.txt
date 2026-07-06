@@ -1,6 +1,6 @@
 # Econumo — Documentation
 
-> Econumo is a beautiful application for managing personal, couple and family finances. Supports multiple currencies, joint accounts, and budgets. Join the waiting list for a discount, offering cloud-hosted or self-hosted options.
+> Econumo is an open-source budgeting app for personal, couple, and family finances — multi-currency, joint accounts, and shared budgets. Cloud or self-hosted.
 
 # Getting Started
 
