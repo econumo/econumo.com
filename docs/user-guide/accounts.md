@@ -4,57 +4,106 @@ URL: https://econumo.com/docs/user-guide/accounts/
 
 This section covers the basics of 'Accounts' in Econumo.
 
-Accounts represent your accounts in financial institutions. For example, "Savings account" or "Cash".
+Accounts represent your accounts in financial institutions — for example,
+"Savings account" or "Cash". Each account has its own currency, and accounts
+are grouped into folders (such as "Personal" and "Family") that structure the
+sidebar and the mobile home screen.
 
 ## In this section
 
 - [Account creation](/docs/user-guide/accounts/#account-creation)
 - [Managing your accounts](/docs/user-guide/accounts/#managing-your-accounts)
     - [Organize accounts in folders](/docs/user-guide/accounts/#organize-accounts-in-folders)
-    - [Ordering folders](/docs/user-guide/accounts/#ordering-folders)
-    - [Hiding folders](/docs/user-guide/accounts/#hiding-folders)
+    - [Editing an account](/docs/user-guide/accounts/#editing-an-account)
 - [Shared access](/docs/user-guide/accounts/#shared-access)
 
 ---
 
 ## Account creation
 
-To create a new account in Econumo, specify the account name, current balance, currency, and icon.
+Open **Settings → Accounts** and press the **+** button on the folder you want
+the account in. Specify the account name, current balance, currency, and icon.
 
-Once the account is created, it will appear in the left sidebar:
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+The starting balance is recorded as a "Balance adjustment" transaction, so your
+history starts consistent from day one.
 
 ---
 
 ## Managing your accounts
 
-All your accounts are accessible via **Settings -> Accounts and Folders**.
+All your accounts are accessible via **Settings → Accounts**. This screen shows
+every folder with its accounts, including the ones shared with you (marked with
+the avatars of everyone who has access).
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ### Organize accounts in folders
 
-You can create folders to organize your accounts. Drag accounts using the dots icon next to their names. The folder
-structure is reflected in the left sidebar:
+Create folders with the **Create folder** button and drag accounts between them
+using the dots handle next to their names. The folder structure is reflected in
+the left sidebar on desktop and on the home screen on mobile.
 
-#### Ordering folders
+Use the folder menu (the three dots on the folder row) to rename a folder, move
+it up or down, or hide it. A hidden folder disappears from the main screen —
+handy for accounts you rarely use — and can be shown again from the same menu.
 
-To reorder folders, click the three dots on the right and select either "Move Up" or "Move Down."
+<ScreenshotSet>
 
-#### Hiding folders
+</ScreenshotSet>
 
-To hide a folder from the main screen, click the three dots icon on the right and choose "Hide." To display it again,
-select "Show."
+### Editing an account
+
+Open the account menu to edit or delete an account. On desktop and tablet,
+click the three dots next to the account; on mobile, tap the account row to
+open its details.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Editing lets you change the name, balance, currency, and icon. You can also
+open the same dialog from the account page itself via the **Configure** button.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+Correcting the balance in the edit dialog records a "Balance adjustment"
+transaction for the difference, so your transaction history always adds up.
 
 ---
 
 ## Shared access
 
-If you are connected with your partner, you can share access to specific accounts. Click "Access Control" in the
-account's context menu, then select the person you want to share with and the access level.
+If you are [connected with your partner](/docs/user-guide/shared-access/), you
+can share access to specific accounts. On desktop and tablet, choose **Access
+control** in the account menu, then select the person and the access level.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+On the phone layout, access control lives in **Settings → Shared access**: open
+the connection and tap the account you want to share. See
+[Shared access](/docs/user-guide/shared-access/#check-shared-accounts-and-budgets).
 
 Econumo offers three levels of shared access:
 
-1. **View Only** - The invited user can see only the balance and transaction list.
-2. **Regular Access** - The invited user can add, update, or delete transactions.
-3. **Full Control** - The invited user can manage all aspects of the account, including adding categories, tags, and
-   payees on your behalf.
+1. **View only** — the invited user can see only the balance and the
+   transaction list.
+2. **Manage transactions** — the invited user can also add, update, or delete
+   transactions.
+3. **Full control** — the invited user can manage all aspects of the account,
+   including adding categories, tags, and payees on your behalf.
 
-Once access is granted, you will see both your avatar and the other user's avatar for the shared account.
+Once access is granted, the shared account shows the avatars of everyone who
+can use it — both in the sidebar and in **Settings → Accounts**.

@@ -12,6 +12,7 @@
 - [Classifications](https://econumo.com/docs/user-guide/classifications.md)
 - [Budgets](https://econumo.com/docs/user-guide/budgets.md)
 - [Shared access](https://econumo.com/docs/user-guide/shared-access.md)
+- [Multi-Currency](https://econumo.com/docs/user-guide/multi-currency.md)
 - [User profile](https://econumo.com/docs/user-guide/user-profile.md)
 - [CSV Import & Export](https://econumo.com/docs/user-guide/csv-import-export.md)
 - [Apps](https://econumo.com/docs/apps.md)
@@ -25,7 +26,6 @@
 - [Contact Us](https://econumo.com/docs/contact-us.md)
 - [Privacy Policy](https://econumo.com/docs/legal/privacy-policy.md)
 - [Terms of Service](https://econumo.com/docs/legal/terms-of-service.md)
-- [Tweaking the backend](https://econumo.com/docs/self-hosting/tweaking-backend.md)
 - [Tweaking the frontend](https://econumo.com/docs/self-hosting/tweaking-frontend.md)
 
 ## Blog

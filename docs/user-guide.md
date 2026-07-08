@@ -2,7 +2,13 @@ URL: https://econumo.com/docs/user-guide/
 
 # User Guide
 
-This guide covers the essentials of using Econumo.
+This guide covers the essentials of using Econumo — from your first sign-in to
+family budgeting with shared accounts.
+
+Econumo works the same way in a desktop browser, on a tablet, and on a phone.
+Throughout this guide, every screen is shown on all three form factors: the
+desktop layout with the sidebar, the compact tablet layout, and the mobile
+layout, where lists open full-screen and actions live in bottom sheets.
 
 ## Contents
 
@@ -10,6 +16,7 @@ This guide covers the essentials of using Econumo.
   - [Sign Up](/docs/user-guide/#sign-up)
   - [Sign In](/docs/user-guide/#sign-in)
   - [Password Recovery](/docs/user-guide/#password-recovery)
+  - [Finding your way around](/docs/user-guide/#finding-your-way-around)
 - [Accounts](/docs/user-guide/accounts/)
   - [Account creation](/docs/user-guide/accounts/#account-creation)
   - [Managing your accounts](/docs/user-guide/accounts/#managing-your-accounts)
@@ -32,9 +39,11 @@ This guide covers the essentials of using Econumo.
   - [Connect with another user](/docs/user-guide/shared-access/#connect-with-another-user)
   - [Remove connection between users](/docs/user-guide/shared-access/#remove-connection-between-users)
   - [Check shared accounts and budgets](/docs/user-guide/shared-access/#check-shared-accounts-and-budgets)
+- [Multi-Currency](/docs/user-guide/multi-currency/)
+  - [Accounts in different currencies](/docs/user-guide/multi-currency/#accounts-in-different-currencies)
+  - [Cross-currency transfers](/docs/user-guide/multi-currency/#cross-currency-transfers)
+  - [Currency in your budget](/docs/user-guide/multi-currency/#currency-in-your-budget)
 - [User profile](/docs/user-guide/user-profile/)
-  - [Accessing your user profile](/docs/user-guide/user-profile/#accessing-your-user-profile)
-  - [Updating your user profile](/docs/user-guide/user-profile/#updating-your-user-profile)
 - [CSV Import & Export](/docs/user-guide/csv-import-export/)
 
 ---
@@ -42,24 +51,62 @@ This guide covers the essentials of using Econumo.
 
 ### Econumo (cloud)
 
-To start, create an account.
+Registration requires a one-time payment. Click **Sign up**, complete the
+payment, and you will receive an email with your credentials.
 
-Registration requires a one-time payment. Once your payment is processed, you will receive an email with your credentials.
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ### Econumo (self-hosted)
 
-To create an account in self-hosted Econumo, provide your Name (or nickname), Email, and Password.
+To create an account in self-hosted Econumo, switch to the **Sign up** tab and
+provide your name (or nickname), email, and password.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+Self-hosted administrators can disable open registration with the
+`ECONUMO_ALLOW_REGISTRATION` environment variable and create users from the
+[CLI](/docs/self-hosting/cli-commands/) instead.
 
 ---
 ## Sign In
 
-To sign in, enter the credentials you provided (or received for Econumo Cloud) during sign-up.
+To sign in, enter the credentials you provided (or received for Econumo Cloud)
+during sign-up.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ---
 ## Password Recovery
 
-To recover your password, click on "Forgot Password?", enter your email, and select "Restore."
+Click **Forgot password?** on the sign-in screen, enter your email, and press
+**Send code**.
 
-If an account exists with the provided email, you will receive an email with a confirmation code.
+<ScreenshotSet>
 
-Enter the confirmation code and create a new password:
+</ScreenshotSet>
+
+If an account exists with the provided email, you will receive a security code.
+Enter the code, choose a new password, and press **Reset password**:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+---
+## Finding your way around
+
+Everything that is not day-to-day spending lives in **Settings**: accounts and
+folders, shared access, budgets, categories, tags, payees, and CSV
+import/export. On desktop and tablet, open it from the bottom of the sidebar;
+on mobile, from the bottom of the home screen.
+
+<ScreenshotSet>
+
+</ScreenshotSet>

@@ -4,7 +4,19 @@ URL: https://econumo.com/docs/user-guide/transactions/
 
 This section provides an overview of Transactions in Econumo.
 
-Transactions form the core of Econumo, as all budgeting is based on the transactions you enter.
+Transactions form the core of Econumo, as all budgeting is based on the
+transactions you enter. Open any account to see its transaction list, search
+it, and add new records.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The search field filters the transaction list as you type:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ## In this section
 
@@ -19,11 +31,15 @@ Transactions form the core of Econumo, as all budgeting is based on the transact
 
 ## Adding transactions
 
+Press **Add transaction** on the account page (on mobile it is the button at
+the bottom of the screen) to open the transaction dialog.
+
 **Transaction date**
 
-In the top-right corner, you can specify the transaction date (the date you spent or earned the money). Clicking on the
-date will open a calendar. You can also use the "arrow left" icon to select a previous date. Note that transaction time
-is not currently supported.
+In the top-right corner of the dialog, you can set the transaction date (the
+date you spent or earned the money). Clicking the date opens a calendar, and
+the arrow next to it steps one day back. Note that transaction time is not
+currently supported.
 
 **Transaction types**
 
@@ -39,58 +55,72 @@ Each type has a different set of fields to complete.
 
 ### Adding expenses
 
-**Accounts**
+To add an expense, pick the account, enter the amount, and choose a category —
+that is all a record needs. Notes, a recipient, and tags are optional.
 
-To add an expense, select one of your accounts. The expense must be in the same currency as the selected account.
+<ScreenshotSet>
 
-To change the account, click its name in the dialog:
+</ScreenshotSet>
 
 **Amount**
 
-Enter the amount spent. From the desktop client, you can use `+`, `-`, `*`, `/`, and `=` keys to calculate your
-spending. Typing `=` will compute the total amount:
+Enter the amount spent in the account's currency. The `+`, `−`, `×`, `÷`, and
+`=` buttons under the amount field (also available as keyboard keys on
+desktop) let you calculate the total right in the dialog — for example, add up
+several receipt lines and press `=`.
 
 **Categories**
 
-Each expense must have a designated category. You can type in the category field to search for or create a new category.
+Each expense must have a designated category. Click the category field to
+search your categories or create a new one: type a name that does not exist
+yet and press "Enter" (or "Search"/"Submit" on your mobile keyboard). The name
+must be 3–64 characters long.
 
-To create a new category, type its name and press "Enter" or "Search"/"Submit" on your mobile device. The name must be
-3-64 characters long:
+<ScreenshotSet>
 
-Once created, the category will change color:
+</ScreenshotSet>
+
+**Recipients**
+
+You can specify a recipient for each transaction — the name of a person or a
+company where you spent the money. Like categories, recipients can be created
+right from the dialog.
+
+**Tags**
+
+Tags group spending across categories — especially useful for trips or special
+occasions (in the screenshots, the family tags their Italy vacation expenses
+with `Italy 2026`). Pick one of the suggested tags or press the `+` button to
+create a new one (3–64 characters).
 
 **Notes**
 
 The notes field allows you to add any comments related to the transaction.
 
-**Recipients**
-
-You can specify a recipient for each transaction—this can be the name of an individual or a company where you spent the
-money.
-
-**Tags**
-
-You can add one tag to your transaction. To create a new tag, click the "plus" button, type the tag name, and press "Enter" or "Search"/"Submit" on your mobile device. The tag must be 3-64 characters long:
-
-A list of active tags will appear in the modal, allowing you to choose one for organizing your expenses, especially
-useful for trips or special occasions.
-
 ---
 
 ### Adding transfers
 
-You can transfer money between your accounts:
+Transfers move money between your accounts without affecting the budget:
 
-**Amount**
+<ScreenshotSet>
 
-Enter the transfer amount. From the desktop client, use `+`, `-`, `*`, `/`, and `=` keys to adjust it. Typing `=` will
-calculate the total:
+</ScreenshotSet>
 
 **From/To**
 
-Select the account **FROM** which you want to move money **TO** another account.
+Select the account **from** which you want to move money **to** another
+account. The swap button next to the account fields switches the direction.
 
-If the accounts have different currencies, two fields for the amount will appear:
+**Amount**
+
+Enter the transfer amount. The same in-dialog calculator (`+`, `−`, `×`, `÷`,
+`=`) is available. If the two accounts use different currencies, a second field
+appears so you can record the exact amount received in the target currency:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 **Notes**
 
@@ -100,39 +130,43 @@ The notes field allows you to add any comments related to the transfer.
 
 ### Adding income
 
-**Accounts**
+Recording an income works just like an expense: pick the account, enter the
+amount, and choose an income category (income categories are separate from
+expense categories). You can also set a **sender** — the person or company you
+received the money from.
 
-To record an income, select one of your accounts, ensuring it is in the same currency.
+<ScreenshotSet>
 
-You can change the account by clicking on its name:
-
-**Amount**
-
-Enter the income amount. From the desktop client, you can use `+`, `-`, `*`, `/`, and `=` keys to adjust it. Typing `=`
-will calculate the total:
-
-**Categories**
-
-All income must have a designated category, which differs from expense categories. You can type in the category field to
-search for or create a new category.
-
-To create a new category, type its name and press "Enter" or "Search"/"Submit" on your mobile device. The name must be
-3-64 characters long:
-
-Once created, the category will change color:
-
-**Senders**
-
-You can designate a sender for each income, essentially the name of an individual or company from whom you received the
-money, similar to the recipient list.
+</ScreenshotSet>
 
 ---
 
 ## Editing a transaction
 
-You can update any transaction, except the system ones with the "Balance adjustment" comment, and transfers to other users'
-accounts.
+On desktop and tablet, open the three-dots menu on a transaction row and choose
+**Edit**. On mobile, tap the transaction to see its details, then press
+**Edit**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The edit dialog is the same as the add dialog, pre-filled with the
+transaction's data:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+You can update any transaction except the system ones with the "Balance
+adjustment" comment and transfers to other users' accounts.
 
 ## Deleting a transaction
 
-You can delete any transaction except transactions in read-only accounts.
+Choose **Delete** in the same menu (or in the details sheet on mobile) and
+confirm. You can delete any transaction except transactions in view-only
+accounts.
+
+<ScreenshotSet>
+
+</ScreenshotSet>

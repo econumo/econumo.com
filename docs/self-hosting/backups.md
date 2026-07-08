@@ -2,30 +2,54 @@ URL: https://econumo.com/docs/self-hosting/backups/
 
 # Backups
 
-`Econumo` does not come with a built-in backup mechanism; it is your responsibility to configure backups for your
-instance.
+Econumo does not come with a built-in backup mechanism; it is your
+responsibility to configure backups for your instance.
 
-`Econumo` stores its data in SQLite, so it is easy to configure regular backups of your database.
-Consider the following well-known options in the SQLite community for effective backup management.
+By default Econumo stores its data in a single SQLite file, so backups are
+easy. In the Docker setup that file lives in the `db` volume at
+`/app/var/db/db.sqlite` (the path your `DATABASE_URL` points to). The `jwt`
+volume (`/app/var/jwt`) holds the JWT keypair — back it up too, or existing
+login tokens become invalid after a restore.
 
-## Regular Cron-based backups
+**Note**
+Always take a manual backup before upgrading your Econumo version, and store a
+copy on a separate device.
 
-For personal use, a regular cron-based backup may be sufficient. You can find a straightforward guide on setting this up here: https://litestream.io/alternatives/cron/
+---
+## Simple file copy
 
-In addition to your cron schedule, I recommend creating a manual backup before upgrading your `Econumo` version. Storing backups on a separate device is also advisable.
-
-## Litestream
-
-[Litestream](https://litestream.io/getting-started/) is an excellent option that can be configured as a sidecar with `Econumo` in Docker. Follow these steps:
-
-1. Create a manual backup of your database.
-2. Enable SQLite WAL mode by running the following command:
+The most reliable backup is a copy of the database file taken while nothing is
+writing to it. Stop the container, copy the file, and start it again:
 
 ```sh
-docker-compose exec -u www-data econumo bin/console app:enable-wal
+docker compose stop econumo
+docker run --rm -v econumo_db:/data -v "$PWD":/backup alpine \
+  cp /data/db.sqlite /backup/db-$(date +%F).sqlite
+docker compose start econumo
 ```
 
-3. Create a Litestream configuration file named litestream.yml next to your docker-compose.yml:
+(Replace `econumo_db` with your actual volume name — check `docker volume ls`.)
+
+For a scheduled version, run the same copy from a cron job. A short pause while
+the container is stopped is fine for a personal instance.
+
+---
+## Litestream (continuous replication)
+
+[Litestream](https://litestream.io/getting-started/) streams SQLite changes to
+object storage (S3, Cloudflare R2, …) continuously, so you never lose more than
+a few seconds of data. It requires the database to be in WAL mode.
+
+**WARNING!**
+Econumo runs SQLite with a single pinned connection and does not enable WAL
+mode itself. Enabling WAL for Litestream is an advanced setup: take a backup
+first, and test a restore before relying on it.
+
+1. Take a manual backup (see above).
+2. Enable WAL mode on the database file (one-off; the setting is stored in the
+   file). With the container stopped, run it against the copied file, e.g.
+   `sqlite3 db.sqlite 'PRAGMA journal_mode=WAL;'`, then put it back.
+3. Create a `litestream.yml` next to your `docker-compose.yml`:
 
 ```yml
 dbs:
@@ -37,29 +61,33 @@ dbs:
         bucket: backup-econumo-sqlite
 ```
 
-4. Add the following environment variables to your `.env` file:
+4. Provide the credentials to the Litestream service (via its own environment):
 
 ```
 LITESTREAM_ACCESS_KEY_ID=<REPLACE_WITH_YOUR_VALUE>
 LITESTREAM_SECRET_ACCESS_KEY=<REPLACE_WITH_YOUR_VALUE>
 ```
 
-5. Incorporate Litestream into your `docker-compose.yml`:
+5. Add Litestream as a sidecar sharing the `db` volume:
 
 ```yml
 services:
   econumo:
-    image: econumo/econumo-ce:latest
+    image: ghcr.io/econumo/econumo:latest
     env_file:
       - .env
     ports:
       - "8181:80"
     volumes:
-      - db:/var/www/db
+      - db:/app/var/db
+      - jwt:/app/var/jwt
     restart: unless-stopped
 
   litestream:
     image: litestream/litestream:latest
+    environment:
+      - LITESTREAM_ACCESS_KEY_ID
+      - LITESTREAM_SECRET_ACCESS_KEY
     volumes:
       - db:/data
       - ./litestream.yml:/etc/litestream.yml
@@ -70,7 +98,15 @@ services:
 
 volumes:
   db:
+  jwt:
 ```
 
-6. Restart Econumo with the command: `docker-compose pull && docker-compose down && docker-compose up -d`
-7. Verify that everything is functioning properly.
+6. Restart the stack: `docker compose pull && docker compose down && docker compose up -d`
+7. Verify that replication is working and practice a restore.
+
+---
+## PostgreSQL
+
+If you run Econumo on PostgreSQL instead of SQLite (set `DATABASE_URL` to a
+`postgres://…` URL), use your usual PostgreSQL backup tooling — for example a
+scheduled `pg_dump` — instead of the SQLite steps above.

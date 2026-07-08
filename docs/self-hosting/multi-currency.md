@@ -4,37 +4,50 @@ URL: https://econumo.com/docs/self-hosting/multi-currency/
 
 Econumo offers multi-currency functionality. To get started, you need to:
 
-1. Load currencies into your Econumo instance.
-2. Set up a daily update for exchange rates (if needed).
+1. Load the currencies you use into your Econumo instance.
+2. Set up regular exchange-rate updates (if needed).
 
 ---
 
-## How to add a new currency to Econumo (v0.5.1+)
+## How to add a new currency
 
-If you want to use a currency other than **USD** (the only preloaded currency in Econumo), simply run the following command (available since v0.5.1):
+Econumo preloads **USD** by default (or whatever you set as
+`ECONUMO_CURRENCY_BASE`). To use another currency, add it with the
+`currency:add` command — pass the ISO code, and optionally a display name and
+the number of fraction digits:
 
 ```sh
-docker-compose exec -u www-data econumo bin/console app:add-currency --help
+docker compose exec econumo /app/econumo currency:add EUR Euro 2
 ```
 
-If you want to add multiple currencies and require regular exchange rate updates, see the next step.
+If you want to add several currencies and keep exchange rates up to date, see
+the next step.
 
 ---
 
-## How to update exchange rates (v0.8.0+)
+## How to update exchange rates
 
-To simplify the process of updating exchange rates for currencies you have, please follow these steps:
+To keep exchange rates current:
 
 1. Create a free account at [Open Exchange Rates](https://openexchangerates.org).
 2. Obtain your App ID from the Open Exchange Rates dashboard.
-3. Set the environment variable `OPEN_EXCHANGE_RATES_TOKEN` in your Econumo instance.
-4. Run the following command to load currencies and update exchange rates:
+3. Set the `OPEN_EXCHANGE_RATES_TOKEN` environment variable in your `.env` and
+   restart the container.
+4. Run the update command (it accepts an optional `YYYY-MM-DD` date, defaulting
+   to today):
 
 ```sh
-docker-compose exec -u www-data econumo bin/console app:update-currency-rates
+docker compose exec econumo /app/econumo currency:update-rates
 ```
 
-Please note that a free version of Open Exchange Rates only supports USD as the base currency. The **base currency is not your default currency** - it’s simply only for conversions.
+To keep rates fresh, schedule this command from a cron job on the host, e.g.
+once a day.
+
+Econumo's base currency defaults to USD and is configurable with the
+`ECONUMO_CURRENCY_BASE` environment variable. Note that a free Open Exchange
+Rates account only supports USD as its base currency, so keep the base at USD
+unless you have a paid plan. The **base currency is not your default
+currency** — it is used only for conversions.
 
 For example, if you have most of your accounts in CAD (Canadian Dollar) and one savings account in USD and another in EUR, currency conversions will occur in two scenarios:
 

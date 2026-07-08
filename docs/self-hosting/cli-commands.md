@@ -2,46 +2,63 @@ URL: https://econumo.com/docs/self-hosting/cli-commands/
 
 # CLI (terminal) commands
 
-Econumo provides several CLI commands that are useful for managing the application.
+Econumo ships as a single binary that is subcommand-driven: `serve` runs the
+server, and everything else is a management command. In the Docker image the
+binary lives at `/app/econumo`, so you run commands with `docker exec`:
+
+```sh
+docker compose exec econumo /app/econumo <command> [args]
+```
+
+Running the binary with no command (or an unknown one) prints the full usage,
+so `docker compose exec econumo /app/econumo` is the quickest way to see what
+is available on your version.
+
+**Note**
+The image is distroless — it has no shell. Run the `/app/econumo` binary
+directly as shown above; `docker compose exec econumo bash` will not work.
 
 ---
-## List of available commands
-
-### Application-specific:
+## User management
 
 ```sh
-docker-compose exec -u www-data econumo bin/console | grep app:
-```
+# Create a user
+docker compose exec econumo /app/econumo user:create "<name>" <email> <password>
 
-### All available commands:
+# Change a user's email
+docker compose exec econumo /app/econumo user:change-email <old-email> <new-email>
 
-```sh
-docker-compose exec -u www-data econumo bin/console
+# Change a user's password
+docker compose exec econumo /app/econumo user:change-password <email> <password>
+
+# Activate or deactivate a user
+docker compose exec econumo /app/econumo user:activate <email>
+docker compose exec econumo /app/econumo user:deactivate <email>
 ```
 
 ---
-## CLI commands
-
-### Add a new currency
+## Currencies
 
 ```sh
-docker-compose exec -u www-data econumo bin/console app:add-currency --help
+# Add a currency: code, optional name, optional fraction digits
+docker compose exec econumo /app/econumo currency:add EUR Euro 2
+
+# Load exchange rates from Open Exchange Rates (optional date, defaults to today)
+docker compose exec econumo /app/econumo currency:update-rates
 ```
 
-### Create a user
+See [Multi-Currency Support](/docs/self-hosting/multi-currency/) for the full
+setup, including the `OPEN_EXCHANGE_RATES_TOKEN` variable.
+
+---
+## Maintenance
 
 ```sh
-docker-compose exec -u www-data econumo bin/console app:create-user --help
+# Generate the RS256 JWT keypair (skips if one already exists; --force overwrites)
+docker compose exec econumo /app/econumo jwt:generate
 ```
 
-### Change user e-mail
-
-```sh
-docker-compose exec -u www-data econumo bin/console app:change-user-email --help
-```
-
-### Change user password
-
-```sh
-docker-compose exec -u www-data econumo bin/console app:change-user-password --help
-```
+**Note**
+The JWT keypair is generated automatically on first boot and persisted in the
+`jwt` volume (`/app/var/jwt`), so you normally never need to run
+`jwt:generate` by hand.

@@ -4,15 +4,21 @@ URL: https://econumo.com/docs/user-guide/budgets/
 
 This section introduces the basics of 'Budgets' in Econumo.
 
-Budgets enable you to implement a "Cash Stuffing" method, also known as the envelope budgeting approach, which uses
-envelopes to manage spending.
+Budgets enable you to implement a "Cash Stuffing" method, also known as the
+envelope budgeting approach, which uses envelopes to manage spending.
 
-The concept is straightforward: Take a few envelopes, label each with an expense category—such as groceries, rent, or
-car loan—and place the amount of money you plan to spend in each envelope. This way, you set limits on your spending for
-each category.
+The concept is straightforward: take a few envelopes, label each with an
+expense category — such as groceries, rent, or car loan — and place the amount
+of money you plan to spend in each envelope. This way, you set limits on your
+spending for each category.
 
-Econumo allows you to create virtual envelopes and allocate your funds accordingly, so you can easily track how much
-money remains for each specific category.
+Econumo allows you to create virtual envelopes and allocate your funds
+accordingly, so you can easily track how much money remains for each specific
+category:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ## In this section
 
@@ -21,12 +27,7 @@ money remains for each specific category.
 - [Manage your budget](/docs/user-guide/budgets/#manage-your-budget)
   - [Budgeting](/docs/user-guide/budgets/#budgeting)
   - [Organizing your budget](/docs/user-guide/budgets/#organizing-your-budget)
-    - [Managing budget folders](/docs/user-guide/budgets/#managing-budget-folders)
-    - [Managing budget elements](/docs/user-guide/budgets/#managing-budget-elements)
   - [Work with the budget](/docs/user-guide/budgets/#work-with-the-budget)
-    - [Folder statistics](/docs/user-guide/budgets/#folder-statistics)
-    - [Envelope, category, and tag spending](/docs/user-guide/budgets/#envelope-category-and-tag-spending)
-    - [Changing currency for budget elements](/docs/user-guide/budgets/#changing-currency-for-budget-elements)
 - [Budgets list](/docs/user-guide/budgets/#budgets-list)
 - [Shared access](/docs/user-guide/budgets/#shared-access)
 
@@ -34,129 +35,154 @@ money remains for each specific category.
 
 ## Budget creation
 
-You can create a budget in two places:
-1. From the **Budget** page in the left sidebar.
-2. From the **Settings -> Budgets** page
+Open **Settings → Budgets** and press **Create budget**. Give the budget a
+name, pick its base currency, and choose which accounts participate in
+budgeting — you can exclude, say, a long-term savings account.
 
-Click on **Create a budget**.
+<ScreenshotSet>
 
-Enter a name for the budget and select any accounts you wish to exclude from budgeting, then click **Create**.
+</ScreenshotSet>
 
-**Note**  
-All new accounts will be included in your budgets by default, but you can exclude them later in the budget settings.
-
-After creating the budget, you can begin managing it!
-
-**Note**  
-Budgets are created in the user's default currency and start from the current month.
+**Note**
+All new accounts are included in your budgets by default, but you can exclude
+them later in the budget settings. Budgets start from the current month.
 
 ---
 ## Update budget details
 
-Click the **Configure** button in the top-left corner and select **Budget Details** to update your budget:
+Open your budget, press **Configure**, and choose **Budget details**. In the
+dialog you can rename the budget, change its currency, and include or exclude
+accounts:
 
-In the modal window, you can rename your budget and include or exclude accounts:
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ---
 ## Manage your budget
 
 In your budget, you will work with the following entities:
 
-- **Budget Folders** - To organize your spending conveniently.
-- **Categories** - Your Econumo categories.
-- **Tags** - Your Econumo tags. These aggregate your spending (e.g., you might plan to fly to Europe on vacation).
-- **Envelopes** - These allow you to group categories (e.g., an envelope for _Food_ could contain categories like _Groceries_, _Drinks_, and _Restaurants_).
+- **Budget Folders** — to organize your spending conveniently (in the
+  screenshots: _Essentials_, _Lifestyle_, _Vacations_).
+- **Categories** — your Econumo categories.
+- **Tags** — your Econumo tags. These aggregate spending across categories
+  (e.g. the whole _Italy 2026_ vacation).
+- **Envelopes** — these group several categories into one limit (e.g. an
+  envelope for _Food_ could contain _Groceries_, _Drinks_, and _Restaurants_).
 
 ---
 ### Budgeting
 
-The goal of budgeting is to maintain your monthly budget. Ideally, you should prepare your budget before the month starts and make minor adjustments during the month as needed. The budget will indicate how much money remains in your virtual envelopes.
+The goal of budgeting is to maintain your monthly budget. Ideally, you should
+prepare your budget before the month starts and make minor adjustments during
+the month as needed. The months bar at the top switches between periods, and
+the budget shows how much money remains in your virtual envelopes.
 
-Your budget consists of four columns:
+Each row has three columns:
 
-1. **Category/Tag/Envelope** Name
-2. **Budgeted Amount** - The amount of money you plan to spend or save.
-3. **Spending Amount** - The amount you have actually spent.
-4. **Available Amount** - The total available, which includes funds transferred from previous months combined with the budgeted amount.
+1. **Budget** — the amount you plan to spend or save.
+2. **Spent** — the amount you have actually spent.
+3. **Available** — what is left: the budgeted amount plus anything carried
+   over from previous months.
 
-You can adjust the numbers in the budgeted amount, as shown in the picture below:
+Click a number in the **Budget** column to adjust it — changes apply
+instantly. Overspent elements are highlighted in red (like _Groceries_ in the
+screenshots above).
 
 ---
 ### Organizing your budget
 
-The default structure of your budget may not be optimal. To change it, click on **Configure** in the top-right corner and select **Edit Structure**.
+The default structure of your budget may not be optimal. To change it, press
+**Configure** and select **Edit structure**. In this mode you can create
+folders and envelopes, drag elements between folders, and change element
+currencies. Once you are finished, press **Done editing**.
 
-You can create new folders, reorder items, and move elements between folders. All changes apply instantly. Once you are finished, click on **Done Editing** in the top-right corner.
+<ScreenshotSet>
 
----
-#### Managing budget folders
+</ScreenshotSet>
 
-To create a folder, click on **Create a Folder** and enter its name.
+**Folders.** Press **Create folder** to add one. The three-dots menu on a
+folder lets you rename it, move it up or down, or delete it (only empty folders
+can be deleted). Drag elements between folders using the dots handle — once the
+**Default folder** is empty, it disappears.
 
-You can delete only empty folders by clicking on the three dots on the right and choosing **Delete** from the menu.
+**Envelopes.** To create an envelope, press the **+** button on the folder
+header. Choose a name, currency, icon, and the categories you want to include:
 
-To reorder your folders, use the folders menu by clicking the three dots on the folder and selecting **Move Up** or **Move Down**.
+<ScreenshotSet>
 
----
-#### Managing budget elements
+</ScreenshotSet>
 
-Simply drag and drop budget elements to move them between folders. Once the **Default Folder** is empty, it will disappear.
+Deleting an envelope releases its categories back into the budget.
 
-You can organize your categories into envelopes. To create a new envelope, press the `+` button to the right of the specific folder.
+**Element currency.** Each element can be budgeted in its own currency: open
+the element's three-dots menu and choose **Change currency**. Amounts spent
+and available for that element are converted automatically.
 
-A dialog will appear:
+<ScreenshotSet>
 
-Choose the name, currency, icon, and any categories you want to include in the envelope (optional).
-
-After creating the envelope, you will see it in the budget:
-
-To delete the envelope, click **Delete** from its menu. All included categories will then reappear in the budget.
+</ScreenshotSet>
 
 ---
 ### Work with the budget
 
-#### Folder statistics
+#### Tag and envelope breakdown
 
-Hover over the folder (on the desktop client) to see the statistics for that folder.
+Tags and envelopes aggregate several categories. Expand one with the chevron
+next to its name to see where the money actually went:
 
-If you have elements in different currencies, they will be automatically converted to your budget's currency.
+<ScreenshotSet>
 
----
-#### Envelope, category, and tag spending
+</ScreenshotSet>
 
-To see how much you've spent in an envelope, category, or tag, click on the amount spent to view the details:
+#### Spending details
 
----
-#### Changing currency for budget elements
+To see the transactions behind any number, click the amount in the **Spent**
+column:
 
-You can change the currency of a specific element by clicking its three dots icon and selecting **Change Currency**.
+<ScreenshotSet>
 
-A dialog with all available currencies will appear:
+</ScreenshotSet>
 
-After saving, the amounts spent and available for the chosen element will be converted.
+#### Multi-currency budgets
+
+If your accounts use several currencies, the budget header shows a per-currency
+switcher (in the screenshots: `$` and `€`), and elements in foreign currencies
+are converted to the budget's currency for folder totals. See
+[Multi-Currency](/docs/user-guide/multi-currency/) for the full picture.
 
 ---
 ## Budgets list
 
-You can access your budgets list by going to **Settings -> Budgets** or by clicking **Configure -> Open Budget List**.
+You can access your budgets list at **Settings → Budgets** or via
+**Configure → Open budget list**. Shared budgets show the avatars of everyone
+who uses them:
 
-You will see all available budgets here:
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ---
 ## Shared access
 
-To share your budget with your partner, open the budget list, click the three dots on the budget you wish to share, and select **Access Control**.
+To budget together with your partner, you first need to
+[connect with them](/docs/user-guide/shared-access/). Then open the budgets
+list, click the three dots on the budget you wish to share, and select
+**Access control**. Pick the person and the access level:
 
-A dialog will open showing your connections and their access levels:
+<ScreenshotSet>
 
-Click on a user’s name to choose the access level.
+</ScreenshotSet>
 
 Econumo supports the following access levels for budgets:
 
-- **View Only** - You share your budget only for viewing.
-- **Regular Access** - You and your partner can collaboratively manage this budget and contribute to it together.
-- **Full Control** - Similar to Regular Access, but your partner can delete and rename the budget.
+- **View only** — you share your budget only for viewing.
+- **Manage budget** — you and your partner can collaboratively manage this
+  budget and contribute to it together.
+- **Full control** — like Manage budget, but your partner can also delete and
+  rename the budget.
 
-Once the appropriate access level is selected, your partner must go to their budget list to accept your budget:
-
-Now you can update the shared budget. You will see your names and avatars as owners of categories and tags:
+Once access is granted, your partner sees the budget in their own budget list,
+and you budget the same envelopes together — as John and Megan do with the
+"Family budget" in the screenshots throughout this page.

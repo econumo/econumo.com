@@ -2,12 +2,15 @@ URL: https://econumo.com/docs/user-guide/shared-access/
 
 # Shared Access
 
-**Note**  
-Please note that the "Shared Access" page is only available in the Econumo (cloud) version.
-
 This section provides an overview of Shared Access in Econumo.
 
-Econumo enables users to connect with each other to share access to various accounts and budgets.
+Econumo enables users to connect with each other to share access to various
+accounts and budgets — the foundation for family budgeting. Connections are
+managed in **Settings → Shared access**:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ## In this section
 
@@ -19,24 +22,47 @@ Econumo enables users to connect with each other to share access to various acco
 
 ## Connect with another user
 
-When you connect with another Econumo user, you aren't sharing anything yet. You will specify which accounts and budgets to share later.
+When you connect with another Econumo user, you aren't sharing anything yet.
+You will specify which accounts and budgets to share later.
 
-To connect with another user, go to **Settings -> Shared Access** and click on **Create an Invitation**:
+To connect, go to **Settings → Shared access** and press **Create invitation**.
+You will get a short code that is valid for 5 minutes:
 
-Ask your partner to open Econumo, navigate to **Settings -> Shared Access**, and click on **Accept an Invitation**:
+<ScreenshotSet>
 
-After the invitation is accepted, your partner will see the connection:
+</ScreenshotSet>
+
+Ask your partner to open Econumo, navigate to **Settings → Shared access**,
+press **Accept invitation**, and enter the code:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+After the invitation is accepted, you will see each other in the connections
+list, and you can start sharing
+[accounts](/docs/user-guide/accounts/#shared-access) and
+[budgets](/docs/user-guide/budgets/#shared-access).
 
 ---
 
 ## Remove connection between users
 
-You can delete the connection between users at any time. This action will remove all shared access for accounts and budgets.
+You can delete the connection between users at any time: open the three-dots
+menu next to the connection and choose **Delete**. This action removes all
+shared access for accounts and budgets in both directions.
 
 ---
 
 ## Check shared accounts and budgets
 
-To view the full list of shared items with a user, click on **View**:
+To view everything you share with a user, choose **View** in the connection's
+menu (on mobile, tap the connection). The dialog lists all shared budgets and
+accounts, who owns each item, and the current access level:
 
-You will see the list of shared accounts and budgets between users.
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Select an item in this dialog to manage its access level — this is also the
+way to share and unshare accounts and budgets from a phone.
