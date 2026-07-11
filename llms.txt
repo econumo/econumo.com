@@ -131,13 +131,11 @@
 - [A Modern Travel Budget Guide For Couples And Families](https://econumo.com/posts/travel-budget.md): Stop stressing about money on vacation. Learn to create a simple, collaborative travel budget that handles multiple currencies and shared expenses with ease.
 - [Average Grocery Cost for One Person (average grocery cost for one person) - Tips](https://econumo.com/posts/average-grocery-cost-for-one-person.md): Explore the average grocery cost for one person, what drives the numbers, and smart tips to budget meals without sacrificing quality.
 - [How to Avoid Currency Conversion Fees When Traveling](https://econumo.com/posts/how-to-avoid-currency-conversion-fees.md): Discover how to avoid currency conversion fees with this expert guide. Learn which cards and accounts save you the most on your next trip abroad.
-- [v0.10.0 Econumo release](https://econumo.com/posts/v0.10.0-release.md): v0.10.0 Econumo release
 - [International Money Transfer Comparison Finding the Best Rates](https://econumo.com/posts/international-money-transfer-comparison.md): Our international money transfer comparison guide helps you find the fastest, cheapest, and most secure ways to send money abroad.
 - [A Guide to Open Source Personal Finance Software](https://econumo.com/posts/open-source-personal-finance-software.md): Discover how open source personal finance software gives you complete control over your money. Learn the benefits, key features, and how to get started today.
 - [Your Free 100 Envelope Challenge Printable to Save $5,050](https://econumo.com/posts/100-envelope-challenge-printable.md): Start saving $5,050 with our free 100 envelope challenge printable. This guide shows you how the challenge works with actionable tips and tracking methods.
 - [Principles of Finance: A Practical Guide for Family Budgeting](https://econumo.com/posts/principles-of-finance.md): Discover the principles of finance and how risk, return, and cash flow shape your family's budget and future with practical, simple steps.
 - [What Does Secured Bond Mean An Investor's Simple Guide](https://econumo.com/posts/what-does-secured-bond-mean.md): Wondering what does secured bond mean? Learn how secured bonds work, what collateral means for your safety, and how they fit into a smart investment plan.
-- [v0.9.0 Econumo release](https://econumo.com/posts/v0.9.0-release.md): v0.9.0 Econumo release
 - [Can You Have an IRA and a 401k? Supercharge Your Savings](https://econumo.com/posts/can-you-have-an-ira-and-a-401-k.md): Wondering can you have an IRA and a 401k? Yes. Learn the rules, contribution limits, and strategies to maximize your retirement savings with both accounts.
 - [7 Life-Changing Benefits of Paying Off Mortgage Early in 2026](https://econumo.com/posts/benefits-of-paying-off-mortgage-early.md): Unlock financial freedom with these 7 benefits of paying off mortgage early. Learn how to save thousands in interest, build wealth, and reduce stress.
 - [Boost Your Score: remove collections from credit report](https://econumo.com/posts/remove-collections-from-credit-report.md): Discover proven steps to remove collections from credit report with disputes, negotiations, and validation letters to boost your score.
@@ -149,28 +147,34 @@
 - [The 12 Best Monthly Expense Tracker Printable Resources for 2026](https://econumo.com/posts/monthly-expense-tracker-printable.md): Discover the top 12 monthly expense tracker printable templates and resources. Find free, editable, and designer-made trackers to manage your budget.
 - [The Ultimate List of Household Expenses for 2026: 10 Categories to Track](https://econumo.com/posts/list-of-household-expenses.md): Master your budget with our complete list of household expenses for 2026. This guide covers 10 key categories to help you track spending and save money.
 - [How to Reduce Monthly Expenses A Practical Guide for Real Life](https://econumo.com/posts/how-to-reduce-monthly-expenses.md): Learn how to reduce monthly expenses with practical strategies that work. Discover how to audit your spending, cut major bills, and master your budget.
-- [v0.8.1 Econumo release](https://econumo.com/posts/v0.8.1-release.md): v0.8.1 Econumo release
 - [How to Stick to a Budget That Actually Works for You](https://econumo.com/posts/how-to-stick-to-a-budget.md): Tired of budgets that fail? Discover a practical method for how to stick to a budget, manage shared finances, and achieve your financial goals with confidence.
-- [v0.8.0 Econumo release](https://econumo.com/posts/v0.8.0-release.md): v0.8.0 Econumo release
 - [A Practical Guide to Budgeting for Irregular Income](https://econumo.com/posts/budgeting-for-irregular-income.md): Tired of financial stress? Learn how to manage a variable paycheck with our practical guide to budgeting for irregular income and build lasting stability.
 - [How to Budget as a Couple: The Practical Guide](https://econumo.com/posts/how-to-budget-as-a-couple.md): Discover how to budget as a couple with a practical, easy-to-follow plan. Learn to talk money, choose a system, and strengthen your relationship.
 - [How to Create a Household Budget That Actually Works for Couples](https://econumo.com/posts/how-to-create-a-household-budget.md): Learn how to create a household budget as a couple. This guide offers practical steps to track spending, set shared goals, and manage your money together.
-- [v0.7.0 Econumo release](https://econumo.com/posts/v0.7.0-release.md): v0.7.0 Econumo release
-- [v0.6.0 Econumo release](https://econumo.com/posts/v0.6.0-release.md): v0.6.0 Econumo release
-- [v0.5.2 Econumo release](https://econumo.com/posts/v0.5.2-release.md): v0.5.2 Econumo release
-- [v0.5.1 Econumo release](https://econumo.com/posts/v0.5.1-release.md): v0.5.1 Econumo release
-- [v0.5.0 Econumo release](https://econumo.com/posts/v0.5.0-release.md): v0.5.0 Econumo release
-- [v0.4.3 Econumo release](https://econumo.com/posts/v0.4.3-release.md): v0.4.3 Econumo release
-- [v0.4.1 Econumo release](https://econumo.com/posts/v0.4.1-release.md): v0.4.1 Econumo release
-- [v0.4.0 Econumo release](https://econumo.com/posts/v0.4.0-release.md): v0.4.0 Econumo release
-- [v0.3.0 Econumo release](https://econumo.com/posts/v0.3.0-release.md): v0.3.0 Econumo release
-- [v0.2.3 Econumo release](https://econumo.com/posts/v0.2.3-release.md): v0.2.3 Econumo release
-- [v0.2.2 Econumo hotfix](https://econumo.com/posts/v0.2.2-release.md): v0.2.2 Econumo hotfix
-- [v0.2.1 Econumo release](https://econumo.com/posts/v0.2.1-release.md): v0.2.1 Econumo release
-- [v0.2.0 Econumo release](https://econumo.com/posts/v0.2.0-release.md): v0.2.0 Econumo release
-- [v0.1.0 Econumo release](https://econumo.com/posts/v0.1.0-release.md): v0.1.0 Econumo release
+
+## Releases
+
+- [v0.10.0 Econumo release](https://econumo.com/releases/v0.10.0.md): v0.10.0 Econumo release
+- [v0.9.0 Econumo release](https://econumo.com/releases/v0.9.0.md): v0.9.0 Econumo release
+- [v0.8.1 Econumo release](https://econumo.com/releases/v0.8.1.md): v0.8.1 Econumo release
+- [v0.8.0 Econumo release](https://econumo.com/releases/v0.8.0.md): v0.8.0 Econumo release
+- [v0.7.0 Econumo release](https://econumo.com/releases/v0.7.0.md): v0.7.0 Econumo release
+- [v0.6.0 Econumo release](https://econumo.com/releases/v0.6.0.md): v0.6.0 Econumo release
+- [v0.5.2 Econumo release](https://econumo.com/releases/v0.5.2.md): v0.5.2 Econumo release
+- [v0.5.1 Econumo release](https://econumo.com/releases/v0.5.1.md): v0.5.1 Econumo release
+- [v0.5.0 Econumo release](https://econumo.com/releases/v0.5.0.md): v0.5.0 Econumo release
+- [v0.4.3 Econumo release](https://econumo.com/releases/v0.4.3.md): v0.4.3 Econumo release
+- [v0.4.1 Econumo release](https://econumo.com/releases/v0.4.1.md): v0.4.1 Econumo release
+- [v0.4.0 Econumo release](https://econumo.com/releases/v0.4.0.md): v0.4.0 Econumo release
+- [v0.3.0 Econumo release](https://econumo.com/releases/v0.3.0.md): v0.3.0 Econumo release
+- [v0.2.3 Econumo release](https://econumo.com/releases/v0.2.3.md): v0.2.3 Econumo release
+- [v0.2.2 Econumo hotfix](https://econumo.com/releases/v0.2.2.md): v0.2.2 Econumo hotfix
+- [v0.2.1 Econumo release](https://econumo.com/releases/v0.2.1.md): v0.2.1 Econumo release
+- [v0.2.0 Econumo release](https://econumo.com/releases/v0.2.0.md): v0.2.0 Econumo release
+- [v0.1.0 Econumo release](https://econumo.com/releases/v0.1.0.md): v0.1.0 Econumo release
 
 ## Optional
 
 - [llms-full.txt](https://econumo.com/llms-full.txt): full documentation as a single file
 - [RSS](https://econumo.com/posts/index.xml): blog feed
+- [Releases RSS](https://econumo.com/releases/index.xml): releases feed
