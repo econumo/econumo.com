@@ -16,6 +16,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Sign Up](/docs/user-guide/#sign-up)
   - [Sign In](/docs/user-guide/#sign-in)
   - [Password Recovery](/docs/user-guide/#password-recovery)
+  - [Getting started checklist](/docs/user-guide/#getting-started-checklist)
   - [Finding your way around](/docs/user-guide/#finding-your-way-around)
 - [Accounts](/docs/user-guide/accounts/)
   - [Account creation](/docs/user-guide/accounts/#account-creation)
@@ -61,7 +62,8 @@ payment, and you will receive an email with your credentials.
 ### Econumo (self-hosted)
 
 To create an account in self-hosted Econumo, switch to the **Sign up** tab and
-provide your name (or nickname), email, and password.
+provide your name (or nickname), email, and password (entered twice to
+confirm).
 
 <ScreenshotSet>
 
@@ -98,6 +100,26 @@ Enter the code, choose a new password, and press **Reset password**:
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+---
+## Getting started checklist
+
+After your first sign-in, Econumo greets you with the **Getting started**
+checklist — a guided tour through the initial setup: add your accounts, enter
+(or import) your first transaction, review categories, tags, and payees, pick
+an avatar, connect with your partner, and create your budget. Each step links
+to the matching section of this guide, and completed steps are ticked off
+automatically.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Work through the steps in any order — the shortcut buttons (**Add account**,
+**Import transactions**, **Choose your avatar**) open the same dialogs
+described later in this guide. When you are done, press **Finish setup** at
+the bottom of the list. Nothing is lost by finishing early: every step remains
+available in **Settings**.
 
 ---
 ## Finding your way around

@@ -103,9 +103,10 @@ currencies. Once you are finished, press **Done editing**.
 </ScreenshotSet>
 
 **Folders.** Press **Create folder** to add one. The three-dots menu on a
-folder lets you rename it, move it up or down, or delete it (only empty folders
-can be deleted). Drag elements between folders using the dots handle — once the
-**Default folder** is empty, it disappears.
+folder lets you rename it (an empty folder can also be deleted there). Drag
+folders and elements around using the dots handle. The built-in **Default
+folder** is always last: it cannot be renamed or removed, and when it is empty
+it just shows a hint inviting you to move elements into it.
 
 **Envelopes.** To create an envelope, press the **+** button on the folder
 header. Choose a name, currency, icon, and the categories you want to include:
@@ -149,7 +150,9 @@ column:
 
 If your accounts use several currencies, the budget header shows a per-currency
 switcher (in the screenshots: `$` and `€`), and elements in foreign currencies
-are converted to the budget's currency for folder totals. See
+are converted to the budget's currency for folder totals. Select a currency in
+the switcher to see its spending progress for the month and the average
+exchange rate used for the period. See
 [Multi-Currency](/docs/user-guide/multi-currency/) for the full picture.
 
 ---
@@ -157,7 +160,8 @@ are converted to the budget's currency for folder totals. See
 
 You can access your budgets list at **Settings → Budgets** or via
 **Configure → Open budget list**. Shared budgets show the avatars of everyone
-who uses them:
+who uses them, and the bookmark icon marks your default budget — the one that
+opens from **Budget** in the sidebar:
 
 <ScreenshotSet>
 

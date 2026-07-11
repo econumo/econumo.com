@@ -103,6 +103,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Sign Up](/docs/user-guide/#sign-up)
   - [Sign In](/docs/user-guide/#sign-in)
   - [Password Recovery](/docs/user-guide/#password-recovery)
+  - [Getting started checklist](/docs/user-guide/#getting-started-checklist)
   - [Finding your way around](/docs/user-guide/#finding-your-way-around)
 - [Accounts](/docs/user-guide/accounts/)
   - [Account creation](/docs/user-guide/accounts/#account-creation)
@@ -148,7 +149,8 @@ payment, and you will receive an email with your credentials.
 ### Econumo (self-hosted)
 
 To create an account in self-hosted Econumo, switch to the **Sign up** tab and
-provide your name (or nickname), email, and password.
+provide your name (or nickname), email, and password (entered twice to
+confirm).
 
 <ScreenshotSet>
 
@@ -185,6 +187,26 @@ Enter the code, choose a new password, and press **Reset password**:
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+---
+## Getting started checklist
+
+After your first sign-in, Econumo greets you with the **Getting started**
+checklist — a guided tour through the initial setup: add your accounts, enter
+(or import) your first transaction, review categories, tags, and payees, pick
+an avatar, connect with your partner, and create your budget. Each step links
+to the matching section of this guide, and completed steps are ticked off
+automatically.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Work through the steps in any order — the shortcut buttons (**Add account**,
+**Import transactions**, **Choose your avatar**) open the same dialogs
+described later in this guide. When you are done, press **Finish setup** at
+the bottom of the list. Nothing is lost by finishing early: every step remains
+available in **Settings**.
 
 ---
 ## Finding your way around
@@ -227,14 +249,16 @@ sidebar and the mobile home screen.
 
 Open **Settings → Accounts** and press the **+** button on the folder you want
 the account in. Specify the account name, current balance, currency, and icon.
+The balance field comes with the same built-in calculator (`+`, `−`, `×`, `÷`,
+`=`) as the [transaction dialog](/docs/user-guide/transactions/#adding-expenses).
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
 **Note**
-The starting balance is recorded as a "Balance adjustment" transaction, so your
-history starts consistent from day one.
+The starting balance is recorded as a regular transaction dated the day you
+created the account, so your history starts consistent from day one.
 
 ---
 
@@ -254,8 +278,8 @@ Create folders with the **Create folder** button and drag accounts between them
 using the dots handle next to their names. The folder structure is reflected in
 the left sidebar on desktop and on the home screen on mobile.
 
-Use the folder menu (the three dots on the folder row) to rename a folder, move
-it up or down, or hide it. A hidden folder disappears from the main screen —
+Use the folder menu (the three dots on the folder row) to edit a folder's name,
+move it up or down, or hide it. A hidden folder disappears from the main screen —
 handy for accounts you rarely use — and can be shown again from the same menu.
 
 <ScreenshotSet>
@@ -280,8 +304,8 @@ open the same dialog from the account page itself via the **Configure** button.
 </ScreenshotSet>
 
 **Note**
-Correcting the balance in the edit dialog records a "Balance adjustment"
-transaction for the difference, so your transaction history always adds up.
+Correcting the balance in the edit dialog records a compensating transaction
+for the difference, so your transaction history always adds up.
 
 ---
 
@@ -296,8 +320,10 @@ control** in the account menu, then select the person and the access level.
 </ScreenshotSet>
 
 **Note**
-On the phone layout, access control lives in **Settings → Shared access**: open
-the connection and tap the account you want to share. See
+The phone layout doesn't offer **Access control** for accounts, so share an
+account from a desktop or tablet first. After that you can change or revoke its
+access level from a phone: open the connection in **Settings → Shared access**
+and tap the account. See
 [Shared access](/docs/user-guide/shared-access/#check-shared-accounts-and-budgets).
 
 Econumo offers three levels of shared access:
@@ -476,8 +502,8 @@ transaction's data:
 
 </ScreenshotSet>
 
-You can update any transaction except the system ones with the "Balance
-adjustment" comment and transfers to other users' accounts.
+You can update any transaction in your own accounts, and in shared accounts
+where you have at least **Manage transactions** access.
 
 ## Deleting a transaction
 
@@ -690,9 +716,10 @@ currencies. Once you are finished, press **Done editing**.
 </ScreenshotSet>
 
 **Folders.** Press **Create folder** to add one. The three-dots menu on a
-folder lets you rename it, move it up or down, or delete it (only empty folders
-can be deleted). Drag elements between folders using the dots handle — once the
-**Default folder** is empty, it disappears.
+folder lets you rename it (an empty folder can also be deleted there). Drag
+folders and elements around using the dots handle. The built-in **Default
+folder** is always last: it cannot be renamed or removed, and when it is empty
+it just shows a hint inviting you to move elements into it.
 
 **Envelopes.** To create an envelope, press the **+** button on the folder
 header. Choose a name, currency, icon, and the categories you want to include:
@@ -736,7 +763,9 @@ column:
 
 If your accounts use several currencies, the budget header shows a per-currency
 switcher (in the screenshots: `$` and `€`), and elements in foreign currencies
-are converted to the budget's currency for folder totals. See
+are converted to the budget's currency for folder totals. Select a currency in
+the switcher to see its spending progress for the month and the average
+exchange rate used for the period. See
 [Multi-Currency](/docs/user-guide/multi-currency/) for the full picture.
 
 ---
@@ -744,7 +773,8 @@ are converted to the budget's currency for folder totals. See
 
 You can access your budgets list at **Settings → Budgets** or via
 **Configure → Open budget list**. Shared budgets show the avatars of everyone
-who uses them:
+who uses them, and the bookmark icon marks your default budget — the one that
+opens from **Budget** in the sidebar:
 
 <ScreenshotSet>
 
@@ -829,8 +859,16 @@ list, and you can start sharing
 ## Remove connection between users
 
 You can delete the connection between users at any time: open the three-dots
-menu next to the connection and choose **Delete**. This action removes all
-shared access for accounts and budgets in both directions.
+menu next to the connection and choose **Delete**. Econumo asks you to confirm
+first, because this action removes all shared access for accounts and budgets
+in both directions:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The connection's dialog (described below) also has a **Delete** button that
+removes the connection the same way.
 
 ---
 
@@ -844,8 +882,12 @@ accounts, who owns each item, and the current access level:
 
 </ScreenshotSet>
 
-Select an item in this dialog to manage its access level — this is also the
-way to share and unshare accounts and budgets from a phone.
+Select an item in this dialog to change its access level, or press
+**Revoke access** to stop sharing it — this is also the way to manage access
+from a phone. The dialog lists only items that are already shared; sharing a
+new account or budget is done with **Access control**, as described in the
+[Accounts](/docs/user-guide/accounts/#shared-access) and
+[Budgets](/docs/user-guide/budgets/#shared-access) sections.
 
 ---
 
@@ -924,8 +966,8 @@ element's menu in **Edit structure** mode and choose **Change currency**:
 
 Spending in a foreign currency is converted to the budget's currency for folder
 and budget totals. When your accounts span several currencies, the budget header
-shows a per-currency switcher (the `$` / `€` toggle) and the exchange rate used
-for the period:
+shows a per-currency switcher (the `$` / `€` toggle); select a currency to see
+its spending progress and the average exchange rate used for the period:
 
 <ScreenshotSet>
 
@@ -986,14 +1028,18 @@ For self-hosted Econumo, please use a
 
 ### How to change your avatar
 
-Econumo pulls your avatar from [Gravatar](https://gravatar.com), linked to
-your email address. To change your avatar, please visit
-[Gravatar](https://gravatar.com).
+Click your avatar on the profile screen to open the avatar picker. Choose a
+color and an icon, then press **Save**. Your avatar is shown to everyone you
+[share](/docs/user-guide/shared-access/) accounts and budgets with.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ### How to change your password
 
 Choose **Change password** in the Security section. Enter your current
-password and the new one:
+password, then the new one twice:
 
 <ScreenshotSet>
 
@@ -1044,8 +1090,8 @@ migrating data from other financial applications or for bulk adding
 transactions.
 
 CSV import requires the CSV file to be in a specific format. It must be
-comma-separated values and include the following columns: Date, Amount,
-Category, and Account name. Optional columns are: Description, Tags, and Payee
+comma-separated values and include the following columns: Date, Amount, and
+Account name. Optional columns are: Category, Description, Tags, and Payee
 (Sender/Recipient).
 
 The "Amount" column should contain positive values for income and negative
@@ -1057,7 +1103,8 @@ To import transactions from a CSV file:
 1. Navigate to **Settings**.
 2. Click on **Import CSV**.
 3. Choose the CSV file you want to import (up to 10 MB).
-4. Map the CSV columns to the corresponding fields in Econumo.
+4. Map the CSV columns to the corresponding fields in Econumo — the required
+   fields (Account, Date, Amount) are marked with an asterisk.
 5. Click **Import** to add the transactions to your account.
 
 <ScreenshotSet>

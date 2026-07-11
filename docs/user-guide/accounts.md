@@ -23,14 +23,16 @@ sidebar and the mobile home screen.
 
 Open **Settings → Accounts** and press the **+** button on the folder you want
 the account in. Specify the account name, current balance, currency, and icon.
+The balance field comes with the same built-in calculator (`+`, `−`, `×`, `÷`,
+`=`) as the [transaction dialog](/docs/user-guide/transactions/#adding-expenses).
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
 **Note**
-The starting balance is recorded as a "Balance adjustment" transaction, so your
-history starts consistent from day one.
+The starting balance is recorded as a regular transaction dated the day you
+created the account, so your history starts consistent from day one.
 
 ---
 
@@ -50,8 +52,8 @@ Create folders with the **Create folder** button and drag accounts between them
 using the dots handle next to their names. The folder structure is reflected in
 the left sidebar on desktop and on the home screen on mobile.
 
-Use the folder menu (the three dots on the folder row) to rename a folder, move
-it up or down, or hide it. A hidden folder disappears from the main screen —
+Use the folder menu (the three dots on the folder row) to edit a folder's name,
+move it up or down, or hide it. A hidden folder disappears from the main screen —
 handy for accounts you rarely use — and can be shown again from the same menu.
 
 <ScreenshotSet>
@@ -76,8 +78,8 @@ open the same dialog from the account page itself via the **Configure** button.
 </ScreenshotSet>
 
 **Note**
-Correcting the balance in the edit dialog records a "Balance adjustment"
-transaction for the difference, so your transaction history always adds up.
+Correcting the balance in the edit dialog records a compensating transaction
+for the difference, so your transaction history always adds up.
 
 ---
 
@@ -92,8 +94,10 @@ control** in the account menu, then select the person and the access level.
 </ScreenshotSet>
 
 **Note**
-On the phone layout, access control lives in **Settings → Shared access**: open
-the connection and tap the account you want to share. See
+The phone layout doesn't offer **Access control** for accounts, so share an
+account from a desktop or tablet first. After that you can change or revoke its
+access level from a phone: open the connection in **Settings → Shared access**
+and tap the account. See
 [Shared access](/docs/user-guide/shared-access/#check-shared-accounts-and-budgets).
 
 Econumo offers three levels of shared access:

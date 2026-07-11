@@ -49,8 +49,16 @@ list, and you can start sharing
 ## Remove connection between users
 
 You can delete the connection between users at any time: open the three-dots
-menu next to the connection and choose **Delete**. This action removes all
-shared access for accounts and budgets in both directions.
+menu next to the connection and choose **Delete**. Econumo asks you to confirm
+first, because this action removes all shared access for accounts and budgets
+in both directions:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The connection's dialog (described below) also has a **Delete** button that
+removes the connection the same way.
 
 ---
 
@@ -64,5 +72,9 @@ accounts, who owns each item, and the current access level:
 
 </ScreenshotSet>
 
-Select an item in this dialog to manage its access level — this is also the
-way to share and unshare accounts and budgets from a phone.
+Select an item in this dialog to change its access level, or press
+**Revoke access** to stop sharing it — this is also the way to manage access
+from a phone. The dialog lists only items that are already shared; sharing a
+new account or budget is done with **Access control**, as described in the
+[Accounts](/docs/user-guide/accounts/#shared-access) and
+[Budgets](/docs/user-guide/budgets/#shared-access) sections.

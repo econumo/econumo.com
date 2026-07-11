@@ -158,8 +158,8 @@ transaction's data:
 
 </ScreenshotSet>
 
-You can update any transaction except the system ones with the "Balance
-adjustment" comment and transfers to other users' accounts.
+You can update any transaction in your own accounts, and in shared accounts
+where you have at least **Manage transactions** access.
 
 ## Deleting a transaction
 

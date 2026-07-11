@@ -71,8 +71,8 @@ element's menu in **Edit structure** mode and choose **Change currency**:
 
 Spending in a foreign currency is converted to the budget's currency for folder
 and budget totals. When your accounts span several currencies, the budget header
-shows a per-currency switcher (the `$` / `€` toggle) and the exchange rate used
-for the period:
+shows a per-currency switcher (the `$` / `€` toggle); select a currency to see
+its spending progress and the average exchange rate used for the period:
 
 <ScreenshotSet>
 

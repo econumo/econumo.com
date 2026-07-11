@@ -44,14 +44,18 @@ For self-hosted Econumo, please use a
 
 ### How to change your avatar
 
-Econumo pulls your avatar from [Gravatar](https://gravatar.com), linked to
-your email address. To change your avatar, please visit
-[Gravatar](https://gravatar.com).
+Click your avatar on the profile screen to open the avatar picker. Choose a
+color and an icon, then press **Save**. Your avatar is shown to everyone you
+[share](/docs/user-guide/shared-access/) accounts and budgets with.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ### How to change your password
 
 Choose **Change password** in the Security section. Enter your current
-password and the new one:
+password, then the new one twice:
 
 <ScreenshotSet>
 

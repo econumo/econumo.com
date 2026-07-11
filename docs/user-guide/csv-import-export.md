@@ -34,8 +34,8 @@ migrating data from other financial applications or for bulk adding
 transactions.
 
 CSV import requires the CSV file to be in a specific format. It must be
-comma-separated values and include the following columns: Date, Amount,
-Category, and Account name. Optional columns are: Description, Tags, and Payee
+comma-separated values and include the following columns: Date, Amount, and
+Account name. Optional columns are: Category, Description, Tags, and Payee
 (Sender/Recipient).
 
 The "Amount" column should contain positive values for income and negative
@@ -47,7 +47,8 @@ To import transactions from a CSV file:
 1. Navigate to **Settings**.
 2. Click on **Import CSV**.
 3. Choose the CSV file you want to import (up to 10 MB).
-4. Map the CSV columns to the corresponding fields in Econumo.
+4. Map the CSV columns to the corresponding fields in Econumo — the required
+   fields (Account, Date, Amount) are marked with an asterisk.
 5. Click **Import** to add the transactions to your account.
 
 <ScreenshotSet>
