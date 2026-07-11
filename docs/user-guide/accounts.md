@@ -93,13 +93,6 @@ control** in the account menu, then select the person and the access level.
 
 </ScreenshotSet>
 
-**Note**
-The phone layout doesn't offer **Access control** for accounts, so share an
-account from a desktop or tablet first. After that you can change or revoke its
-access level from a phone: open the connection in **Settings → Shared access**
-and tap the account. See
-[Shared access](/docs/user-guide/shared-access/#check-shared-accounts-and-budgets).
-
 Econumo offers three levels of shared access:
 
 1. **View only** — the invited user can see only the balance and the
