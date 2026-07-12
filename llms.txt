@@ -154,26 +154,26 @@
 
 ## Releases
 
-- [v1.0.0](https://econumo.com/releases/v1.0.0.md): v1.0.0 Econumo release
-- [v0.10.1](https://econumo.com/releases/v0.10.1.md): v0.10.1 Econumo release
-- [v0.10.0](https://econumo.com/releases/v0.10.0.md): v0.10.0 Econumo release
-- [v0.9.0](https://econumo.com/releases/v0.9.0.md): v0.9.0 Econumo release
-- [v0.8.1](https://econumo.com/releases/v0.8.1.md): v0.8.1 Econumo release
-- [v0.8.0](https://econumo.com/releases/v0.8.0.md): v0.8.0 Econumo release
-- [v0.7.0](https://econumo.com/releases/v0.7.0.md): v0.7.0 Econumo release
-- [v0.6.0](https://econumo.com/releases/v0.6.0.md): v0.6.0 Econumo release
-- [v0.5.2](https://econumo.com/releases/v0.5.2.md): v0.5.2 Econumo release
-- [v0.5.1](https://econumo.com/releases/v0.5.1.md): v0.5.1 Econumo release
-- [v0.5.0](https://econumo.com/releases/v0.5.0.md): v0.5.0 Econumo release
-- [v0.4.3](https://econumo.com/releases/v0.4.3.md): v0.4.3 Econumo release
-- [v0.4.1](https://econumo.com/releases/v0.4.1.md): v0.4.1 Econumo release
-- [v0.4.0](https://econumo.com/releases/v0.4.0.md): v0.4.0 Econumo release
-- [v0.3.0](https://econumo.com/releases/v0.3.0.md): v0.3.0 Econumo release
-- [v0.2.3](https://econumo.com/releases/v0.2.3.md): v0.2.3 Econumo release
-- [v0.2.2](https://econumo.com/releases/v0.2.2.md): v0.2.2 Econumo hotfix
-- [v0.2.1](https://econumo.com/releases/v0.2.1.md): v0.2.1 Econumo release
-- [v0.2.0](https://econumo.com/releases/v0.2.0.md): v0.2.0 Econumo release
-- [v0.1.0](https://econumo.com/releases/v0.1.0.md): v0.1.0 Econumo release
+- [v1.0.0](https://econumo.com/releases/v1.0.0.md): v1.0.0 — a complete rewrite with a new Go backend and redesigned React frontend in a single, much faster and lighter binary.
+- [v0.10.1](https://econumo.com/releases/v0.10.1.md): v0.10.1 — adds a version indicator so you always know which build you're running, and fixes a startup issue on Alpine images.
+- [v0.10.0](https://econumo.com/releases/v0.10.0.md): v0.10.0 — raises the character limit for names from 18 to 64 characters and refines the transaction list.
+- [v0.9.0](https://econumo.com/releases/v0.9.0.md): v0.9.0 — Econumo becomes a fully open-source project in a single repository, now under the permissive MIT license.
+- [v0.8.1](https://econumo.com/releases/v0.8.1.md): v0.8.1 — enhances Import, letting you override any field during the import process.
+- [v0.8.0](https://econumo.com/releases/v0.8.0.md): v0.8.0 — introduces CSV Import/Export for backing up your data or migrating between Econumo instances.
+- [v0.7.0](https://econumo.com/releases/v0.7.0.md): v0.7.0 — adds experimental, beta-quality PostgreSQL support (not yet recommended for production).
+- [v0.6.0](https://econumo.com/releases/v0.6.0.md): v0.6.0 — rewrites currency handling so each currency can use up to 8 fraction digits for precise budget conversions.
+- [v0.5.2](https://econumo.com/releases/v0.5.2.md): v0.5.2 — a small follow-up that fixes an issue with currencies that have no exchange rates.
+- [v0.5.1](https://econumo.com/releases/v0.5.1.md): v0.5.1 — bug fixes and UI/UX improvements based on community feedback after the Econumo CE announcement.
+- [v0.5.0](https://econumo.com/releases/v0.5.0.md): v0.5.0 — introduces user onboarding and a transaction calculator widget, plus many budget refinements and fixes.
+- [v0.4.3](https://econumo.com/releases/v0.4.3.md): v0.4.3 — adds a running Total to the budgeting module for a clearer big-picture view.
+- [v0.4.1](https://econumo.com/releases/v0.4.1.md): v0.4.1 — minor fixes and configuration improvements, including a new ECONUMO_BASE_URL variable.
+- [v0.4.0](https://econumo.com/releases/v0.4.0.md): v0.4.0 — adds user registration along with a broad set of budgeting improvements and bug fixes.
+- [v0.3.0](https://econumo.com/releases/v0.3.0.md): v0.3.0 — Econumo's editions are unified, merging the separate products into the fully open-source Econumo CE.
+- [v0.2.3](https://econumo.com/releases/v0.2.3.md): v0.2.3 — small refinements to the login flow, legal pages, and branding.
+- [v0.2.2](https://econumo.com/releases/v0.2.2.md): v0.2.2 — a hotfix that restores authentication by rolling back a dependency update that broke it.
+- [v0.2.1](https://econumo.com/releases/v0.2.1.md): v0.2.1 — registered users are now connected with one another automatically, making collaboration easier.
+- [v0.2.0](https://econumo.com/releases/v0.2.0.md): v0.2.0 — backend cleanup that drops the legacy PostgreSQL dependency and adds consistent timezone handling.
+- [v0.1.0](https://econumo.com/releases/v0.1.0.md): v0.1.0 — the first public release of Econumo, an open, self-hosted way to manage personal and family finances.
 
 ## Optional
 
