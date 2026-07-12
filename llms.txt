@@ -154,6 +154,7 @@
 
 ## Releases
 
+- [v1.0.0](https://econumo.com/releases/v1.0.0.md): v1.0.0 Econumo release
 - [v0.10.1](https://econumo.com/releases/v0.10.1.md): v0.10.1 Econumo release
 - [v0.10.0](https://econumo.com/releases/v0.10.0.md): v0.10.0 Econumo release
 - [v0.9.0](https://econumo.com/releases/v0.9.0.md): v0.9.0 Econumo release
