@@ -154,24 +154,25 @@
 
 ## Releases
 
-- [v0.10.0 Econumo release](https://econumo.com/releases/v0.10.0.md): v0.10.0 Econumo release
-- [v0.9.0 Econumo release](https://econumo.com/releases/v0.9.0.md): v0.9.0 Econumo release
-- [v0.8.1 Econumo release](https://econumo.com/releases/v0.8.1.md): v0.8.1 Econumo release
-- [v0.8.0 Econumo release](https://econumo.com/releases/v0.8.0.md): v0.8.0 Econumo release
-- [v0.7.0 Econumo release](https://econumo.com/releases/v0.7.0.md): v0.7.0 Econumo release
-- [v0.6.0 Econumo release](https://econumo.com/releases/v0.6.0.md): v0.6.0 Econumo release
-- [v0.5.2 Econumo release](https://econumo.com/releases/v0.5.2.md): v0.5.2 Econumo release
-- [v0.5.1 Econumo release](https://econumo.com/releases/v0.5.1.md): v0.5.1 Econumo release
-- [v0.5.0 Econumo release](https://econumo.com/releases/v0.5.0.md): v0.5.0 Econumo release
-- [v0.4.3 Econumo release](https://econumo.com/releases/v0.4.3.md): v0.4.3 Econumo release
-- [v0.4.1 Econumo release](https://econumo.com/releases/v0.4.1.md): v0.4.1 Econumo release
-- [v0.4.0 Econumo release](https://econumo.com/releases/v0.4.0.md): v0.4.0 Econumo release
-- [v0.3.0 Econumo release](https://econumo.com/releases/v0.3.0.md): v0.3.0 Econumo release
-- [v0.2.3 Econumo release](https://econumo.com/releases/v0.2.3.md): v0.2.3 Econumo release
-- [v0.2.2 Econumo hotfix](https://econumo.com/releases/v0.2.2.md): v0.2.2 Econumo hotfix
-- [v0.2.1 Econumo release](https://econumo.com/releases/v0.2.1.md): v0.2.1 Econumo release
-- [v0.2.0 Econumo release](https://econumo.com/releases/v0.2.0.md): v0.2.0 Econumo release
-- [v0.1.0 Econumo release](https://econumo.com/releases/v0.1.0.md): v0.1.0 Econumo release
+- [v0.10.1](https://econumo.com/releases/v0.10.1.md): v0.10.1 Econumo release
+- [v0.10.0](https://econumo.com/releases/v0.10.0.md): v0.10.0 Econumo release
+- [v0.9.0](https://econumo.com/releases/v0.9.0.md): v0.9.0 Econumo release
+- [v0.8.1](https://econumo.com/releases/v0.8.1.md): v0.8.1 Econumo release
+- [v0.8.0](https://econumo.com/releases/v0.8.0.md): v0.8.0 Econumo release
+- [v0.7.0](https://econumo.com/releases/v0.7.0.md): v0.7.0 Econumo release
+- [v0.6.0](https://econumo.com/releases/v0.6.0.md): v0.6.0 Econumo release
+- [v0.5.2](https://econumo.com/releases/v0.5.2.md): v0.5.2 Econumo release
+- [v0.5.1](https://econumo.com/releases/v0.5.1.md): v0.5.1 Econumo release
+- [v0.5.0](https://econumo.com/releases/v0.5.0.md): v0.5.0 Econumo release
+- [v0.4.3](https://econumo.com/releases/v0.4.3.md): v0.4.3 Econumo release
+- [v0.4.1](https://econumo.com/releases/v0.4.1.md): v0.4.1 Econumo release
+- [v0.4.0](https://econumo.com/releases/v0.4.0.md): v0.4.0 Econumo release
+- [v0.3.0](https://econumo.com/releases/v0.3.0.md): v0.3.0 Econumo release
+- [v0.2.3](https://econumo.com/releases/v0.2.3.md): v0.2.3 Econumo release
+- [v0.2.2](https://econumo.com/releases/v0.2.2.md): v0.2.2 Econumo hotfix
+- [v0.2.1](https://econumo.com/releases/v0.2.1.md): v0.2.1 Econumo release
+- [v0.2.0](https://econumo.com/releases/v0.2.0.md): v0.2.0 Econumo release
+- [v0.1.0](https://econumo.com/releases/v0.1.0.md): v0.1.0 Econumo release
 
 ## Optional
 
