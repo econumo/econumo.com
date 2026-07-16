@@ -154,6 +154,7 @@
 
 ## Releases
 
+- [v1.0.1](https://econumo.com/releases/v1.0.1.md): v1.0.1 — adds a version and API-docs link to the settings footer, and fixes setting a limit on tags or categories created after a budget.
 - [v1.0.0](https://econumo.com/releases/v1.0.0.md): v1.0.0 — a complete rewrite with a new Go backend and redesigned React frontend in a single, much faster and lighter binary.
 - [v0.10.1](https://econumo.com/releases/v0.10.1.md): v0.10.1 — adds a version indicator so you always know which build you're running, and fixes a startup issue on Alpine images.
 - [v0.10.0](https://econumo.com/releases/v0.10.0.md): v0.10.0 — raises the character limit for names from 18 to 64 characters and refines the transaction list.
