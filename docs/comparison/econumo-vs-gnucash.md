@@ -89,7 +89,7 @@ GnuCash's popularity is best measured in decades rather than stars.
 | Forks | 2 | 963 |
 | Contributors | small core team | ~317 |
 | Age | ~6 years | ~28 years |
-| Downloads | not published | ~67,000 in 3 months (SourceForge) |
+| Downloads | ~21,000 across two registries | ~67,000 in 3 months (SourceForge) |
 
 Roughly 22,000 people download GnuCash every month, three-quarters of them on
 Windows. Its star count understates it badly — GnuCash predates GitHub by a decade,

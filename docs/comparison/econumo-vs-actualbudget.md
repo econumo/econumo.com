@@ -102,7 +102,7 @@ otherwise would not help you choose.
 | GitHub stars | 79 | **27,595** |
 | Forks | 2 | **2,706** |
 | Named contributors | small core team | **463** |
-| Docker pulls | not published | **30.9 million** |
+| Container pulls | ~21,000 across two registries | **30.9 million** (Docker Hub) |
 | Open source since | November 2024 | April 2022 |
 
 Actual Budget is one of the most popular open-source personal finance projects in

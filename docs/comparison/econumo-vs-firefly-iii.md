@@ -31,7 +31,7 @@ per-user sharing.
 | **GitHub stars** | 79 | 24,070 |
 | **Forks** | 2 | 2,229 |
 | **Contributors** | small core team | 177 (89% of commits by one person) |
-| **Docker pulls** | not published | 27.5 million |
+| **Container pulls** | ~21,000 across two registries | 27.5 million (Docker Hub) |
 | **Releases to date** | 24 | 329 |
 | **In development since** | 2020 | 2012 |
 | **First public release** | November 2024 | October 2014 |
@@ -85,7 +85,7 @@ Firefly III is far more established, and the numbers are not close.
 |---|---|---|
 | GitHub stars | 79 | **24,070** |
 | Forks | 2 | **2,229** |
-| Docker pulls | not published | **27.5 million** |
+| Container pulls | ~21,000 across two registries | **27.5 million** (Docker Hub) |
 | In development since | 2020 | **2012** |
 | Releases | 24 | **329** |
 
