@@ -13,6 +13,9 @@ This section provides an overview of user profiles in Econumo.
   - [How to change your avatar](/docs/user-guide/user-profile/#how-to-change-your-avatar)
   - [How to change your password](/docs/user-guide/user-profile/#how-to-change-your-password)
   - [How to change your default currency](/docs/user-guide/user-profile/#how-to-change-your-default-currency)
+  - [How to change the interface language](/docs/user-guide/user-profile/#how-to-change-the-interface-language)
+- [Sessions](/docs/user-guide/user-profile/#sessions)
+- [API tokens](/docs/user-guide/user-profile/#api-tokens)
 
 ---
 ## Accessing your user profile
@@ -65,3 +68,57 @@ password, then the new one twice:
 
 The **Currency** preference in the Preferences section sets your default
 currency in Econumo.
+
+### How to change the interface language
+
+The **Language** preference sits right below **Currency**. Open it and pick one
+of the available languages — currently **English** and **Русский**. The same
+dialog is available from the language badge on the sign-in and sign-up screens,
+before you have an account.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+---
+## Sessions
+
+**Security → Sessions** lists every device currently signed in to your account,
+with the browser and operating system it was identified as and when it was last
+active. Your current session is marked **Current**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Press **Revoke** next to a session to sign that device out, **Sign out** to end
+the session you are using right now, or **Sign out other devices** to end every
+session except the current one.
+
+**Note**
+If you spot a session you do not recognise, revoke it and
+[change your password](/docs/user-guide/user-profile/#how-to-change-your-password).
+
+---
+## API tokens
+
+Econumo has a [REST API](/docs/api/), and personal access tokens are how you
+authenticate against it — handy for scripts, home-automation dashboards, or any
+integration of your own. Open **Security → API tokens** to manage them.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Press **Create token**, give it a name that will remind you what it is for
+(for example, "Home Assistant"), and choose when it expires: **30 days**,
+**90 days**, **365 days**, a **custom date**, or **never**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+A personal access token grants full access to your account over the API — treat
+it like a password. Create a separate token per integration so you can revoke
+one without breaking the others.

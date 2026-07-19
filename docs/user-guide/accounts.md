@@ -87,7 +87,8 @@ for the difference, so your transaction history always adds up.
 
 If you are [connected with your partner](/docs/user-guide/shared-access/), you
 can share access to specific accounts. On desktop and tablet, choose **Access
-control** in the account menu, then select the person and the access level.
+control** in the account menu — or press the **Access control** button inside
+the edit-account dialog — then select the person and the access level.
 
 <ScreenshotSet>
 

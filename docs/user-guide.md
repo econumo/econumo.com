@@ -45,6 +45,9 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Cross-currency transfers](/docs/user-guide/multi-currency/#cross-currency-transfers)
   - [Currency in your budget](/docs/user-guide/multi-currency/#currency-in-your-budget)
 - [User profile](/docs/user-guide/user-profile/)
+  - [Updating your user profile](/docs/user-guide/user-profile/#updating-your-user-profile)
+  - [Sessions](/docs/user-guide/user-profile/#sessions)
+  - [API tokens](/docs/user-guide/user-profile/#api-tokens)
 - [CSV Import & Export](/docs/user-guide/csv-import-export/)
 
 ---
@@ -127,7 +130,10 @@ available in **Settings**.
 Everything that is not day-to-day spending lives in **Settings**: accounts and
 folders, shared access, budgets, categories, tags, payees, and CSV
 import/export. On desktop and tablet, open it from the bottom of the sidebar;
-on mobile, from the bottom of the home screen.
+on mobile, from the bottom of the home screen. Your name at the top of the
+screen opens your [profile](/docs/user-guide/user-profile/), and the **API**
+link at the very bottom opens the [API reference](/docs/api/) for your
+instance.
 
 <ScreenshotSet>
 
