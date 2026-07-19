@@ -154,6 +154,8 @@
 
 ## Releases
 
+- [v1.1.0](https://econumo.com/releases/v1.1.0.md): v1.1.0 — adds multi-language support, a redesigned invite-based account sharing flow, exact decimal money handling, and new-release notifications, plus a security-hardening pass.
+- [v1.1.1](https://econumo.com/releases/v1.1.1.md): v1.1.1 — a maintenance release that resolves three CodeQL security findings.
 - [v1.0.2](https://econumo.com/releases/v1.0.2.md): v1.0.2 — a maintenance release with dependency updates and a faster, QEMU-free multi-arch release build.
 - [v1.0.1](https://econumo.com/releases/v1.0.1.md): v1.0.1 — adds a version and API-docs link to the settings footer, and fixes setting a limit on tags or categories created after a budget.
 - [v1.0.0](https://econumo.com/releases/v1.0.0.md): v1.0.0 — a complete rewrite with a new Go backend and redesigned React frontend in a single, much faster and lighter binary.
