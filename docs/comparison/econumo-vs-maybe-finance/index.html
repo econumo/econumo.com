@@ -1,0 +1,356 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preload" href="/_astro/plus-jakarta-sans-latin-wght-normal.eXO_dkmS.woff2" as="font" type="font/woff2" crossorigin><title>Econumo vs Maybe Finance — Econumo</title><meta name="description" content="Maybe Finance shut down in 2025 and its repository is archived. Where to go now — an honest comparison of Econumo and Sure, the community fork, for displaced Maybe users."><link rel="canonical" href="https://econumo.com/docs/comparison/econumo-vs-maybe-finance/"><link rel="shortcut icon" href="/favicon.svg" type="image/png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><meta property="og:site_name" content="Econumo"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Econumo vs Maybe Finance — Econumo"><meta property="og:description" content="Maybe Finance shut down in 2025 and its repository is archived. Where to go now — an honest comparison of Econumo and Sure, the community fork, for displaced Maybe users."><meta property="og:url" content="https://econumo.com/docs/comparison/econumo-vs-maybe-finance/"><meta property="og:image" content="https://econumo.com/econumo-og-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-07-18T00:00:00.000Z"><meta property="article:modified_time" content="2026-07-18T00:00:00.000Z"><meta property="article:section" content="docs"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Econumo vs Maybe Finance — Econumo"><meta name="twitter:description" content="Maybe Finance shut down in 2025 and its repository is archived. Where to go now — an honest comparison of Econumo and Sure, the community fork, for displaced Maybe users."><meta name="twitter:image" content="https://econumo.com/econumo-og-image.png"><link rel="alternate" type="application/rss+xml" title="Econumo" href="/index.xml"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Econumo","item":"https://econumo.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://econumo.com/docs/"},{"@type":"ListItem","position":3,"name":"Econumo vs Maybe Finance","item":"https://econumo.com/docs/comparison/econumo-vs-maybe-finance/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Maybe Finance shut down?","acceptedAnswer":{"@type":"Answer","text":"Yes. Maybe Finance announced on 24 July 2025 that it was pivoting to B2B financial forecasting and would no longer maintain the personal finance app. The GitHub repository is archived and read-only, with its last commit on 24 July 2025. The company itself wound down in early 2026, and maybefinance.com now redirects away from the product."}},{"@type":"Question","name":"What is the best alternative to Maybe Finance?","acceptedAnswer":{"@type":"Answer","text":"It depends what you used Maybe for. If you want your bank sync, investment tracking and net worth dashboard to keep working, Sure — the community fork at github.com/we-promise/sure — is the direct continuation and the better choice. If you mainly wanted a simple app to plan your spending, and never got much from bank sync, Econumo offers envelope budgeting that neither Maybe nor Sure has."}},{"@type":"Question","name":"Can I still self-host the archived Maybe Finance?","acceptedAnswer":{"@type":"Answer","text":"You can run it, but it is partially broken. Maybe depended on Synth, its own market-data API, which was shut down along with the company — so investment prices and some features no longer work. The archived code receives no security updates. Sure replaced that dependency with several working market-data providers."}},{"@type":"Question","name":"Did Maybe Finance have envelope budgeting?","acceptedAnswer":{"@type":"Answer","text":"No. Maybe had monthly category budgets with allocation, but no envelope carryover between months — there is no rollover field in its data model. Sure inherited the same design. Envelope budgeting, where unspent money rolls forward in each category, is the main thing Econumo does that neither offers."}},{"@type":"Question","name":"Can I migrate my Maybe Finance data to Econumo?","acceptedAnswer":{"@type":"Answer","text":"Only via CSV. Econumo does not read Maybe's database, so migrating means exporting transactions to CSV and importing them, then rebuilding your budget. If you are self-hosting Maybe and want a drop-in upgrade that keeps your existing database, Sure is the straightforward path — it shares Maybe's Rails and PostgreSQL schema."}}]}]</script><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40"><meta name="color-scheme" content="light dark"><!-- Google Tag Manager --><script>(function(){const GTM_ID = "GTM-MQM3JZ62";
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',GTM_ID);})();</script><!-- End Google Tag Manager --><link rel="stylesheet" href="/_astro/Layout.bLLu7q4w.css"></head> <body> <!-- Google Tag Manager (noscript) --> <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQM3JZ62" height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <div id="topBarWrapper" class="top-bar-wrapper fixed inset-x-0 top-0 z-50"> <div class="top-bar mx-auto max-w-6xl px-5 sm:px-8"> <div class="desktop-wrapper flex h-16 items-center gap-6"> <label for="menu-control" class="menu-icon" aria-label="Documentation"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2 5H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 12H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 19H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> </svg> </label> <nav class="flex flex-1 items-center gap-8"> <a href="/" class="logo menu-link"></a> <div class="nav-wrapper hidden flex-1 items-center justify-end gap-8 min-[961px]:flex"> <ul id="main-nav" class="main-nav part-1 flex items-center gap-7"> <li><a class="menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="menu-link" href="/#sPricing">Pricing</a></li> </ul> <div class="divider h-5 w-px bg-ink/15"></div> <ul class="main-nav part-2 flex items-center"> <li><a href="/docs/">Docs</a></li> </ul> </div> </nav> <div class="btn btn-small btn-fill btn-yellow"> <a href="https://app.econumo.com" target="_blank" class="plausible-event-name--signin"> Sign In </a> </div> <input type="hidden" name="page-lang" id="page-lang" value="en"> </div> <div id="mobile-menu" class="mobile-wrapper"> <div class="mobile-menu-wrapper"> <ul id="mobile-nav" class="mobile-nav part-1"> <li><a class="mobile-menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="mobile-menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="mobile-menu-link" href="/#sPricing">Pricing</a></li> </ul> <ul class="mobile-nav part-2"> <li><a href="/docs/">Docs</a></li> </ul> </div> </div> </div> </div> <div class="main-overlay"></div>  <div class="content-wrapper"> <div class="content"> <input type="checkbox" class="hidden toggle" id="menu-control"> <input type="checkbox" class="hidden toggle" id="toc-control"> <main class="container flex gap-10"> <aside class="book-menu"> <div class="book-menu-content"> <nav> <div class="book-search"> <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"> <div class="book-search-spinner hidden"></div> <ul id="book-search-results"></ul> </div> <ul> <li> <a href="/docs/"> Getting Started </a>   </li><li> <a href="/docs/edition/"> Editions </a>   </li><li> <a href="/docs/user-guide/"> User Guide </a> <ul> <li> <a href="/docs/user-guide/accounts/"> Accounts </a> </li><li> <a href="/docs/user-guide/transactions/"> Transactions </a> </li><li> <a href="/docs/user-guide/classifications/"> Classifications </a> </li><li> <a href="/docs/user-guide/budgets/"> Budgets </a> </li><li> <a href="/docs/user-guide/shared-access/"> Shared access </a> </li><li> <a href="/docs/user-guide/multi-currency/"> Multi-Currency </a> </li><li> <a href="/docs/user-guide/user-profile/"> User profile </a> </li><li> <a href="/docs/user-guide/csv-import-export/"> CSV Import &amp; Export </a> </li> </ul>  </li><li> <a href="/docs/apps/"> Apps </a>   </li><li> <a href="/docs/self-hosting/"> Self-Hosting </a> <ul> <li> <a href="/docs/self-hosting/multi-currency/"> Multi-Currency Support </a> </li><li> <a href="/docs/self-hosting/backups/"> Backups </a> </li><li> <a href="/docs/self-hosting/cli-commands/"> CLI commands </a> </li><li> <a href="/docs/self-hosting/debug/"> Debug </a> </li> </ul>  </li><li> <a href="/docs/api/"> API </a>   </li><li> <a href="/docs/comparison/"> Econumo compared </a> <ul> <li> <a href="/docs/comparison/econumo-vs-actualbudget/"> vs Actual Budget </a> </li><li> <a href="/docs/comparison/econumo-vs-ynab/"> vs YNAB </a> </li><li> <a href="/docs/comparison/econumo-vs-firefly-iii/"> vs Firefly III </a> </li><li> <a href="/docs/comparison/econumo-vs-maybe-finance/" class="active"> vs Maybe Finance </a> </li><li> <a href="/docs/comparison/econumo-vs-ezbookkeeping/"> vs ezBookkeeping </a> </li><li> <a href="/docs/comparison/econumo-vs-gnucash/"> vs GnuCash </a> </li> </ul>  </li><li> <a href="/docs/faq/"> FAQ </a>   </li><li> <a href="/docs/contact-us/"> Contact Us </a>  <br> </li><li> <a href="/posts/"> Blog </a>   </li><li> <a href="/releases/"> Releases </a>  <br> </li><li> <a href="/docs/legal/privacy-policy/"> Privacy Policy </a>   </li><li> <a href="/docs/legal/terms-of-service/"> Terms of Service </a>  <br> </li> </ul> <ul> <li> <a href="https://github.com/econumo" target="_blank" rel="noopener"> GitHub </a> </li><li> <a href="https://x.com/econumo" target="_blank" rel="noopener"> X (Twitter) </a> </li> </ul> </nav> </div> </aside> <div class="book-page"> <header class="book-header"> <div class="flex align-center justify-between"> <strong>Econumo vs Maybe Finance</strong> <label for="toc-control"></label> </div> </header>  <article class="book-article"> <h1 id="econumo-vs-maybe-finance">Econumo vs Maybe Finance <a class="anchor" href="#econumo-vs-maybe-finance">#</a></h1>
+<p><strong>Maybe Finance is no longer maintained.</strong> The project was archived on GitHub in
+July 2025, and the company behind it wound down in early 2026. If you arrived here
+looking for a Maybe alternative, this page is about where to go next — and it will
+not pretend Econumo is the right answer for everyone.</p>
+<blockquote class="book-hint warning"><p><strong>Maybe Finance shut down</strong></p><p>On <strong>24 July 2025</strong>, Maybe Finance published a final release titled
+<em>“Farewell… Maybe”</em> announcing a pivot to B2B financial forecasting. The
+<a href="https://github.com/maybe-finance/maybe">repository</a> is archived and read-only,
+with 54,351 stars frozen in place. <code>maybefinance.com</code> now redirects away from the
+product, and the hosted app is gone.</p></blockquote>
+<blockquote class="book-hint info"><p><strong>The short version</strong></p><p><strong><a href="https://github.com/we-promise/sure">Sure</a> is the continuation. Econumo is the
+alternative.</strong>
+If you loved Maybe’s <strong>tracking</strong> — bank sync, investments, the net worth
+dashboard — go to Sure. It is a direct fork, actively maintained, and keeps your
+existing database.
+If you loved Maybe’s <strong>simplicity</strong> but wished it actually helped you <em>plan</em> — and
+never got much out of bank sync anyway — Econumo does the envelope budgeting that
+neither Maybe nor Sure has.</p></blockquote>
+<hr/>
+<h2 id="which-should-you-choose">Which should you choose? <a class="anchor" href="#which-should-you-choose">#</a></h2>
+<p>The honest decision tree, before any comparison table:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>If you…</th><th>Go to</th></tr></thead><tbody><tr><td>Want bank sync to keep importing transactions</td><td><strong>Sure</strong></td></tr><tr><td>Track investments, holdings or crypto</td><td><strong>Sure</strong></td></tr><tr><td>Care most about the net worth graph and balance sheet</td><td><strong>Sure</strong></td></tr><tr><td>Are self-hosting Maybe and want to keep your database</td><td><strong>Sure</strong></td></tr><tr><td>Want the AI assistant</td><td><strong>Sure</strong></td></tr><tr><td>Want <strong>envelope budgeting</strong> with money that rolls over</td><td><strong>Econumo</strong></td></tr><tr><td>Budget with a <strong>partner or family</strong>, each with their own login</td><td><strong>Econumo</strong></td></tr><tr><td>Budget across <strong>multiple currencies</strong> in one place</td><td><strong>Econumo</strong></td></tr><tr><td>Were entering transactions manually anyway</td><td><strong>Econumo</strong></td></tr><tr><td>Want a hosted account without running a server</td><td><strong>Econumo</strong></td></tr></tbody></table>
+<p>If several rows on both sides apply, you probably want Sure for tracking and are
+better served waiting rather than switching twice.</p>
+<hr/>
+<h2 id="at-a-glance">At a glance <a class="anchor" href="#at-a-glance">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Maybe Finance</th><th>Sure (fork)</th></tr></thead><tbody><tr><td><strong>Status</strong></td><td>✅ Active</td><td>❌ <strong>Archived Jul 2025</strong></td><td>✅ Active</td></tr><tr><td><strong>Licence</strong></td><td>MIT</td><td>AGPL-3.0</td><td>AGPL-3.0</td></tr><tr><td><strong>Price</strong></td><td>Free self-hosted; $20 one-time cloud</td><td>—</td><td>Free, self-hosted</td></tr><tr><td><strong>GitHub stars</strong></td><td>79</td><td>54,351 (frozen)</td><td>9,065</td></tr><tr><td><strong>Last release</strong></td><td>v1.1.1 (19 Jul 2026)</td><td>v0.6.0 (24 Jul 2025)</td><td>v0.7.2 (1 Jul 2026)</td></tr><tr><td><strong>Total releases</strong></td><td>24</td><td>28</td><td>20</td></tr><tr><td><strong>Stack</strong></td><td>Go, single binary</td><td>Ruby on Rails + PostgreSQL</td><td>Ruby on Rails + PostgreSQL</td></tr><tr><td><strong>Envelope budgeting</strong></td><td>✅</td><td>❌ Monthly categories only</td><td>❌ Inherited from Maybe</td></tr><tr><td><strong>Net worth / balance sheet</strong></td><td>❌</td><td>✅</td><td>✅</td></tr><tr><td><strong>Investment tracking</strong></td><td>❌</td><td>✅</td><td>✅ Expanded</td></tr><tr><td><strong>Bank sync</strong></td><td>❌</td><td>✅ Plaid only</td><td>✅ ~20 providers</td></tr><tr><td><strong>Multi-currency</strong></td><td>✅</td><td>✅</td><td>✅</td></tr><tr><td><strong>Household sharing</strong></td><td>✅ Per-item access</td><td>✅ Household invites</td><td>✅ With permissions</td></tr><tr><td><strong>Mobile apps</strong></td><td>PWA</td><td>❌ None</td><td>🟡 Flutter, alpha</td></tr><tr><td><strong>AI assistant</strong></td><td>❌</td><td>✅</td><td>✅ Optional</td></tr></tbody></table>
+<p><em>Figures observed 19 July 2026 from the GitHub API and each project’s
+documentation. Maybe’s figures are frozen at archive time.</em></p>
+<hr/>
+<h2 id="what-happened-to-maybe-finance">What happened to Maybe Finance <a class="anchor" href="#what-happened-to-maybe-finance">#</a></h2>
+<p>Maybe was founded in 2021 by Josh Pigford and Travis Woods. Its first attempt was
+a paid commercial product that failed to find enough customers. In <strong>January 2024</strong>
+the team open-sourced roughly a million dollars’ worth of prior development work,
+and it exploded — the top trending repository on GitHub for a week, tens of
+thousands of stars, arriving just as Mint’s shutdown left millions of users looking
+for a replacement.</p>
+<p>That momentum never converted into a business. From the final release notes:</p>
+<blockquote>
+<p>“In the end, our obligation as a company is to our investors, and … we’ve
+determined that continuing to build this app is not our best chance at paying
+back our investors and profiting as a company.”</p>
+</blockquote>
+<p>The repository’s last commit is <strong>24 July 2025</strong>. The company itself shut down in
+early 2026 and began liquidating assets — its market-data product Synth now has
+its domain listed for sale.</p>
+<h3 id="do-not-simply-self-host-the-archive">Do not simply self-host the archive <a class="anchor" href="#do-not-simply-self-host-the-archive">#</a></h3>
+<p>This matters practically: <strong>archived Maybe is partially broken today.</strong> It depended
+on <strong>Synth</strong>, Maybe’s own market-data API, which died with the company. Investment
+prices and related features no longer work, and the code receives no security
+updates.</p>
+<p>Sure replaced that dependency with several working market-data providers. If you
+want Maybe’s feature set, run Sure, not the archive.</p>
+<hr/>
+<h2 id="what-maybe-got-right">What Maybe got right <a class="anchor" href="#what-maybe-got-right">#</a></h2>
+<p>Worth stating clearly, because it explains why 54,000 people starred it and why
+this page exists at all.</p>
+<p><strong>The design.</strong> Maybe’s team was unusually disciplined about restraint. From their
+own write-up:</p>
+<blockquote>
+<p>“We spent a lot of time asking the question, ‘What can we delete?’ … Our goal
+with this app was to <em>remove complexity</em> from personal finance.”</p>
+</blockquote>
+<p><strong>Transfers as first-class citizens.</strong> Maybe auto-detected transfers between your
+own accounts and <em>refused to let you categorise them</em>, so they never polluted
+budgets or spending totals. Their reasoning — that other apps force users into a
+“junk drawer” of Transfer and Excluded categories — is correct, and it is a detail
+people miss immediately when it is absent.</p>
+<p><strong>The net worth dashboard.</strong> Assets, liabilities, property, crypto and investments
+in one balance sheet with a trend over time. This is what made Maybe a <em>Mint</em>
+replacement rather than a <em>YNAB</em> replacement — and it is the single biggest thing
+Econumo does <strong>not</strong> do.</p>
+<hr/>
+<h2 id="the-gap-neither-maybe-nor-sure-fills">The gap neither Maybe nor Sure fills <a class="anchor" href="#the-gap-neither-maybe-nor-sure-fills">#</a></h2>
+<p>Maybe had <strong>monthly category budgets</strong>, not envelopes. You could allocate money
+across categories within a month, but there was <strong>no carryover between months</strong> —
+no rollover field exists anywhere in its data model, and Sure inherited the same
+design.</p>
+<p>That is a deliberate philosophy, not an oversight. Maybe’s position was that <em>“most
+users are satisfied with less; not more”</em>, and its four guiding questions were all
+retrospective: how much do I have, am I spending less than I earn, how much did I
+spend last month, what did I spend it on.</p>
+<p>Those are good questions. They are just not budgeting questions. <strong>Maybe told you
+where your money went. Envelope budgeting decides where it goes next.</strong></p>
+<p><a href="/docs/user-guide/budgets/">Econumo’s budgets</a> are envelopes: income is assigned
+into categories grouped in folders, with limits, available amounts and rollover
+between months.</p>
+<p> <img src="/_astro/econumo-budget.qCR5Psvf_MDv5c.webp" alt="Econumo's budget screen — envelope budgeting with folders, limits and available amounts" decoding="async" loading="lazy" width="1080" height="756"></p>
+<p><em>Econumo’s envelope budget — unspent money stays in the envelope and carries
+forward.</em></p>
+<p> <img src="/_astro/sure-dashboard.CiY-ybaH_1tr1MV.webp" alt="Sure's dashboard — cashflow Sankey diagram, asset allocation and net worth, with an AI assistant panel" loading="lazy" decoding="async" width="2540" height="2280"></p>
+<p><em>Sure’s dashboard, continuing Maybe’s design: cashflow, balance sheet and net
+worth. Screenshot from the Sure project README.</em></p>
+<p>The two screenshots show the difference better than any table. One is a plan; the
+other is a report.</p>
+<hr/>
+<h2 id="bank-sync--and-why-econumo-does-not-have-it">Bank sync — and why Econumo does not have it <a class="anchor" href="#bank-sync--and-why-econumo-does-not-have-it">#</a></h2>
+<p>Econumo has <strong>no automatic bank import</strong>, and for a Maybe refugee that is the most
+obvious downgrade. It is a <a href="/docs/faq/">deliberate decision</a>, with
+<a href="/docs/user-guide/csv-import-export/">CSV import/export</a> and a
+<a href="/docs/api/">REST API</a> instead.</p>
+<p>Maybe’s own postmortem is the most credible explanation of why a small
+self-hosted project might reasonably decline to build it:</p>
+<blockquote>
+<p>“The single biggest challenge with a personal finance app in 2025 is bank
+providers. … this is a <em>massive</em> challenge for anyone building a personal
+finance app and is the primary reason why ‘bootstrapping’ a personal finance app
+with automated bank syncing is an uphill battle. <strong>You need a lot of money and
+time to get this right.</strong>”</p>
+</blockquote>
+<p>They listed unsupported banks, banks that only accept logins at certain hours,
+provider documentation that did not match production data, and bank data that was
+simply wrong. With roughly $3M raised, it was still the thing that beat them.</p>
+<p>That is context, not an excuse. If automatic bank import is why you budget at all,
+<strong>Sure is the better choice</strong> — it now supports around twenty providers including
+Plaid, SimpleFIN, Enable Banking, Akahu and several brokers, well beyond Maybe’s
+Plaid-only integration.</p>
+<hr/>
+<h2 id="sure-the-direct-continuation">Sure: the direct continuation <a class="anchor" href="#sure-the-direct-continuation">#</a></h2>
+<p>Sure was forked on <strong>23 July 2025</strong> — one day <em>before</em> Maybe’s final release —
+and its first version was titled <em>“Maybe v0.6.0 — Bug compatible”</em>, an explicit
+statement of intent.</p>
+<p>It has since clearly outgrown a straight continuation:</p>
+<ul>
+<li><strong>Replaced the dead Synth dependency</strong> with Twelve Data, Yahoo Finance, Alpha
+Vantage, Frankfurter and others</li>
+<li><strong>Expanded bank sync</strong> from Plaid alone to roughly twenty providers</li>
+<li><strong>Native mobile apps</strong> in Flutter — iOS and Android, still alpha</li>
+<li><strong>Pluggable AI</strong>, including local models via Ollama, and the option to disable
+it entirely</li>
+<li><strong>OpenID Connect / SSO</strong>, which Maybe never had</li>
+<li><strong>Family sharing permissions</strong>, goals, transaction splits, privacy mode</li>
+<li><strong>Internationalisation</strong> — Maybe was English-only</li>
+</ul>
+<p>Health signals are genuinely good: <strong>1,199 merged pull requests</strong> in its first
+year, and <strong>eight consecutive on-schedule monthly stable releases</strong> from November
+2025 through July 2026.</p>
+<p>Two caveats worth knowing. Its <strong>bus factor is low</strong> — one maintainer leads
+development and writes all the communications, with a long tail of occasional
+contributors — and there are <strong>more than 200 open pull requests</strong>, the classic
+signature of review capacity being the bottleneck. It is substantially healthier
+than a one-person project, but it is not yet institutionally durable.</p>
+<hr/>
+<h2 id="where-econumo-genuinely-fits">Where Econumo genuinely fits <a class="anchor" href="#where-econumo-genuinely-fits">#</a></h2>
+<p><strong>Envelope budgeting.</strong> Verified absent from both Maybe and Sure. This is the real
+differentiator, not a marketing one.</p>
+<p><strong>Multi-currency and household sharing.</strong> Straight parity with Maybe — Econumo has
+both, with <a href="/docs/user-guide/shared-access/">access levels set per account and per budget</a>.</p>
+<p><strong>A much lighter self-host.</strong> Econumo is a single Go binary in a distroless image
+using about 10 MB of RAM, with SQLite by default. Sure is a Rails application with
+PostgreSQL, background workers, and API keys needed for market data and AI. If your
+Maybe instance felt heavy for what you used it for, that gap is real.</p>
+<p><strong>No third-party dependencies.</strong> Sure’s headline features need API keys from
+market-data or LLM providers. Econumo needs none — which is also precisely why
+Maybe’s Synth shutdown could not happen to it.</p>
+<p><strong>MIT rather than AGPL.</strong> Maybe and Sure are both AGPL-3.0. Maybe additionally
+trademarked its name, which is why the fork had to be renamed — that is what
+AGPL-plus-trademark looks like in practice.</p>
+<p><strong>A hosted option.</strong> $20 one-time per user, or self-host free. Sure offers
+self-hosting only.</p>
+<hr/>
+<h2 id="be-clear-about-the-switching-cost">Be clear about the switching cost <a class="anchor" href="#be-clear-about-the-switching-cost">#</a></h2>
+<p>If you are running self-hosted Maybe today:</p>
+<ul>
+<li><strong>Moving to Sure</strong> is close to a container swap. It shares Maybe’s Rails and
+PostgreSQL schema and started life bug-compatible with v0.6.0.</li>
+<li><strong>Moving to Econumo</strong> means exporting to CSV, importing, and <strong>rebuilding your
+budget from scratch</strong>. There is no Maybe importer. You also lose investment
+tracking and the net worth balance sheet, which Econumo does not model at all.</li>
+</ul>
+<p>If you were a <em>hosted</em> Maybe customer, there is a harder problem: the sunset window
+closed around September 2025, so if you did not export then, that data is likely
+gone. Neither project can recover it.</p>
+<p>Given all that, the switch to Econumo makes sense when you were <strong>already entering
+transactions by hand</strong> — which described most of Maybe’s users, since the project
+had tens of thousands of self-hosters and only a few hundred paying customers — and
+what you actually wanted was a budget rather than a report.</p>
+<p>Try the <a href="https://demo.econumo.com">Econumo demo</a> in your browser before deciding.</p>
+<hr/>
+<h2 id="frequently-asked-questions">Frequently asked questions <a class="anchor" href="#frequently-asked-questions">#</a></h2>
+<h3 id="is-maybe-finance-shut-down">Is Maybe Finance shut down? <a class="anchor" href="#is-maybe-finance-shut-down">#</a></h3>
+<p>Yes. It announced a pivot to B2B forecasting on 24 July 2025 and archived the
+repository; the company wound down in early 2026.</p>
+<h3 id="what-is-the-best-alternative-to-maybe-finance">What is the best alternative to Maybe Finance? <a class="anchor" href="#what-is-the-best-alternative-to-maybe-finance">#</a></h3>
+<p>Sure, if you want bank sync, investments and the net worth dashboard to keep
+working. Econumo, if you wanted a simple app that helps you plan rather than report,
+and did not rely on bank sync.</p>
+<h3 id="can-i-still-self-host-the-archived-maybe-finance">Can I still self-host the archived Maybe Finance? <a class="anchor" href="#can-i-still-self-host-the-archived-maybe-finance">#</a></h3>
+<p>You can run it, but its Synth market-data dependency died with the company, so
+parts are broken and it gets no security updates. Run Sure instead.</p>
+<h3 id="did-maybe-finance-have-envelope-budgeting">Did Maybe Finance have envelope budgeting? <a class="anchor" href="#did-maybe-finance-have-envelope-budgeting">#</a></h3>
+<p>No — monthly category budgets with no carryover between months. Sure inherited the
+same model.</p>
+<h3 id="can-i-migrate-my-maybe-data-to-econumo">Can I migrate my Maybe data to Econumo? <a class="anchor" href="#can-i-migrate-my-maybe-data-to-econumo">#</a></h3>
+<p>Only via CSV, and you will rebuild your budget. Sure is the drop-in path if you
+want to keep your existing database.</p>
+<hr/>
+<p><em>Last verified 19 July 2026 against the GitHub API and the projects’ own release
+notes and documentation. Maybe Finance is a trademark of Maybe Finance Inc.;
+Econumo is not affiliated with or endorsed by Maybe Finance Inc. or the Sure
+project. If you spot something out of date, <a href="/docs/contact-us/">let us know</a>.</em></p> </article>  <footer class="book-footer"> <div class="flex flex-wrap justify-between"></div> </footer> <label for="menu-control" class="book-menu-overlay"></label> </div> </main> </div> </div>  <div id="overlay" class="overlay"> <div class="modal-wrapper"> <div class="modal"> <div class="modal-icon"></div> <div id="signup-part-1"> <p class="sub-info">Econumo Cloud</p> <p><span class="font-medium">Sign up now</span> to get product updates and a discount for Econumo Cloud.</p> <form id="waiting-list-form" action="https://api.flowmitry.com/webhook/897714d4-a553-4e70-881b-470ea14be269"> <input type="hidden" name="url" value="https://econumo.com/docs/comparison/econumo-vs-maybe-finance/"> <input type="hidden" name="language" value="en"> <input type="hidden" name="price" value="20"> <input type="hidden" name="price-family" value="40"> <div class="gold-input-wrappers"> <input id="waitingListEmail" type="email" name="email" placeholder="Enter your email" autocomplete="off" autocorrect="off" required="required"> <div class="feedback msg-error">Be sure the entered mail is correct</div> <div class="control-wrapper"> <input type="submit" id="send-mail" class="btn btn-large btn-fill btn-yellow plausible-event-name--lead" value="Sign Up"> </div> </div> </form> </div> <div id="signup-part-2" class="hidden"> <p class="heading">Success!</p> <p>Your e-mail has been added to the list. We will keep you posted about Econumo.</p> <p>Meanwhile, you can try the demo right now</p> <div class="btns-wrapper center"> <a href="https://demo.econumo.com" target="_blank" class="btn btn-outline plausible-event-name--demo"> Try Demo </a> </div> </div> </div> </div> </div> <script defer src="/scripts/top-bar.js"></script> <script defer src="/scripts/modal.js"></script><script defer src="/scripts/navigation.js"></script><script defer src="/scripts/mobile.js"></script><script defer src="/scripts/form.js"></script><script defer src="/scripts/book.js"></script> <script defer src="/scripts/search.js"></script> </body> </html>

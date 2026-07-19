@@ -1,0 +1,538 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preload" href="/_astro/plus-jakarta-sans-latin-wght-normal.eXO_dkmS.woff2" as="font" type="font/woff2" crossorigin><title>Econumo vs Actual Budget — Econumo</title><meta name="description" content="A detailed, source-backed comparison of Econumo and Actual Budget — licence, price, popularity, release history and features. Multi-currency, family sharing and bank sync compared side by side."><link rel="canonical" href="https://econumo.com/docs/comparison/econumo-vs-actualbudget/"><link rel="shortcut icon" href="/favicon.svg" type="image/png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><meta property="og:site_name" content="Econumo"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Econumo vs Actual Budget — Econumo"><meta property="og:description" content="A detailed, source-backed comparison of Econumo and Actual Budget — licence, price, popularity, release history and features. Multi-currency, family sharing and bank sync compared side by side."><meta property="og:url" content="https://econumo.com/docs/comparison/econumo-vs-actualbudget/"><meta property="og:image" content="https://econumo.com/econumo-og-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-07-18T00:00:00.000Z"><meta property="article:modified_time" content="2026-07-18T00:00:00.000Z"><meta property="article:section" content="docs"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Econumo vs Actual Budget — Econumo"><meta name="twitter:description" content="A detailed, source-backed comparison of Econumo and Actual Budget — licence, price, popularity, release history and features. Multi-currency, family sharing and bank sync compared side by side."><meta name="twitter:image" content="https://econumo.com/econumo-og-image.png"><link rel="alternate" type="application/rss+xml" title="Econumo" href="/index.xml"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Econumo","item":"https://econumo.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://econumo.com/docs/"},{"@type":"ListItem","position":3,"name":"Econumo vs Actual Budget","item":"https://econumo.com/docs/comparison/econumo-vs-actualbudget/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Actual Budget free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Actual Budget is MIT-licensed and completely free, with no paid tier and no first-party hosted plan. You either run it locally or self-host the sync server. Its official hosting partner PikaPods charges roughly $1.50 per month as of November 2025."}},{"@type":"Question","name":"Does Actual Budget support multiple currencies?","acceptedAnswer":{"@type":"Answer","text":"No. The official documentation states that Actual Budget is currency agnostic and does not support multi-currency. Only a manual workaround is documented, using separate accounts per currency and rule templating to convert amounts. A multi-currency request has been the most-upvoted issue in the project since 2023 and is not on the 2026 roadmap."}},{"@type":"Question","name":"Can two people share a budget in Actual Budget?","acceptedAnswer":{"@type":"Answer","text":"Yes, but multi-user access requires you to configure an external OpenID Connect provider such as Authelia, Authentik or Keycloak alongside your Actual server. Without OIDC the server is protected by a single shared password. Econumo has per-user accounts and invitation-based sharing built in, with an access level set per account and per budget."}},{"@type":"Question","name":"Which is better for budgeting in more than one currency?","acceptedAnswer":{"@type":"Answer","text":"Econumo. Each Econumo account has its own currency, cross-currency transfers record both amounts, and the budget converts everything into one currency so totals reconcile. Actual Budget does not support multi-currency at all."}},{"@type":"Question","name":"Does Econumo have automatic bank synchronisation?","acceptedAnswer":{"@type":"Answer","text":"No. Econumo is deliberately manual-entry first and automatic bank import is not currently a priority, though CSV import and a REST API are available. Actual Budget is clearly stronger here, with SimpleFIN, Enable Banking, Akahu and Pluggy.ai integrations."}}]}]</script><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40"><meta name="color-scheme" content="light dark"><!-- Google Tag Manager --><script>(function(){const GTM_ID = "GTM-MQM3JZ62";
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',GTM_ID);})();</script><!-- End Google Tag Manager --><link rel="stylesheet" href="/_astro/Layout.bLLu7q4w.css"></head> <body> <!-- Google Tag Manager (noscript) --> <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQM3JZ62" height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <div id="topBarWrapper" class="top-bar-wrapper fixed inset-x-0 top-0 z-50"> <div class="top-bar mx-auto max-w-6xl px-5 sm:px-8"> <div class="desktop-wrapper flex h-16 items-center gap-6"> <label for="menu-control" class="menu-icon" aria-label="Documentation"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2 5H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 12H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 19H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> </svg> </label> <nav class="flex flex-1 items-center gap-8"> <a href="/" class="logo menu-link"></a> <div class="nav-wrapper hidden flex-1 items-center justify-end gap-8 min-[961px]:flex"> <ul id="main-nav" class="main-nav part-1 flex items-center gap-7"> <li><a class="menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="menu-link" href="/#sPricing">Pricing</a></li> </ul> <div class="divider h-5 w-px bg-ink/15"></div> <ul class="main-nav part-2 flex items-center"> <li><a href="/docs/">Docs</a></li> </ul> </div> </nav> <div class="btn btn-small btn-fill btn-yellow"> <a href="https://app.econumo.com" target="_blank" class="plausible-event-name--signin"> Sign In </a> </div> <input type="hidden" name="page-lang" id="page-lang" value="en"> </div> <div id="mobile-menu" class="mobile-wrapper"> <div class="mobile-menu-wrapper"> <ul id="mobile-nav" class="mobile-nav part-1"> <li><a class="mobile-menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="mobile-menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="mobile-menu-link" href="/#sPricing">Pricing</a></li> </ul> <ul class="mobile-nav part-2"> <li><a href="/docs/">Docs</a></li> </ul> </div> </div> </div> </div> <div class="main-overlay"></div>  <div class="content-wrapper"> <div class="content"> <input type="checkbox" class="hidden toggle" id="menu-control"> <input type="checkbox" class="hidden toggle" id="toc-control"> <main class="container flex gap-10"> <aside class="book-menu"> <div class="book-menu-content"> <nav> <div class="book-search"> <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"> <div class="book-search-spinner hidden"></div> <ul id="book-search-results"></ul> </div> <ul> <li> <a href="/docs/"> Getting Started </a>   </li><li> <a href="/docs/edition/"> Editions </a>   </li><li> <a href="/docs/user-guide/"> User Guide </a> <ul> <li> <a href="/docs/user-guide/accounts/"> Accounts </a> </li><li> <a href="/docs/user-guide/transactions/"> Transactions </a> </li><li> <a href="/docs/user-guide/classifications/"> Classifications </a> </li><li> <a href="/docs/user-guide/budgets/"> Budgets </a> </li><li> <a href="/docs/user-guide/shared-access/"> Shared access </a> </li><li> <a href="/docs/user-guide/multi-currency/"> Multi-Currency </a> </li><li> <a href="/docs/user-guide/user-profile/"> User profile </a> </li><li> <a href="/docs/user-guide/csv-import-export/"> CSV Import &amp; Export </a> </li> </ul>  </li><li> <a href="/docs/apps/"> Apps </a>   </li><li> <a href="/docs/self-hosting/"> Self-Hosting </a> <ul> <li> <a href="/docs/self-hosting/multi-currency/"> Multi-Currency Support </a> </li><li> <a href="/docs/self-hosting/backups/"> Backups </a> </li><li> <a href="/docs/self-hosting/cli-commands/"> CLI commands </a> </li><li> <a href="/docs/self-hosting/debug/"> Debug </a> </li> </ul>  </li><li> <a href="/docs/api/"> API </a>   </li><li> <a href="/docs/comparison/"> Econumo compared </a> <ul> <li> <a href="/docs/comparison/econumo-vs-actualbudget/" class="active"> vs Actual Budget </a> </li><li> <a href="/docs/comparison/econumo-vs-ynab/"> vs YNAB </a> </li><li> <a href="/docs/comparison/econumo-vs-firefly-iii/"> vs Firefly III </a> </li><li> <a href="/docs/comparison/econumo-vs-maybe-finance/"> vs Maybe Finance </a> </li><li> <a href="/docs/comparison/econumo-vs-ezbookkeeping/"> vs ezBookkeeping </a> </li><li> <a href="/docs/comparison/econumo-vs-gnucash/"> vs GnuCash </a> </li> </ul>  </li><li> <a href="/docs/faq/"> FAQ </a>   </li><li> <a href="/docs/contact-us/"> Contact Us </a>  <br> </li><li> <a href="/posts/"> Blog </a>   </li><li> <a href="/releases/"> Releases </a>  <br> </li><li> <a href="/docs/legal/privacy-policy/"> Privacy Policy </a>   </li><li> <a href="/docs/legal/terms-of-service/"> Terms of Service </a>  <br> </li> </ul> <ul> <li> <a href="https://github.com/econumo" target="_blank" rel="noopener"> GitHub </a> </li><li> <a href="https://x.com/econumo" target="_blank" rel="noopener"> X (Twitter) </a> </li> </ul> </nav> </div> </aside> <div class="book-page"> <header class="book-header"> <div class="flex align-center justify-between"> <strong>Econumo vs Actual Budget</strong> <label for="toc-control"></label> </div> </header>  <article class="book-article"> <h1 id="econumo-vs-actual-budget">Econumo vs Actual Budget <a class="anchor" href="#econumo-vs-actual-budget">#</a></h1>
+<p>Econumo and Actual Budget are both open-source, self-hostable, envelope-style
+budgeting apps released under the MIT licence. They overlap enough that people
+routinely evaluate one against the other — and they differ enough that the right
+answer is usually obvious once you know which two or three things you care about.</p>
+<p>This page compares them on licence, price, popularity, release history and
+features. Where Actual Budget is the better tool, it says so.</p>
+<blockquote class="book-hint info"><p><strong>The short version</strong></p><p>Choose <strong>Actual Budget</strong> if you bank in a single currency and want automatic bank
+synchronisation, a large community and the most mature open-source budgeting
+codebase available. Choose <strong>Econumo</strong> if you budget in <strong>more than one currency</strong>,
+want <strong>built-in family sharing</strong> without standing up an identity provider, or want a
+<strong>hosted account</strong> you can simply pay for once.</p></blockquote>
+<hr/>
+<h2 id="at-a-glance">At a glance <a class="anchor" href="#at-a-glance">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Actual Budget</th></tr></thead><tbody><tr><td><strong>Licence</strong></td><td>MIT</td><td>MIT</td></tr><tr><td><strong>Self-hosted price</strong></td><td>Free</td><td>Free</td></tr><tr><td><strong>Hosted price</strong></td><td>$20 one-time, per user</td><td>No first-party hosting (PikaPods ≈ $1.50/mo)</td></tr><tr><td><strong>GitHub stars</strong></td><td>79</td><td>27,595</td></tr><tr><td><strong>Contributors</strong></td><td>Small core team</td><td>463</td></tr><tr><td><strong>Releases to date</strong></td><td>24</td><td>59</td></tr><tr><td><strong>In development since</strong></td><td>2020</td><td>2022 as open source</td></tr><tr><td><strong>First public release</strong></td><td>November 2024</td><td>April 2023</td></tr><tr><td><strong>Latest release</strong></td><td>v1.1.1 (19 Jul 2026)</td><td>v26.7.0 (2 Jul 2026)</td></tr><tr><td><strong>Language / stack</strong></td><td>Go, single binary</td><td>TypeScript / Node.js ≥ 22</td></tr><tr><td><strong>Database</strong></td><td>SQLite (default) or PostgreSQL</td><td>SQLite</td></tr><tr><td><strong>Budgeting method</strong></td><td>Envelope</td><td>Envelope / zero-sum</td></tr><tr><td><strong>Multi-currency</strong></td><td>✅ Native, per account</td><td>❌ Not supported</td></tr><tr><td><strong>Family sharing</strong></td><td>✅ Built in, per-item access</td><td>⚠️ Requires external OIDC provider</td></tr><tr><td><strong>Bank sync</strong></td><td>❌ Manual entry + CSV</td><td>✅ 4 active providers</td></tr><tr><td><strong>Mobile</strong></td><td>PWA</td><td>PWA (native apps deprecated)</td></tr><tr><td><strong>End-to-end encryption</strong></td><td>❌</td><td>✅ Optional</td></tr><tr><td><strong>REST API</strong></td><td>✅ OpenAPI / Swagger</td><td>✅ API + CLI</td></tr></tbody></table>
+<p><em>Figures observed 19 July 2026 from the GitHub API and each project’s official
+documentation.</em></p>
+<hr/>
+<h2 id="licence">Licence <a class="anchor" href="#licence">#</a></h2>
+<p>Both projects use the <strong>MIT licence</strong> — among the most permissive licences in
+common use. You can run either commercially, modify either, and neither imposes a
+copyleft obligation on code you build around it.</p>
+<p>This is worth stating plainly because it is a genuine tie, and it distinguishes
+both from AGPL-licensed alternatives such as Firefly III or Ghostfolio, where
+network use of a modified version obliges you to publish your changes.</p>
+<ul>
+<li>Econumo: <a href="https://github.com/econumo/econumo/blob/main/LICENSE">MIT</a></li>
+<li>Actual Budget: <a href="https://github.com/actualbudget/actual/blob/master/LICENSE.txt">MIT</a></li>
+</ul>
+<hr/>
+<h2 id="price">Price <a class="anchor" href="#price">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Actual Budget</th></tr></thead><tbody><tr><td>Self-hosted</td><td><strong>Free</strong></td><td><strong>Free</strong></td></tr><tr><td>Hosted by the project</td><td><strong>$20 one-time</strong>, per user</td><td>Not offered</td></tr><tr><td>Hosted by a partner</td><td>—</td><td>PikaPods, ≈ $1.50/month</td></tr><tr><td>Family plan</td><td>$40 one-time</td><td>—</td></tr><tr><td>Funding model</td><td>Cloud licences + sponsorship</td><td>Donations (Open Collective, GitHub Sponsors)</td></tr></tbody></table>
+<p>Self-hosting either app costs nothing but your own infrastructure. The difference
+is what happens when you would rather not run a server.</p>
+<p>Econumo sells a <strong>hosted cloud account for a single $20 payment per user</strong> (a
+family licence covering several users is $40). There is no subscription and no
+recurring renewal.</p>
+<p>Actual Budget has <strong>no first-party hosted option at all</strong> — a deliberate choice,
+not an oversight. If you want Actual without running Docker yourself, the
+documented route is its hosting partner <a href="https://actualbudget.org/docs/install/pikapods/">PikaPods</a>,
+at roughly $1.50 per month as of November 2025, which works out near $18/year
+recurring and shares revenue back with the project.</p>
+<p>Over five years the hosted paths land at roughly $20 for Econumo against roughly
+$90 for PikaPods-hosted Actual — though PikaPods is a general hosting service and
+that comparison flatters Econumo slightly, since you are also paying for compute.</p>
+<hr/>
+<h2 id="popularity-and-project-health">Popularity and project health <a class="anchor" href="#popularity-and-project-health">#</a></h2>
+<p>This is the category where Actual Budget wins decisively, and pretending
+otherwise would not help you choose.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Actual Budget</th></tr></thead><tbody><tr><td>GitHub stars</td><td>79</td><td><strong>27,595</strong></td></tr><tr><td>Forks</td><td>2</td><td><strong>2,706</strong></td></tr><tr><td>Named contributors</td><td>small core team</td><td><strong>463</strong></td></tr><tr><td>Docker pulls</td><td>not published</td><td><strong>30.9 million</strong></td></tr><tr><td>Open source since</td><td>November 2024</td><td>April 2022</td></tr></tbody></table>
+<p>Actual Budget is one of the most popular open-source personal finance projects in
+existence, with a broad contributor base, an active Discord and Reddit community,
+and a disciplined monthly release train that has not slipped in three years. If
+community size, third-party guides and the odds of the project outliving any one
+maintainer are what matter to you, <strong>Actual Budget is the safer pick.</strong></p>
+<p>Econumo is a far smaller project, though not a newer one. It has been in
+development since 2020, was open-sourced in November 2024, and was rebuilt on Go
+and React for its 1.0 release in July 2026. What its size buys you is a focused
+feature set and fast movement on the specific gaps described below; what it costs
+you is ecosystem.</p>
+<hr/>
+<h2 id="release-history">Release history <a class="anchor" href="#release-history">#</a></h2>
+<p>Both projects ship regularly, on different philosophies.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Actual Budget</th></tr></thead><tbody><tr><td>Total releases</td><td>24</td><td>59</td></tr><tr><td>First public release</td><td>v0.1.0, 16 Nov 2024</td><td>v22.12.9, 17 Apr 2023</td></tr><tr><td>Latest release</td><td>v1.1.1, 19 Jul 2026</td><td>v26.7.0, 2 Jul 2026</td></tr><tr><td>Versioning</td><td>SemVer</td><td>CalVer (<code>YY.M.patch</code>)</td></tr><tr><td>Cadence</td><td>Frequent, feature-driven</td><td>~Monthly, on the 1st–5th</td></tr></tbody></table>
+<p>Actual Budget releases a minor version in the first week of nearly every month —
+20 releases in 2023, 13 in 2024, 16 in 2025 and 10 through July 2026. Econumo
+reached its 1.0 milestone in July 2026 after 20 months of pre-1.0 development and
+ships on a feature-driven cadence.</p>
+<p>Neither project is dormant. Both pushed code the week this page was written.</p>
+<hr/>
+<h2 id="features-head-to-head">Features head to head <a class="anchor" href="#features-head-to-head">#</a></h2>
+<h3 id="budgeting-method--a-genuine-tie">Budgeting method — a genuine tie <a class="anchor" href="#budgeting-method--a-genuine-tie">#</a></h3>
+<p>Both implement <strong>envelope budgeting</strong>: income is assigned to categories, and you
+spend from the category rather than the account. Actual describes its model as a
+“monthly envelope system”; Econumo organises envelopes into folders with limits
+and available amounts. Anyone comfortable in one will recognise the other.</p>
+<p> <img src="/_astro/econumo-budget.qCR5Psvf_MDv5c.webp" alt="Econumo's budget screen — envelope budgeting with folders, limits and available amounts" decoding="async" loading="lazy" width="1080" height="756"></p>
+<p><em>Econumo’s budget view: envelopes grouped into folders, with per-envelope limits.</em></p>
+<p> <img src="/_astro/actualbudget-budget.DYl2c65K_owHXa.webp" alt="Actual Budget's budget screen, showing budgeted, spent and balance columns per category" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><em>Actual Budget’s budget view: categories with Budgeted / Spent / Balance columns
+and a “To Budget” figure. Screenshot from the official public demo.</em></p>
+<p>The layouts are close cousins. The meaningful differences are elsewhere.</p>
+<h3 id="multi-currency--econumos-clearest-advantage">Multi-currency — Econumo’s clearest advantage <a class="anchor" href="#multi-currency--econumos-clearest-advantage">#</a></h3>
+<p>This is the single biggest functional gap between the two, and it is not a close
+call.</p>
+<p><strong>Actual Budget does not support multi-currency.</strong> Its own documentation states
+that the software is
+“<a href="https://actualbudget.org/docs/budgeting/multi-currency/">currency agnostic and does not support multi-currency</a>”.
+The only documented approach is a manual workaround: hold separate accounts per
+currency and convert amounts yourself using rule templating, which is itself an
+experimental feature. There is no per-account currency field, no automatic
+exchange-rate updates and no multi-currency reporting.</p>
+<p>The request is the most-upvoted issue in the repository —
+<a href="https://github.com/actualbudget/actual/issues/1132">#1132</a>, opened in June 2023
+with 328 upvotes — and discussion was still active in April 2026 over how to model
+the data. It does not appear on the
+<a href="https://actualbudget.org/blog/roadmap-for-2026/">2026 roadmap</a>. What has shipped
+so far is cosmetic: v26.1.0 added currency <em>symbols</em> to the budget view, and
+v26.7.0 added three more symbols to the list.</p>
+<p><strong>Econumo supports multiple currencies natively.</strong> Each account has its own fixed
+currency; cross-currency transfers record both amounts; and the budget converts
+everything into a single currency so the totals reconcile. See
+<a href="/docs/user-guide/multi-currency/">Multi-Currency</a> for how it works.</p>
+<p>If you hold money in more than one currency — expats, cross-border families,
+anyone paid in a currency they do not spend — this alone likely decides it.</p>
+<h3 id="family-sharing--built-in-vs-bolted-on">Family sharing — built in vs bolted on <a class="anchor" href="#family-sharing--built-in-vs-bolted-on">#</a></h3>
+<p>Both support more than one person, with very different setup costs.</p>
+<p><strong>Econumo</strong> has sharing as a first-class concept. You connect to another user by
+<a href="/docs/user-guide/shared-access/">invitation</a>, then choose an access level <em>per
+account and per budget</em>. Nothing to install, nothing to configure.</p>
+<p><strong>Actual Budget</strong> supports multi-user, but the
+<a href="https://actualbudget.org/docs/config/multi-user/">documentation</a> requires you to
+run an <strong>external OpenID Connect provider</strong> — Authelia, Authentik, Keycloak or
+similar — next to your Actual server. Without OIDC, the server is protected by one
+shared password, so everyone in the household shares an identity. Two roles exist
+(Basic and Admin), and budget owners grant per-budget access.</p>
+<p>For a technical user who already runs an identity provider, this is fine, even
+preferable. For a couple who want a shared budget on a Raspberry Pi, standing up
+Keycloak is a real barrier.</p>
+<h3 id="bank-synchronisation--actual-budgets-clearest-advantage">Bank synchronisation — Actual Budget’s clearest advantage <a class="anchor" href="#bank-synchronisation--actual-budgets-clearest-advantage">#</a></h3>
+<p>Here the advantage runs the other way, decisively.</p>
+<p><strong>Actual Budget</strong> supports four active bank-sync providers, covering much of the
+world:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Provider</th><th>Region</th><th>Note</th></tr></thead><tbody><tr><td>SimpleFIN Bridge</td><td>North America</td><td>Paid third-party service</td></tr><tr><td>Enable Banking</td><td>Europe</td><td>Added 2026</td></tr><tr><td>Akahu</td><td>New Zealand</td><td>Added v26.7.0, experimental</td></tr><tr><td>Pluggy.ai</td><td>Brazil</td><td></td></tr></tbody></table>
+<p>One caveat if you are in the EU: the older <strong>GoCardless</strong> integration is
+<a href="https://actualbudget.org/docs/advanced/bank-sync/">no longer accepting new accounts</a>,
+so new European users are routed to the newer Enable Banking integration. Every
+provider also requires you to register your own API credentials — Actual brokers
+nothing on your behalf.</p>
+<p><strong>Econumo has no automatic bank import.</strong> This is an explicit product decision
+rather than a missing feature: the <a href="/docs/faq/">FAQ</a> states that automated import
+is not a priority, on the view that manual entry builds a stronger habit of
+attention to spending. <a href="/docs/user-guide/csv-import-export/">CSV import and export</a>
+and the <a href="/docs/api/">REST API</a> are the supported routes for bulk data.</p>
+<p>If automatic transaction import is non-negotiable for you, <strong>choose Actual
+Budget.</strong></p>
+<h3 id="mobile">Mobile <a class="anchor" href="#mobile">#</a></h3>
+<p>Neither project ships a maintained native mobile app.</p>
+<p>Actual Budget’s official mobile applications are <strong>deprecated</strong>, and the archived
+codebase is public; mobile parity is a stated 2026 roadmap goal, which is itself
+an acknowledgement of the current gap. What exists is an installable PWA, plus
+unofficial community clients.</p>
+<p>Econumo is a responsive web app installable to the home screen on
+<a href="/docs/apps/">iPhone, Android, Mac and PC</a>.</p>
+<p>In practice both are “a good mobile website you can pin to your home screen”.</p>
+<h3 id="data-api-and-automation">Data, API and automation <a class="anchor" href="#data-api-and-automation">#</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Actual Budget</th></tr></thead><tbody><tr><td>Import formats</td><td>CSV</td><td>CSV, QIF, OFX, QFX, CAMT.053</td></tr><tr><td>YNAB migration</td><td>❌</td><td>✅ YNAB4 and nYNAB importers</td></tr><tr><td>Export</td><td>CSV</td><td>CSV, full local data file</td></tr><tr><td>REST API</td><td>✅ OpenAPI / Swagger UI</td><td>✅ Node.js API library</td></tr><tr><td>CLI</td><td>❌</td><td>✅ Stable since v26.7.0</td></tr><tr><td>Rules engine</td><td>❌</td><td>✅ Conditions, actions, templating</td></tr><tr><td>End-to-end encryption</td><td>❌</td><td>✅ Optional</td></tr></tbody></table>
+<p>Actual Budget is substantially stronger on data portability and automation. Its
+rules engine, importers and optional end-to-end encryption are mature, and its
+YNAB importers make migration off YNAB genuinely straightforward.</p>
+<p>Econumo’s API is fully documented via Swagger — you can browse it on the
+<a href="https://demo.econumo.com/api/doc">demo instance</a> — but there is no CLI and no
+rules engine today.</p>
+<h3 id="running-it">Running it <a class="anchor" href="#running-it">#</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Actual Budget</th></tr></thead><tbody><tr><td>Stack</td><td>Go, single static binary</td><td>TypeScript on Node.js ≥ 22</td></tr><tr><td>Image</td><td>Distroless Docker image</td><td>Docker image</td></tr><tr><td>Database</td><td>SQLite or PostgreSQL</td><td>SQLite</td></tr><tr><td>Memory footprint</td><td>~10 MB</td><td>Higher (Node runtime)</td></tr><tr><td>Architecture</td><td>Server-rendered API + web app</td><td>Local-first with sync server</td></tr><tr><td>Desktop builds</td><td>—</td><td>Microsoft Store, Flathub</td></tr></tbody></table>
+<p>Econumo ships as <strong>one self-contained Go binary</strong> in a distroless image that
+serves both the API and the web app, runs migrations on boot and uses about 10 MB
+of RAM. On a small VPS or a Raspberry Pi alongside other services, that is a
+meaningful difference.</p>
+<p>Actual Budget’s <strong>local-first architecture</strong> is the more interesting design: your
+data lives on your device <em>and</em> syncs through your server, so the app keeps
+working fully offline and syncs when it reconnects. Econumo requires a reachable
+server.</p>
+<hr/>
+<h2 id="which-should-you-choose">Which should you choose? <a class="anchor" href="#which-should-you-choose">#</a></h2>
+<p><strong>Choose Actual Budget if:</strong></p>
+<ul>
+<li>You budget in a single currency</li>
+<li>Automatic bank synchronisation matters to you</li>
+<li>You want end-to-end encryption or offline-first operation</li>
+<li>You are migrating from YNAB and want an importer</li>
+<li>Community size, contributor count and ecosystem maturity are decisive</li>
+<li>You want a rules engine and CLI for automation</li>
+</ul>
+<p><strong>Choose Econumo if:</strong></p>
+<ul>
+<li>You budget across <strong>multiple currencies</strong></li>
+<li>You want <strong>family sharing that works out of the box</strong>, without running an
+identity provider</li>
+<li>You want a <strong>hosted account for a single $20 payment</strong> rather than self-hosting
+or a subscription</li>
+<li>You are running on constrained hardware and want a ~10 MB single binary</li>
+<li>You prefer deliberate manual entry to automatic import</li>
+</ul>
+<p>Both are MIT-licensed and both let you export your data, so neither choice locks
+you in. If you are undecided, the <a href="https://demo.econumo.com">Econumo demo</a> and the
+<a href="https://demo.actualbudget.org">Actual Budget demo</a> both run in the browser with no
+signup.</p>
+<hr/>
+<h2 id="frequently-asked-questions">Frequently asked questions <a class="anchor" href="#frequently-asked-questions">#</a></h2>
+<h3 id="is-actual-budget-free">Is Actual Budget free? <a class="anchor" href="#is-actual-budget-free">#</a></h3>
+<p>Yes — MIT-licensed and completely free, with no paid tier and no first-party
+hosted plan. Its hosting partner PikaPods charges about $1.50 per month.</p>
+<h3 id="does-actual-budget-support-multiple-currencies">Does Actual Budget support multiple currencies? <a class="anchor" href="#does-actual-budget-support-multiple-currencies">#</a></h3>
+<p>No. The official documentation states it is currency agnostic and does not support
+multi-currency. Only a manual workaround is documented. The request has been the
+most-upvoted issue in the project since 2023 and is not on the 2026 roadmap.</p>
+<h3 id="can-two-people-share-a-budget-in-actual-budget">Can two people share a budget in Actual Budget? <a class="anchor" href="#can-two-people-share-a-budget-in-actual-budget">#</a></h3>
+<p>Yes, but it requires configuring an external OpenID Connect provider such as
+Authelia, Authentik or Keycloak. Without OIDC the server uses a single shared
+password. Econumo has invitation-based sharing with per-item access levels built
+in.</p>
+<h3 id="which-is-better-for-budgeting-in-more-than-one-currency">Which is better for budgeting in more than one currency? <a class="anchor" href="#which-is-better-for-budgeting-in-more-than-one-currency">#</a></h3>
+<p>Econumo. Each account has its own currency, cross-currency transfers record both
+amounts, and the budget converts everything to one currency. Actual Budget does
+not support multi-currency at all.</p>
+<h3 id="does-econumo-have-automatic-bank-synchronisation">Does Econumo have automatic bank synchronisation? <a class="anchor" href="#does-econumo-have-automatic-bank-synchronisation">#</a></h3>
+<p>No. Econumo is manual-entry first, with CSV import and a REST API for bulk data.
+Actual Budget is clearly stronger here.</p>
+<hr/>
+<p><em>Last verified 19 July 2026 against the GitHub API and each project’s official
+documentation. Star counts, release counts and prices change — if you spot
+something out of date, <a href="/docs/contact-us/">let us know</a>.</em></p> </article>  <footer class="book-footer"> <div class="flex flex-wrap justify-between"></div> </footer> <label for="menu-control" class="book-menu-overlay"></label> </div> </main> </div> </div>  <div id="overlay" class="overlay"> <div class="modal-wrapper"> <div class="modal"> <div class="modal-icon"></div> <div id="signup-part-1"> <p class="sub-info">Econumo Cloud</p> <p><span class="font-medium">Sign up now</span> to get product updates and a discount for Econumo Cloud.</p> <form id="waiting-list-form" action="https://api.flowmitry.com/webhook/897714d4-a553-4e70-881b-470ea14be269"> <input type="hidden" name="url" value="https://econumo.com/docs/comparison/econumo-vs-actualbudget/"> <input type="hidden" name="language" value="en"> <input type="hidden" name="price" value="20"> <input type="hidden" name="price-family" value="40"> <div class="gold-input-wrappers"> <input id="waitingListEmail" type="email" name="email" placeholder="Enter your email" autocomplete="off" autocorrect="off" required="required"> <div class="feedback msg-error">Be sure the entered mail is correct</div> <div class="control-wrapper"> <input type="submit" id="send-mail" class="btn btn-large btn-fill btn-yellow plausible-event-name--lead" value="Sign Up"> </div> </div> </form> </div> <div id="signup-part-2" class="hidden"> <p class="heading">Success!</p> <p>Your e-mail has been added to the list. We will keep you posted about Econumo.</p> <p>Meanwhile, you can try the demo right now</p> <div class="btns-wrapper center"> <a href="https://demo.econumo.com" target="_blank" class="btn btn-outline plausible-event-name--demo"> Try Demo </a> </div> </div> </div> </div> </div> <script defer src="/scripts/top-bar.js"></script> <script defer src="/scripts/modal.js"></script><script defer src="/scripts/navigation.js"></script><script defer src="/scripts/mobile.js"></script><script defer src="/scripts/form.js"></script><script defer src="/scripts/book.js"></script> <script defer src="/scripts/search.js"></script> </body> </html>

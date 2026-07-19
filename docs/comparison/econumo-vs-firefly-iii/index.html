@@ -1,0 +1,472 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preload" href="/_astro/plus-jakarta-sans-latin-wght-normal.eXO_dkmS.woff2" as="font" type="font/woff2" crossorigin><title>Econumo vs Firefly III — Econumo</title><meta name="description" content="Econumo and Firefly III compared — licence, price, popularity, release history and features. Envelope budgeting and household sharing against a mature double-entry transaction manager."><link rel="canonical" href="https://econumo.com/docs/comparison/econumo-vs-firefly-iii/"><link rel="shortcut icon" href="/favicon.svg" type="image/png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><meta property="og:site_name" content="Econumo"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Econumo vs Firefly III — Econumo"><meta property="og:description" content="Econumo and Firefly III compared — licence, price, popularity, release history and features. Envelope budgeting and household sharing against a mature double-entry transaction manager."><meta property="og:url" content="https://econumo.com/docs/comparison/econumo-vs-firefly-iii/"><meta property="og:image" content="https://econumo.com/econumo-og-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-07-18T00:00:00.000Z"><meta property="article:modified_time" content="2026-07-18T00:00:00.000Z"><meta property="article:section" content="docs"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Econumo vs Firefly III — Econumo"><meta name="twitter:description" content="Econumo and Firefly III compared — licence, price, popularity, release history and features. Envelope budgeting and household sharing against a mature double-entry transaction manager."><meta name="twitter:image" content="https://econumo.com/econumo-og-image.png"><link rel="alternate" type="application/rss+xml" title="Econumo" href="/index.xml"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Econumo","item":"https://econumo.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://econumo.com/docs/"},{"@type":"ListItem","position":3,"name":"Econumo vs Firefly III","item":"https://econumo.com/docs/comparison/econumo-vs-firefly-iii/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can my partner and I share a budget in Firefly III?","acceptedAnswer":{"@type":"Answer","text":"No. Firefly III supports unlimited users but each administration is locked to a single user with completely separate data. Its official FAQ states that if you want to share your financial administration with your partner you must share the username and password with them. Econumo supports invitation-based sharing with an access level set per account and per budget, so each person keeps their own login."}},{"@type":"Question","name":"Does Firefly III do envelope or zero-based budgeting?","acceptedAnswer":{"@type":"Answer","text":"No. Firefly III is a double-entry transaction manager where budgets are spending caps rather than envelopes you fund. You cannot assign income to a budget to increase it — you must raise the amount manually. The maintainer has written that he considers zero-based budgeting a poor approach and it will not be added."}},{"@type":"Question","name":"Is Firefly III free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Firefly III is free and open source under the AGPL-3.0-or-later licence, self-hosted only, with no official paid or hosted tier. Development is funded through GitHub Sponsors, Patreon, Ko-fi and Liberapay."}},{"@type":"Question","name":"Does Firefly III support multiple currencies?","acceptedAnswer":{"@type":"Answer","text":"Yes, with caveats. It supports unlimited currencies with per-account currencies and mandatory foreign amounts on cross-currency transactions. Automatic exchange rates arrived in v6.2.0 but are off by default, convert only to your primary currency, and fall back to a rate of 1 when data is missing. Budgets ignore foreign amounts entirely — a budget set in EUR is unaffected by USD transactions."}},{"@type":"Question","name":"Which is easier to set up, Econumo or Firefly III?","acceptedAnswer":{"@type":"Answer","text":"Econumo. It is a single Go binary in a Docker image that runs migrations on boot and uses about 10 MB of RAM. Firefly III needs PHP 8.5 with nine extensions, a web server, a database, four post-install artisan commands, a cron job, and a second separate application if you want to import bank data."}}]}]</script><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40"><meta name="color-scheme" content="light dark"><!-- Google Tag Manager --><script>(function(){const GTM_ID = "GTM-MQM3JZ62";
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',GTM_ID);})();</script><!-- End Google Tag Manager --><link rel="stylesheet" href="/_astro/Layout.bLLu7q4w.css"></head> <body> <!-- Google Tag Manager (noscript) --> <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQM3JZ62" height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <div id="topBarWrapper" class="top-bar-wrapper fixed inset-x-0 top-0 z-50"> <div class="top-bar mx-auto max-w-6xl px-5 sm:px-8"> <div class="desktop-wrapper flex h-16 items-center gap-6"> <label for="menu-control" class="menu-icon" aria-label="Documentation"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2 5H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 12H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 19H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> </svg> </label> <nav class="flex flex-1 items-center gap-8"> <a href="/" class="logo menu-link"></a> <div class="nav-wrapper hidden flex-1 items-center justify-end gap-8 min-[961px]:flex"> <ul id="main-nav" class="main-nav part-1 flex items-center gap-7"> <li><a class="menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="menu-link" href="/#sPricing">Pricing</a></li> </ul> <div class="divider h-5 w-px bg-ink/15"></div> <ul class="main-nav part-2 flex items-center"> <li><a href="/docs/">Docs</a></li> </ul> </div> </nav> <div class="btn btn-small btn-fill btn-yellow"> <a href="https://app.econumo.com" target="_blank" class="plausible-event-name--signin"> Sign In </a> </div> <input type="hidden" name="page-lang" id="page-lang" value="en"> </div> <div id="mobile-menu" class="mobile-wrapper"> <div class="mobile-menu-wrapper"> <ul id="mobile-nav" class="mobile-nav part-1"> <li><a class="mobile-menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="mobile-menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="mobile-menu-link" href="/#sPricing">Pricing</a></li> </ul> <ul class="mobile-nav part-2"> <li><a href="/docs/">Docs</a></li> </ul> </div> </div> </div> </div> <div class="main-overlay"></div>  <div class="content-wrapper"> <div class="content"> <input type="checkbox" class="hidden toggle" id="menu-control"> <input type="checkbox" class="hidden toggle" id="toc-control"> <main class="container flex gap-10"> <aside class="book-menu"> <div class="book-menu-content"> <nav> <div class="book-search"> <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"> <div class="book-search-spinner hidden"></div> <ul id="book-search-results"></ul> </div> <ul> <li> <a href="/docs/"> Getting Started </a>   </li><li> <a href="/docs/edition/"> Editions </a>   </li><li> <a href="/docs/user-guide/"> User Guide </a> <ul> <li> <a href="/docs/user-guide/accounts/"> Accounts </a> </li><li> <a href="/docs/user-guide/transactions/"> Transactions </a> </li><li> <a href="/docs/user-guide/classifications/"> Classifications </a> </li><li> <a href="/docs/user-guide/budgets/"> Budgets </a> </li><li> <a href="/docs/user-guide/shared-access/"> Shared access </a> </li><li> <a href="/docs/user-guide/multi-currency/"> Multi-Currency </a> </li><li> <a href="/docs/user-guide/user-profile/"> User profile </a> </li><li> <a href="/docs/user-guide/csv-import-export/"> CSV Import &amp; Export </a> </li> </ul>  </li><li> <a href="/docs/apps/"> Apps </a>   </li><li> <a href="/docs/self-hosting/"> Self-Hosting </a> <ul> <li> <a href="/docs/self-hosting/multi-currency/"> Multi-Currency Support </a> </li><li> <a href="/docs/self-hosting/backups/"> Backups </a> </li><li> <a href="/docs/self-hosting/cli-commands/"> CLI commands </a> </li><li> <a href="/docs/self-hosting/debug/"> Debug </a> </li> </ul>  </li><li> <a href="/docs/api/"> API </a>   </li><li> <a href="/docs/comparison/"> Econumo compared </a> <ul> <li> <a href="/docs/comparison/econumo-vs-actualbudget/"> vs Actual Budget </a> </li><li> <a href="/docs/comparison/econumo-vs-ynab/"> vs YNAB </a> </li><li> <a href="/docs/comparison/econumo-vs-firefly-iii/" class="active"> vs Firefly III </a> </li><li> <a href="/docs/comparison/econumo-vs-maybe-finance/"> vs Maybe Finance </a> </li><li> <a href="/docs/comparison/econumo-vs-ezbookkeeping/"> vs ezBookkeeping </a> </li><li> <a href="/docs/comparison/econumo-vs-gnucash/"> vs GnuCash </a> </li> </ul>  </li><li> <a href="/docs/faq/"> FAQ </a>   </li><li> <a href="/docs/contact-us/"> Contact Us </a>  <br> </li><li> <a href="/posts/"> Blog </a>   </li><li> <a href="/releases/"> Releases </a>  <br> </li><li> <a href="/docs/legal/privacy-policy/"> Privacy Policy </a>   </li><li> <a href="/docs/legal/terms-of-service/"> Terms of Service </a>  <br> </li> </ul> <ul> <li> <a href="https://github.com/econumo" target="_blank" rel="noopener"> GitHub </a> </li><li> <a href="https://x.com/econumo" target="_blank" rel="noopener"> X (Twitter) </a> </li> </ul> </nav> </div> </aside> <div class="book-page"> <header class="book-header"> <div class="flex align-center justify-between"> <strong>Econumo vs Firefly III</strong> <label for="toc-control"></label> </div> </header>  <article class="book-article"> <h1 id="econumo-vs-firefly-iii">Econumo vs Firefly III <a class="anchor" href="#econumo-vs-firefly-iii">#</a></h1>
+<p>Firefly III is the most established self-hosted personal finance manager there is —
+in development since 2012, with 24,000 GitHub stars and 27 million Docker pulls.
+If you have searched for self-hosted finance software, you have met it.</p>
+<p>It is also, by its author’s own description, <strong>a double-entry bookkeeping system
+rather than a budgeting app</strong> — and it is <strong>strictly single-user</strong>. Those two facts
+decide most comparisons with Econumo.</p>
+<blockquote class="book-hint info"><p><strong>The short version</strong></p><p>Choose <strong>Firefly III</strong> if you want a mature, deeply featured transaction manager
+with double-entry rigour, rich reporting and a huge community — and you are the
+only person who will use it.
+Choose <strong>Econumo</strong> if you want <strong>envelope budgeting</strong> rather than spending caps, or
+if you want to <strong>share a budget with your partner without sharing a password</strong>.
+Firefly III’s own FAQ recommends password-sharing for couples; Econumo has proper
+per-user sharing.</p></blockquote>
+<hr/>
+<h2 id="at-a-glance">At a glance <a class="anchor" href="#at-a-glance">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Firefly III</th></tr></thead><tbody><tr><td><strong>Licence</strong></td><td>MIT</td><td>AGPL-3.0-or-later</td></tr><tr><td><strong>Price</strong></td><td>Free self-hosted; $20 one-time cloud</td><td>Free, self-host only</td></tr><tr><td><strong>GitHub stars</strong></td><td>79</td><td>24,070</td></tr><tr><td><strong>Forks</strong></td><td>2</td><td>2,229</td></tr><tr><td><strong>Contributors</strong></td><td>small core team</td><td>177 (89% of commits by one person)</td></tr><tr><td><strong>Docker pulls</strong></td><td>not published</td><td>27.5 million</td></tr><tr><td><strong>Releases to date</strong></td><td>24</td><td>329</td></tr><tr><td><strong>In development since</strong></td><td>2020</td><td>2012</td></tr><tr><td><strong>First public release</strong></td><td>November 2024</td><td>October 2014</td></tr><tr><td><strong>Latest release</strong></td><td>v1.1.1 (19 Jul 2026)</td><td>v6.6.6 (1 Jul 2026)</td></tr><tr><td><strong>Cadence</strong></td><td>Feature-driven</td><td>~45 releases in the last 12 months</td></tr><tr><td><strong>Stack</strong></td><td>Go, single binary</td><td>PHP ≥ 8.5, Laravel 13</td></tr><tr><td><strong>Database</strong></td><td>SQLite or PostgreSQL</td><td>MySQL, MariaDB, PostgreSQL, SQLite</td></tr><tr><td><strong>Memory footprint</strong></td><td>~10 MB</td><td>Full PHP/web-server stack</td></tr><tr><td><strong>Budgeting model</strong></td><td>Envelope</td><td>Spending caps on a double-entry ledger</td></tr><tr><td><strong>Zero-based budgeting</strong></td><td>✅</td><td>❌ Explicitly declined</td></tr><tr><td><strong>Household sharing</strong></td><td>✅ Per-item access levels</td><td>❌ “Share the username and password”</td></tr><tr><td><strong>Multi-currency</strong></td><td>✅ Converts into one budget currency</td><td>⚠️ Yes, but budgets ignore foreign amounts</td></tr><tr><td><strong>Bank sync</strong></td><td>❌ CSV import</td><td>⚠️ Separate app; EU providers contracting</td></tr><tr><td><strong>Mobile</strong></td><td>PWA</td><td>❌ No official app; community apps only</td></tr><tr><td><strong>API</strong></td><td>✅ REST + Swagger</td><td>✅ Extensive REST + webhooks</td></tr></tbody></table>
+<p><em>Figures observed 18 July 2026 from the GitHub API, Docker Hub and Firefly III’s
+official documentation.</em></p>
+<hr/>
+<h2 id="licence--the-one-real-legal-difference">Licence — the one real legal difference <a class="anchor" href="#licence--the-one-real-legal-difference">#</a></h2>
+<p>Econumo is <strong>MIT</strong>. Firefly III is <strong>AGPL-3.0-or-later</strong>.</p>
+<p>The AGPL is the strongest common copyleft licence: if you modify Firefly III and
+let others use it <strong>over a network</strong>, you must publish your modifications. For a
+household running it privately this changes nothing. For anyone building a service
+on top, it is a serious constraint that MIT does not impose.</p>
+<hr/>
+<h2 id="price">Price <a class="anchor" href="#price">#</a></h2>
+<p>Both are free to self-host. Firefly III has <strong>no official paid tier and no
+official hosted service</strong> — self-hosting is the only supported model. It is funded
+through GitHub Sponsors, Patreon, Ko-fi and Liberapay, and the author describes it
+plainly as <em>“a side gig.”</em></p>
+<p>Econumo’s self-hosted edition is likewise free, with an optional hosted account at
+<strong>$20 one-time per user</strong> for those who would rather not run a server. Firefly III
+has no equivalent — third-party hosts list it, but that is not a project offering.</p>
+<hr/>
+<h2 id="popularity-and-project-health">Popularity and project health <a class="anchor" href="#popularity-and-project-health">#</a></h2>
+<p>Firefly III is far more established, and the numbers are not close.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Firefly III</th></tr></thead><tbody><tr><td>GitHub stars</td><td>79</td><td><strong>24,070</strong></td></tr><tr><td>Forks</td><td>2</td><td><strong>2,229</strong></td></tr><tr><td>Docker pulls</td><td>not published</td><td><strong>27.5 million</strong></td></tr><tr><td>In development since</td><td>2020</td><td><strong>2012</strong></td></tr><tr><td>Releases</td><td>24</td><td><strong>329</strong></td></tr></tbody></table>
+<p>If longevity and community size are what you are optimising for, Firefly III wins
+comfortably.</p>
+<p>One thing to weigh alongside that, in fairness to both projects: Firefly III’s
+development is <strong>overwhelmingly one person</strong>. James Cole has authored roughly
+20,800 of the repository’s commits — about 89% — and the next most active human
+contributor has 131. Of the last 100 commits, 68 were his, 31 were bots, and one
+was from anyone else. The project is very actively maintained and ships roughly
+every eight days, but its bus factor is 1, and the author is candid that it is a
+side project.</p>
+<p>That is not a criticism so much as context: a large star count does not
+automatically mean a large maintenance team.</p>
+<hr/>
+<h2 id="release-history">Release history <a class="anchor" href="#release-history">#</a></h2>
+<p>Firefly III has one of the most prolific release records in the category: <strong>329
+releases since October 2014</strong>, averaging around 28 stable releases a year over its
+lifetime and accelerating to <strong>45 in the last twelve months</strong> — roughly one every
+eight days.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Firefly III</th></tr></thead><tbody><tr><td>Total releases</td><td>24</td><td>329</td></tr><tr><td>First public release</td><td>16 Nov 2024</td><td>14 Oct 2014</td></tr><tr><td>Latest release</td><td>v1.1.1, 19 Jul 2026</td><td>v6.6.6, 1 Jul 2026</td></tr></tbody></table>
+<p>The flip side of that cadence is an upgrade treadmill. Firefly III moved from PHP
+8.3 to <strong>PHP 8.5</strong> within about eighteen months, dropped Docker support for
+<code>linux/arm/v7</code>, <code>linux/arm/v8</code> and <code>linux/386</code> in 6.2.0, and has renamed core
+concepts across recent versions. Its own 6.2.0 release note says: <em>“I expect you
+will run into issue, and I appreciate your feedback and your patience as I fix
+them.”</em></p>
+<hr/>
+<h2 id="budgeting--the-philosophical-difference">Budgeting — the philosophical difference <a class="anchor" href="#budgeting--the-philosophical-difference">#</a></h2>
+<p>This is the most important section on the page, and it is not a matter of one
+being more polished than the other. <strong>They disagree about what budgeting is.</strong></p>
+<p><strong>Firefly III does not do envelope or zero-based budgeting, by design.</strong> A budget
+there is, in the docs’ own words, <em>“just another identifier to link withdrawals
+together”</em>, optionally with a date range and an amount — a <strong>spending cap</strong>, not an
+envelope you fund.</p>
+<p>The clearest proof is this line from the
+<a href="https://docs.firefly-iii.org/explanation/financial-concepts/budgets/">budgets documentation</a>:</p>
+<blockquote>
+<p>“You cannot assign income to a budget to automatically increase the budgets
+amount. If you have more money available for the budget, you must increase the
+budget manually.”</p>
+</blockquote>
+<p>That is the exact inverse of envelope budgeting, where income is what fills the
+envelopes. Overspending is also not enforced — the budget simply depletes and
+<em>“Firefly III will not complain.”</em> Rollover exists only as a cron-driven
+“auto-budget” mode, not as native carryover.</p>
+<p>The maintainer has stated his position directly, on a page flagged as personal
+opinion:</p>
+<blockquote>
+<p>“Zero based budgeting is a method of budgeting that focuses on giving each Euro
+a goal. … I believe this approach is pretty terrible.”</p>
+</blockquote>
+<p>So this will not change. If you have come from YNAB and want that workflow,
+Firefly III is explicitly not offering it.</p>
+<p><strong>Econumo is envelope-first.</strong> <a href="/docs/user-guide/budgets/">Budgets</a> are the primary
+object: income is assigned to envelopes grouped in folders, with limits, available
+amounts and rollover.</p>
+<p> <img src="/_astro/econumo-budget.qCR5Psvf_MDv5c.webp" alt="Econumo's budget screen — envelope budgeting with folders, limits and available amounts" decoding="async" loading="lazy" width="1080" height="756"></p>
+<p><em>Econumo’s envelope budget: money assigned into envelopes, not spending caps
+attached to a ledger.</em></p>
+<p>Neither model is wrong. But they suit different people, and the choice between
+them is the choice between these two apps.</p>
+<hr/>
+<h2 id="household-sharing--firefly-iiis-hardest-limit">Household sharing — Firefly III’s hardest limit <a class="anchor" href="#household-sharing--firefly-iiis-hardest-limit">#</a></h2>
+<p>Firefly III supports unlimited <strong>users</strong>, each with a completely separate financial
+administration. What it does not support is two people sharing one.</p>
+<p>From the <a href="https://docs.firefly-iii.org/how-to/firefly-iii/features/multi-user/">official multi-user documentation</a>:</p>
+<blockquote>
+<p>“Can I share my administration with other users? At the moment, you cannot.
+Sorry about that. … This is a big project and will take a while.”</p>
+</blockquote>
+<p>And from the <a href="https://docs.firefly-iii.org/references/faq/firefly-iii/general/">FAQ</a>:</p>
+<blockquote>
+<p>“Each administration is tightly locked to a single user. If you want to share
+your financial administration with your partner or somebody else, <strong>you must
+share the username and password with them.</strong>”</p>
+</blockquote>
+<p>The author has explained why it is unlikely to change soon: roughly 95% of the
+codebase would be affected, since every query is scoped to a single user ID. Asked
+in 2021 whether household use really required sharing credentials, his answer was
+<em>“Indeed. I advise a password manager with a shared vault.”</em> The request dates back
+to 2016 and still ships as “at the moment, you cannot” as of July 2026.</p>
+<p><strong>Econumo was built for this case.</strong> You
+<a href="/docs/user-guide/shared-access/">connect by invitation</a> and set an access level
+<strong>per account and per budget</strong>. Each person has their own login, their own
+password, and sees exactly what you have shared.</p>
+<p>For a couple or a family, this is the single biggest practical difference between
+the two applications.</p>
+<hr/>
+<h2 id="multi-currency--both-support-it-differently">Multi-currency — both support it, differently <a class="anchor" href="#multi-currency--both-support-it-differently">#</a></h2>
+<p>Firefly III’s multi-currency support is genuinely substantial: unlimited
+currencies, a currency per asset account, and mandatory foreign amounts on
+cross-currency transactions. Automatic exchange rates arrived in <strong>v6.2.0</strong>
+(January 2025).</p>
+<p>There are real caveats worth knowing before relying on it:</p>
+<ul>
+<li>Exchange rates are <strong>off by default</strong> and need a working cron job</li>
+<li>Conversion runs <strong>one way only</strong>, into your primary currency</li>
+<li>If a rate is missing, Firefly III <strong>silently uses 1</strong></li>
+<li>No historical rates</li>
+<li>Maximum 8 decimal places, so most cryptocurrencies are impractical</li>
+<li><strong>Budgets ignore foreign amounts entirely</strong> — per the docs, <em>“A budget with the
+amount set to EUR 100 will not be influenced by transactions in USD, even when
+those transactions are linked to the budget.”</em> You must set a separate budget
+amount per currency.</li>
+</ul>
+<p>That last point matters most here: Firefly III is multi-currency at the <em>ledger</em>
+level, but its <em>budgets</em> are not.</p>
+<p><strong>Econumo converts everything into a single budget currency</strong>, so a multi-currency
+household sees one set of totals that reconcile — see
+<a href="/docs/user-guide/multi-currency/">Multi-Currency</a>. Firefly III’s ledger is the
+more powerful accounting tool; Econumo’s budget is the more usable multi-currency
+budget.</p>
+<hr/>
+<h2 id="bank-import">Bank import <a class="anchor" href="#bank-import">#</a></h2>
+<p>Neither project is in a strong position here, but for different reasons.</p>
+<p><strong>Firefly III</strong> imports through the <strong>Data Importer, a completely separate
+application</strong> with its own installation, Docker image, upgrade cycle and OAuth
+wiring. It reads CSV and CAMT.053 files, and connects to Enable Banking (2,500+
+banks across 29 European countries), SimpleFIN and Lunch Flow (paid).</p>
+<p>Two of its longest-standing providers are going away: <strong>Salt Edge ended free-tier
+access for Firefly III users on 31 October 2025</strong>, and <strong>GoCardless is shifting
+away from its bank-account-data product</strong>. European bank sync is mid-migration to
+Enable Banking.</p>
+<p>The docs are candid about the experience — <em>“Importing data from your bank and
+doing this automatically is not that easy with Firefly III”</em> — and note that
+imported transactions probably will not match ones you entered manually. Docker
+pull counts suggest many users skip the importer entirely: 12.3M pulls against
+27.5M for the core image.</p>
+<p><strong>Econumo</strong> has no automatic bank import at all — a
+<a href="/docs/faq/">deliberate decision</a> — with
+<a href="/docs/user-guide/csv-import-export/">CSV import/export</a> and a
+<a href="/docs/api/">REST API</a> instead.</p>
+<p>So: Firefly III can sync from banks and Econumo cannot, but Firefly III’s bank sync
+costs you a second application to run and is contracting in Europe.</p>
+<hr/>
+<h2 id="setup-and-running-cost">Setup and running cost <a class="anchor" href="#setup-and-running-cost">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>Firefly III</th></tr></thead><tbody><tr><td>Runtime</td><td>Single Go binary, distroless image</td><td>PHP ≥ 8.5 + web server</td></tr><tr><td>Extensions needed</td><td>none</td><td>BCMath, intl, curl, zip, libsodium, GD, XML, MBString, DB driver</td></tr><tr><td>Post-install steps</td><td>migrations run on boot</td><td>four <code>php artisan</code> commands</td></tr><tr><td>Cron job</td><td>not required</td><td>effectively required</td></tr><tr><td>Import tooling</td><td>built in</td><td>separate application</td></tr><tr><td>Memory</td><td>~10 MB</td><td>full PHP stack</td></tr></tbody></table>
+<p>Firefly III’s own documentation states it is <em>“geared towards tech-savvy users”</em>
+and that you should be someone who <em>“doesn’t mind tinkering with self-hosted
+servers.”</em> That is an accurate and honest self-description.</p>
+<p>Econumo pulls one image, runs its migrations on boot and uses about 10 MB of RAM.</p>
+<hr/>
+<h2 id="mobile">Mobile <a class="anchor" href="#mobile">#</a></h2>
+<p><strong>Firefly III has never shipped an official mobile app.</strong> Its documentation lists
+community apps — Waterfly III (Android), Abacus (iOS and Android), Photuris III,
+Firefly-Pico and others — several actively maintained, one officially flagged as
+dead since January 2020. The project positions its REST API as the mobile story.</p>
+<p><strong>Econumo</strong> is a responsive web app installable to the home screen on
+<a href="/docs/apps/">iPhone, Android, Mac and PC</a>.</p>
+<hr/>
+<h2 id="where-firefly-iii-is-better">Where Firefly III is better <a class="anchor" href="#where-firefly-iii-is-better">#</a></h2>
+<ul>
+<li><strong>Maturity</strong> — fourteen years of development, 329 releases, 27.5M Docker pulls</li>
+<li><strong>Double-entry rigour</strong> — a real accounting ledger, which Econumo is not</li>
+<li><strong>Reporting depth</strong> — far more extensive</li>
+<li><strong>Bank sync</strong> — Econumo has none at all</li>
+<li><strong>Import formats</strong> and a large third-party ecosystem</li>
+<li><strong>API surface</strong> — extremely broad, plus first-class webhooks</li>
+<li><strong>Community</strong> — vastly larger, with abundant third-party guides</li>
+</ul>
+<h2 id="where-econumo-is-better">Where Econumo is better <a class="anchor" href="#where-econumo-is-better">#</a></h2>
+<ul>
+<li><strong>Envelope budgeting</strong> — Firefly III declines to offer it</li>
+<li><strong>Household sharing</strong> — proper per-user access instead of a shared password</li>
+<li><strong>Multi-currency budgeting</strong> — budgets that actually combine currencies</li>
+<li><strong>Setup</strong> — one small binary versus a PHP stack, cron job and second app</li>
+<li><strong>Licence</strong> — MIT rather than AGPL</li>
+<li><strong>Hosted option</strong> — $20 one-time, or self-host free</li>
+</ul>
+<hr/>
+<h2 id="which-should-you-choose">Which should you choose? <a class="anchor" href="#which-should-you-choose">#</a></h2>
+<p><strong>Choose Firefly III if:</strong></p>
+<ul>
+<li>You want a full double-entry ledger and detailed financial reporting</li>
+<li>You are budgeting alone and will never need to share</li>
+<li>You want spending caps rather than funded envelopes</li>
+<li>You want bank sync and are willing to run a second application for it</li>
+<li>You are comfortable maintaining a PHP application</li>
+<li>Project maturity and ecosystem size are decisive</li>
+</ul>
+<p><strong>Choose Econumo if:</strong></p>
+<ul>
+<li>You want <strong>envelope budgeting</strong></li>
+<li>You want to <strong>share a budget with your household</strong>, each person with their own login</li>
+<li>You want <strong>multi-currency budgets</strong> that combine into one set of totals</li>
+<li>You want a small, simple deployment</li>
+<li>You want the option of a hosted account for a single $20 payment</li>
+</ul>
+<p>Try the <a href="https://demo.econumo.com">Econumo demo</a> or the
+<a href="https://demo.firefly-iii.org">Firefly III demo</a> — both run in a browser.</p>
+<hr/>
+<h2 id="frequently-asked-questions">Frequently asked questions <a class="anchor" href="#frequently-asked-questions">#</a></h2>
+<h3 id="can-my-partner-and-i-share-a-budget-in-firefly-iii">Can my partner and I share a budget in Firefly III? <a class="anchor" href="#can-my-partner-and-i-share-a-budget-in-firefly-iii">#</a></h3>
+<p>No. Each administration is locked to one user, and the official FAQ says you must
+share the username and password. Econumo has invitation-based sharing with
+per-account and per-budget access levels.</p>
+<h3 id="does-firefly-iii-do-envelope-or-zero-based-budgeting">Does Firefly III do envelope or zero-based budgeting? <a class="anchor" href="#does-firefly-iii-do-envelope-or-zero-based-budgeting">#</a></h3>
+<p>No. Budgets are spending caps on a double-entry ledger; you cannot assign income to
+a budget. The maintainer has written that he considers zero-based budgeting a poor
+approach and will not add it.</p>
+<h3 id="is-firefly-iii-free">Is Firefly III free? <a class="anchor" href="#is-firefly-iii-free">#</a></h3>
+<p>Yes — AGPL-3.0-or-later, self-hosted only, funded by sponsorship. There is no
+official hosted tier.</p>
+<h3 id="does-firefly-iii-support-multiple-currencies">Does Firefly III support multiple currencies? <a class="anchor" href="#does-firefly-iii-support-multiple-currencies">#</a></h3>
+<p>Yes at the ledger level, with caveats: rates are off by default, convert only into
+your primary currency, and fall back to 1 when missing. Budgets ignore foreign
+amounts entirely.</p>
+<h3 id="which-is-easier-to-set-up">Which is easier to set up? <a class="anchor" href="#which-is-easier-to-set-up">#</a></h3>
+<p>Econumo — a single Go binary using about 10 MB of RAM. Firefly III needs PHP 8.5
+with nine extensions, a database, four post-install commands, a cron job, and a
+second application for imports.</p>
+<hr/>
+<p><em>Last verified 18–19 July 2026 against the GitHub API, Docker Hub and Firefly III’s
+official documentation. If you spot something out of date,
+<a href="/docs/contact-us/">let us know</a>.</em></p> </article>  <footer class="book-footer"> <div class="flex flex-wrap justify-between"></div> </footer> <label for="menu-control" class="book-menu-overlay"></label> </div> </main> </div> </div>  <div id="overlay" class="overlay"> <div class="modal-wrapper"> <div class="modal"> <div class="modal-icon"></div> <div id="signup-part-1"> <p class="sub-info">Econumo Cloud</p> <p><span class="font-medium">Sign up now</span> to get product updates and a discount for Econumo Cloud.</p> <form id="waiting-list-form" action="https://api.flowmitry.com/webhook/897714d4-a553-4e70-881b-470ea14be269"> <input type="hidden" name="url" value="https://econumo.com/docs/comparison/econumo-vs-firefly-iii/"> <input type="hidden" name="language" value="en"> <input type="hidden" name="price" value="20"> <input type="hidden" name="price-family" value="40"> <div class="gold-input-wrappers"> <input id="waitingListEmail" type="email" name="email" placeholder="Enter your email" autocomplete="off" autocorrect="off" required="required"> <div class="feedback msg-error">Be sure the entered mail is correct</div> <div class="control-wrapper"> <input type="submit" id="send-mail" class="btn btn-large btn-fill btn-yellow plausible-event-name--lead" value="Sign Up"> </div> </div> </form> </div> <div id="signup-part-2" class="hidden"> <p class="heading">Success!</p> <p>Your e-mail has been added to the list. We will keep you posted about Econumo.</p> <p>Meanwhile, you can try the demo right now</p> <div class="btns-wrapper center"> <a href="https://demo.econumo.com" target="_blank" class="btn btn-outline plausible-event-name--demo"> Try Demo </a> </div> </div> </div> </div> </div> <script defer src="/scripts/top-bar.js"></script> <script defer src="/scripts/modal.js"></script><script defer src="/scripts/navigation.js"></script><script defer src="/scripts/mobile.js"></script><script defer src="/scripts/form.js"></script><script defer src="/scripts/book.js"></script> <script defer src="/scripts/search.js"></script> </body> </html>

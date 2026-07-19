@@ -1,0 +1,328 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preload" href="/_astro/plus-jakarta-sans-latin-wght-normal.eXO_dkmS.woff2" as="font" type="font/woff2" crossorigin><title>Econumo vs ezBookkeeping — Econumo</title><meta name="description" content="Econumo and ezBookkeeping compared — two lightweight, MIT-licensed, self-hosted Go finance apps. Licence, price, popularity, releases and the two features that decide it: budgeting and household sharing."><link rel="canonical" href="https://econumo.com/docs/comparison/econumo-vs-ezbookkeeping/"><link rel="shortcut icon" href="/favicon.svg" type="image/png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><meta property="og:site_name" content="Econumo"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Econumo vs ezBookkeeping — Econumo"><meta property="og:description" content="Econumo and ezBookkeeping compared — two lightweight, MIT-licensed, self-hosted Go finance apps. Licence, price, popularity, releases and the two features that decide it: budgeting and household sharing."><meta property="og:url" content="https://econumo.com/docs/comparison/econumo-vs-ezbookkeeping/"><meta property="og:image" content="https://econumo.com/econumo-og-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-07-18T00:00:00.000Z"><meta property="article:modified_time" content="2026-07-18T00:00:00.000Z"><meta property="article:section" content="docs"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Econumo vs ezBookkeeping — Econumo"><meta name="twitter:description" content="Econumo and ezBookkeeping compared — two lightweight, MIT-licensed, self-hosted Go finance apps. Licence, price, popularity, releases and the two features that decide it: budgeting and household sharing."><meta name="twitter:image" content="https://econumo.com/econumo-og-image.png"><link rel="alternate" type="application/rss+xml" title="Econumo" href="/index.xml"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Econumo","item":"https://econumo.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://econumo.com/docs/"},{"@type":"ListItem","position":3,"name":"Econumo vs ezBookkeeping","item":"https://econumo.com/docs/comparison/econumo-vs-ezbookkeeping/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does ezBookkeeping have budgeting?","acceptedAnswer":{"@type":"Answer","text":"No. ezBookkeeping does not support budgeting of any kind — not envelope budgeting, not category budgets. Its own official comparison page lists budgeting as not supported, there is no budget entity in its data model, and several budget feature requests have been closed without implementation. It is designed as a retrospective bookkeeping and analytics tool."}},{"@type":"Question","name":"Can a couple share a budget in ezBookkeeping?","acceptedAnswer":{"@type":"Answer","text":"No. ezBookkeeping supports multiple user accounts on one instance, but each user has completely separate data — there is no shared ledger, no co-owned account and no cross-user aggregation. The maintainer has stated that cross-user aggregation is not planned because accounts, categories and tags are scoped to individual users. Econumo supports invitation-based sharing with an access level per account and per budget."}},{"@type":"Question","name":"Is ezBookkeeping open source and free?","acceptedAnswer":{"@type":"Answer","text":"Yes. ezBookkeeping is MIT-licensed and free, with no paid features. The project states it does not accept donations or sponsorships, and there is no official hosted service — self-hosting only."}},{"@type":"Question","name":"Which uses fewer resources, Econumo or ezBookkeeping?","acceptedAnswer":{"@type":"Answer","text":"Both are exceptionally light. Econumo ships as a single distroless Go binary using around 10 MB of RAM. ezBookkeeping reports roughly 30 MiB of RAM for a single user. Either runs comfortably on a Raspberry Pi or a small NAS."}}]}]</script><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40"><meta name="color-scheme" content="light dark"><!-- Google Tag Manager --><script>(function(){const GTM_ID = "GTM-MQM3JZ62";
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',GTM_ID);})();</script><!-- End Google Tag Manager --><link rel="stylesheet" href="/_astro/Layout.bLLu7q4w.css"></head> <body> <!-- Google Tag Manager (noscript) --> <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQM3JZ62" height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <div id="topBarWrapper" class="top-bar-wrapper fixed inset-x-0 top-0 z-50"> <div class="top-bar mx-auto max-w-6xl px-5 sm:px-8"> <div class="desktop-wrapper flex h-16 items-center gap-6"> <label for="menu-control" class="menu-icon" aria-label="Documentation"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2 5H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 12H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 19H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> </svg> </label> <nav class="flex flex-1 items-center gap-8"> <a href="/" class="logo menu-link"></a> <div class="nav-wrapper hidden flex-1 items-center justify-end gap-8 min-[961px]:flex"> <ul id="main-nav" class="main-nav part-1 flex items-center gap-7"> <li><a class="menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="menu-link" href="/#sPricing">Pricing</a></li> </ul> <div class="divider h-5 w-px bg-ink/15"></div> <ul class="main-nav part-2 flex items-center"> <li><a href="/docs/">Docs</a></li> </ul> </div> </nav> <div class="btn btn-small btn-fill btn-yellow"> <a href="https://app.econumo.com" target="_blank" class="plausible-event-name--signin"> Sign In </a> </div> <input type="hidden" name="page-lang" id="page-lang" value="en"> </div> <div id="mobile-menu" class="mobile-wrapper"> <div class="mobile-menu-wrapper"> <ul id="mobile-nav" class="mobile-nav part-1"> <li><a class="mobile-menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="mobile-menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="mobile-menu-link" href="/#sPricing">Pricing</a></li> </ul> <ul class="mobile-nav part-2"> <li><a href="/docs/">Docs</a></li> </ul> </div> </div> </div> </div> <div class="main-overlay"></div>  <div class="content-wrapper"> <div class="content"> <input type="checkbox" class="hidden toggle" id="menu-control"> <input type="checkbox" class="hidden toggle" id="toc-control"> <main class="container flex gap-10"> <aside class="book-menu"> <div class="book-menu-content"> <nav> <div class="book-search"> <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"> <div class="book-search-spinner hidden"></div> <ul id="book-search-results"></ul> </div> <ul> <li> <a href="/docs/"> Getting Started </a>   </li><li> <a href="/docs/edition/"> Editions </a>   </li><li> <a href="/docs/user-guide/"> User Guide </a> <ul> <li> <a href="/docs/user-guide/accounts/"> Accounts </a> </li><li> <a href="/docs/user-guide/transactions/"> Transactions </a> </li><li> <a href="/docs/user-guide/classifications/"> Classifications </a> </li><li> <a href="/docs/user-guide/budgets/"> Budgets </a> </li><li> <a href="/docs/user-guide/shared-access/"> Shared access </a> </li><li> <a href="/docs/user-guide/multi-currency/"> Multi-Currency </a> </li><li> <a href="/docs/user-guide/user-profile/"> User profile </a> </li><li> <a href="/docs/user-guide/csv-import-export/"> CSV Import &amp; Export </a> </li> </ul>  </li><li> <a href="/docs/apps/"> Apps </a>   </li><li> <a href="/docs/self-hosting/"> Self-Hosting </a> <ul> <li> <a href="/docs/self-hosting/multi-currency/"> Multi-Currency Support </a> </li><li> <a href="/docs/self-hosting/backups/"> Backups </a> </li><li> <a href="/docs/self-hosting/cli-commands/"> CLI commands </a> </li><li> <a href="/docs/self-hosting/debug/"> Debug </a> </li> </ul>  </li><li> <a href="/docs/api/"> API </a>   </li><li> <a href="/docs/comparison/"> Econumo compared </a> <ul> <li> <a href="/docs/comparison/econumo-vs-actualbudget/"> vs Actual Budget </a> </li><li> <a href="/docs/comparison/econumo-vs-ynab/"> vs YNAB </a> </li><li> <a href="/docs/comparison/econumo-vs-firefly-iii/"> vs Firefly III </a> </li><li> <a href="/docs/comparison/econumo-vs-maybe-finance/"> vs Maybe Finance </a> </li><li> <a href="/docs/comparison/econumo-vs-ezbookkeeping/" class="active"> vs ezBookkeeping </a> </li><li> <a href="/docs/comparison/econumo-vs-gnucash/"> vs GnuCash </a> </li> </ul>  </li><li> <a href="/docs/faq/"> FAQ </a>   </li><li> <a href="/docs/contact-us/"> Contact Us </a>  <br> </li><li> <a href="/posts/"> Blog </a>   </li><li> <a href="/releases/"> Releases </a>  <br> </li><li> <a href="/docs/legal/privacy-policy/"> Privacy Policy </a>   </li><li> <a href="/docs/legal/terms-of-service/"> Terms of Service </a>  <br> </li> </ul> <ul> <li> <a href="https://github.com/econumo" target="_blank" rel="noopener"> GitHub </a> </li><li> <a href="https://x.com/econumo" target="_blank" rel="noopener"> X (Twitter) </a> </li> </ul> </nav> </div> </aside> <div class="book-page"> <header class="book-header"> <div class="flex align-center justify-between"> <strong>Econumo vs ezBookkeeping</strong> <label for="toc-control"></label> </div> </header>  <article class="book-article"> <h1 id="econumo-vs-ezbookkeeping">Econumo vs ezBookkeeping <a class="anchor" href="#econumo-vs-ezbookkeeping">#</a></h1>
+<p>Of everything in the self-hosted personal finance space, <strong>ezBookkeeping is
+Econumo’s closest technical twin.</strong> Both are written in Go, both are MIT-licensed,
+both ship as a lightweight self-hosted Docker container, both run on SQLite or
+PostgreSQL, and both are built to run on hardware as small as a Raspberry Pi.</p>
+<p>They are, however, built for two different jobs — and the difference is unusually
+clean-cut.</p>
+<blockquote class="book-hint info"><p><strong>The short version</strong></p><p>ezBookkeeping is a <strong>bookkeeping and analytics</strong> tool: record what happened, import
+it from almost any file format, and chart it. Econumo is a <strong>budgeting</strong> tool: plan
+what should happen, in envelopes, together with your household.
+ezBookkeeping has <strong>no budgeting features at all</strong> and <strong>no shared household
+ledger</strong>. If you want either of those, that decides it. If you want the broadest
+possible import-format support and rich retrospective analytics, ezBookkeeping is
+excellent at that.</p></blockquote>
+<hr/>
+<h2 id="at-a-glance">At a glance <a class="anchor" href="#at-a-glance">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>ezBookkeeping</th></tr></thead><tbody><tr><td><strong>Licence</strong></td><td>MIT</td><td>MIT</td></tr><tr><td><strong>Price</strong></td><td>Free self-hosted; $20 one-time cloud</td><td>Free, self-host only</td></tr><tr><td><strong>GitHub stars</strong></td><td>79</td><td>5,239</td></tr><tr><td><strong>Releases to date</strong></td><td>24</td><td>22</td></tr><tr><td><strong>In development since</strong></td><td>2020</td><td>October 2020</td></tr><tr><td><strong>First public release</strong></td><td>November 2024</td><td>June 2021</td></tr><tr><td><strong>Latest release</strong></td><td>v1.1.1 (19 Jul 2026)</td><td>v1.5.1 (31 May 2026)</td></tr><tr><td><strong>Backend</strong></td><td>Go</td><td>Go</td></tr><tr><td><strong>Frontend</strong></td><td>React</td><td>Vue 3 (Framework7 mobile / Vuetify desktop)</td></tr><tr><td><strong>Database</strong></td><td>SQLite or PostgreSQL</td><td>SQLite, MySQL or PostgreSQL</td></tr><tr><td><strong>Memory footprint</strong></td><td>~10 MB</td><td>~30 MiB</td></tr><tr><td><strong>Envelope budgeting</strong></td><td>✅</td><td>❌ Not supported at all</td></tr><tr><td><strong>Household sharing</strong></td><td>✅ Per-item access levels</td><td>❌ Multi-user, but no shared data</td></tr><tr><td><strong>Multi-currency</strong></td><td>✅</td><td>✅ With auto-updating rates</td></tr><tr><td><strong>Import formats</strong></td><td>CSV</td><td>CSV, OFX, QFX, QIF, IIF, Camt.052/053, MT940</td></tr><tr><td><strong>Bank sync</strong></td><td>❌</td><td>❌ File import only</td></tr><tr><td><strong>Mobile</strong></td><td>PWA</td><td>PWA with separate mobile UI</td></tr><tr><td><strong>API</strong></td><td>✅ OpenAPI / Swagger</td><td>✅ HTTP API + MCP server</td></tr><tr><td><strong>2FA</strong></td><td>—</td><td>✅ TOTP, WebAuthn, OIDC</td></tr></tbody></table>
+<p><em>Figures observed 18–19 July 2026 from the GitHub API and each project’s official
+documentation.</em></p>
+<hr/>
+<h2 id="licence-and-price">Licence and price <a class="anchor" href="#licence-and-price">#</a></h2>
+<p>A genuine tie on licence: both are <strong>MIT</strong>, both are free to self-host forever.</p>
+<p>The projects differ in how they sustain themselves. ezBookkeeping is unusually
+absolutist — its FAQ states there are no paid features and that the project
+<strong>does not accept donations or sponsorships</strong>, and there is no official hosted
+service. Econumo funds development through an optional hosted cloud account
+(<strong>$20 one-time per user</strong>, $40 for a family licence) while the self-hosted
+edition stays free.</p>
+<p>If you object on principle to a project having any commercial arm at all,
+ezBookkeeping’s position is the purer one. If you would rather pay once and not
+run a server, only Econumo offers that.</p>
+<hr/>
+<h2 id="popularity-and-project-health">Popularity and project health <a class="anchor" href="#popularity-and-project-health">#</a></h2>
+<p>ezBookkeeping is much the better known of the two — <strong>5,239 stars to Econumo’s
+79</strong> — but the two projects are near-contemporaries. Both have been in development
+since 2020; ezBookkeeping simply found its audience, and Econumo has not.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>ezBookkeeping</th></tr></thead><tbody><tr><td>GitHub stars</td><td>79</td><td><strong>5,239</strong></td></tr><tr><td>Forks</td><td>2</td><td>600</td></tr><tr><td>Contributors</td><td>small core team</td><td>~36</td></tr><tr><td>In development since</td><td>2020</td><td>October 2020</td></tr></tbody></table>
+<p>One characteristic worth knowing about ezBookkeeping: development is
+<strong>overwhelmingly one person</strong>, who personally answers nearly every issue. That
+produces an unusually coherent product and fast, decisive issue triage — and it
+also concentrates the project’s bus factor. Design decisions are firmly held, and
+requests that do not fit the vision are closed rather than left open, which is
+directly relevant to the budgeting question below.</p>
+<hr/>
+<h2 id="release-history">Release history <a class="anchor" href="#release-history">#</a></h2>
+<p>Both projects started in 2020 and have shipped a near-identical number of public
+releases, though Econumo spent its first four years closed-source.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Econumo</th><th>ezBookkeeping</th></tr></thead><tbody><tr><td>In development since</td><td>2020</td><td>October 2020</td></tr><tr><td>Public releases to date</td><td>24</td><td>22</td></tr><tr><td>First public release</td><td>v0.1.0, 16 Nov 2024</td><td>v0.1.0, 20 Jun 2021</td></tr><tr><td>1.0 milestone</td><td>July 2026 (Go + React rewrite)</td><td>August 2025</td></tr><tr><td>Latest release</td><td>v1.1.1, 19 Jul 2026</td><td>v1.5.1, 31 May 2026</td></tr></tbody></table>
+<p>ezBookkeeping’s cadence has accelerated sharply — 4 releases in 2023, 3 in 2024,
+8 in 2025 and 6 in the first half of 2026. Both projects are healthy and actively
+maintained.</p>
+<hr/>
+<h2 id="the-two-differences-that-decide-it">The two differences that decide it <a class="anchor" href="#the-two-differences-that-decide-it">#</a></h2>
+<h3 id="1-ezbookkeeping-has-no-budgeting">1. ezBookkeeping has no budgeting <a class="anchor" href="#1-ezbookkeeping-has-no-budgeting">#</a></h3>
+<p>This is not a weak-budgeting story or a roadmap gap. ezBookkeeping does not
+implement budgeting, by design.</p>
+<p>The project’s <strong>own comparison page</strong> lists budgeting as
+<a href="https://ezbookkeeping.mayswind.net/comparison/">not supported</a>. There is no budget
+entity in its data model. And budget feature requests —
+<a href="https://github.com/mayswind/ezbookkeeping/issues/67">#67</a>,
+<a href="https://github.com/mayswind/ezbookkeeping/issues/127">#127</a>,
+<a href="https://github.com/mayswind/ezbookkeeping/issues/168">#168</a> and
+<a href="https://github.com/mayswind/ezbookkeeping/issues/289">#289</a> — have been filed and
+closed without implementation. Issue #289 puts the philosophy plainly: the app
+focuses on tracking past transactions, with no support for planning or forecasting.</p>
+<p>That is a legitimate product position. Plenty of people want a clean ledger with
+good charts and no opinions about what they <em>should</em> spend. If that is you,
+ezBookkeeping does it well.</p>
+<p>But if you want to assign income to categories before you spend it — the envelope
+method — ezBookkeeping cannot do it, and is not going to.
+<a href="/docs/user-guide/budgets/">Econumo’s budgets</a> are the entire point of the app:
+envelopes grouped into folders, with limits, available amounts and rollover.</p>
+<p> <img src="/_astro/econumo-budget.qCR5Psvf_MDv5c.webp" alt="Econumo's budget screen — envelope budgeting with folders, limits and available amounts" decoding="async" loading="lazy" width="1080" height="756"></p>
+<p><em>Econumo’s budget view. ezBookkeeping has no equivalent screen.</em></p>
+<h3 id="2-ezbookkeeping-is-multi-user-but-not-multi-player">2. ezBookkeeping is multi-user, but not multi-player <a class="anchor" href="#2-ezbookkeeping-is-multi-user-but-not-multi-player">#</a></h3>
+<p>This one is easy to get wrong, so it is worth stating precisely.</p>
+<p>ezBookkeeping <strong>does</strong> support multiple users — one instance can host many
+independent accounts. But each user’s data is <strong>completely separate</strong>. There is no
+shared ledger, no co-owned account, no household view and no cross-user
+aggregation. The maintainer has explained the reasoning in
+<a href="https://github.com/mayswind/ezbookkeeping/issues/53">#53</a> and
+<a href="https://github.com/mayswind/ezbookkeeping/issues/322">#322</a>: accounts, categories
+and tags are all scoped to an individual user, ezBookkeeping is designed for
+personal use, and cross-user aggregation is not planned.</p>
+<p>For a couple who want a joint budget, the only workaround is sharing one login.</p>
+<p><a href="/docs/user-guide/shared-access/">Econumo’s shared access</a> is built for exactly
+this case: you connect to another user by invitation, then set an access level
+<strong>per account and per budget</strong>. Each person keeps their own login and sees a shared
+view of the things you have chosen to share.</p>
+<hr/>
+<h2 id="where-ezbookkeeping-is-better">Where ezBookkeeping is better <a class="anchor" href="#where-ezbookkeeping-is-better">#</a></h2>
+<p>Being the closest twin cuts both ways. ezBookkeeping clearly beats Econumo on
+several axes:</p>
+<p><strong>Import formats.</strong> ezBookkeeping reads CSV, OFX, QFX, QIF, IIF, Camt.052,
+Camt.053 and MT940, plus dedicated migration importers for <strong>GnuCash, Firefly III
+and Beancount</strong>. Econumo imports CSV only. If you are migrating years of history
+out of another tool, this is a real gap.</p>
+<p><strong>Authentication and security features.</strong> TOTP two-factor authentication,
+WebAuthn app lock, OIDC external authentication and login rate limiting all ship
+today.</p>
+<p><strong>AI and automation surface.</strong> ezBookkeeping provides an HTTP API <em>and</em> an MCP
+(Model Context Protocol) server, an Agent Skill and CLI tooling — ahead of most of
+the field on AI integration. Econumo offers a documented
+<a href="/docs/api/">REST API with Swagger UI</a>, but no MCP server.</p>
+<p><strong>Extras.</strong> Transaction image attachments with AI receipt recognition, scheduled
+and recurring transactions, geolocation with maps, S3/MinIO attachment storage,
+and a dedicated mobile UI distinct from the desktop one.</p>
+<p><strong>Maturity.</strong> Four more years of development and 66× the stars.</p>
+<p>Neither app has automatic bank synchronisation — both are file-import and
+manual-entry tools.</p>
+<hr/>
+<h2 id="which-should-you-choose">Which should you choose? <a class="anchor" href="#which-should-you-choose">#</a></h2>
+<p><strong>Choose ezBookkeeping if:</strong></p>
+<ul>
+<li>You want a ledger and analytics, not a budget</li>
+<li>You are migrating from GnuCash, Firefly III or Beancount and want an importer</li>
+<li>You need broad bank-statement format support (MT940, Camt.053, OFX, QIF)</li>
+<li>You want TOTP/WebAuthn/OIDC authentication out of the box</li>
+<li>You are budgeting alone and will never need to share</li>
+<li>Project maturity and community size are decisive</li>
+</ul>
+<p><strong>Choose Econumo if:</strong></p>
+<ul>
+<li>You want <strong>envelope budgeting</strong> — ezBookkeeping has none</li>
+<li>You want a <strong>shared household budget</strong> where each person has their own login</li>
+<li>You want a hosted option you can pay for once instead of self-hosting</li>
+<li>You want the smallest possible footprint (~10 MB, single distroless binary)</li>
+</ul>
+<p>Both are MIT-licensed, both export your data, and both have public demos — the
+<a href="https://demo.econumo.com">Econumo demo</a> and the
+<a href="https://ezbookkeeping-demo.mayswind.net">ezBookkeeping demo</a> — so you can try
+both before committing.</p>
+<hr/>
+<h2 id="frequently-asked-questions">Frequently asked questions <a class="anchor" href="#frequently-asked-questions">#</a></h2>
+<h3 id="does-ezbookkeeping-have-budgeting">Does ezBookkeeping have budgeting? <a class="anchor" href="#does-ezbookkeeping-have-budgeting">#</a></h3>
+<p>No. Its own comparison page lists budgeting as unsupported, there is no budget
+entity in the data model, and multiple budget requests have been closed without
+implementation. It is a retrospective bookkeeping and analytics tool.</p>
+<h3 id="can-a-couple-share-a-budget-in-ezbookkeeping">Can a couple share a budget in ezBookkeeping? <a class="anchor" href="#can-a-couple-share-a-budget-in-ezbookkeeping">#</a></h3>
+<p>No. Multiple users can have accounts on one instance, but their data is entirely
+separate — no shared ledger and no cross-user aggregation, which the maintainer
+has confirmed is not planned. Econumo supports per-account and per-budget sharing
+by invitation.</p>
+<h3 id="is-ezbookkeeping-open-source-and-free">Is ezBookkeeping open source and free? <a class="anchor" href="#is-ezbookkeeping-open-source-and-free">#</a></h3>
+<p>Yes — MIT-licensed with no paid features. The project does not accept donations or
+sponsorships and offers no hosted service.</p>
+<h3 id="which-uses-fewer-resources">Which uses fewer resources? <a class="anchor" href="#which-uses-fewer-resources">#</a></h3>
+<p>Both are very light. Econumo uses about 10 MB of RAM as a single distroless Go
+binary; ezBookkeeping reports about 30 MiB for a single user.</p>
+<hr/>
+<p><em>Last verified 19 July 2026 against the GitHub API and each project’s official
+documentation. If you spot something out of date,
+<a href="/docs/contact-us/">let us know</a>.</em></p> </article>  <footer class="book-footer"> <div class="flex flex-wrap justify-between"></div> </footer> <label for="menu-control" class="book-menu-overlay"></label> </div> </main> </div> </div>  <div id="overlay" class="overlay"> <div class="modal-wrapper"> <div class="modal"> <div class="modal-icon"></div> <div id="signup-part-1"> <p class="sub-info">Econumo Cloud</p> <p><span class="font-medium">Sign up now</span> to get product updates and a discount for Econumo Cloud.</p> <form id="waiting-list-form" action="https://api.flowmitry.com/webhook/897714d4-a553-4e70-881b-470ea14be269"> <input type="hidden" name="url" value="https://econumo.com/docs/comparison/econumo-vs-ezbookkeeping/"> <input type="hidden" name="language" value="en"> <input type="hidden" name="price" value="20"> <input type="hidden" name="price-family" value="40"> <div class="gold-input-wrappers"> <input id="waitingListEmail" type="email" name="email" placeholder="Enter your email" autocomplete="off" autocorrect="off" required="required"> <div class="feedback msg-error">Be sure the entered mail is correct</div> <div class="control-wrapper"> <input type="submit" id="send-mail" class="btn btn-large btn-fill btn-yellow plausible-event-name--lead" value="Sign Up"> </div> </div> </form> </div> <div id="signup-part-2" class="hidden"> <p class="heading">Success!</p> <p>Your e-mail has been added to the list. We will keep you posted about Econumo.</p> <p>Meanwhile, you can try the demo right now</p> <div class="btns-wrapper center"> <a href="https://demo.econumo.com" target="_blank" class="btn btn-outline plausible-event-name--demo"> Try Demo </a> </div> </div> </div> </div> </div> <script defer src="/scripts/top-bar.js"></script> <script defer src="/scripts/modal.js"></script><script defer src="/scripts/navigation.js"></script><script defer src="/scripts/mobile.js"></script><script defer src="/scripts/form.js"></script><script defer src="/scripts/book.js"></script> <script defer src="/scripts/search.js"></script> </body> </html>

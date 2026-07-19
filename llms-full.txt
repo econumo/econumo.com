@@ -1546,6 +1546,1910 @@ If `ECONUMO_SYSTEM_API_KEY` is empty, you will not be able to use the **System A
 
 ---
 
+# Econumo compared
+
+URL: https://econumo.com/docs/comparison/
+
+# Econumo compared
+
+Econumo is not the only way to budget, and it is not the right tool for everyone.
+These pages compare it against the alternatives people most often weigh it
+against — on licence, price, popularity, release history and features — and say
+plainly where the other tool is the better choice.
+
+Every figure is sourced and dated. Where a claim comes from a competitor's own
+documentation, it is linked.
+
+---
+
+## Comparisons
+
+- [Econumo vs Actual Budget](/docs/comparison/econumo-vs-actualbudget/) — the
+  closest open-source match: also MIT, also envelope budgeting, also
+  self-hostable. Differs sharply on multi-currency, family sharing and bank sync.
+- [Econumo vs YNAB](/docs/comparison/econumo-vs-ynab/) — the app that made
+  envelope budgeting mainstream. Proprietary, cloud-only and $109/year, with
+  excellent bank sync and no multi-currency within a budget.
+- [Econumo vs Firefly III](/docs/comparison/econumo-vs-firefly-iii/) — the most
+  established self-hosted finance manager. A double-entry ledger rather than an
+  envelope budgeter, and strictly single-user.
+- [Econumo vs Maybe Finance](/docs/comparison/econumo-vs-maybe-finance/) — Maybe
+  shut down in 2025 and its repo is archived. Where displaced users should go, and
+  when the community fork Sure is the better answer than Econumo.
+- [Econumo vs ezBookkeeping](/docs/comparison/econumo-vs-ezbookkeeping/) — the
+  closest *technical* twin: also Go, also MIT, also tiny. But it has no budgeting
+  features and no shared household data.
+- [Econumo vs GnuCash](/docs/comparison/econumo-vs-gnucash/) — a 28-year-old
+  desktop double-entry accounting package. Far deeper accounting; no envelope
+  budgeting, no sharing, no mobile.
+
+---
+
+## How Econumo positions itself
+
+Across every comparison, the same three differences keep appearing:
+
+1. **Multi-currency is native.** Each account has its own currency, cross-currency
+   transfers record both amounts, and budgets convert to a single currency. Several
+   popular alternatives do not support this at all. See
+   [Multi-Currency](/docs/user-guide/multi-currency/).
+2. **Family sharing is built in.** You connect by invitation and set an access
+   level per account and per budget — no identity provider to run. See
+   [Shared Access](/docs/user-guide/shared-access/).
+3. **Hosting is a one-time payment.** Self-hosting is free forever; the hosted
+   cloud is a single $20 payment per user rather than a subscription. See
+   [Editions](/docs/edition/).
+
+And the recurring trade-off to be aware of:
+
+- **There is no automatic bank synchronisation.** Econumo is manual-entry first,
+  with [CSV import/export](/docs/user-guide/csv-import-export/) and a
+  [REST API](/docs/api/) for bulk data. If automatic bank import is essential to
+  you, several alternatives do it better — see the [FAQ](/docs/faq/) for why.
+
+---
+
+# Econumo vs Actual Budget
+
+URL: https://econumo.com/docs/comparison/econumo-vs-actualbudget/
+
+# Econumo vs Actual Budget
+
+Econumo and Actual Budget are both open-source, self-hostable, envelope-style
+budgeting apps released under the MIT licence. They overlap enough that people
+routinely evaluate one against the other — and they differ enough that the right
+answer is usually obvious once you know which two or three things you care about.
+
+This page compares them on licence, price, popularity, release history and
+features. Where Actual Budget is the better tool, it says so.
+
+**The short version**
+
+Choose **Actual Budget** if you bank in a single currency and want automatic bank
+synchronisation, a large community and the most mature open-source budgeting
+codebase available. Choose **Econumo** if you budget in **more than one currency**,
+want **built-in family sharing** without standing up an identity provider, or want a
+**hosted account** you can simply pay for once.
+
+---
+
+## At a glance
+
+| | Econumo | Actual Budget |
+|---|---|---|
+| **Licence** | MIT | MIT |
+| **Self-hosted price** | Free | Free |
+| **Hosted price** | $20 one-time, per user | No first-party hosting (PikaPods ≈ $1.50/mo) |
+| **GitHub stars** | 79 | 27,595 |
+| **Contributors** | Small core team | 463 |
+| **Releases to date** | 24 | 59 |
+| **In development since** | 2020 | 2022 as open source |
+| **First public release** | November 2024 | April 2023 |
+| **Latest release** | v1.1.1 (19 Jul 2026) | v26.7.0 (2 Jul 2026) |
+| **Language / stack** | Go, single binary | TypeScript / Node.js ≥ 22 |
+| **Database** | SQLite (default) or PostgreSQL | SQLite |
+| **Budgeting method** | Envelope | Envelope / zero-sum |
+| **Multi-currency** | ✅ Native, per account | ❌ Not supported |
+| **Family sharing** | ✅ Built in, per-item access | ⚠️ Requires external OIDC provider |
+| **Bank sync** | ❌ Manual entry + CSV | ✅ 4 active providers |
+| **Mobile** | PWA | PWA (native apps deprecated) |
+| **End-to-end encryption** | ❌ | ✅ Optional |
+| **REST API** | ✅ OpenAPI / Swagger | ✅ API + CLI |
+
+*Figures observed 19 July 2026 from the GitHub API and each project's official
+documentation.*
+
+---
+
+## Licence
+
+Both projects use the **MIT licence** — among the most permissive licences in
+common use. You can run either commercially, modify either, and neither imposes a
+copyleft obligation on code you build around it.
+
+This is worth stating plainly because it is a genuine tie, and it distinguishes
+both from AGPL-licensed alternatives such as Firefly III or Ghostfolio, where
+network use of a modified version obliges you to publish your changes.
+
+- Econumo: [MIT](https://github.com/econumo/econumo/blob/main/LICENSE)
+- Actual Budget: [MIT](https://github.com/actualbudget/actual/blob/master/LICENSE.txt)
+
+---
+
+## Price
+
+| | Econumo | Actual Budget |
+|---|---|---|
+| Self-hosted | **Free** | **Free** |
+| Hosted by the project | **$20 one-time**, per user | Not offered |
+| Hosted by a partner | — | PikaPods, ≈ $1.50/month |
+| Family plan | $40 one-time | — |
+| Funding model | Cloud licences + sponsorship | Donations (Open Collective, GitHub Sponsors) |
+
+Self-hosting either app costs nothing but your own infrastructure. The difference
+is what happens when you would rather not run a server.
+
+Econumo sells a **hosted cloud account for a single $20 payment per user** (a
+family licence covering several users is $40). There is no subscription and no
+recurring renewal.
+
+Actual Budget has **no first-party hosted option at all** — a deliberate choice,
+not an oversight. If you want Actual without running Docker yourself, the
+documented route is its hosting partner [PikaPods](https://actualbudget.org/docs/install/pikapods/),
+at roughly $1.50 per month as of November 2025, which works out near $18/year
+recurring and shares revenue back with the project.
+
+Over five years the hosted paths land at roughly $20 for Econumo against roughly
+$90 for PikaPods-hosted Actual — though PikaPods is a general hosting service and
+that comparison flatters Econumo slightly, since you are also paying for compute.
+
+---
+
+## Popularity and project health
+
+This is the category where Actual Budget wins decisively, and pretending
+otherwise would not help you choose.
+
+| | Econumo | Actual Budget |
+|---|---|---|
+| GitHub stars | 79 | **27,595** |
+| Forks | 2 | **2,706** |
+| Named contributors | small core team | **463** |
+| Docker pulls | not published | **30.9 million** |
+| Open source since | November 2024 | April 2022 |
+
+Actual Budget is one of the most popular open-source personal finance projects in
+existence, with a broad contributor base, an active Discord and Reddit community,
+and a disciplined monthly release train that has not slipped in three years. If
+community size, third-party guides and the odds of the project outliving any one
+maintainer are what matter to you, **Actual Budget is the safer pick.**
+
+Econumo is a far smaller project, though not a newer one. It has been in
+development since 2020, was open-sourced in November 2024, and was rebuilt on Go
+and React for its 1.0 release in July 2026. What its size buys you is a focused
+feature set and fast movement on the specific gaps described below; what it costs
+you is ecosystem.
+
+---
+
+## Release history
+
+Both projects ship regularly, on different philosophies.
+
+| | Econumo | Actual Budget |
+|---|---|---|
+| Total releases | 24 | 59 |
+| First public release | v0.1.0, 16 Nov 2024 | v22.12.9, 17 Apr 2023 |
+| Latest release | v1.1.1, 19 Jul 2026 | v26.7.0, 2 Jul 2026 |
+| Versioning | SemVer | CalVer (`YY.M.patch`) |
+| Cadence | Frequent, feature-driven | ~Monthly, on the 1st–5th |
+
+Actual Budget releases a minor version in the first week of nearly every month —
+20 releases in 2023, 13 in 2024, 16 in 2025 and 10 through July 2026. Econumo
+reached its 1.0 milestone in July 2026 after 20 months of pre-1.0 development and
+ships on a feature-driven cadence.
+
+Neither project is dormant. Both pushed code the week this page was written.
+
+---
+
+## Features head to head
+
+### Budgeting method — a genuine tie
+
+Both implement **envelope budgeting**: income is assigned to categories, and you
+spend from the category rather than the account. Actual describes its model as a
+"monthly envelope system"; Econumo organises envelopes into folders with limits
+and available amounts. Anyone comfortable in one will recognise the other.
+
+*Econumo's budget view: envelopes grouped into folders, with per-envelope limits.*
+
+*Actual Budget's budget view: categories with Budgeted / Spent / Balance columns
+and a "To Budget" figure. Screenshot from the official public demo.*
+
+The layouts are close cousins. The meaningful differences are elsewhere.
+
+### Multi-currency — Econumo's clearest advantage
+
+This is the single biggest functional gap between the two, and it is not a close
+call.
+
+**Actual Budget does not support multi-currency.** Its own documentation states
+that the software is
+"[currency agnostic and does not support multi-currency](https://actualbudget.org/docs/budgeting/multi-currency/)".
+The only documented approach is a manual workaround: hold separate accounts per
+currency and convert amounts yourself using rule templating, which is itself an
+experimental feature. There is no per-account currency field, no automatic
+exchange-rate updates and no multi-currency reporting.
+
+The request is the most-upvoted issue in the repository —
+[#1132](https://github.com/actualbudget/actual/issues/1132), opened in June 2023
+with 328 upvotes — and discussion was still active in April 2026 over how to model
+the data. It does not appear on the
+[2026 roadmap](https://actualbudget.org/blog/roadmap-for-2026/). What has shipped
+so far is cosmetic: v26.1.0 added currency *symbols* to the budget view, and
+v26.7.0 added three more symbols to the list.
+
+**Econumo supports multiple currencies natively.** Each account has its own fixed
+currency; cross-currency transfers record both amounts; and the budget converts
+everything into a single currency so the totals reconcile. See
+[Multi-Currency](/docs/user-guide/multi-currency/) for how it works.
+
+If you hold money in more than one currency — expats, cross-border families,
+anyone paid in a currency they do not spend — this alone likely decides it.
+
+### Family sharing — built in vs bolted on
+
+Both support more than one person, with very different setup costs.
+
+**Econumo** has sharing as a first-class concept. You connect to another user by
+[invitation](/docs/user-guide/shared-access/), then choose an access level *per
+account and per budget*. Nothing to install, nothing to configure.
+
+**Actual Budget** supports multi-user, but the
+[documentation](https://actualbudget.org/docs/config/multi-user/) requires you to
+run an **external OpenID Connect provider** — Authelia, Authentik, Keycloak or
+similar — next to your Actual server. Without OIDC, the server is protected by one
+shared password, so everyone in the household shares an identity. Two roles exist
+(Basic and Admin), and budget owners grant per-budget access.
+
+For a technical user who already runs an identity provider, this is fine, even
+preferable. For a couple who want a shared budget on a Raspberry Pi, standing up
+Keycloak is a real barrier.
+
+### Bank synchronisation — Actual Budget's clearest advantage
+
+Here the advantage runs the other way, decisively.
+
+**Actual Budget** supports four active bank-sync providers, covering much of the
+world:
+
+| Provider | Region | Note |
+|---|---|---|
+| SimpleFIN Bridge | North America | Paid third-party service |
+| Enable Banking | Europe | Added 2026 |
+| Akahu | New Zealand | Added v26.7.0, experimental |
+| Pluggy.ai | Brazil | |
+
+One caveat if you are in the EU: the older **GoCardless** integration is
+[no longer accepting new accounts](https://actualbudget.org/docs/advanced/bank-sync/),
+so new European users are routed to the newer Enable Banking integration. Every
+provider also requires you to register your own API credentials — Actual brokers
+nothing on your behalf.
+
+**Econumo has no automatic bank import.** This is an explicit product decision
+rather than a missing feature: the [FAQ](/docs/faq/) states that automated import
+is not a priority, on the view that manual entry builds a stronger habit of
+attention to spending. [CSV import and export](/docs/user-guide/csv-import-export/)
+and the [REST API](/docs/api/) are the supported routes for bulk data.
+
+If automatic transaction import is non-negotiable for you, **choose Actual
+Budget.**
+
+### Mobile
+
+Neither project ships a maintained native mobile app.
+
+Actual Budget's official mobile applications are **deprecated**, and the archived
+codebase is public; mobile parity is a stated 2026 roadmap goal, which is itself
+an acknowledgement of the current gap. What exists is an installable PWA, plus
+unofficial community clients.
+
+Econumo is a responsive web app installable to the home screen on
+[iPhone, Android, Mac and PC](/docs/apps/).
+
+In practice both are "a good mobile website you can pin to your home screen".
+
+### Data, API and automation
+
+| | Econumo | Actual Budget |
+|---|---|---|
+| Import formats | CSV | CSV, QIF, OFX, QFX, CAMT.053 |
+| YNAB migration | ❌ | ✅ YNAB4 and nYNAB importers |
+| Export | CSV | CSV, full local data file |
+| REST API | ✅ OpenAPI / Swagger UI | ✅ Node.js API library |
+| CLI | ❌ | ✅ Stable since v26.7.0 |
+| Rules engine | ❌ | ✅ Conditions, actions, templating |
+| End-to-end encryption | ❌ | ✅ Optional |
+
+Actual Budget is substantially stronger on data portability and automation. Its
+rules engine, importers and optional end-to-end encryption are mature, and its
+YNAB importers make migration off YNAB genuinely straightforward.
+
+Econumo's API is fully documented via Swagger — you can browse it on the
+[demo instance](https://demo.econumo.com/api/doc) — but there is no CLI and no
+rules engine today.
+
+### Running it
+
+| | Econumo | Actual Budget |
+|---|---|---|
+| Stack | Go, single static binary | TypeScript on Node.js ≥ 22 |
+| Image | Distroless Docker image | Docker image |
+| Database | SQLite or PostgreSQL | SQLite |
+| Memory footprint | ~10 MB | Higher (Node runtime) |
+| Architecture | Server-rendered API + web app | Local-first with sync server |
+| Desktop builds | — | Microsoft Store, Flathub |
+
+Econumo ships as **one self-contained Go binary** in a distroless image that
+serves both the API and the web app, runs migrations on boot and uses about 10 MB
+of RAM. On a small VPS or a Raspberry Pi alongside other services, that is a
+meaningful difference.
+
+Actual Budget's **local-first architecture** is the more interesting design: your
+data lives on your device *and* syncs through your server, so the app keeps
+working fully offline and syncs when it reconnects. Econumo requires a reachable
+server.
+
+---
+
+## Which should you choose?
+
+**Choose Actual Budget if:**
+
+- You budget in a single currency
+- Automatic bank synchronisation matters to you
+- You want end-to-end encryption or offline-first operation
+- You are migrating from YNAB and want an importer
+- Community size, contributor count and ecosystem maturity are decisive
+- You want a rules engine and CLI for automation
+
+**Choose Econumo if:**
+
+- You budget across **multiple currencies**
+- You want **family sharing that works out of the box**, without running an
+  identity provider
+- You want a **hosted account for a single $20 payment** rather than self-hosting
+  or a subscription
+- You are running on constrained hardware and want a ~10 MB single binary
+- You prefer deliberate manual entry to automatic import
+
+Both are MIT-licensed and both let you export your data, so neither choice locks
+you in. If you are undecided, the [Econumo demo](https://demo.econumo.com) and the
+[Actual Budget demo](https://demo.actualbudget.org) both run in the browser with no
+signup.
+
+---
+
+## Frequently asked questions
+
+### Is Actual Budget free?
+
+Yes — MIT-licensed and completely free, with no paid tier and no first-party
+hosted plan. Its hosting partner PikaPods charges about $1.50 per month.
+
+### Does Actual Budget support multiple currencies?
+
+No. The official documentation states it is currency agnostic and does not support
+multi-currency. Only a manual workaround is documented. The request has been the
+most-upvoted issue in the project since 2023 and is not on the 2026 roadmap.
+
+### Can two people share a budget in Actual Budget?
+
+Yes, but it requires configuring an external OpenID Connect provider such as
+Authelia, Authentik or Keycloak. Without OIDC the server uses a single shared
+password. Econumo has invitation-based sharing with per-item access levels built
+in.
+
+### Which is better for budgeting in more than one currency?
+
+Econumo. Each account has its own currency, cross-currency transfers record both
+amounts, and the budget converts everything to one currency. Actual Budget does
+not support multi-currency at all.
+
+### Does Econumo have automatic bank synchronisation?
+
+No. Econumo is manual-entry first, with CSV import and a REST API for bulk data.
+Actual Budget is clearly stronger here.
+
+---
+
+*Last verified 19 July 2026 against the GitHub API and each project's official
+documentation. Star counts, release counts and prices change — if you spot
+something out of date, [let us know](/docs/contact-us/).*
+
+---
+
+# Econumo vs YNAB
+
+URL: https://econumo.com/docs/comparison/econumo-vs-ynab/
+
+# Econumo vs YNAB
+
+YNAB is the app that made envelope budgeting mainstream, and most tools in this
+space — Econumo included — owe something to it. It is also proprietary,
+cloud-only, and **$109 per year**.
+
+If you like the YNAB method but not the subscription, the lock-in, or the
+single-currency limit, this comparison is for you. If you want the polished
+product with real bank sync and excellent mobile apps, YNAB is still very good at
+being YNAB.
+
+**The short version**
+
+Choose **YNAB** if you want automatic bank import, best-in-class native mobile
+apps, and a mature, supported product — and the price is acceptable to you.
+Choose **Econumo** if you want to **own your data**, budget in **more than one
+currency**, or stop paying a subscription: self-hosting is free forever, and the
+hosted account is a **single $20 payment**.
+
+---
+
+## At a glance
+
+| | Econumo | YNAB |
+|---|---|---|
+| **Licence** | MIT, open source | Proprietary, closed source |
+| **Self-hosting** | ✅ | ❌ Cloud only |
+| **Price** | Free self-hosted; $20 one-time cloud | **$14.99/mo or $109/yr** |
+| **Free trial** | Free forever, self-hosted | 34 days, no card required |
+| **Student offer** | n/a — free | Free for 365 days |
+| **People per plan** | $20 per user; $40 family licence | Up to 6 people, one subscription |
+| **Budgeting method** | Envelope | Zero-based envelope (the Four Rules) |
+| **Multi-currency** | ✅ Native, per account | ❌ One currency per budget |
+| **Bank sync** | ❌ CSV import | ✅ Plaid + MX (US, CA, 18 EU countries) |
+| **Mobile apps** | PWA | ✅ Native iOS and Android |
+| **Data ownership** | Your server, or Econumo Cloud | YNAB's servers |
+| **API** | ✅ REST + Swagger, no rate limit | ✅ REST, 200 requests/hour |
+| **Export** | CSV | CSV |
+
+*Figures observed 18–19 July 2026 from ynab.com and Econumo's documentation.*
+
+---
+
+## Price — the headline difference
+
+| | Econumo | YNAB |
+|---|---|---|
+| Self-hosted | **Free, forever** | Not possible |
+| Hosted, 1 year | $20 one-time | $109 |
+| Hosted, 3 years | $20 one-time | $327 |
+| Hosted, 5 years | $20 one-time | $545 |
+| Family | $40 one-time | $109/yr, up to 6 people |
+
+YNAB costs **$14.99 per month, or $109 per year** if paid annually. It offers a
+generous **34-day free trial with no credit card**, and students get a **free
+365-day subscription** with proof of enrolment.
+
+Econumo's self-hosted edition is free indefinitely. The hosted cloud account is a
+**single $20 payment per user** — not a subscription — with a $40 family licence
+covering several users.
+
+Over five years that is roughly **$20 against $545**. Even the $40 family licence
+is about four weeks of a YNAB subscription.
+
+To be fair to YNAB: a single subscription covers **up to six people** with shared
+data, so a large household spreads that cost further than the per-user comparison
+suggests. And YNAB is a supported commercial product with staff, onboarding
+material and customer service — self-hosting Econumo means you are your own
+sysadmin.
+
+---
+
+## Licence and data ownership
+
+YNAB is **proprietary, closed-source software delivered only as a hosted service**.
+There is no source code, no self-hosting option and no way to run it after a
+subscription lapses. Your transaction history lives on YNAB's servers, and access
+to the API requires an active subscription.
+
+Econumo is **MIT-licensed**. You can read the code, run it on your own hardware,
+modify it, and keep using it forever regardless of what happens to the project or
+the company behind it.
+
+For many people this is the deciding factor: household financial history is about
+as sensitive as personal data gets, and self-hosting is the only arrangement where
+it never leaves hardware you control.
+
+---
+
+## Multi-currency — a hard limit in YNAB
+
+**YNAB supports one currency per budget.** Its official guidance for anyone
+holding more than one currency is to
+[create a separate budget for each](https://support.ynab.com/en_us/using-multiple-currencies-in-ynab-a-guide-SyBF6PHno).
+
+In practice that means: no combined net position across currencies, no
+cross-currency transfers, and duplicated category structures you maintain by hand.
+Unofficial third-party converters exist, but nothing supported.
+
+**Econumo handles this natively.** Each account has its own fixed currency,
+cross-currency transfers record both amounts, and the budget converts everything
+into a single currency so the totals reconcile — see
+[Multi-Currency](/docs/user-guide/multi-currency/).
+
+If you are an expat, paid in a currency you do not spend, or in a household
+straddling two countries, this is likely the whole decision.
+
+---
+
+## Budgeting method — very similar
+
+Both apps implement **zero-based envelope budgeting**: money arrives, you assign
+every unit of it to a category, and you spend from categories rather than from
+accounts. YNAB formalises this as the Four Rules; Econumo organises envelopes into
+folders with limits and available amounts.
+
+*Econumo's budget view. If you have used YNAB, the model will be familiar.*
+
+Anyone fluent in YNAB will find Econumo's [budgets](/docs/user-guide/budgets/)
+conceptually familiar. Note that Econumo has **no YNAB import tool** — if you are
+migrating years of history, plan on exporting to CSV and importing that. (Actual
+Budget, by contrast, does ship dedicated YNAB4 and nYNAB importers — see
+[Econumo vs Actual Budget](/docs/comparison/econumo-vs-actualbudget/).)
+
+---
+
+## Where YNAB is clearly better
+
+An honest comparison has to be blunt here. YNAB is a well-funded commercial
+product and it shows.
+
+**Bank synchronisation.** YNAB imports transactions directly through **Plaid and
+MX**, covering the US and Canada well, plus 18 European countries via Plaid.
+Econumo has **no automatic bank import at all** — a
+[deliberate decision](/docs/faq/) in favour of manual entry, with
+[CSV import/export](/docs/user-guide/csv-import-export/) and a
+[REST API](/docs/api/) for bulk data. If automatic import is why you budget at
+all, choose YNAB.
+
+**Mobile apps.** YNAB ships genuinely excellent native apps — **4.79 stars from
+over 60,000 ratings** on the iOS App Store, and 4.6 stars with 1M+ downloads on
+Google Play. Econumo is a responsive web app you install to the home screen from
+[iPhone, Android, Mac or PC](/docs/apps/). Good, but not a native app.
+
+**Household sharing.** YNAB's subscription sharing covers **up to six people** on
+one plan with shared data, at no extra cost. Econumo's
+[shared access](/docs/user-guide/shared-access/) is arguably more granular — you
+set an access level per account and per budget rather than sharing everything —
+but YNAB's is simpler and well supported.
+
+**Polish and support.** Onboarding, teaching material, workshops and customer
+support are all things a subscription pays for.
+
+---
+
+## Where Econumo is better
+
+**Price.** $20 once against $109 every year.
+
+**You own it.** MIT-licensed, self-hostable, and yours to keep. No subscription
+lapse can lock you out of your own history.
+
+**Multi-currency.** Native, versus not supported within a budget.
+
+**Privacy.** Self-hosted, your data never leaves your hardware. No third-party
+bank aggregator holds credentials on your behalf.
+
+**No rate limits.** Econumo's [API](/docs/api/) is your server. YNAB's is capped
+at 200 requests per hour and requires an active subscription.
+
+**Runs anywhere.** A single ~10 MB Go binary on a Raspberry Pi, NAS or small VPS.
+
+---
+
+## Which should you choose?
+
+**Choose YNAB if:**
+
+- Automatic bank import is essential
+- You want first-class native mobile apps
+- You budget in a single currency
+- You want a supported product with real customer service
+- Several people will share one plan and the annual cost is acceptable
+
+**Choose Econumo if:**
+
+- You want to stop paying a subscription
+- You want to **own and self-host** your financial data
+- You budget across **multiple currencies**
+- You are comfortable entering transactions manually or via CSV
+- You want a hosted account for a **single $20 payment**
+
+If you like the YNAB method but want it free and open source, Econumo and
+[Actual Budget](/docs/comparison/econumo-vs-actualbudget/) are the two strongest
+options — Actual Budget for single-currency budgeting with bank sync, Econumo for
+multi-currency and built-in household sharing.
+
+Try the [Econumo demo](https://demo.econumo.com) in your browser, no signup
+required.
+
+---
+
+## Frequently asked questions
+
+### How much does YNAB cost?
+
+$14.99 per month or $109 per year as of July 2026, with a 34-day free trial and no
+card required. Students get 365 days free. One subscription covers up to six
+people.
+
+### Does YNAB support multiple currencies?
+
+Not within one budget. YNAB officially recommends a separate budget per currency,
+so there is no combined view or cross-currency transfer. Econumo converts all
+accounts into one budget currency.
+
+### Is there a free alternative to YNAB?
+
+Yes — Econumo is MIT-licensed and free to self-host, using the same envelope
+method. Actual Budget is another free, MIT-licensed option.
+
+### Can I self-host YNAB?
+
+No. YNAB is proprietary and cloud-only; your data lives on its servers. Econumo is
+open source and self-hostable.
+
+### Does Econumo connect to my bank like YNAB does?
+
+No. This is YNAB's clearest advantage. Econumo is manual-entry first, with CSV
+import and a REST API.
+
+---
+
+*Last verified 19 July 2026 against ynab.com and Econumo's documentation. Prices
+change — check [ynab.com/pricing](https://www.ynab.com/pricing) for the current
+figure. If you spot something out of date, [let us know](/docs/contact-us/).*
+
+---
+
+# Econumo vs Firefly III
+
+URL: https://econumo.com/docs/comparison/econumo-vs-firefly-iii/
+
+# Econumo vs Firefly III
+
+Firefly III is the most established self-hosted personal finance manager there is —
+in development since 2012, with 24,000 GitHub stars and 27 million Docker pulls.
+If you have searched for self-hosted finance software, you have met it.
+
+It is also, by its author's own description, **a double-entry bookkeeping system
+rather than a budgeting app** — and it is **strictly single-user**. Those two facts
+decide most comparisons with Econumo.
+
+**The short version**
+
+Choose **Firefly III** if you want a mature, deeply featured transaction manager
+with double-entry rigour, rich reporting and a huge community — and you are the
+only person who will use it.
+Choose **Econumo** if you want **envelope budgeting** rather than spending caps, or
+if you want to **share a budget with your partner without sharing a password**.
+Firefly III's own FAQ recommends password-sharing for couples; Econumo has proper
+per-user sharing.
+
+---
+
+## At a glance
+
+| | Econumo | Firefly III |
+|---|---|---|
+| **Licence** | MIT | AGPL-3.0-or-later |
+| **Price** | Free self-hosted; $20 one-time cloud | Free, self-host only |
+| **GitHub stars** | 79 | 24,070 |
+| **Forks** | 2 | 2,229 |
+| **Contributors** | small core team | 177 (89% of commits by one person) |
+| **Docker pulls** | not published | 27.5 million |
+| **Releases to date** | 24 | 329 |
+| **In development since** | 2020 | 2012 |
+| **First public release** | November 2024 | October 2014 |
+| **Latest release** | v1.1.1 (19 Jul 2026) | v6.6.6 (1 Jul 2026) |
+| **Cadence** | Feature-driven | ~45 releases in the last 12 months |
+| **Stack** | Go, single binary | PHP ≥ 8.5, Laravel 13 |
+| **Database** | SQLite or PostgreSQL | MySQL, MariaDB, PostgreSQL, SQLite |
+| **Memory footprint** | ~10 MB | Full PHP/web-server stack |
+| **Budgeting model** | Envelope | Spending caps on a double-entry ledger |
+| **Zero-based budgeting** | ✅ | ❌ Explicitly declined |
+| **Household sharing** | ✅ Per-item access levels | ❌ "Share the username and password" |
+| **Multi-currency** | ✅ Converts into one budget currency | ⚠️ Yes, but budgets ignore foreign amounts |
+| **Bank sync** | ❌ CSV import | ⚠️ Separate app; EU providers contracting |
+| **Mobile** | PWA | ❌ No official app; community apps only |
+| **API** | ✅ REST + Swagger | ✅ Extensive REST + webhooks |
+
+*Figures observed 18 July 2026 from the GitHub API, Docker Hub and Firefly III's
+official documentation.*
+
+---
+
+## Licence — the one real legal difference
+
+Econumo is **MIT**. Firefly III is **AGPL-3.0-or-later**.
+
+The AGPL is the strongest common copyleft licence: if you modify Firefly III and
+let others use it **over a network**, you must publish your modifications. For a
+household running it privately this changes nothing. For anyone building a service
+on top, it is a serious constraint that MIT does not impose.
+
+---
+
+## Price
+
+Both are free to self-host. Firefly III has **no official paid tier and no
+official hosted service** — self-hosting is the only supported model. It is funded
+through GitHub Sponsors, Patreon, Ko-fi and Liberapay, and the author describes it
+plainly as *"a side gig."*
+
+Econumo's self-hosted edition is likewise free, with an optional hosted account at
+**$20 one-time per user** for those who would rather not run a server. Firefly III
+has no equivalent — third-party hosts list it, but that is not a project offering.
+
+---
+
+## Popularity and project health
+
+Firefly III is far more established, and the numbers are not close.
+
+| | Econumo | Firefly III |
+|---|---|---|
+| GitHub stars | 79 | **24,070** |
+| Forks | 2 | **2,229** |
+| Docker pulls | not published | **27.5 million** |
+| In development since | 2020 | **2012** |
+| Releases | 24 | **329** |
+
+If longevity and community size are what you are optimising for, Firefly III wins
+comfortably.
+
+One thing to weigh alongside that, in fairness to both projects: Firefly III's
+development is **overwhelmingly one person**. James Cole has authored roughly
+20,800 of the repository's commits — about 89% — and the next most active human
+contributor has 131. Of the last 100 commits, 68 were his, 31 were bots, and one
+was from anyone else. The project is very actively maintained and ships roughly
+every eight days, but its bus factor is 1, and the author is candid that it is a
+side project.
+
+That is not a criticism so much as context: a large star count does not
+automatically mean a large maintenance team.
+
+---
+
+## Release history
+
+Firefly III has one of the most prolific release records in the category: **329
+releases since October 2014**, averaging around 28 stable releases a year over its
+lifetime and accelerating to **45 in the last twelve months** — roughly one every
+eight days.
+
+| | Econumo | Firefly III |
+|---|---|---|
+| Total releases | 24 | 329 |
+| First public release | 16 Nov 2024 | 14 Oct 2014 |
+| Latest release | v1.1.1, 19 Jul 2026 | v6.6.6, 1 Jul 2026 |
+
+The flip side of that cadence is an upgrade treadmill. Firefly III moved from PHP
+8.3 to **PHP 8.5** within about eighteen months, dropped Docker support for
+`linux/arm/v7`, `linux/arm/v8` and `linux/386` in 6.2.0, and has renamed core
+concepts across recent versions. Its own 6.2.0 release note says: *"I expect you
+will run into issue, and I appreciate your feedback and your patience as I fix
+them."*
+
+---
+
+## Budgeting — the philosophical difference
+
+This is the most important section on the page, and it is not a matter of one
+being more polished than the other. **They disagree about what budgeting is.**
+
+**Firefly III does not do envelope or zero-based budgeting, by design.** A budget
+there is, in the docs' own words, *"just another identifier to link withdrawals
+together"*, optionally with a date range and an amount — a **spending cap**, not an
+envelope you fund.
+
+The clearest proof is this line from the
+[budgets documentation](https://docs.firefly-iii.org/explanation/financial-concepts/budgets/):
+
+> "You cannot assign income to a budget to automatically increase the budgets
+> amount. If you have more money available for the budget, you must increase the
+> budget manually."
+
+That is the exact inverse of envelope budgeting, where income is what fills the
+envelopes. Overspending is also not enforced — the budget simply depletes and
+*"Firefly III will not complain."* Rollover exists only as a cron-driven
+"auto-budget" mode, not as native carryover.
+
+The maintainer has stated his position directly, on a page flagged as personal
+opinion:
+
+> "Zero based budgeting is a method of budgeting that focuses on giving each Euro
+> a goal. … I believe this approach is pretty terrible."
+
+So this will not change. If you have come from YNAB and want that workflow,
+Firefly III is explicitly not offering it.
+
+**Econumo is envelope-first.** [Budgets](/docs/user-guide/budgets/) are the primary
+object: income is assigned to envelopes grouped in folders, with limits, available
+amounts and rollover.
+
+*Econumo's envelope budget: money assigned into envelopes, not spending caps
+attached to a ledger.*
+
+Neither model is wrong. But they suit different people, and the choice between
+them is the choice between these two apps.
+
+---
+
+## Household sharing — Firefly III's hardest limit
+
+Firefly III supports unlimited **users**, each with a completely separate financial
+administration. What it does not support is two people sharing one.
+
+From the [official multi-user documentation](https://docs.firefly-iii.org/how-to/firefly-iii/features/multi-user/):
+
+> "Can I share my administration with other users? At the moment, you cannot.
+> Sorry about that. … This is a big project and will take a while."
+
+And from the [FAQ](https://docs.firefly-iii.org/references/faq/firefly-iii/general/):
+
+> "Each administration is tightly locked to a single user. If you want to share
+> your financial administration with your partner or somebody else, **you must
+> share the username and password with them.**"
+
+The author has explained why it is unlikely to change soon: roughly 95% of the
+codebase would be affected, since every query is scoped to a single user ID. Asked
+in 2021 whether household use really required sharing credentials, his answer was
+*"Indeed. I advise a password manager with a shared vault."* The request dates back
+to 2016 and still ships as "at the moment, you cannot" as of July 2026.
+
+**Econumo was built for this case.** You
+[connect by invitation](/docs/user-guide/shared-access/) and set an access level
+**per account and per budget**. Each person has their own login, their own
+password, and sees exactly what you have shared.
+
+For a couple or a family, this is the single biggest practical difference between
+the two applications.
+
+---
+
+## Multi-currency — both support it, differently
+
+Firefly III's multi-currency support is genuinely substantial: unlimited
+currencies, a currency per asset account, and mandatory foreign amounts on
+cross-currency transactions. Automatic exchange rates arrived in **v6.2.0**
+(January 2025).
+
+There are real caveats worth knowing before relying on it:
+
+- Exchange rates are **off by default** and need a working cron job
+- Conversion runs **one way only**, into your primary currency
+- If a rate is missing, Firefly III **silently uses 1**
+- No historical rates
+- Maximum 8 decimal places, so most cryptocurrencies are impractical
+- **Budgets ignore foreign amounts entirely** — per the docs, *"A budget with the
+  amount set to EUR 100 will not be influenced by transactions in USD, even when
+  those transactions are linked to the budget."* You must set a separate budget
+  amount per currency.
+
+That last point matters most here: Firefly III is multi-currency at the *ledger*
+level, but its *budgets* are not.
+
+**Econumo converts everything into a single budget currency**, so a multi-currency
+household sees one set of totals that reconcile — see
+[Multi-Currency](/docs/user-guide/multi-currency/). Firefly III's ledger is the
+more powerful accounting tool; Econumo's budget is the more usable multi-currency
+budget.
+
+---
+
+## Bank import
+
+Neither project is in a strong position here, but for different reasons.
+
+**Firefly III** imports through the **Data Importer, a completely separate
+application** with its own installation, Docker image, upgrade cycle and OAuth
+wiring. It reads CSV and CAMT.053 files, and connects to Enable Banking (2,500+
+banks across 29 European countries), SimpleFIN and Lunch Flow (paid).
+
+Two of its longest-standing providers are going away: **Salt Edge ended free-tier
+access for Firefly III users on 31 October 2025**, and **GoCardless is shifting
+away from its bank-account-data product**. European bank sync is mid-migration to
+Enable Banking.
+
+The docs are candid about the experience — *"Importing data from your bank and
+doing this automatically is not that easy with Firefly III"* — and note that
+imported transactions probably will not match ones you entered manually. Docker
+pull counts suggest many users skip the importer entirely: 12.3M pulls against
+27.5M for the core image.
+
+**Econumo** has no automatic bank import at all — a
+[deliberate decision](/docs/faq/) — with
+[CSV import/export](/docs/user-guide/csv-import-export/) and a
+[REST API](/docs/api/) instead.
+
+So: Firefly III can sync from banks and Econumo cannot, but Firefly III's bank sync
+costs you a second application to run and is contracting in Europe.
+
+---
+
+## Setup and running cost
+
+| | Econumo | Firefly III |
+|---|---|---|
+| Runtime | Single Go binary, distroless image | PHP ≥ 8.5 + web server |
+| Extensions needed | none | BCMath, intl, curl, zip, libsodium, GD, XML, MBString, DB driver |
+| Post-install steps | migrations run on boot | four `php artisan` commands |
+| Cron job | not required | effectively required |
+| Import tooling | built in | separate application |
+| Memory | ~10 MB | full PHP stack |
+
+Firefly III's own documentation states it is *"geared towards tech-savvy users"*
+and that you should be someone who *"doesn't mind tinkering with self-hosted
+servers."* That is an accurate and honest self-description.
+
+Econumo pulls one image, runs its migrations on boot and uses about 10 MB of RAM.
+
+---
+
+## Mobile
+
+**Firefly III has never shipped an official mobile app.** Its documentation lists
+community apps — Waterfly III (Android), Abacus (iOS and Android), Photuris III,
+Firefly-Pico and others — several actively maintained, one officially flagged as
+dead since January 2020. The project positions its REST API as the mobile story.
+
+**Econumo** is a responsive web app installable to the home screen on
+[iPhone, Android, Mac and PC](/docs/apps/).
+
+---
+
+## Where Firefly III is better
+
+- **Maturity** — fourteen years of development, 329 releases, 27.5M Docker pulls
+- **Double-entry rigour** — a real accounting ledger, which Econumo is not
+- **Reporting depth** — far more extensive
+- **Bank sync** — Econumo has none at all
+- **Import formats** and a large third-party ecosystem
+- **API surface** — extremely broad, plus first-class webhooks
+- **Community** — vastly larger, with abundant third-party guides
+
+## Where Econumo is better
+
+- **Envelope budgeting** — Firefly III declines to offer it
+- **Household sharing** — proper per-user access instead of a shared password
+- **Multi-currency budgeting** — budgets that actually combine currencies
+- **Setup** — one small binary versus a PHP stack, cron job and second app
+- **Licence** — MIT rather than AGPL
+- **Hosted option** — $20 one-time, or self-host free
+
+---
+
+## Which should you choose?
+
+**Choose Firefly III if:**
+
+- You want a full double-entry ledger and detailed financial reporting
+- You are budgeting alone and will never need to share
+- You want spending caps rather than funded envelopes
+- You want bank sync and are willing to run a second application for it
+- You are comfortable maintaining a PHP application
+- Project maturity and ecosystem size are decisive
+
+**Choose Econumo if:**
+
+- You want **envelope budgeting**
+- You want to **share a budget with your household**, each person with their own login
+- You want **multi-currency budgets** that combine into one set of totals
+- You want a small, simple deployment
+- You want the option of a hosted account for a single $20 payment
+
+Try the [Econumo demo](https://demo.econumo.com) or the
+[Firefly III demo](https://demo.firefly-iii.org) — both run in a browser.
+
+---
+
+## Frequently asked questions
+
+### Can my partner and I share a budget in Firefly III?
+
+No. Each administration is locked to one user, and the official FAQ says you must
+share the username and password. Econumo has invitation-based sharing with
+per-account and per-budget access levels.
+
+### Does Firefly III do envelope or zero-based budgeting?
+
+No. Budgets are spending caps on a double-entry ledger; you cannot assign income to
+a budget. The maintainer has written that he considers zero-based budgeting a poor
+approach and will not add it.
+
+### Is Firefly III free?
+
+Yes — AGPL-3.0-or-later, self-hosted only, funded by sponsorship. There is no
+official hosted tier.
+
+### Does Firefly III support multiple currencies?
+
+Yes at the ledger level, with caveats: rates are off by default, convert only into
+your primary currency, and fall back to 1 when missing. Budgets ignore foreign
+amounts entirely.
+
+### Which is easier to set up?
+
+Econumo — a single Go binary using about 10 MB of RAM. Firefly III needs PHP 8.5
+with nine extensions, a database, four post-install commands, a cron job, and a
+second application for imports.
+
+---
+
+*Last verified 18–19 July 2026 against the GitHub API, Docker Hub and Firefly III's
+official documentation. If you spot something out of date,
+[let us know](/docs/contact-us/).*
+
+---
+
+# Econumo vs Maybe Finance
+
+URL: https://econumo.com/docs/comparison/econumo-vs-maybe-finance/
+
+# Econumo vs Maybe Finance
+
+**Maybe Finance is no longer maintained.** The project was archived on GitHub in
+July 2025, and the company behind it wound down in early 2026. If you arrived here
+looking for a Maybe alternative, this page is about where to go next — and it will
+not pretend Econumo is the right answer for everyone.
+
+**Maybe Finance shut down**
+
+On **24 July 2025**, Maybe Finance published a final release titled
+*"Farewell… Maybe"* announcing a pivot to B2B financial forecasting. The
+[repository](https://github.com/maybe-finance/maybe) is archived and read-only,
+with 54,351 stars frozen in place. `maybefinance.com` now redirects away from the
+product, and the hosted app is gone.
+
+**The short version**
+
+**[Sure](https://github.com/we-promise/sure) is the continuation. Econumo is the
+alternative.**
+If you loved Maybe's **tracking** — bank sync, investments, the net worth
+dashboard — go to Sure. It is a direct fork, actively maintained, and keeps your
+existing database.
+If you loved Maybe's **simplicity** but wished it actually helped you *plan* — and
+never got much out of bank sync anyway — Econumo does the envelope budgeting that
+neither Maybe nor Sure has.
+
+---
+
+## Which should you choose?
+
+The honest decision tree, before any comparison table:
+
+| If you… | Go to |
+|---|---|
+| Want bank sync to keep importing transactions | **Sure** |
+| Track investments, holdings or crypto | **Sure** |
+| Care most about the net worth graph and balance sheet | **Sure** |
+| Are self-hosting Maybe and want to keep your database | **Sure** |
+| Want the AI assistant | **Sure** |
+| Want **envelope budgeting** with money that rolls over | **Econumo** |
+| Budget with a **partner or family**, each with their own login | **Econumo** |
+| Budget across **multiple currencies** in one place | **Econumo** |
+| Were entering transactions manually anyway | **Econumo** |
+| Want a hosted account without running a server | **Econumo** |
+
+If several rows on both sides apply, you probably want Sure for tracking and are
+better served waiting rather than switching twice.
+
+---
+
+## At a glance
+
+| | Econumo | Maybe Finance | Sure (fork) |
+|---|---|---|---|
+| **Status** | ✅ Active | ❌ **Archived Jul 2025** | ✅ Active |
+| **Licence** | MIT | AGPL-3.0 | AGPL-3.0 |
+| **Price** | Free self-hosted; $20 one-time cloud | — | Free, self-hosted |
+| **GitHub stars** | 79 | 54,351 (frozen) | 9,065 |
+| **Last release** | v1.1.1 (19 Jul 2026) | v0.6.0 (24 Jul 2025) | v0.7.2 (1 Jul 2026) |
+| **Total releases** | 24 | 28 | 20 |
+| **Stack** | Go, single binary | Ruby on Rails + PostgreSQL | Ruby on Rails + PostgreSQL |
+| **Envelope budgeting** | ✅ | ❌ Monthly categories only | ❌ Inherited from Maybe |
+| **Net worth / balance sheet** | ❌ | ✅ | ✅ |
+| **Investment tracking** | ❌ | ✅ | ✅ Expanded |
+| **Bank sync** | ❌ | ✅ Plaid only | ✅ ~20 providers |
+| **Multi-currency** | ✅ | ✅ | ✅ |
+| **Household sharing** | ✅ Per-item access | ✅ Household invites | ✅ With permissions |
+| **Mobile apps** | PWA | ❌ None | 🟡 Flutter, alpha |
+| **AI assistant** | ❌ | ✅ | ✅ Optional |
+
+*Figures observed 19 July 2026 from the GitHub API and each project's
+documentation. Maybe's figures are frozen at archive time.*
+
+---
+
+## What happened to Maybe Finance
+
+Maybe was founded in 2021 by Josh Pigford and Travis Woods. Its first attempt was
+a paid commercial product that failed to find enough customers. In **January 2024**
+the team open-sourced roughly a million dollars' worth of prior development work,
+and it exploded — the top trending repository on GitHub for a week, tens of
+thousands of stars, arriving just as Mint's shutdown left millions of users looking
+for a replacement.
+
+That momentum never converted into a business. From the final release notes:
+
+> "In the end, our obligation as a company is to our investors, and … we've
+> determined that continuing to build this app is not our best chance at paying
+> back our investors and profiting as a company."
+
+The repository's last commit is **24 July 2025**. The company itself shut down in
+early 2026 and began liquidating assets — its market-data product Synth now has
+its domain listed for sale.
+
+### Do not simply self-host the archive
+
+This matters practically: **archived Maybe is partially broken today.** It depended
+on **Synth**, Maybe's own market-data API, which died with the company. Investment
+prices and related features no longer work, and the code receives no security
+updates.
+
+Sure replaced that dependency with several working market-data providers. If you
+want Maybe's feature set, run Sure, not the archive.
+
+---
+
+## What Maybe got right
+
+Worth stating clearly, because it explains why 54,000 people starred it and why
+this page exists at all.
+
+**The design.** Maybe's team was unusually disciplined about restraint. From their
+own write-up:
+
+> "We spent a lot of time asking the question, 'What can we delete?' … Our goal
+> with this app was to *remove complexity* from personal finance."
+
+**Transfers as first-class citizens.** Maybe auto-detected transfers between your
+own accounts and *refused to let you categorise them*, so they never polluted
+budgets or spending totals. Their reasoning — that other apps force users into a
+"junk drawer" of Transfer and Excluded categories — is correct, and it is a detail
+people miss immediately when it is absent.
+
+**The net worth dashboard.** Assets, liabilities, property, crypto and investments
+in one balance sheet with a trend over time. This is what made Maybe a *Mint*
+replacement rather than a *YNAB* replacement — and it is the single biggest thing
+Econumo does **not** do.
+
+---
+
+## The gap neither Maybe nor Sure fills
+
+Maybe had **monthly category budgets**, not envelopes. You could allocate money
+across categories within a month, but there was **no carryover between months** —
+no rollover field exists anywhere in its data model, and Sure inherited the same
+design.
+
+That is a deliberate philosophy, not an oversight. Maybe's position was that *"most
+users are satisfied with less; not more"*, and its four guiding questions were all
+retrospective: how much do I have, am I spending less than I earn, how much did I
+spend last month, what did I spend it on.
+
+Those are good questions. They are just not budgeting questions. **Maybe told you
+where your money went. Envelope budgeting decides where it goes next.**
+
+[Econumo's budgets](/docs/user-guide/budgets/) are envelopes: income is assigned
+into categories grouped in folders, with limits, available amounts and rollover
+between months.
+
+*Econumo's envelope budget — unspent money stays in the envelope and carries
+forward.*
+
+*Sure's dashboard, continuing Maybe's design: cashflow, balance sheet and net
+worth. Screenshot from the Sure project README.*
+
+The two screenshots show the difference better than any table. One is a plan; the
+other is a report.
+
+---
+
+## Bank sync — and why Econumo does not have it
+
+Econumo has **no automatic bank import**, and for a Maybe refugee that is the most
+obvious downgrade. It is a [deliberate decision](/docs/faq/), with
+[CSV import/export](/docs/user-guide/csv-import-export/) and a
+[REST API](/docs/api/) instead.
+
+Maybe's own postmortem is the most credible explanation of why a small
+self-hosted project might reasonably decline to build it:
+
+> "The single biggest challenge with a personal finance app in 2025 is bank
+> providers. … this is a *massive* challenge for anyone building a personal
+> finance app and is the primary reason why 'bootstrapping' a personal finance app
+> with automated bank syncing is an uphill battle. **You need a lot of money and
+> time to get this right.**"
+
+They listed unsupported banks, banks that only accept logins at certain hours,
+provider documentation that did not match production data, and bank data that was
+simply wrong. With roughly $3M raised, it was still the thing that beat them.
+
+That is context, not an excuse. If automatic bank import is why you budget at all,
+**Sure is the better choice** — it now supports around twenty providers including
+Plaid, SimpleFIN, Enable Banking, Akahu and several brokers, well beyond Maybe's
+Plaid-only integration.
+
+---
+
+## Sure: the direct continuation
+
+Sure was forked on **23 July 2025** — one day *before* Maybe's final release —
+and its first version was titled *"Maybe v0.6.0 — Bug compatible"*, an explicit
+statement of intent.
+
+It has since clearly outgrown a straight continuation:
+
+- **Replaced the dead Synth dependency** with Twelve Data, Yahoo Finance, Alpha
+  Vantage, Frankfurter and others
+- **Expanded bank sync** from Plaid alone to roughly twenty providers
+- **Native mobile apps** in Flutter — iOS and Android, still alpha
+- **Pluggable AI**, including local models via Ollama, and the option to disable
+  it entirely
+- **OpenID Connect / SSO**, which Maybe never had
+- **Family sharing permissions**, goals, transaction splits, privacy mode
+- **Internationalisation** — Maybe was English-only
+
+Health signals are genuinely good: **1,199 merged pull requests** in its first
+year, and **eight consecutive on-schedule monthly stable releases** from November
+2025 through July 2026.
+
+Two caveats worth knowing. Its **bus factor is low** — one maintainer leads
+development and writes all the communications, with a long tail of occasional
+contributors — and there are **more than 200 open pull requests**, the classic
+signature of review capacity being the bottleneck. It is substantially healthier
+than a one-person project, but it is not yet institutionally durable.
+
+---
+
+## Where Econumo genuinely fits
+
+**Envelope budgeting.** Verified absent from both Maybe and Sure. This is the real
+differentiator, not a marketing one.
+
+**Multi-currency and household sharing.** Straight parity with Maybe — Econumo has
+both, with [access levels set per account and per budget](/docs/user-guide/shared-access/).
+
+**A much lighter self-host.** Econumo is a single Go binary in a distroless image
+using about 10 MB of RAM, with SQLite by default. Sure is a Rails application with
+PostgreSQL, background workers, and API keys needed for market data and AI. If your
+Maybe instance felt heavy for what you used it for, that gap is real.
+
+**No third-party dependencies.** Sure's headline features need API keys from
+market-data or LLM providers. Econumo needs none — which is also precisely why
+Maybe's Synth shutdown could not happen to it.
+
+**MIT rather than AGPL.** Maybe and Sure are both AGPL-3.0. Maybe additionally
+trademarked its name, which is why the fork had to be renamed — that is what
+AGPL-plus-trademark looks like in practice.
+
+**A hosted option.** $20 one-time per user, or self-host free. Sure offers
+self-hosting only.
+
+---
+
+## Be clear about the switching cost
+
+If you are running self-hosted Maybe today:
+
+- **Moving to Sure** is close to a container swap. It shares Maybe's Rails and
+  PostgreSQL schema and started life bug-compatible with v0.6.0.
+- **Moving to Econumo** means exporting to CSV, importing, and **rebuilding your
+  budget from scratch**. There is no Maybe importer. You also lose investment
+  tracking and the net worth balance sheet, which Econumo does not model at all.
+
+If you were a *hosted* Maybe customer, there is a harder problem: the sunset window
+closed around September 2025, so if you did not export then, that data is likely
+gone. Neither project can recover it.
+
+Given all that, the switch to Econumo makes sense when you were **already entering
+transactions by hand** — which described most of Maybe's users, since the project
+had tens of thousands of self-hosters and only a few hundred paying customers — and
+what you actually wanted was a budget rather than a report.
+
+Try the [Econumo demo](https://demo.econumo.com) in your browser before deciding.
+
+---
+
+## Frequently asked questions
+
+### Is Maybe Finance shut down?
+
+Yes. It announced a pivot to B2B forecasting on 24 July 2025 and archived the
+repository; the company wound down in early 2026.
+
+### What is the best alternative to Maybe Finance?
+
+Sure, if you want bank sync, investments and the net worth dashboard to keep
+working. Econumo, if you wanted a simple app that helps you plan rather than report,
+and did not rely on bank sync.
+
+### Can I still self-host the archived Maybe Finance?
+
+You can run it, but its Synth market-data dependency died with the company, so
+parts are broken and it gets no security updates. Run Sure instead.
+
+### Did Maybe Finance have envelope budgeting?
+
+No — monthly category budgets with no carryover between months. Sure inherited the
+same model.
+
+### Can I migrate my Maybe data to Econumo?
+
+Only via CSV, and you will rebuild your budget. Sure is the drop-in path if you
+want to keep your existing database.
+
+---
+
+*Last verified 19 July 2026 against the GitHub API and the projects' own release
+notes and documentation. Maybe Finance is a trademark of Maybe Finance Inc.;
+Econumo is not affiliated with or endorsed by Maybe Finance Inc. or the Sure
+project. If you spot something out of date, [let us know](/docs/contact-us/).*
+
+---
+
+# Econumo vs ezBookkeeping
+
+URL: https://econumo.com/docs/comparison/econumo-vs-ezbookkeeping/
+
+# Econumo vs ezBookkeeping
+
+Of everything in the self-hosted personal finance space, **ezBookkeeping is
+Econumo's closest technical twin.** Both are written in Go, both are MIT-licensed,
+both ship as a lightweight self-hosted Docker container, both run on SQLite or
+PostgreSQL, and both are built to run on hardware as small as a Raspberry Pi.
+
+They are, however, built for two different jobs — and the difference is unusually
+clean-cut.
+
+**The short version**
+
+ezBookkeeping is a **bookkeeping and analytics** tool: record what happened, import
+it from almost any file format, and chart it. Econumo is a **budgeting** tool: plan
+what should happen, in envelopes, together with your household.
+ezBookkeeping has **no budgeting features at all** and **no shared household
+ledger**. If you want either of those, that decides it. If you want the broadest
+possible import-format support and rich retrospective analytics, ezBookkeeping is
+excellent at that.
+
+---
+
+## At a glance
+
+| | Econumo | ezBookkeeping |
+|---|---|---|
+| **Licence** | MIT | MIT |
+| **Price** | Free self-hosted; $20 one-time cloud | Free, self-host only |
+| **GitHub stars** | 79 | 5,239 |
+| **Releases to date** | 24 | 22 |
+| **In development since** | 2020 | October 2020 |
+| **First public release** | November 2024 | June 2021 |
+| **Latest release** | v1.1.1 (19 Jul 2026) | v1.5.1 (31 May 2026) |
+| **Backend** | Go | Go |
+| **Frontend** | React | Vue 3 (Framework7 mobile / Vuetify desktop) |
+| **Database** | SQLite or PostgreSQL | SQLite, MySQL or PostgreSQL |
+| **Memory footprint** | ~10 MB | ~30 MiB |
+| **Envelope budgeting** | ✅ | ❌ Not supported at all |
+| **Household sharing** | ✅ Per-item access levels | ❌ Multi-user, but no shared data |
+| **Multi-currency** | ✅ | ✅ With auto-updating rates |
+| **Import formats** | CSV | CSV, OFX, QFX, QIF, IIF, Camt.052/053, MT940 |
+| **Bank sync** | ❌ | ❌ File import only |
+| **Mobile** | PWA | PWA with separate mobile UI |
+| **API** | ✅ OpenAPI / Swagger | ✅ HTTP API + MCP server |
+| **2FA** | — | ✅ TOTP, WebAuthn, OIDC |
+
+*Figures observed 18–19 July 2026 from the GitHub API and each project's official
+documentation.*
+
+---
+
+## Licence and price
+
+A genuine tie on licence: both are **MIT**, both are free to self-host forever.
+
+The projects differ in how they sustain themselves. ezBookkeeping is unusually
+absolutist — its FAQ states there are no paid features and that the project
+**does not accept donations or sponsorships**, and there is no official hosted
+service. Econumo funds development through an optional hosted cloud account
+(**$20 one-time per user**, $40 for a family licence) while the self-hosted
+edition stays free.
+
+If you object on principle to a project having any commercial arm at all,
+ezBookkeeping's position is the purer one. If you would rather pay once and not
+run a server, only Econumo offers that.
+
+---
+
+## Popularity and project health
+
+ezBookkeeping is much the better known of the two — **5,239 stars to Econumo's
+79** — but the two projects are near-contemporaries. Both have been in development
+since 2020; ezBookkeeping simply found its audience, and Econumo has not.
+
+| | Econumo | ezBookkeeping |
+|---|---|---|
+| GitHub stars | 79 | **5,239** |
+| Forks | 2 | 600 |
+| Contributors | small core team | ~36 |
+| In development since | 2020 | October 2020 |
+
+One characteristic worth knowing about ezBookkeeping: development is
+**overwhelmingly one person**, who personally answers nearly every issue. That
+produces an unusually coherent product and fast, decisive issue triage — and it
+also concentrates the project's bus factor. Design decisions are firmly held, and
+requests that do not fit the vision are closed rather than left open, which is
+directly relevant to the budgeting question below.
+
+---
+
+## Release history
+
+Both projects started in 2020 and have shipped a near-identical number of public
+releases, though Econumo spent its first four years closed-source.
+
+| | Econumo | ezBookkeeping |
+|---|---|---|
+| In development since | 2020 | October 2020 |
+| Public releases to date | 24 | 22 |
+| First public release | v0.1.0, 16 Nov 2024 | v0.1.0, 20 Jun 2021 |
+| 1.0 milestone | July 2026 (Go + React rewrite) | August 2025 |
+| Latest release | v1.1.1, 19 Jul 2026 | v1.5.1, 31 May 2026 |
+
+ezBookkeeping's cadence has accelerated sharply — 4 releases in 2023, 3 in 2024,
+8 in 2025 and 6 in the first half of 2026. Both projects are healthy and actively
+maintained.
+
+---
+
+## The two differences that decide it
+
+### 1. ezBookkeeping has no budgeting
+
+This is not a weak-budgeting story or a roadmap gap. ezBookkeeping does not
+implement budgeting, by design.
+
+The project's **own comparison page** lists budgeting as
+[not supported](https://ezbookkeeping.mayswind.net/comparison/). There is no budget
+entity in its data model. And budget feature requests —
+[#67](https://github.com/mayswind/ezbookkeeping/issues/67),
+[#127](https://github.com/mayswind/ezbookkeeping/issues/127),
+[#168](https://github.com/mayswind/ezbookkeeping/issues/168) and
+[#289](https://github.com/mayswind/ezbookkeeping/issues/289) — have been filed and
+closed without implementation. Issue #289 puts the philosophy plainly: the app
+focuses on tracking past transactions, with no support for planning or forecasting.
+
+That is a legitimate product position. Plenty of people want a clean ledger with
+good charts and no opinions about what they *should* spend. If that is you,
+ezBookkeeping does it well.
+
+But if you want to assign income to categories before you spend it — the envelope
+method — ezBookkeeping cannot do it, and is not going to.
+[Econumo's budgets](/docs/user-guide/budgets/) are the entire point of the app:
+envelopes grouped into folders, with limits, available amounts and rollover.
+
+*Econumo's budget view. ezBookkeeping has no equivalent screen.*
+
+### 2. ezBookkeeping is multi-user, but not multi-player
+
+This one is easy to get wrong, so it is worth stating precisely.
+
+ezBookkeeping **does** support multiple users — one instance can host many
+independent accounts. But each user's data is **completely separate**. There is no
+shared ledger, no co-owned account, no household view and no cross-user
+aggregation. The maintainer has explained the reasoning in
+[#53](https://github.com/mayswind/ezbookkeeping/issues/53) and
+[#322](https://github.com/mayswind/ezbookkeeping/issues/322): accounts, categories
+and tags are all scoped to an individual user, ezBookkeeping is designed for
+personal use, and cross-user aggregation is not planned.
+
+For a couple who want a joint budget, the only workaround is sharing one login.
+
+[Econumo's shared access](/docs/user-guide/shared-access/) is built for exactly
+this case: you connect to another user by invitation, then set an access level
+**per account and per budget**. Each person keeps their own login and sees a shared
+view of the things you have chosen to share.
+
+---
+
+## Where ezBookkeeping is better
+
+Being the closest twin cuts both ways. ezBookkeeping clearly beats Econumo on
+several axes:
+
+**Import formats.** ezBookkeeping reads CSV, OFX, QFX, QIF, IIF, Camt.052,
+Camt.053 and MT940, plus dedicated migration importers for **GnuCash, Firefly III
+and Beancount**. Econumo imports CSV only. If you are migrating years of history
+out of another tool, this is a real gap.
+
+**Authentication and security features.** TOTP two-factor authentication,
+WebAuthn app lock, OIDC external authentication and login rate limiting all ship
+today.
+
+**AI and automation surface.** ezBookkeeping provides an HTTP API *and* an MCP
+(Model Context Protocol) server, an Agent Skill and CLI tooling — ahead of most of
+the field on AI integration. Econumo offers a documented
+[REST API with Swagger UI](/docs/api/), but no MCP server.
+
+**Extras.** Transaction image attachments with AI receipt recognition, scheduled
+and recurring transactions, geolocation with maps, S3/MinIO attachment storage,
+and a dedicated mobile UI distinct from the desktop one.
+
+**Maturity.** Four more years of development and 66× the stars.
+
+Neither app has automatic bank synchronisation — both are file-import and
+manual-entry tools.
+
+---
+
+## Which should you choose?
+
+**Choose ezBookkeeping if:**
+
+- You want a ledger and analytics, not a budget
+- You are migrating from GnuCash, Firefly III or Beancount and want an importer
+- You need broad bank-statement format support (MT940, Camt.053, OFX, QIF)
+- You want TOTP/WebAuthn/OIDC authentication out of the box
+- You are budgeting alone and will never need to share
+- Project maturity and community size are decisive
+
+**Choose Econumo if:**
+
+- You want **envelope budgeting** — ezBookkeeping has none
+- You want a **shared household budget** where each person has their own login
+- You want a hosted option you can pay for once instead of self-hosting
+- You want the smallest possible footprint (~10 MB, single distroless binary)
+
+Both are MIT-licensed, both export your data, and both have public demos — the
+[Econumo demo](https://demo.econumo.com) and the
+[ezBookkeeping demo](https://ezbookkeeping-demo.mayswind.net) — so you can try
+both before committing.
+
+---
+
+## Frequently asked questions
+
+### Does ezBookkeeping have budgeting?
+
+No. Its own comparison page lists budgeting as unsupported, there is no budget
+entity in the data model, and multiple budget requests have been closed without
+implementation. It is a retrospective bookkeeping and analytics tool.
+
+### Can a couple share a budget in ezBookkeeping?
+
+No. Multiple users can have accounts on one instance, but their data is entirely
+separate — no shared ledger and no cross-user aggregation, which the maintainer
+has confirmed is not planned. Econumo supports per-account and per-budget sharing
+by invitation.
+
+### Is ezBookkeeping open source and free?
+
+Yes — MIT-licensed with no paid features. The project does not accept donations or
+sponsorships and offers no hosted service.
+
+### Which uses fewer resources?
+
+Both are very light. Econumo uses about 10 MB of RAM as a single distroless Go
+binary; ezBookkeeping reports about 30 MiB for a single user.
+
+---
+
+*Last verified 19 July 2026 against the GitHub API and each project's official
+documentation. If you spot something out of date,
+[let us know](/docs/contact-us/).*
+
+---
+
+# Econumo vs GnuCash
+
+URL: https://econumo.com/docs/comparison/econumo-vs-gnucash/
+
+# Econumo vs GnuCash
+
+GnuCash is one of the oldest and most respected open-source finance projects in
+existence — development began in **1997**, and it is still shipping quarterly
+releases nearly three decades later. Econumo is a self-hosted budgeting web app,
+in development since 2020 and open-sourced in November 2024.
+
+Comparing them is less about which is better and more about which category you
+actually need: **double-entry accounting** or **household budgeting**.
+
+**The short version**
+
+Choose **GnuCash** if you want rigorous double-entry bookkeeping, investment and
+share tracking, or the strongest multi-currency accounting engine available for
+free — and you are happy in a desktop application, on your own.
+Choose **Econumo** if you want **envelope budgeting**, access from a phone or any
+browser, and a **shared budget with your household**. GnuCash does none of those
+three well.
+
+---
+
+## At a glance
+
+| | Econumo | GnuCash |
+|---|---|---|
+| **Licence** | MIT | GPL-2.0-or-later / GPL-3.0 |
+| **Price** | Free self-hosted; $20 one-time cloud | Free |
+| **In development since** | 2020 | 1997 |
+| **First public release** | November 2024 | 1998 |
+| **GitHub stars** | 79 | 4,290 |
+| **Releases on GitHub** | 24 | 75 (2015 onward only) |
+| **Latest release** | v1.1.1 (19 Jul 2026) | 5.16 (28 Jun 2026) |
+| **Cadence** | Feature-driven | Strict quarterly, ~4/year |
+| **Form factor** | Self-hosted web app | Desktop application (GTK) |
+| **Platforms** | Any browser | Windows, macOS, Linux |
+| **Language** | Go | C / C++ / Scheme |
+| **Storage** | SQLite or PostgreSQL | XML file, or SQLite/MySQL/PostgreSQL |
+| **Accounting model** | Envelope budgeting | Full double-entry |
+| **Envelope budgeting** | ✅ | ❌ Ledger-delta budgets only |
+| **Household sharing** | ✅ Per-item access | ❌ Single-user |
+| **Mobile** | PWA | ❌ Android app unmaintained since 2018 |
+| **Multi-currency** | ✅ | ✅ Best in class |
+| **Investments / shares** | ❌ | ✅ With auto price quotes |
+| **Bank sync** | ❌ CSV import | ⚠️ AqBanking (mostly EU banks) |
+| **API** | ✅ REST + Swagger | ❌ Python/Scheme bindings only |
+
+*Figures observed 18–19 July 2026 from the GitHub API, gnucash.org and each
+project's documentation.*
+
+---
+
+## Licence
+
+This is the one place where the two differ in a way that could matter legally.
+
+Econumo is **MIT** — permissive, with no obligation to publish changes. GnuCash is
+**GPL-2.0-or-later / GPL-3.0**, a copyleft licence: distribute a modified GnuCash
+and you must release your modifications under the same terms.
+
+For an individual user this makes no practical difference. For anyone building a
+product on top, MIT is the less demanding choice.
+
+*Note: GitHub's licence detector reports GnuCash as `NOASSERTION` because its
+LICENSE file is a composite; the file itself specifies GPL v2 "or, at your option,
+any later version", with an OpenSSL linking exception on some files.*
+
+---
+
+## Price
+
+Both are free. GnuCash has no paid tier, no hosted service and no commercial
+edition — it is funded by donations. Econumo's self-hosted edition is likewise
+free, with an optional hosted cloud account at **$20 one-time per user**.
+
+Since GnuCash runs on your own desktop, there is nothing to host and no running
+cost either way.
+
+---
+
+## Popularity and longevity
+
+GnuCash's popularity is best measured in decades rather than stars.
+
+| | Econumo | GnuCash |
+|---|---|---|
+| GitHub stars | 79 | 4,290 |
+| Forks | 2 | 963 |
+| Contributors | small core team | ~317 |
+| Age | ~6 years | ~28 years |
+| Downloads | not published | ~67,000 in 3 months (SourceForge) |
+
+Roughly 22,000 people download GnuCash every month, three-quarters of them on
+Windows. Its star count understates it badly — GnuCash predates GitHub by a decade,
+and much of its community lives on mailing lists, Bugzilla and its own wiki rather
+than on GitHub.
+
+**On project longevity, GnuCash is in a class of its own.** Very little software
+of any kind has shipped continuously since 1998. If your main worry is a project
+disappearing, that record is hard to argue with.
+
+---
+
+## Release history
+
+GnuCash runs one of the most predictable release trains in open source: a stable
+release in **late March, late June, late September and mid-to-late December**,
+every year.
+
+| Version | Released |
+|---|---|
+| 5.16 | 28 Jun 2026 |
+| 5.15 | 29 Mar 2026 |
+| 5.14 | 21 Dec 2025 |
+| 5.13 | 28 Sep 2025 |
+| 5.12 | 29 Jun 2025 |
+
+The 75 releases visible on GitHub only reach back to 2015 — the project's true
+release history runs to 1998 and is catalogued on
+[gnucash.org](https://www.gnucash.org/news.phtml).
+
+Econumo, by contrast, has shipped 24 public releases since November 2024 on a
+feature-driven cadence, reaching 1.0 — and a Go and React rewrite — in July 2026.
+
+---
+
+## Features head to head
+
+### Budgeting — Econumo's core, GnuCash's weak spot
+
+GnuCash is a **general ledger** with a budget feature attached, and this is
+consistently identified as its weakest area.
+
+Its budget works by ledger deltas: you enter an expected change per account per
+period, and GnuCash reports actuals against that expectation. There is no envelope
+model, no moving money between categories mid-month, no per-envelope rollover, and
+no intra-period tracking. The project's own wiki maintains a long-standing
+[Budget Requirements](https://wiki.gnucash.org/wiki/Budget_Requirements) page
+enumerating what is still unimplemented, and reviewers regularly report that users
+never quite get the budget feature to fit how they think about money.
+
+Econumo is built the other way around — [budgets](/docs/user-guide/budgets/) are
+the primary object, organised as envelopes in folders with limits and available
+amounts.
+
+*Econumo's envelope budget. GnuCash's budget screen is a per-account grid of
+expected period amounts.*
+
+If you specifically want **envelope budgeting**, GnuCash is the wrong tool — and
+the GnuCash community will generally tell you the same.
+
+### Accounting rigour — GnuCash's core, Econumo does not compete
+
+The reverse is just as true. GnuCash offers full **double-entry accounting**, with
+every transaction balanced across accounts. It handles:
+
+- Stocks, bonds and mutual funds, with automatic price quote retrieval
+- Depreciation, accounts receivable/payable, invoicing and payroll basics
+- Small-business accounting
+- Scheduled transactions and a full reporting engine
+- Fixed-point arithmetic throughout, avoiding floating-point rounding error
+
+Econumo does none of this. It is a personal and family **budgeting** app, not a
+bookkeeping system, and it has no investment tracking.
+
+If you need to track a share portfolio or run books for a small business,
+**choose GnuCash.**
+
+### Multi-currency — both strong, GnuCash deeper
+
+Both handle multiple currencies properly, which puts them ahead of much of the
+field.
+
+**GnuCash** is the more powerful engine: per-account currency denomination,
+cross-currency transactions fully balanced through double-entry, automatic FX and
+security price retrieval via Finance::Quote, and fixed-point arithmetic.
+
+**Econumo** gives each account a fixed currency, records both amounts on
+cross-currency transfers, and converts the whole budget into a single currency so
+totals reconcile — see [Multi-Currency](/docs/user-guide/multi-currency/). That is
+what a multi-currency *budget* needs, without the accounting machinery.
+
+### Access and sharing — the practical difference
+
+This is where the 28-year age gap shows most.
+
+**GnuCash is a single-user desktop application.** There are no user accounts, no
+permissions and no per-user views. Even with a SQL backend, concurrent multi-user
+editing is not supported — sharing means passing a file around, or sharing one
+database with locking. There is no web interface.
+
+**Mobile is effectively absent.** GnuCash for Android last released in **June
+2018** and is unmaintained; it was only ever a capture tool that exported back to
+the desktop, never a sync client.
+
+**Econumo** is a web app: any browser, any device, installable to the home screen
+on [iPhone, Android, Mac and PC](/docs/apps/). Two people can hold separate logins
+and [share specific accounts and budgets](/docs/user-guide/shared-access/) at a
+chosen access level.
+
+For a couple who both want to add a transaction from their phone in a shop, this
+is decisive.
+
+### Bank import
+
+**GnuCash** imports QIF, OFX and CSV files, and supports live connections through
+**AqBanking** — HBCI, EBICS and OFX Direct Connect. In practice, live bank sync is
+largely a German and European story. GnuCash's own wiki describes OFX Direct
+Connect as an obsolete protocol that most banks had stopped offering by 2024, so
+most users outside the EU are on file import.
+
+**Econumo** has no automatic bank import at all — this is a
+[deliberate decision](/docs/faq/) — offering
+[CSV import and export](/docs/user-guide/csv-import-export/) and a
+[REST API](/docs/api/) instead.
+
+GnuCash wins here, with the caveat that its live-sync advantage mostly applies to
+European bank customers.
+
+### Learning curve
+
+GnuCash's most-cited complaint, ahead of even the dated GTK interface, is that
+**you need to understand double-entry accounting before you can be productive**.
+For someone who wants to know whether they can afford dinner out, that is a
+substantial barrier. Its report builder also draws consistent criticism for being
+clunky and hard to customise.
+
+Econumo asks you to understand envelopes, and nothing more.
+
+---
+
+## Which should you choose?
+
+**Choose GnuCash if:**
+
+- You want real double-entry accounting and understand it, or want to learn
+- You track investments, shares or a small business
+- You need the deepest multi-currency and price-quote support available for free
+- You are in Europe and want live HBCI/EBICS bank connections
+- You work alone, on one desktop computer
+- Three decades of continuous development is your definition of safe
+
+**Choose Econumo if:**
+
+- You want **envelope budgeting** rather than a general ledger
+- You want to use it **from a phone or any browser**
+- You want to **share a budget with your partner or family**, each with a login
+- You want multi-currency budgeting without an accounting course
+- You want a hosted option for a single $20 payment
+
+These tools are different enough that "both" is a reasonable answer — GnuCash for
+the books and investments, Econumo for the household budget. You can try Econumo
+on the [demo instance](https://demo.econumo.com) without signing up.
+
+---
+
+## Frequently asked questions
+
+### Is GnuCash good for budgeting?
+
+Budgeting is GnuCash's weakest area. It offers ledger-derived budgets — an expected
+change per account per period — with no envelope model, no moving money between
+categories and no per-envelope rollover.
+
+### Can my partner and I use GnuCash together?
+
+Not really. It is a single-user desktop application with no user accounts or
+permissions; sharing means sharing a file or database. Econumo has per-user logins
+and invitation-based sharing per account and per budget.
+
+### Does GnuCash have a mobile app?
+
+Not a maintained one. GnuCash for Android last released in June 2018 and was only
+ever a companion capture tool. Econumo is a responsive web app installable to the
+home screen.
+
+### Is GnuCash still actively developed?
+
+Yes — a strict quarterly release train, about four releases a year, with 5.16
+shipping on 28 June 2026.
+
+### Which has better multi-currency support?
+
+GnuCash has the deeper accounting engine, including automatic price quotes and
+fixed-point arithmetic. Econumo covers what multi-currency budgeting requires
+without the accounting complexity.
+
+---
+
+*Last verified 19 July 2026 against the GitHub API, gnucash.org and each project's
+documentation. If you spot something out of date,
+[let us know](/docs/contact-us/).*
+
+---
+
 # FAQ
 
 URL: https://econumo.com/docs/faq/
