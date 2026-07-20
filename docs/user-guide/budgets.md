@@ -187,6 +187,10 @@ Econumo supports the following access levels for budgets:
 - **Full control** — like Manage budget, but your partner can also delete and
   rename the budget.
 
-Once access is granted, your partner sees the budget in their own budget list,
-and you budget the same envelopes together — as John and Megan do with the
-"Family budget" in the screenshots throughout this page.
+As with accounts, this sends a **pending invite** rather than sharing the
+budget outright — your partner accepts or declines it from the
+**Sharing requests** panel described in
+[Shared Access](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request).
+Once accepted, your partner sees the budget in their own budget list, and you
+budget the same envelopes together — as John and Megan do with the "Family
+budget" in the screenshots throughout this page.

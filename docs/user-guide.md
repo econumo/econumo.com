@@ -38,6 +38,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Shared access](/docs/user-guide/budgets/#shared-access)
 - [Shared access](/docs/user-guide/shared-access/)
   - [Connect with another user](/docs/user-guide/shared-access/#connect-with-another-user)
+  - [Accept or decline a sharing request](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request)
   - [Remove connection between users](/docs/user-guide/shared-access/#remove-connection-between-users)
   - [Check shared accounts and budgets](/docs/user-guide/shared-access/#check-shared-accounts-and-budgets)
 - [Multi-Currency](/docs/user-guide/multi-currency/)

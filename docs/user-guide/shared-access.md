@@ -15,6 +15,7 @@ managed in **Settings → Shared access**:
 ## In this section
 
 - [Connect with another user](/docs/user-guide/shared-access/#connect-with-another-user)
+- [Accept or decline a sharing request](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request)
 - [Remove connection between users](/docs/user-guide/shared-access/#remove-connection-between-users)
 - [Check shared accounts and budgets](/docs/user-guide/shared-access/#check-shared-accounts-and-budgets)
 
@@ -46,6 +47,31 @@ list, and you can start sharing
 
 ---
 
+## Accept or decline a sharing request
+
+Sharing an account or budget with someone doesn't hand it over immediately —
+Econumo sends a **pending invite** that the other person has to accept or
+decline first. Whenever you have invites waiting, a counter badge appears on
+a **Sharing requests** button in the top navigation; open it to see who
+invited you and to what.
+
+For each request:
+
+- **Accept** — for an account, you first choose which folder to file it
+  under (or leave it in **General**, which is created automatically if it
+  doesn't exist yet); a budget is added straight to your budgets list.
+- **Decline** — the invite is dismissed.
+
+While a request is still pending, the person who sent it sees
+**invitation pending** next to your name in the Access control dialog.
+
+**Note**
+Connections and shares that already existed before this flow shipped keep
+working without any action on your part — Econumo grandfathered them in as
+already accepted.
+
+---
+
 ## Remove connection between users
 
 You can delete the connection between users at any time: open the three-dots
@@ -72,9 +98,15 @@ accounts, who owns each item, and the current access level:
 
 </ScreenshotSet>
 
-Select an item in this dialog to change its access level, or press
-**Revoke access** to stop sharing it — this is also the way to manage access
-from a phone. The dialog lists only items that are already shared; sharing a
-new account or budget is done with **Access control**, as described in the
+Select an item in this dialog — this is also the way to manage access from a
+phone. What opens depends on which side you're on:
+
+- For something **you own**, you get an access-level picker where you can
+  change the level or press **Revoke access**.
+- For something **shared with you**, you get a plain confirmation to
+  **Decline access** instead.
+
+The dialog lists only items that are already shared; sharing a new account or
+budget is done with **Access control**, as described in the
 [Accounts](/docs/user-guide/accounts/#shared-access) and
 [Budgets](/docs/user-guide/budgets/#shared-access) sections.

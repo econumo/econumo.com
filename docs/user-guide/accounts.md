@@ -103,5 +103,11 @@ Econumo offers three levels of shared access:
 3. **Full control** — the invited user can manage all aspects of the account,
    including adding categories, tags, and payees on your behalf.
 
-Once access is granted, the shared account shows the avatars of everyone who
-can use it — both in the sidebar and in **Settings → Accounts**.
+Granting access doesn't add the account to your partner's account list right
+away: Econumo sends them a **pending invite** instead of sharing it outright.
+They accept it — choosing which folder to file the account under — or decline
+it, from the **Sharing requests** panel described in
+[Shared Access](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request).
+Until they respond, the Access control dialog shows **invitation pending**
+next to their name. Once accepted, the shared account shows the avatars of
+everyone who can use it — both in the sidebar and in **Settings → Accounts**.
