@@ -1,0 +1,28 @@
+{
+  "tags": [
+    {
+      "id": "gtm-head",
+      "trigger": "pageLoad",
+      "content": "<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-MQM3JZ62');</script>\n<!-- End Google Tag Manager -->",
+      "location": "head"
+    },
+    {
+      "id": "gtm-body",
+      "trigger": "pageLoad",
+      "content": "<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-MQM3JZ62\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->",
+      "location": "bodyTop"
+    },
+    {
+      "id": "demo-warning",
+      "trigger": "pageLoad",
+      "content": "<script>!function(){try{var e=document.createElement(\"style\");if(e.textContent=\".demo-banner {  position: fixed;  top: 0;  left: 0;  width: 100%;  background: #fff3cd;  border-bottom: 1px solid #ffeeba;  z-index: 9999;  display: none;}.demo-banner-content {  padding: 12px 24px;  display: flex;  justify-content: space-between;  align-items: center;  max-width: 1200px;  margin: 0 auto;}#demo-banner-close {  background: none;  border: none;  font-size: 20px;  cursor: pointer;  padding: 0 12px;}\",document.head.appendChild(e),!sessionStorage.getItem(\"demoBannerDismissed\")&&document.body){document.body.insertAdjacentHTML(\"afterbegin\",'<div id=\"demo-warning-banner\" class=\"demo-banner\">  <div class=\"demo-banner-content\">    <span>⚠\uFE0F <b>Demo Version</b>: Your data will be stored for one week only</span>    <button id=\"demo-banner-close\" aria-label=\"Close\">×</button>  </div></div>');var n=document.getElementById(\"demo-warning-banner\");n&&(n.style.display=\"block\",document.getElementById(\"demo-banner-close\").onclick=function(){n.style.display=\"none\",sessionStorage.setItem(\"demoBannerDismissed\",\"true\")})}}catch(e){console.error(\"Demo banner error:\",e)}}()</script>",
+      "location": "head"
+    },
+    {
+      "id": "plausible",
+      "trigger": "pageLoad",
+      "content": "<script data-domain=demo.econumo.com defer src=https://analytics.flowmitry.com/js/script.outbound-links.tagged-events.js></script><script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>",
+      "location": "head"
+    }
+  ]
+}
