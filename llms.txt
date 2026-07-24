@@ -161,6 +161,7 @@
 
 ## Releases
 
+- [v1.2.0](https://econumo.com/releases/v1.2.0.md): v1.2.0 — Docker-free single-binary deployment, an embedded MCP server for AI assistants, and first-class PostgreSQL support.
 - [v1.1.0](https://econumo.com/releases/v1.1.0.md): v1.1.0 — adds multi-language support, a redesigned invite-based account sharing flow, exact decimal money handling, and new-release notifications, plus a security-hardening pass.
 - [v1.1.1](https://econumo.com/releases/v1.1.1.md): v1.1.1 — a maintenance release that resolves three CodeQL security findings.
 - [v1.0.2](https://econumo.com/releases/v1.0.2.md): v1.0.2 — a maintenance release with dependency updates and a faster, QEMU-free multi-arch release build.
