@@ -64,14 +64,12 @@ Econumo provides versatile editions to meet various needs:
 Suited for individuals and families seeking convenience and access, this cloud-hosted solution offers a comprehensive
 suite of financial management tools available anytime, anywhere.
 
-- Demo: [https://demo.econumo.com](https://demo.econumo.com)
-
-_Demo version is available for one week only. After this period, your demo account will be blocked._
+Create an account at [app.econumo.com](https://app.econumo.com/register) to start a free trial — no credit card required.
 
 ---
 ### Econumo (Self-Hosted)
 
-Designed for households needing a self-hosted, collaborative approach. This **free** platform delivers powerful
+Designed for households needing a self-hosted, collaborative approach. This **free**, MIT-licensed platform delivers powerful
 financial management features for those who prioritize privacy and control over their budgeting.
 
 Self-hosted **Econumo** is a single self-contained binary (shipped as a distroless Docker image) that serves both the
@@ -1600,7 +1598,7 @@ URL: https://econumo.com/docs/api/
 
 Econumo includes a REST API and OpenAPI (Swagger) documentation.
 
-The Swagger UI is accessible at the `api/doc` URL. For example, in the demo environment, it can be found here: [https://demo.econumo.com/api/doc](https://demo.econumo.com/api/doc).
+The Swagger UI is accessible at the `api/doc` URL. For example: [https://app.econumo.com/api/doc/](https://app.econumo.com/api/doc/).
 
 The documentation features only `GET` and `POST` HTTP methods. The `GET` method is used for reading data, while the `POST` method is used for modifying data (creating, changing, or deleting).
 
@@ -1629,7 +1627,7 @@ Authorization: Bearer {ACCESS_TOKEN}
 
 ### Health check
 
-Econumo includes a `/_/health-check` endpoint. For example: https://demo.econumo.com/_/health-check.
+Econumo includes a `/_/health-check` endpoint. For example: https://app.econumo.com/_/health-check.
 
 You can configure your monitoring tools to check if Econumo is functioning properly.
 
@@ -1790,15 +1788,13 @@ network use of a modified version obliges you to publish your changes.
 | Self-hosted | **Free** | **Free** |
 | Hosted by the project | **$20 one-time**, per user | Not offered |
 | Hosted by a partner | — | PikaPods, ≈ $1.50/month |
-| Family plan | $40 one-time | — |
-| Funding model | Cloud licences + sponsorship | Donations (Open Collective, GitHub Sponsors) |
+| Funding model | Cloud licences | Donations (Open Collective, GitHub Sponsors) |
 
 Self-hosting either app costs nothing but your own infrastructure. The difference
 is what happens when you would rather not run a server.
 
-Econumo sells a **hosted cloud account for a single $20 payment per user** (a
-family licence covering several users is $40). There is no subscription and no
-recurring renewal.
+Econumo sells a **hosted cloud account for a single $20 payment per user**.
+There is no subscription and no recurring renewal.
 
 Actual Budget has **no first-party hosted option at all** — a deliberate choice,
 not an oversight. If you want Actual without running Docker yourself, the
@@ -1984,7 +1980,7 @@ rules engine, importers and optional end-to-end encryption are mature, and its
 YNAB importers make migration off YNAB genuinely straightforward.
 
 Econumo's API is fully documented via Swagger — you can browse it on the
-[demo instance](https://demo.econumo.com/api/doc) — but there is no CLI and no
+[API docs](https://app.econumo.com/api/doc/) — but there is no CLI and no
 rules engine today.
 
 ### Running it
@@ -2032,7 +2028,7 @@ server.
 - You prefer deliberate manual entry to automatic import
 
 Both are MIT-licensed and both let you export your data, so neither choice locks
-you in. If you are undecided, the [Econumo demo](https://demo.econumo.com) and the
+you in. If you are undecided, a free [Econumo trial](https://app.econumo.com/register) and the
 [Actual Budget demo](https://demo.actualbudget.org) both run in the browser with no
 signup.
 
@@ -2111,7 +2107,7 @@ hosted account is a **single $20 payment**.
 | **Price** | Free self-hosted; $20 one-time cloud | **$14.99/mo or $109/yr** |
 | **Free trial** | Free forever, self-hosted | 34 days, no card required |
 | **Student offer** | n/a — free | Free for 365 days |
-| **People per plan** | $20 per user; $40 family licence | Up to 6 people, one subscription |
+| **People per plan** | $20 per user (one-time) | Up to 6 people, one subscription |
 | **Budgeting method** | Envelope | Zero-based envelope (the Four Rules) |
 | **Multi-currency** | ✅ Native, per account | ❌ One currency per budget |
 | **Bank sync** | ❌ CSV import | ✅ Plaid + MX (US, CA, 18 EU countries) |
@@ -2132,18 +2128,15 @@ hosted account is a **single $20 payment**.
 | Hosted, 1 year | $20 one-time | $109 |
 | Hosted, 3 years | $20 one-time | $327 |
 | Hosted, 5 years | $20 one-time | $545 |
-| Family | $40 one-time | $109/yr, up to 6 people |
 
 YNAB costs **$14.99 per month, or $109 per year** if paid annually. It offers a
 generous **34-day free trial with no credit card**, and students get a **free
 365-day subscription** with proof of enrolment.
 
 Econumo's self-hosted edition is free indefinitely. The hosted cloud account is a
-**single $20 payment per user** — not a subscription — with a $40 family licence
-covering several users.
+**single $20 payment per user** — not a subscription.
 
-Over five years that is roughly **$20 against $545**. Even the $40 family licence
-is about four weeks of a YNAB subscription.
+Over five years that is roughly **$20 against $545**.
 
 To be fair to YNAB: a single subscription covers **up to six people** with shared
 data, so a large household spreads that cost further than the per-user comparison
@@ -2278,7 +2271,7 @@ If you like the YNAB method but want it free and open source, Econumo and
 options — Actual Budget for single-currency budgeting with bank sync, Econumo for
 multi-currency and built-in household sharing.
 
-Try the [Econumo demo](https://demo.econumo.com) in your browser, no signup
+Start a free [Econumo trial](https://app.econumo.com/register) in your browser, no signup
 required.
 
 ---
@@ -2657,7 +2650,7 @@ dead since January 2020. The project positions its REST API as the mobile story.
 - You want a small, simple deployment
 - You want the option of a hosted account for a single $20 payment
 
-Try the [Econumo demo](https://demo.econumo.com) or the
+Start a free [Econumo trial](https://app.econumo.com/register), or try the
 [Firefly III demo](https://demo.firefly-iii.org) — both run in a browser.
 
 ---
@@ -2967,7 +2960,7 @@ transactions by hand** — which described most of Maybe's users, since the proj
 had tens of thousands of self-hosters and only a few hundred paying customers — and
 what you actually wanted was a budget rather than a report.
 
-Try the [Econumo demo](https://demo.econumo.com) in your browser before deciding.
+Start a free [Econumo trial](https://app.econumo.com/register) before deciding.
 
 ---
 
@@ -3071,8 +3064,7 @@ The projects differ in how they sustain themselves. ezBookkeeping is unusually
 absolutist — its FAQ states there are no paid features and that the project
 **does not accept donations or sponsorships**, and there is no official hosted
 service. Econumo funds development through an optional hosted cloud account
-(**$20 one-time per user**, $40 for a family licence) while the self-hosted
-edition stays free.
+(**$20 one-time per user**) while the self-hosted edition stays free.
 
 If you object on principle to a project having any commercial arm at all,
 ezBookkeeping's position is the purer one. If you would rather pay once and not
@@ -3219,9 +3211,9 @@ manual-entry tools.
 - You want a hosted option you can pay for once instead of self-hosting
 - You want the smallest possible footprint (~10 MB, single distroless binary)
 
-Both are MIT-licensed, both export your data, and both have public demos — the
-[Econumo demo](https://demo.econumo.com) and the
-[ezBookkeeping demo](https://ezbookkeeping-demo.mayswind.net) — so you can try
+Both are MIT-licensed and both export your data — Econumo offers a
+free [Econumo trial](https://app.econumo.com/register) and ezBookkeeping a
+[public demo](https://ezbookkeeping-demo.mayswind.net) — so you can try
 both before committing.
 
 ---
@@ -3514,7 +3506,7 @@ Econumo asks you to understand envelopes, and nothing more.
 
 These tools are different enough that "both" is a reasonable answer — GnuCash for
 the books and investments, Econumo for the household budget. You can try Econumo
-on the [demo instance](https://demo.econumo.com) without signing up.
+by starting a free [trial](https://app.econumo.com/register).
 
 ---
 
@@ -3718,7 +3710,7 @@ Due to the nature of digital products:
 - **Econumo Cloud**: All sales are final. However, we may offer refunds at our discretion in exceptional cases, such as
   unresolved technical issues caused by us.
 
-We encourage you to try our demo at [demo.econumo.com](https://demo.econumo.com) or use self-hosted **Econumo** before purchasing **Econumo Cloud** to ensure the Software meets your needs.
+We encourage you to start a free trial at [app.econumo.com](https://app.econumo.com/register) or use self-hosted **Econumo** before purchasing **Econumo Cloud** to ensure the Software meets your needs.
 
 ## 7. Third-Party Links
 
@@ -3785,92 +3777,3 @@ If you have any questions or concerns, please reach out: econumo@gmail.com
 
 ---
 Last Updated: January 25, 2026
-
----
-
-# Tweaking the frontend
-
-URL: https://econumo.com/docs/self-hosting/tweaking-frontend/
-
-# Tweaking the frontend
-
-**WARNING!**
-In general, tweaking is not recommended; please do so at your own risk.
-
-Econumo uses the JavaScript tag manager [LilTag](https://github.com/deeravenger/liltag), allowing you to inject any
-JavaScript code into your Econumo instance.
-
-I use this mechanism to show a warning message on [demo.econumo.com](https://demo.econumo.com) and to inject analytics scripts.
-
-In this guide, we'll inject the following script into your Econumo:
-
-```html
-
-<script>console.log('Injected!');</script>
-```
-
----
-
-## Configuration
-
-### Step 1
-
-The SPA reads its runtime config from `econumo-config.js`, which already points
-`LILTAG_CONFIG_URL` at `liltag-config.json`. To override it (for example to
-raise the cache TTL), mount your own `econumo-config.js` — see the commented
-line in the shipped `docker-compose.yml`:
-
-```js
-window.econumoConfig = {
-  // ...keep the other fields...
-  LILTAG_CONFIG_URL: 'liltag-config.json',
-  LILTAG_CACHE_TTL: 3600,
-}
-```
-
-### Step 2
-
-Create a [LilTag](https://github.com/flowmitry/liltag) configuration file:
-
-```json
-{
-  "tags": [
-    {
-      "id": "test",
-      "trigger": "pageLoad",
-      "content": "<script>console.log('Injected!');</script>",
-      "location": "head"
-    }
-  ]
-}
-```
-
-For more details on configuring LilTag, please refer to the [documentation](https://github.com/flowmitry/liltag).
-
-### Step 3
-
-The binary serves the SPA from `/app/web`, so mount your `liltag-config.json`
-next to the other static files there:
-
-```yaml
-services:
-  econumo:
-    image: ghcr.io/econumo/econumo:latest
-    env_file:
-      - .env
-    ports:
-      - "8181:80"
-    volumes:
-      - db:/app/var/db
-      - jwt:/app/var/jwt
-      - ./liltag-config.json:/app/web/liltag-config.json:ro
-    restart: unless-stopped
-
-volumes:
-  db:
-  jwt:
-```
-
-### Step 4
-
-Restart your Docker Compose and check the browser's console.

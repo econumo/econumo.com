@@ -234,4 +234,4 @@ Yes, but it only applies to income from business transactions. Personal payments
 However, if you're paid for goods or services through either platform, that money is taxable. The IRS rules have been changing, but for the 2026 tax year, payment apps will be required to send a Form 1099-K to anyone who receives more than **$5,000** in business payments. This makes it essential to use a business profile for any commercial activity to keep your records clean and separate.
 
 ---
-Of course, managing these payments and tracking where your money is going is the whole reason **Econumo** exists. Our platform is built to help you manually log transactions from PayPal, Venmo, and all your other accounts in one simple, privacy-focused dashboard. See how it works with our [free live demo](https://econumo.com) today.
+Of course, managing these payments and tracking where your money is going is the whole reason **Econumo** exists. Our platform is built to help you manually log transactions from PayPal, Venmo, and all your other accounts in one simple, privacy-focused dashboard. See how it works by [starting a free trial](https://app.econumo.com/register) today.

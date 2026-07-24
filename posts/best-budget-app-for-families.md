@@ -28,7 +28,7 @@ Econumo's feature set is built for real-world family scenarios. Here’s how it 
 
 ### Pricing and Availability
 
-Econumo offers a unique dual-access model. You can self-host the community edition for **free** by deploying it on your own server. For those who prefer a simpler setup, a cloud-hosted version is in development with a planned one-time cost of around $20 to $30 per user. You can join the waiting list for early access and discounts.
+Econumo offers a unique dual-access model. You can self-host the community edition for **free** by deploying it on your own server. For those who prefer a simpler setup, a cloud-hosted version is available for a one-time cost of $20 per user, for life. You can start a free trial to see if it fits before you commit.
 
 ### Pros and Cons
 
@@ -39,7 +39,6 @@ Econumo offers a unique dual-access model. You can self-host the community editi
     *   Clean, modern UI and an available API for customization.
 *   **Cons:**
     *   No automatic bank syncing relies on manual data entry.
-    *   The managed cloud version is not yet publicly available.
 
 **Website:** [https://econumo.com](https://econumo.com)
 
@@ -212,7 +211,7 @@ FamZoo earns its place as a top pick by gamifying financial education and giving
 
 | Product | Core features | Quality ★ | Price 💰 | Target & USP 👥 ✨ |
 |---|---:|:---:|---|---|
-| **Econumo 🏆** | Collaborative multi-user & joint accounts, multi-currency, manual entry, API, self‑host option | ★★★★☆ | 💰 Self‑host: Free; Cloud planned ~$20–$30 one‑time/user | 👥 Couples, families, travelers • ✨ Privacy‑first, self‑host & manual control |
+| **Econumo 🏆** | Collaborative multi-user & joint accounts, multi-currency, manual entry, API, self‑host option | ★★★★☆ | 💰 Self‑host: Free; Cloud $20 one‑time/user (lifetime) | 👥 Couples, families, travelers • ✨ Privacy‑first, self‑host & manual control |
 | YNAB (You Need A Budget) | Zero‑based budgeting, goals, reports, bank connections, household sharing (up to 6) | ★★★★★ | 💰 Subscription (higher); 34‑day free trial | 👥 Families seeking structured budgeting • ✨ Strong budgeting methodology & education |
 | Monarch Money | Unlimited account connections & collaborators, budgets, goals, investments, net‑worth | ★★★★☆ | 💰 Subscription; no permanent free tier | 👥 Couples/households wanting planning tools • ✨ Granular sharing & clean planning UI |
 | Quicken Simplifi | Custom spending plans, projections, savings & investment tracking, US bank sync | ★★★★☆ | 💰 Paid (often first‑year discounts) | 👥 Families wanting established brand support • ✨ Cash‑flow projections & optional LifeHub |

@@ -234,4 +234,4 @@ Before you start, sit down together and define what’s what.
 Getting this clear from the start creates total transparency around your shared financial life while still giving each of you the freedom to manage your own money. It’s not about policing each other; it’s about working as a team.
 
 ---
-Ready to turn financial guesswork into confident action? **Econumo** provides the flexible tools you need to manage your personal and shared finances with total clarity. [Try the live demo today](https://econumo.com).
+Ready to turn financial guesswork into confident action? **Econumo** provides the flexible tools you need to manage your personal and shared finances with total clarity. [Start a free trial today](https://app.econumo.com/register).

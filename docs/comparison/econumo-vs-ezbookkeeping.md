@@ -59,8 +59,7 @@ The projects differ in how they sustain themselves. ezBookkeeping is unusually
 absolutist — its FAQ states there are no paid features and that the project
 **does not accept donations or sponsorships**, and there is no official hosted
 service. Econumo funds development through an optional hosted cloud account
-(**$20 one-time per user**, $40 for a family licence) while the self-hosted
-edition stays free.
+(**$20 one-time per user**) while the self-hosted edition stays free.
 
 If you object on principle to a project having any commercial arm at all,
 ezBookkeeping's position is the purer one. If you would rather pay once and not
@@ -207,9 +206,9 @@ manual-entry tools.
 - You want a hosted option you can pay for once instead of self-hosting
 - You want the smallest possible footprint (~10 MB, single distroless binary)
 
-Both are MIT-licensed, both export your data, and both have public demos — the
-[Econumo demo](https://demo.econumo.com) and the
-[ezBookkeeping demo](https://ezbookkeeping-demo.mayswind.net) — so you can try
+Both are MIT-licensed and both export your data — Econumo offers a
+free [Econumo trial](https://app.econumo.com/register) and ezBookkeeping a
+[public demo](https://ezbookkeeping-demo.mayswind.net) — so you can try
 both before committing.
 
 ---

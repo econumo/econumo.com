@@ -273,4 +273,4 @@ Dedicated personal accounting software, on the other hand, is built specifically
 Ultimately, the right software lets you focus on your financial decisions, not on maintaining the tool itself. You can spend your energy analyzing your habits instead of debugging a VLOOKUP formula. It’s the difference between being your own IT admin and being the CFO of your life.
 
 ---
-Ready to take control with a tool designed for how you actually live? **Econumo** gives you the collaborative features, multi-currency support, and privacy you need to manage your money with confidence. See how it works by exploring the [live demo](https://econumo.com) today.
+Ready to take control with a tool designed for how you actually live? **Econumo** gives you the collaborative features, multi-currency support, and privacy you need to manage your money with confidence. See how it works by starting a [free trial](https://app.econumo.com/register) today.

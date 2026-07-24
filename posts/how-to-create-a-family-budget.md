@@ -308,4 +308,4 @@ Getting started is often the hardest part because it feels so overwhelming. Don�
 These two things—finding your shared "why" and getting an honest look at your spending—are the foundation for everything else. Get these right, and you'll be on your way to building a family budget that finally works for you.
 
 ---
-Ready to turn these ideas into action? **Econumo** is built for families who want to manage their money as a team. With multi-user accounts for collaborative tracking and easy-to-create budgets, you can finally get on the same page and build the financial future you've been dreaming of. [Try the live demo or get started for free at Econumo](https://econumo.com).
+Ready to turn these ideas into action? **Econumo** is built for families who want to manage their money as a team. With multi-user accounts for collaborative tracking and easy-to-create budgets, you can finally get on the same page and build the financial future you've been dreaming of. [Start a free trial, or get started for free at Econumo](https://econumo.com).

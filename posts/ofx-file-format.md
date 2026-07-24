@@ -223,4 +223,4 @@ It's true, while most big banks support OFX, some smaller credit unions or newer
 First, see if they offer downloads in other formats like QFX or CSV. As we just covered, a QFX file will likely work just as well as an OFX. A CSV is a solid fallback, even if it requires a little more hands-on effort to get it imported correctly. If that doesn't work, don't underestimate just contacting your bank's support team—they might have a hidden solution or at least take note that customers are asking for it.
 
 ---
-Ready to take control of your finances with a clear, private, and powerful budgeting tool? **Econumo** is designed to work seamlessly with the OFX file format, giving you full ownership of your financial data. [Try the live demo or self-host for free](https://econumo.com) and start your journey to financial clarity today.
+Ready to take control of your finances with a clear, private, and powerful budgeting tool? **Econumo** is designed to work seamlessly with the OFX file format, giving you full ownership of your financial data. [Start a free trial, or self-host it for free](https://econumo.com) and start your journey to financial clarity today.

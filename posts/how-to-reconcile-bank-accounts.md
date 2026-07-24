@@ -226,4 +226,4 @@ Syncing can fail, leaving some transactions behind. Software bugs might create d
 Think of reconciliation as your final human quality check. It's where you **verify that the data in your app is a perfect mirror of what your bank says**. This ensures your budget, your reports, and your entire financial plan are built on a foundation of completely accurate data.
 
 ---
-Ready to build a rock-solid financial routine with tools designed for clarity and collaboration? With **Econumo**, you can master your money through mindful tracking, joint ledgers for partners, and seamless multi-currency support. Take control of your financial data by visiting [https://econumo.com](https://econumo.com) to try the live demo or join the waitlist.
+Ready to build a rock-solid financial routine with tools designed for clarity and collaboration? With **Econumo**, you can master your money through mindful tracking, joint ledgers for partners, and seamless multi-currency support. Take control of your financial data by visiting [https://econumo.com](https://econumo.com) to start a free trial.

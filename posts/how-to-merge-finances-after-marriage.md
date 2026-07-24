@@ -273,4 +273,4 @@ You can use a joint account for all the shared necessities—rent or mortgage, u
 For those in a second marriage, things can get a bit more complex. It's wise to also look into specific topics like the [estate planning hurdles in remarriage](https://texastrustadministration.com/tackling-estate-planning-hurdles-in-remarriage/) to ensure everyone is protected and your long-term plans are clear.
 
 ---
-Managing shared expenses doesn't have to be complicated. With **Econumo**, you and your partner can easily track joint bills, plan for shared goals, and stay aligned on your financial journey. [Try the live demo today](https://econumo.com) to see how simple collaborative budgeting can be.
+Managing shared expenses doesn't have to be complicated. With **Econumo**, you and your partner can easily track joint bills, plan for shared goals, and stay aligned on your financial journey. [Start a free trial today](https://app.econumo.com/register) to see how simple collaborative budgeting can be.

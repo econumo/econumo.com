@@ -200,4 +200,4 @@ The problem isn't the one-off treat; it's when those impulse buys become a const
 That means you can go ahead and buy the concert tickets or that new gadget completely guilt-free. You can enjoy it because you know your bills are covered and your savings are on track. It’s all about spending with intention, not deprivation.
 
 ---
-Ready to stop reacting and start planning? You can build a budget that actually works for you and your family. Get started with **Econumo** and see how our collaborative, privacy-focused tools can help. [Check out the live demo](https://econumo.com) to see how simple it is to manage your money with intention.
+Ready to stop reacting and start planning? You can build a budget that actually works for you and your family. Get started with **Econumo** and see how our collaborative, privacy-focused tools can help. [Start a free trial](https://app.econumo.com/register) to see how simple it is to manage your money with intention.

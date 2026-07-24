@@ -213,4 +213,4 @@ Instead of being stuck with an even split, you can divide things up more realist
 This kind of flexibility is what makes these apps so powerful. It keeps things fair and prevents arguments, whether you're running a household or just trying to split a dinner bill with friends.
 
 ---
-Ready to bring some much-needed clarity to your shared finances? **Econumo** offers flexible splitting, multi-currency support, and a privacy-first approach with manual entry and self-hosting options. Try the live demo today at [https://econumo.com](https://econumo.com).
+Ready to bring some much-needed clarity to your shared finances? **Econumo** offers flexible splitting, multi-currency support, and a privacy-first approach with manual entry and self-hosting options. Start a free trial today at [https://econumo.com](https://econumo.com).

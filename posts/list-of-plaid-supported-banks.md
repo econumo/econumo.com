@@ -302,4 +302,4 @@ That is the goal. Not just finding out whether a bank is on the list, but buildi
 
 ---
 
-Econumo gives you that flexibility. You can connect your thinking to real bank workflows without being trapped by them. If you want a budgeting tool built for couples, families, shared accounts, manual tracking, multi-currency planning, and privacy-conscious control, explore [Econumo](https://econumo.com). Try the live demo, self-host the community edition, or join the waiting list for the cloud release.
+Econumo gives you that flexibility. You can connect your thinking to real bank workflows without being trapped by them. If you want a budgeting tool built for couples, families, shared accounts, manual tracking, multi-currency planning, and privacy-conscious control, explore [Econumo](https://econumo.com). Start a free trial, or self-host the community edition for free.

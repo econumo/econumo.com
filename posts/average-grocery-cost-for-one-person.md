@@ -201,4 +201,4 @@ The big exceptions are major life changes. If you move to a new city, have to ad
 This way, your budget stays useful and realistic without you having to stress over every single penny, every single day.
 
 ---
-Ready to take full control of your finances? **Econumo** is a collaborative budgeting app designed for modern households. Plan shared goals, manage joint accounts, and build mindful spending habits with our flexible, privacy-focused platform. [Try the live demo on Econumo.com](https://econumo.com) and see how easy collaborative budgeting can be.
+Ready to take full control of your finances? **Econumo** is a collaborative budgeting app designed for modern households. Plan shared goals, manage joint accounts, and build mindful spending habits with our flexible, privacy-focused platform. [Start a free trial on Econumo.com](https://app.econumo.com/register) and see how easy collaborative budgeting can be.

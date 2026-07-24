@@ -249,4 +249,4 @@ Quicken does use strong encryption to protect your data file on your computer an
 While they secure this data, it still means a third party has a copy of your complete financial history. For anyone who puts a premium on absolute privacy, a self-hosted or privacy-first alternative is the only way to ensure your information never leaves your control.
 
 ---
-If you've realized that collaborative budgeting and total data privacy are your top priorities, **Econumo** was built for you. [Explore our live demo or learn more about our self-hosting options](https://econumo.com) to see how it works.
+If you've realized that collaborative budgeting and total data privacy are your top priorities, **Econumo** was built for you. [Start a free trial or learn more about our self-hosting options](https://econumo.com) to see how it works.

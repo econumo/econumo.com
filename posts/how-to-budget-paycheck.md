@@ -207,4 +207,4 @@ You both agree on how much to contribute to a joint account that covers all the 
 This approach creates a clear plan for your shared responsibilities while giving each of you the freedom you need. It turns money from a battlefield into a team sport. The key, as always, is to keep talking about it.
 
 ---
-Ready to build a budget that actually works for you and your family? **Econumo** gives you the tools for collaborative, multi-currency, and privacy-focused money management. Take control of your finances by trying the live demo or exploring the free, self-hosted community edition today at https://econumo.com.
+Ready to build a budget that actually works for you and your family? **Econumo** gives you the tools for collaborative, multi-currency, and privacy-focused money management. Take control of your finances by starting a free trial, or exploring the free, self-hosted community edition, today at https://econumo.com.

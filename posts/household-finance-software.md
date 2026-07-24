@@ -232,4 +232,4 @@ This is where good household finance software shines. It makes it easy to adjust
 Interestingly, some research shows that people often get better at managing money after retirement, when their income is lower but more predictable. They have more time to plan and trim expenses. Using software to manage a variable income now can help you build those same powerful habits long before you retire.
 
 ---
-Ready to turn financial chaos into collaborative clarity? **Econumo** is designed for families who want to manage money together, on their own terms. With multi-user access, flexible budgeting, and a focus on your privacy, it’s the perfect tool to get your household on the same page. Try the live demo or self-host for free at [https://econumo.com](https://econumo.com).
+Ready to turn financial chaos into collaborative clarity? **Econumo** is designed for families who want to manage money together, on their own terms. With multi-user access, flexible budgeting, and a focus on your privacy, it’s the perfect tool to get your household on the same page. Start a free trial, or self-host for free, at [https://econumo.com](https://econumo.com).

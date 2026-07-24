@@ -259,4 +259,4 @@ From there, take your very next step: save your first **$500** into a mini-emerg
 Nailing these small goals builds incredible confidence. It proves to you that you *can* do this, which gives you the fuel you need to tackle the next, bigger goal on your path to financial stability.
 
 ---
-Ready to take control and build your financial foundation together? **Econumo** provides the collaborative tools you need to track spending, manage shared goals, and make money a source of teamwork, not stress. [Try the live demo or join the waitlist today at https://econumo.com](https://econumo.com).
+Ready to take control and build your financial foundation together? **Econumo** provides the collaborative tools you need to track spending, manage shared goals, and make money a source of teamwork, not stress. [Start a free trial today at https://econumo.com](https://app.econumo.com/register).

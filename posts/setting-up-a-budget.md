@@ -239,4 +239,4 @@ Every time you get paid, you assign those dollars to jobs, starting with the mos
 This priority-based system ensures your critical expenses are always covered, no matter what your paycheck looks like that week or month.
 
 ---
-Ready to build a budget that actually works for your life? **Econumo** is designed to be simple, collaborative, and powerful. [Try the live demo or self-host it for free](https://econumo.com).
+Ready to build a budget that actually works for your life? **Econumo** is designed to be simple, collaborative, and powerful. [Start a free trial, or self-host it for free](https://econumo.com).

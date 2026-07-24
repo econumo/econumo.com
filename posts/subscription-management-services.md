@@ -298,4 +298,4 @@ A calm household budget usually comes from routines, not heroic effort. If you c
 
 ---
 
-If you want a privacy-conscious way to manage shared household finances, [Econumo](https://econumo.com) is built for couples, families, and multi-currency households that value clarity and control. You can explore the live demo, consider the self-hosted option for full data ownership, or join the waiting list for the upcoming cloud release.
+If you want a privacy-conscious way to manage shared household finances, [Econumo](https://econumo.com) is built for couples, families, and multi-currency households that value clarity and control. You can start a free trial, or consider the self-hosted option for full data ownership.

@@ -30,7 +30,7 @@ hosted account is a **single $20 payment**.
 | **Price** | Free self-hosted; $20 one-time cloud | **$14.99/mo or $109/yr** |
 | **Free trial** | Free forever, self-hosted | 34 days, no card required |
 | **Student offer** | n/a — free | Free for 365 days |
-| **People per plan** | $20 per user; $40 family licence | Up to 6 people, one subscription |
+| **People per plan** | $20 per user (one-time) | Up to 6 people, one subscription |
 | **Budgeting method** | Envelope | Zero-based envelope (the Four Rules) |
 | **Multi-currency** | ✅ Native, per account | ❌ One currency per budget |
 | **Bank sync** | ❌ CSV import | ✅ Plaid + MX (US, CA, 18 EU countries) |
@@ -51,18 +51,15 @@ hosted account is a **single $20 payment**.
 | Hosted, 1 year | $20 one-time | $109 |
 | Hosted, 3 years | $20 one-time | $327 |
 | Hosted, 5 years | $20 one-time | $545 |
-| Family | $40 one-time | $109/yr, up to 6 people |
 
 YNAB costs **$14.99 per month, or $109 per year** if paid annually. It offers a
 generous **34-day free trial with no credit card**, and students get a **free
 365-day subscription** with proof of enrolment.
 
 Econumo's self-hosted edition is free indefinitely. The hosted cloud account is a
-**single $20 payment per user** — not a subscription — with a $40 family licence
-covering several users.
+**single $20 payment per user** — not a subscription.
 
-Over five years that is roughly **$20 against $545**. Even the $40 family licence
-is about four weeks of a YNAB subscription.
+Over five years that is roughly **$20 against $545**.
 
 To be fair to YNAB: a single subscription covers **up to six people** with shared
 data, so a large household spreads that cost further than the per-user comparison
@@ -197,7 +194,7 @@ If you like the YNAB method but want it free and open source, Econumo and
 options — Actual Budget for single-currency budgeting with bank sync, Econumo for
 multi-currency and built-in household sharing.
 
-Try the [Econumo demo](https://demo.econumo.com) in your browser, no signup
+Start a free [Econumo trial](https://app.econumo.com/register) in your browser, no signup
 required.
 
 ---

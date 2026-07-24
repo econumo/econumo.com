@@ -233,4 +233,4 @@ The main difference is they charge you a monthly fee for their service. Some peo
 If you're already trying to manage your money to pay off debts, adding another monthly bill for a credit repair company can be counterproductive. Learning **[how to stick to a budget](https://econumo.com/posts/how-to-stick-to-a-budget/)** is the first step toward freeing up cash you could use for a settlement offer. If you still feel you need help, look into a reputable non-profit credit counseling agency. They’re a much more trustworthy and affordable alternative to most for-profit companies.
 
 ---
-Ready to take full control of your financial picture? **Econumo** provides the tools you need to build a budget, track your spending, and accelerate your debt-payoff journey. Manage your money with clarity and confidence. [Try our live demo or join the waiting list today!](https://econumo.com)
+Ready to take full control of your financial picture? **Econumo** provides the tools you need to build a budget, track your spending, and accelerate your debt-payoff journey. Manage your money with clarity and confidence. [Start a free trial today!](https://app.econumo.com/register)

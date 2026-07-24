@@ -234,4 +234,4 @@ The best habit is a daily one, but the most important thing is just being consis
 Why? Because staying on top of it daily makes the process feel effortless. You'll avoid that dreaded end-of-the-month scramble trying to remember what that **$45** charge from two weeks ago was for. This small, daily habit keeps you constantly connected to your money, helps you build financial mindfulness, and means no more nasty surprises.
 
 ---
-Ready to write your own financial story? **Econumo** is the perfect tool for putting journal entry accounting to work for your household—with clarity, ease, and a shared view for you and your partner. Check out the [live demo](https://econumo.com) or get started today.
+Ready to write your own financial story? **Econumo** is the perfect tool for putting journal entry accounting to work for your household—with clarity, ease, and a shared view for you and your partner. [Start a free trial](https://app.econumo.com/register) today.

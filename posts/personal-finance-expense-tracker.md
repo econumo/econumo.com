@@ -219,4 +219,4 @@ A spreadsheet can absolutely work. It's a powerful, flexible tool and a fantasti
 Modern apps are built for more than one person to use at a time, often have built-in support for multiple currencies, and can generate reports automatically, turning all your numbers into useful insights. And if you're worried about privacy, a self-hostable app gives you the best of both worlds—all the advanced features with the peace of mind that comes from knowing your financial data is completely under your own roof.
 
 ---
-Ready to take control of your shared finances with a tracker built for real life? **Econumo** offers collaborative budgeting, multi-currency support, and the option to self-host for total privacy. Try the live demo and see how it can simplify your household's money management at [https://econumo.com](https://econumo.com).
+Ready to take control of your shared finances with a tracker built for real life? **Econumo** offers collaborative budgeting, multi-currency support, and the option to self-host for total privacy. Start a free trial and see how it can simplify your household's money management at [https://econumo.com](https://econumo.com).

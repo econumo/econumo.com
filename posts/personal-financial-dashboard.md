@@ -220,4 +220,4 @@ A collaborative dashboard acts as a single source of truth. Features like **shar
 This kind of transparency takes the guesswork out of family finances. It fosters teamwork and turns money management from a source of conflict into a shared goal. When everyone is looking at the same clear picture, it’s so much easier to stay on the same page and celebrate your progress together.
 
 ---
-Ready to build a financial command center that gives you clarity, privacy, and collaboration? **Econumo** provides the flexible tools you need. [Explore the live demo](https://econumo.com), download the free self-hosted version, or join the waitlist today to take control.
+Ready to build a financial command center that gives you clarity, privacy, and collaboration? **Econumo** provides the flexible tools you need. [Start a free trial](https://app.econumo.com/register), or download the free self-hosted version to take control.

@@ -277,4 +277,4 @@ If you want to keep the discipline of envelopes while managing shared finances m
 
 ---
 
-If you want a budgeting setup that supports shared households, manual tracking, multi-currency life, and privacy-conscious money management, take a look at [Econumo](https://econumo.com). You can try the live demo, explore the self-hosted community edition, or join the waiting list for the cloud release.
+If you want a budgeting setup that supports shared households, manual tracking, multi-currency life, and privacy-conscious money management, take a look at [Econumo](https://econumo.com). You can start a free trial or explore the self-hosted community edition.

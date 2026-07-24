@@ -218,4 +218,4 @@ When you create your monthly budget, use a conservative number—something on th
 
 Ready to get a real handle on your financial journey? With **Econumo**, you can track your income and expenses, work with your partner on shared goals, and build a budget that actually fits your life. It’s flexible, private, and made for modern households.
 
-[Explore the live demo](https://econumo.com) or join the waiting list today.
+[Start a free trial](https://app.econumo.com/register) today.

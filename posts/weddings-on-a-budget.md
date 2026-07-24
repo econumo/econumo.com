@@ -236,4 +236,4 @@ The trade-off? You often pay a bit more for that convenience and lose the flexib
 To figure out if it's a true value, ask for an itemized breakdown of what’s included in their package. Then, spend a little time getting quotes for those same services from a few outside vendors. Sometimes, bundling is a clear winner. Other times, you'll find that sourcing everything yourself is the way to save.
 
 ---
-Take control of your wedding finances and plan as a team. With **Econumo**, you can create a shared budget, track every expense in real time, and manage contributions from multiple sources with total clarity. Start your marriage on a strong financial foundation by visiting [https://econumo.com](https://econumo.com) to try the live demo today.
+Take control of your wedding finances and plan as a team. With **Econumo**, you can create a shared budget, track every expense in real time, and manage contributions from multiple sources with total clarity. Start your marriage on a strong financial foundation by visiting [https://econumo.com](https://econumo.com) to start a free trial today.

@@ -333,7 +333,7 @@ dead since January 2020. The project positions its REST API as the mobile story.
 - You want a small, simple deployment
 - You want the option of a hosted account for a single $20 payment
 
-Try the [Econumo demo](https://demo.econumo.com) or the
+Start a free [Econumo trial](https://app.econumo.com/register), or try the
 [Firefly III demo](https://demo.firefly-iii.org) — both run in a browser.
 
 ---

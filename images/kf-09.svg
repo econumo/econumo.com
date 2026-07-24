@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="120px" height="96px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 4.086 3.269"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#1A1A1A;stroke-width:0.068;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.61313}
+    .fil0 {fill:none}
+    .fil1 {fill:#FCC730}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <rect class="fil0" width="4.086" height="3.269"/>
+  <path class="fil1" d="M2.043 0.741c0.055,0.331 0.313,0.589 0.644,0.644 -0.331,0.055 -0.589,0.313 -0.644,0.644 -0.055,-0.331 -0.313,-0.589 -0.644,-0.644 0.331,-0.055 0.589,-0.313 0.644,-0.644z"/>
+  <path class="fil0 str0" d="M2.043 0.741c0.055,0.331 0.313,0.589 0.644,0.644 -0.331,0.055 -0.589,0.313 -0.644,0.644 -0.055,-0.331 -0.313,-0.589 -0.644,-0.644 0.331,-0.055 0.589,-0.313 0.644,-0.644z"/>
+  <path class="fil0 str0" d="M1.322 2.05c0.028,0.166 0.157,0.295 0.323,0.323 -0.166,0.028 -0.295,0.157 -0.323,0.323 -0.028,-0.166 -0.157,-0.295 -0.323,-0.323 0.166,-0.028 0.295,-0.157 0.323,-0.323z"/>
+  <path class="fil0 str0" d="M2.83 2.222c0.017,0.1 0.094,0.177 0.194,0.194 -0.1,0.017 -0.177,0.094 -0.194,0.194 -0.017,-0.1 -0.094,-0.177 -0.194,-0.194 0.1,-0.017 0.177,-0.094 0.194,-0.194z"/>
+ </g>
+</svg>

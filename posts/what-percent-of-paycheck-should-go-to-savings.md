@@ -296,4 +296,4 @@ These moments are perfect opportunities to see if your savings rate still makes 
 Your life isn't static, and your financial plan shouldn't be either.
 
 ---
-Ready to take control of your spending and savings goals? **Econumo** provides the tools you need to manage your money with clarity and confidence. [Try the live demo or join the waiting list today!](https://econumo.com)
+Ready to take control of your spending and savings goals? **Econumo** provides the tools you need to manage your money with clarity and confidence. [Start a free trial today!](https://app.econumo.com/register)

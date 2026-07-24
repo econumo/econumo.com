@@ -214,4 +214,4 @@ Here’s how it works: After you've set aside money for all your joint bills, sa
 
 ---
 
-Ready to build a financial system that finally ends the money stress? **Econumo** gives you all the tools for collaborative budgeting, multi-currency tracking, and total privacy. [Try the live demo today](https://econumo.com) and see how it feels to be in control of your shared finances.
+Ready to build a financial system that finally ends the money stress? **Econumo** gives you all the tools for collaborative budgeting, multi-currency tracking, and total privacy. [Start a free trial today](https://app.econumo.com/register) and see how it feels to be in control of your shared finances.

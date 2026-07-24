@@ -181,4 +181,4 @@ But the long-term savings can be huge. Common ways to do it include:
 *   **Auditing your subscriptions.** Go through your bank statements and be ruthless about canceling services you don’t really use anymore.
 
 ---
-Ready to stop guessing and start managing your fixed expenses with total clarity? **Econumo** makes it easy for you and your partner to track recurring bills, see your financial baseline at a glance, and build a budget that works. Take control of your money together by trying the live demo at [https://econumo.com](https://econumo.com).
+Ready to stop guessing and start managing your fixed expenses with total clarity? **Econumo** makes it easy for you and your partner to track recurring bills, see your financial baseline at a glance, and build a budget that works. Take control of your money together by starting a free trial at [https://econumo.com](https://econumo.com).

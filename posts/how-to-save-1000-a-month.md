@@ -287,4 +287,4 @@ Life happens. Your car's transmission dies, or you get a surprise medical bill. 
 Missing your goal for one month doesn't mean the whole plan has failed. Acknowledge it, tweak next month's budget if you have to, and get right back to your routine. A single setback is just a blip on the radar in your long-term financial journey. Just stay focused and keep moving.
 
 ---
-Ready to take full control of your shared and individual finances? **Econumo** provides the flexible tools you need to track spending, manage joint accounts, and hit your savings goals together. [Try the live demo or join the waiting list for our cloud version!](https://econumo.com)
+Ready to take full control of your shared and individual finances? **Econumo** provides the flexible tools you need to track spending, manage joint accounts, and hit your savings goals together. [Start a free trial of our cloud version!](https://app.econumo.com/register)

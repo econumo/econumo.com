@@ -217,7 +217,7 @@ This is absolutely essential for anyone whose financial life crosses borders. It
 
 Econumo is designed to adapt to your life. For developers and power users, an **API is available** to build custom integrations and automations, letting you connect your finances to other parts of your digital world.
 
-This flexibility also applies to how you get started. You can begin today by self-hosting the **free community edition**, which gives you all the core features you need. For those who'd rather not manage the technical side, an **upcoming cloud version** will offer the same great tools with the convenience of a managed service. This mix of options ensures Econumo can work for a wide range of people, from the dedicated DIY budgeter to the busy family who just needs something that works.
+This flexibility also applies to how you get started. You can begin today by self-hosting the **free community edition**, which gives you all the core features you need. For those who'd rather not manage the technical side, the **cloud version** offers the same tools with the convenience of a managed service. This mix of options ensures Econumo can work for a wide range of people, from the dedicated DIY budgeter to the busy family who just needs something that works.
 
 ## Got Questions About Mint Alternatives? We've Got Answers.
 
@@ -260,4 +260,4 @@ This setup gives you two massive security advantages:
 Of course, that control comes with responsibility. You'll need to handle your own security basics, like using strong passwords, keeping your software up to date, and making sure your network is configured correctly. For anyone comfortable with a little bit of tech management, self-hosting is hands-down the best way to guarantee your financial data stays private and secure.
 
 ---
-Ready to take control of your household finances with a tool built for collaboration, privacy, and modern needs? Explore **Econumo** and see how our focused approach can simplify your financial life. Try the live demo or self-host the free community edition today at [https://econumo.com](https://econumo.com).
+Ready to take control of your household finances with a tool built for collaboration, privacy, and modern needs? Explore **Econumo** and see how our focused approach can simplify your financial life. Start a free trial, or self-host the free community edition today at [https://econumo.com](https://econumo.com).

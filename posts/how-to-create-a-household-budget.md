@@ -356,4 +356,4 @@ Frame your budget as the tool that will get you to those shared dreams, not as a
 
 * * *
 
-Ready to stop guessing and start building a budget that actually works for you and your partner? **Econumo** provides the collaborative tools you need to manage shared bills, track spending together, and achieve your financial goals as a team. [Explore the live demo or get started for free today](https://econumo.com).
+Ready to stop guessing and start building a budget that actually works for you and your partner? **Econumo** provides the collaborative tools you need to manage shared bills, track spending together, and achieve your financial goals as a team. [Start a free trial, or get started for free, today](https://econumo.com).

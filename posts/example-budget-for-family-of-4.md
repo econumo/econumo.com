@@ -364,4 +364,4 @@ An example budget for family of 4 is useful because it gives you a starting poin
 
 ---
 
-If you want a budgeting setup built for shared household finances, manual tracking, privacy-conscious planning, and multi-currency life, take a look at [Econumo](https://econumo.com). You can try the live demo, explore the self-hosted community edition, or join the waiting list for the cloud release.
+If you want a budgeting setup built for shared household finances, manual tracking, privacy-conscious planning, and multi-currency life, take a look at [Econumo](https://econumo.com). You can start a free trial or explore the self-hosted community edition.

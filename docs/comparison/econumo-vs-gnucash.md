@@ -251,7 +251,7 @@ Econumo asks you to understand envelopes, and nothing more.
 
 These tools are different enough that "both" is a reasonable answer — GnuCash for
 the books and investments, Econumo for the household budget. You can try Econumo
-on the [demo instance](https://demo.econumo.com) without signing up.
+by starting a free [trial](https://app.econumo.com/register).
 
 ---
 

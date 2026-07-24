@@ -260,4 +260,4 @@ Let's run the numbers on an example:
 Seeing that number in black and white can be incredibly motivating. If it feels too long, you know exactly what you need to do: find ways to boost your income or cut back on expenses to accelerate your savings.
 
 ---
-Juggling all these moving parts—from tracking goals to getting on the same page with a partner—can feel like a lot. With **Econumo**, you can create dedicated savings goals, manage joint accounts with your partner, and get a clear, consolidated view of your financial progress, even across multiple currencies. Take control of your home-buying journey by trying the live demo or joining the waitlist at [https://econumo.com](https://econumo.com).
+Juggling all these moving parts—from tracking goals to getting on the same page with a partner—can feel like a lot. With **Econumo**, you can create dedicated savings goals, manage joint accounts with your partner, and get a clear, consolidated view of your financial progress, even across multiple currencies. Take control of your home-buying journey by starting a free trial at [https://econumo.com](https://econumo.com).

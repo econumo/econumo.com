@@ -191,4 +191,4 @@ This is a fantastic question because these two things often work together to tak
 A provider might advertise "fee-free" exchanges, but they can still make a ton of money by giving you a bad rate (a wide spread). Your goal is to find options that minimize *both* the upfront fees and the hidden spread.
 
 ---
-Ready to stop guessing and start tracking? With [**Econumo**](https://econumo.com), you can log every expense in its original currency, giving you a perfect picture of your spending without any confusing conversions. See exactly where every dollar, euro, and yen is going. [Explore the live demo on econumo.com](https://econumo.com) and take control of your travel budget.
+Ready to stop guessing and start tracking? With [**Econumo**](https://econumo.com), you can log every expense in its original currency, giving you a perfect picture of your spending without any confusing conversions. See exactly where every dollar, euro, and yen is going. [Start a free trial at econumo.com](https://app.econumo.com/register) and take control of your travel budget.

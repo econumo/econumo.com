@@ -318,4 +318,4 @@ Keep the plan realistic and specific. Base it on your current income, fixed bill
 
 If you want to act on this today, do four things. Pick one goal. Write it in SMART form. Choose the first three micro-actions. Set your next money check-in before the day ends.
 
-If you want a practical way to turn these goals into shared daily habits, try [Econumo](https://econumo.com). It’s built for couples, families, privacy-focused budgeters, and multi-currency households that need more than generic budgeting advice. You can explore the live demo, try the free self-hosted community edition, or join the waiting list for the upcoming cloud release.
+If you want a practical way to turn these goals into shared daily habits, try [Econumo](https://econumo.com). It’s built for couples, families, privacy-focused budgeters, and multi-currency households that need more than generic budgeting advice. You can start a free trial, or try the free self-hosted community edition.

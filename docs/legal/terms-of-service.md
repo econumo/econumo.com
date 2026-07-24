@@ -52,7 +52,7 @@ Due to the nature of digital products:
 - **Econumo Cloud**: All sales are final. However, we may offer refunds at our discretion in exceptional cases, such as
   unresolved technical issues caused by us.
 
-We encourage you to try our demo at [demo.econumo.com](https://demo.econumo.com) or use self-hosted **Econumo** before purchasing **Econumo Cloud** to ensure the Software meets your needs.
+We encourage you to start a free trial at [app.econumo.com](https://app.econumo.com/register) or use self-hosted **Econumo** before purchasing **Econumo Cloud** to ensure the Software meets your needs.
 
 ## 7. Third-Party Links
 

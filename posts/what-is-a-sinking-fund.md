@@ -191,4 +191,4 @@ Honestly, there's no magic number. I've seen people do great with **3-5** major 
 My advice? Start small. Pick two or three of your most pressing expenses and build funds for those first. Once you get the hang of it, you can easily add more. If you ever feel overwhelmed trying to keep track of everything, that's your cue to simplify and maybe combine a few funds. The right number is whatever you can manage without feeling stressed.
 
 ---
-Ready to stop worrying about big expenses and finally feel in control of your goals? **Econumo** makes it simple to set up, track, and manage all your sinking funds in one place. [Start your free trial today](https://econumo.com) and see how much easier budgeting can be with a partner.
+Ready to stop worrying about big expenses and finally feel in control of your goals? **Econumo** makes it simple to set up, track, and manage all your sinking funds in one place. [Start your free trial today](https://app.econumo.com/register) and see how much easier budgeting can be with a partner.

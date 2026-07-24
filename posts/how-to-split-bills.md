@@ -256,4 +256,4 @@ The golden rule is simple: split **shared expenses**, not personal ones. That si
 
 ***
 
-Ready to build a bill-splitting system that finally clicks? **Econumo** gives you the tools you need to manage shared budgets, track expenses in different currencies, and keep the peace. Take control of your household finances and [try our live demo](https://econumo.com) today.
+Ready to build a bill-splitting system that finally clicks? **Econumo** gives you the tools you need to manage shared budgets, track expenses in different currencies, and keep the peace. Take control of your household finances and [start a free trial](https://app.econumo.com/register) today.

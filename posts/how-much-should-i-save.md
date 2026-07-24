@@ -251,4 +251,4 @@ Next, you need to "Pay Yourself First." Set up an automatic transfer to a separa
 Finally, start looking for ways to grow your income. Could you sell some stuff you don't use anymore? Pick up a flexible side hustle? Build a case for a raise at your job? Combining small, consistent spending cuts with even a modest income boost is the most reliable way to break the cycle and build a real savings habit from scratch.
 
 ---
-Ready to take control and start building a savings plan that works for you and your family? **Econumo** provides the tools you need to track spending, set collaborative goals, and manage your money with confidence. [Try the live demo or join the cloud waitlist today!](https://econumo.com)
+Ready to take control and start building a savings plan that works for you and your family? **Econumo** provides the tools you need to track spending, set collaborative goals, and manage your money with confidence. [Start a free trial today!](https://app.econumo.com/register)

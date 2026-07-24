@@ -209,4 +209,4 @@ Don't just assume it worked. Always double-check your next statement to confirm 
 
 ---
 
-Ready to take control of your car loan and all your other financial goals? With **Econumo**, you and your family can build a collaborative budget, track every dollar, and work together to get out of debt faster. [Try the live demo or join the waiting list for our cloud version today!](https://econumo.com)
+Ready to take control of your car loan and all your other financial goals? With **Econumo**, you and your family can build a collaborative budget, track every dollar, and work together to get out of debt faster. [Start a free trial today!](https://app.econumo.com/register)

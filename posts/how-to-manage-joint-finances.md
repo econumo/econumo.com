@@ -259,4 +259,4 @@ Spreadsheets are powerful, yes, but they have major drawbacks for two people. Th
 Modern budgeting apps, on the other hand, are designed for collaboration. They let you both see a shared financial picture in real-time from your own phones. This immediate visibility is what helps you make smart daily spending decisions together and stay on track with your goals. A good app can transform budgeting from a dreaded chore into a simple, ongoing conversation.
 
 ---
-Ready to build your shared financial system? **Econumo** makes it easy to manage joint finances with features like multi-user access, shared budgets, and multi-currency support, all in a beautiful and private interface. [Try the live demo or join the waiting list for our cloud version today](https://econumo.com).
+Ready to build your shared financial system? **Econumo** makes it easy to manage joint finances with features like multi-user access, shared budgets, and multi-currency support, all in a beautiful and private interface. [Start a free trial of our cloud version today](https://app.econumo.com/register).

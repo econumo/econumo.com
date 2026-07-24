@@ -267,4 +267,4 @@ Ready to put these principles into action? With **Econumo**, you can:
 - Manage joint accounts seamlessly  
 - Build targeted budgets to accelerate debt repayment  
 
-Take control of your financial story today by trying the [live demo](https://econumo.com).
+Take control of your financial story today by starting a [free trial](https://app.econumo.com/register).

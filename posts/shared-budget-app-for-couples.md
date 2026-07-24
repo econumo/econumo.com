@@ -211,4 +211,4 @@ Honestly, most couples land on a hybrid approach. They'll auto-sync recurring bi
 
 ---
 
-Ready to build a financial system that works for your relationship? **Econumo** is designed for collaboration, with flexible budgeting, multi-currency support, and privacy-focused options like self-hosting. Take control of your money together by trying the live demo at [https://econumo.com](https://econumo.com).
+Ready to build a financial system that works for your relationship? **Econumo** is designed for collaboration, with flexible budgeting, multi-currency support, and privacy-focused options like self-hosting. Take control of your money together by starting a free trial at [https://econumo.com](https://econumo.com).

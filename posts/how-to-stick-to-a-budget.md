@@ -208,4 +208,4 @@ Start by figuring out your baseline budget. Look back at the last year and base 
 Once that emergency fund is stocked, you can use any extra income to pay next month's bills ahead of time or start aggressively tackling bigger goals. A zero-based budget is fantastic for this because it ensures every single dollar has a job, so that surplus cash doesn't just vanish. For a more detailed breakdown, check out the steps in our [**comprehensive user guide on creating budgets**](https://econumo.com/docs/user-guide/budgets/).
 
 ---
-Ready to build a budget that finally sticks? With **Econumo**, you can manage shared finances, track spending manually for greater awareness, and even self-host for complete privacy. Take control of your money by trying the live demo today at [https://econumo.com](https://econumo.com).
+Ready to build a budget that finally sticks? With **Econumo**, you can manage shared finances, track spending manually for greater awareness, and even self-host for complete privacy. Take control of your money by starting a free trial today at [https://econumo.com](https://econumo.com).

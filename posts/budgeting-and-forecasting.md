@@ -293,4 +293,4 @@ In fact, a truly healthy financial plan should have a built-in surplus. When you
 Aiming for a surplus isn't just about good bookkeeping; it's a proactive strategy that builds financial strength and helps you get ahead so much faster. It’s a core principle of effective **budgeting and forecasting** that shifts you from just managing your money to actively growing it.
 
 ---
-Ready to build a financial plan that gives you clarity, control, and complete privacy? **Econumo** is designed for couples and families who want to manage their money together, on their own terms. Take control of your financial future by visiting [https://econumo.com](https://econumo.com) to try the live demo or self-host the free community edition today.
+Ready to build a financial plan that gives you clarity, control, and complete privacy? **Econumo** is designed for couples and families who want to manage their money together, on their own terms. Take control of your financial future by visiting [https://econumo.com](https://econumo.com) to start a free trial, or self-host the free community edition today.

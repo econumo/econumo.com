@@ -4,7 +4,7 @@ URL: https://econumo.com/docs/api/
 
 Econumo includes a REST API and OpenAPI (Swagger) documentation.
 
-The Swagger UI is accessible at the `api/doc` URL. For example, in the demo environment, it can be found here: [https://demo.econumo.com/api/doc](https://demo.econumo.com/api/doc).
+The Swagger UI is accessible at the `api/doc` URL. For example: [https://app.econumo.com/api/doc/](https://app.econumo.com/api/doc/).
 
 The documentation features only `GET` and `POST` HTTP methods. The `GET` method is used for reading data, while the `POST` method is used for modifying data (creating, changing, or deleting).
 
@@ -33,7 +33,7 @@ Authorization: Bearer {ACCESS_TOKEN}
 
 ### Health check
 
-Econumo includes a `/_/health-check` endpoint. For example: https://demo.econumo.com/_/health-check.
+Econumo includes a `/_/health-check` endpoint. For example: https://app.econumo.com/_/health-check.
 
 You can configure your monitoring tools to check if Econumo is functioning properly.
 

@@ -207,4 +207,4 @@ When it comes to shared expenses like groceries, agree on the total number and l
 
 ---
 
-Ready to stop guessing and start building a financial plan that works for both of you? **Econumo** gives you the tools to create a shared budget, track your spending together, and hit your goals as a team. [Try the live demo today](https://econumo.com) and see how simple managing money as a couple can be.
+Ready to stop guessing and start building a financial plan that works for both of you? **Econumo** gives you the tools to create a shared budget, track your spending together, and hit your goals as a team. [Start a free trial today](https://app.econumo.com/register) and see how simple managing money as a couple can be.

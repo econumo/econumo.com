@@ -226,4 +226,4 @@ The next step is turning this understanding into action.
 Start putting these ideas into practice and see for yourself how this powerful method can reshape your relationship with money. Stop just tracking what you’ve spent and start directing where your money will go. Making that shift from reactive to proactive is the key to building lasting financial security and reaching your goals without the stress. You have the 'why' and the 'how'—now it’s time to start.
 
 ---
-Ready to build a budget that gives you total clarity and control? See how **Econumo** makes cash flow budgeting simple and collaborative. [Try the live demo today](https://econumo.com).
+Ready to build a budget that gives you total clarity and control? See how **Econumo** makes cash flow budgeting simple and collaborative. [Start a free trial today](https://app.econumo.com/register).

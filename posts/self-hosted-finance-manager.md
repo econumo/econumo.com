@@ -157,7 +157,7 @@ This shift toward self-hosted tools isn't happening in a vacuum. The personal fi
 
 > Econumo is more than just a list of features—it’s a philosophy. It’s about giving you the tools to build a private, collaborative financial command center that is 100% yours.
 
-Ready to see for yourself? Feel free to play around with our live demo to get a feel for the platform. When you're ready to take the reins, our self-hosting documentation gives you a clear, step-by-step guide to get your own instance running smoothly. It’s time to stop renting your financial data and start owning it.
+Ready to see for yourself? Start a free trial to get a feel for the platform. When you’re ready to take the reins, our self-hosting documentation gives you a clear, step-by-step guide to get your own instance running smoothly. It’s time to stop renting your financial data and start owning it.
 
 ## Frequently Asked Questions
 
@@ -212,4 +212,4 @@ Once you’ve configured your server for secure remote access (using HTTPS), you
 
 ---
 
-Ready to take control of your financial story? **Econumo** is a powerful, privacy-first platform built for individuals and families just like you. Get started by self-hosting our [free community edition](https://econumo.com) or explore our features with the live demo. Your journey to financial independence starts today.
+Ready to take control of your financial story? **Econumo** is a powerful, privacy-first platform built for individuals and families just like you. Get started by self-hosting our [free community edition](https://econumo.com) or start a free trial. Your journey to financial independence starts today.

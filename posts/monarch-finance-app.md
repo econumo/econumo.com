@@ -69,7 +69,7 @@ This hands-on method helps you develop a much deeper feel for your spending habi
 
 ### Designed for Privacy and Flexibility
 
-Econumo’s focus on user control also applies to your data. It's one of the rare platforms that lets you choose between its upcoming convenient cloud service or a full **self-hosting** option. For anyone serious about privacy, this is a huge deal. It means your financial data can live entirely on your own server, never leaving your control.
+Econumo’s focus on user control also applies to your data. It's one of the rare platforms that lets you choose between its convenient cloud service or a full **self-hosting** option. For anyone serious about privacy, this is a huge deal. It means your financial data can live entirely on your own server, never leaving your control.
 
 The platform is also genuinely built for a global user base, with strong **multi-currency support**. This isn't just an afterthought; it's a core feature for expats, digital nomads, and anyone earning or spending in more than one currency—something US-centric apps often struggle with.
 
@@ -228,7 +228,7 @@ Figuring out which one fits your wallet and your workflow is the final piece of 
 
 [Monarch Money](https://www.monarchmoney.com/) keeps things simple with a single premium subscription, which runs about **$99.99 per year**. What you're paying for is convenience. That fee unlocks powerful, automatic bank syncing, smart categorization, and a full dashboard for your investments, all without a single ad. You’re essentially buying back your time.
 
-Econumo comes at it from a completely different angle. It gives you two choices: you can run the Community Edition on your own hardware for free (perfect for privacy die-hards), or you can opt for their upcoming cloud service if you'd rather not manage the technical side. This lets you pick a path based on your budget and how hands-on you want to be.
+Econumo comes at it from a completely different angle. It gives you two choices: you can run the Community Edition on your own hardware for free (perfect for privacy die-hards), or you can opt for their cloud service if you'd rather not manage the technical side. This lets you pick a path based on your budget and how hands-on you want to be.
 
 ### Making the Move: Your Migration Plan
 
@@ -275,4 +275,4 @@ When it comes to long-term financial planning with a partner, Econumo really shi
 Monarch gives you a single, unified household view, which offers total transparency and works great for some couples. Econumo’s "spaces," however, let you and your partner manage joint accounts for a house deposit or a vacation while keeping your personal spending private. That unique blend of collaboration and autonomy is often the key to keeping financial harmony for the long haul.
 
 ---
-Ready to take control of your finances with a tool built for collaboration and privacy? Try the **Econumo** live demo today or join the waitlist for our cloud release. [Get started at econumo.com](https://econumo.com).
+Ready to take control of your finances with a tool built for collaboration and privacy? Start a free trial of **Econumo** today, or self-host it for free. [Get started at econumo.com](https://app.econumo.com/register).

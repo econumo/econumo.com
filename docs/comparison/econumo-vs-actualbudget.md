@@ -70,15 +70,13 @@ network use of a modified version obliges you to publish your changes.
 | Self-hosted | **Free** | **Free** |
 | Hosted by the project | **$20 one-time**, per user | Not offered |
 | Hosted by a partner | — | PikaPods, ≈ $1.50/month |
-| Family plan | $40 one-time | — |
-| Funding model | Cloud licences + sponsorship | Donations (Open Collective, GitHub Sponsors) |
+| Funding model | Cloud licences | Donations (Open Collective, GitHub Sponsors) |
 
 Self-hosting either app costs nothing but your own infrastructure. The difference
 is what happens when you would rather not run a server.
 
-Econumo sells a **hosted cloud account for a single $20 payment per user** (a
-family licence covering several users is $40). There is no subscription and no
-recurring renewal.
+Econumo sells a **hosted cloud account for a single $20 payment per user**.
+There is no subscription and no recurring renewal.
 
 Actual Budget has **no first-party hosted option at all** — a deliberate choice,
 not an oversight. If you want Actual without running Docker yourself, the
@@ -264,7 +262,7 @@ rules engine, importers and optional end-to-end encryption are mature, and its
 YNAB importers make migration off YNAB genuinely straightforward.
 
 Econumo's API is fully documented via Swagger — you can browse it on the
-[demo instance](https://demo.econumo.com/api/doc) — but there is no CLI and no
+[API docs](https://app.econumo.com/api/doc/) — but there is no CLI and no
 rules engine today.
 
 ### Running it
@@ -312,7 +310,7 @@ server.
 - You prefer deliberate manual entry to automatic import
 
 Both are MIT-licensed and both let you export your data, so neither choice locks
-you in. If you are undecided, the [Econumo demo](https://demo.econumo.com) and the
+you in. If you are undecided, a free [Econumo trial](https://app.econumo.com/register) and the
 [Actual Budget demo](https://demo.actualbudget.org) both run in the browser with no
 signup.
 

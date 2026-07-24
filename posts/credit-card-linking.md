@@ -360,4 +360,4 @@ The right setup is the one you'll maintain without giving up more privacy than y
 
 ---
 
-If you want a budgeting tool built for shared finances, flexible workflows, and stronger data ownership, take a look at [Econumo](https://econumo.com). You can explore the live demo, try a self-hosted setup if you want full control of your data, and choose a style of money tracking that fits your household instead of forcing your household to fit the software.
+If you want a budgeting tool built for shared finances, flexible workflows, and stronger data ownership, take a look at [Econumo](https://econumo.com). You can start a free trial, try a self-hosted setup if you want full control of your data, and choose a style of money tracking that fits your household instead of forcing your household to fit the software.

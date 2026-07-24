@@ -300,4 +300,4 @@ Once that money is in the envelope, it’s mentally gone. You’re way less like
 
 ---
 
-Ready to combine the hands-on benefits of cash envelopes with the convenience of a modern app? **Econumo** is designed for couples and families who want to manage their money collaboratively. Track your digital envelopes, coordinate shared goals, and stay on the same financial page. [Try the live demo or join the waiting list at Econumo](https://econumo.com).
+Ready to combine the hands-on benefits of cash envelopes with the convenience of a modern app? **Econumo** is designed for couples and families who want to manage their money collaboratively. Track your digital envelopes, coordinate shared goals, and stay on the same financial page. [Start a free trial at Econumo](https://app.econumo.com/register).

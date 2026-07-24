@@ -162,4 +162,4 @@ For families using apps to manage their finances together, knowing how these bon
 This blend of safety and steady income is precisely why they are a cornerstone for so many smart, long-term investment portfolios.
 
 ---
-Ready to take control of your family's financial future? With **Econumo**, you can manage shared budgets, track spending, and work towards your goals together. Our privacy-focused app makes collaborative money management simple and stress-free. [Try the live demo or join the waiting list today!](https://econumo.com)
+Ready to take control of your family's financial future? With **Econumo**, you can manage shared budgets, track spending, and work towards your goals together. Our privacy-focused app makes collaborative money management simple and stress-free. [Start a free trial today!](https://app.econumo.com/register)

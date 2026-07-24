@@ -226,4 +226,4 @@ This is easily the most popular question, and honestly, it's the least important
 Everyone’s financial journey is unique. Different careers, different salaries, different family situations, different costs of living—you can't compare them. The only benchmark that matters is *you*. Is your net worth trending up from last quarter? From last year? That’s how you know you're winning.
 
 ---
-Ready to stop guessing and start tracking your financial journey with clarity? **Econumo** provides the tools you need to manage your household finances, monitor your progress, and build a stronger financial future, together. [Try the live demo and take control today](https://econumo.com).
+Ready to stop guessing and start tracking your financial journey with clarity? **Econumo** provides the tools you need to manage your household finances, monitor your progress, and build a stronger financial future, together. [Start a free trial and take control today](https://app.econumo.com/register).

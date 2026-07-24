@@ -245,4 +245,4 @@ Here are a few tips that have worked wonders for us:
 When you make financial planning a shared, open process, the stress melts away, and you can focus on what actually matters—enjoying your trip together.
 
 ---
-Ready to build a travel budget that actually works for you, your partner, or your family? **Econumo** is designed for collaborative, multi-currency financial planning, giving you the clarity and control you need for a stress-free vacation. Try the live demo or self-host for free today at [https://econumo.com](https://econumo.com).
+Ready to build a travel budget that actually works for you, your partner, or your family? **Econumo** is designed for collaborative, multi-currency financial planning, giving you the clarity and control you need for a stress-free vacation. Start a free trial, or self-host for free today at [https://econumo.com](https://econumo.com).

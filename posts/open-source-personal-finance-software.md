@@ -259,4 +259,4 @@ Since the code is public, the story doesn't end if the original creators move on
 
 ---
 
-Ready to take the next step toward financial independence? **Econumo** offers the tools you need to manage your money with confidence. [Try our live demo, self-host the community edition for free, or join the cloud waitlist today.](https://econumo.com)
+Ready to take the next step toward financial independence? **Econumo** offers the tools you need to manage your money with confidence. [Start a free trial, or self-host the community edition for free.](https://econumo.com)

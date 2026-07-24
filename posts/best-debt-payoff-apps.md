@@ -31,24 +31,23 @@ Econumo’s feature set is uniquely suited for specific needs, making it a top c
 *   **Multi-Currency Support:** Expats, digital nomads, and frequent travelers will appreciate the robust multi-currency functionality, which simplifies managing income, expenses, and debts across different countries.
 *   **Flexibility for Power Users:** An available API allows technically-inclined users to build custom automations or integrate Econumo with other tools, offering a level of customization rarely seen in personal finance apps.
 
-The platform is accessible via any modern web browser, with a responsive design that adapts seamlessly to desktop, tablet, and mobile devices. While a hosted cloud edition is still in development, you can explore a live demo and join a waiting list for an early-bird discount on the planned one-time payment of around $20–$30. This model avoids recurring subscription fees, adding to its long-term value. For practical strategies on accelerating your repayment journey, Econumo provides excellent resources on [how to pay off debt faster](https://econumo.com/posts/how-to-pay-off-debt-faster/).
+The platform is accessible via any modern web browser, with a responsive design that adapts seamlessly to desktop, tablet, and mobile devices. The hosted cloud edition is available now for a one-time payment of $20, and you can start a free trial before you buy. This model avoids recurring subscription fees, adding to its long-term value. For practical strategies on accelerating your repayment journey, Econumo provides excellent resources on [how to pay off debt faster](https://econumo.com/posts/how-to-pay-off-debt-faster/).
 
 | Feature                     | Details                                                                                                                                              |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Best For**                | Privacy-conscious individuals, couples, families, and expats.                                                                                        |
 | **Platform**                | Web (Responsive for Desktop, Tablet, Mobile)                                                                                                         |
-| **Pricing**                 | **Community Edition:** Free (self-hosted). <br> **Cloud Edition:** In development, planned one-time payment (~$20–$30).                               |
+| **Pricing**                 | **Community Edition:** Free (self-hosted). <br> **Cloud Edition:** One-time payment of $20/user (lifetime).                               |
 | **Key Differentiator**      | Self-hosting option for complete data privacy and robust multi-user features for collaborative budgeting.                                            |
 | **Data Sync**               | Primarily manual entry to encourage mindful tracking.                                                                                                |
 
 **Pros:**
 *   **Privacy-first:** Keep your financial data entirely private with the self-hosted edition.
 *   **Designed for households:** Multi-user and joint account features streamline shared finances.
-*   **No subscriptions:** The planned cloud version uses a one-time payment model.
+*   **No subscriptions:** The cloud version uses a one-time payment model — $20/user for life, no subscription.
 *   **Power-user friendly:** An API provides ultimate flexibility for custom integrations.
 
 **Cons:**
-*   **Cloud version is not yet released:** The hosted service is still under development, and final pricing could change.
 *   **Requires manual effort:** The lack of automatic bank syncing may not suit users who prefer a fully automated system.
 
 **[Visit Econumo](https://econumo.com)**
@@ -255,7 +254,7 @@ The app's automated tools are its main draw. By connecting your bank accounts, R
 
 | Product | Core features | UX / Quality ★ | Pricing / Value 💰 | Best for 👥 | Unique selling points ✨ |
 |---|---:|:---:|:---:|:---:|---|
-| 🏆 **Econumo** | Collaborative budgets, joint accounts, manual txn entry, multi-currency, API | ★★★★☆ polished adaptive web UI | 💰 Self-host FREE; cloud one‑time ~$20–$30/user (early) | 👥 Couples/families, privacy‑focused, expats, power users | ✨ Self‑hostable + API + privacy‑first + mindful manual tracking |
+| 🏆 **Econumo** | Collaborative budgets, joint accounts, manual txn entry, multi-currency, API | ★★★★☆ polished adaptive web UI | 💰 Self-host FREE; cloud one‑time $20/user (lifetime) | 👥 Couples/families, privacy‑focused, expats, power users | ✨ Self‑hostable + API + privacy‑first + mindful manual tracking |
 | Debt Payoff Planner | Snowball/avalanche/snowflake, payoff timelines, charts, sync | ★★★★☆ simple & focused workflow | 💰 Low cost; Pro adds web sync | 👥 Users focused solely on debt elimination | ✨ Clear payoff visuals & strategy options |
 | Apple App Store – Debt Payoff Planner | Native iOS app, calculators, payment logging, family sharing | ★★★★★ visible strong user ratings | 💰 In‑app purchases / subscriptions | 👥 iPhone/iPad users wanting App Store convenience | ✨ App Store transparency & auto updates |
 | Google Play Store – Debt Payoff Planner | Android app, payoff timelines, notifications, dev support | ★★★★☆ large install base | 💰 In‑app purchases / subscriptions | 👥 Android users seeking same payoff tool | ✨ Store listing privacy & install metrics |

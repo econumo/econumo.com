@@ -253,4 +253,4 @@ When something goes wrong, don't panic. Acknowledge the frustration, use your em
 
 ---
 
-Staying on track is so much easier when you have the right tools. **Econumo** was built to help you and your family manage money as a team. With features like shared budgets, manual transaction tracking that forces mindfulness, and a clear view of your progress, you can turn your debt-free goals into a reality. Take control of your finances and [try the live demo on econumo.com](https://econumo.com) to see how it can work for you.
+Staying on track is so much easier when you have the right tools. **Econumo** was built to help you and your family manage money as a team. With features like shared budgets, manual transaction tracking that forces mindfulness, and a clear view of your progress, you can turn your debt-free goals into a reality. Take control of your finances and [start a free trial at econumo.com](https://app.econumo.com/register) to see how it can work for you.

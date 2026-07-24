@@ -274,4 +274,4 @@ Absolutely. Just because the software lives on your own server doesn't mean it's
 It ends up feeling just like using a regular cloud app, but with one massive difference: your data travels directly from your device to *your* server. It never touches a third-party company's systems. You get all the convenience of remote access without giving up an ounce of your privacy.
 
 ---
-Ready to take control of your finances with a tool built for privacy and collaboration? Check out the [**Econumo** live demo](https://econumo.com) to see it in action, or download the community edition and start your self-hosting journey today.
+Ready to take control of your finances with a tool built for privacy and collaboration? [Start a free trial](https://app.econumo.com/register) to see **Econumo** in action, or download the community edition and start your self-hosting journey today.

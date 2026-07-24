@@ -209,4 +209,4 @@ By the time June rolls around, you’ll have the full **$120** sitting there, re
 While YNAB is a fantastic tool for getting a handle on your credit cards, it's always smart to see what else is out there. You can explore more ways to enhance your financial toolkit by checking out [Australia's best money-saving apps](https://cashbackaustralia.com.au/best-money-saving-apps/).
 
 ---
-With **Econumo**, you can build these mindful spending habits in a collaborative, privacy-focused environment perfect for couples and families. Take control of your finances by trying the live demo or exploring the self-hosted options at [https://econumo.com](https://econumo.com).
+With **Econumo**, you can build these mindful spending habits in a collaborative, privacy-focused environment perfect for couples and families. Take control of your finances by starting a free trial or exploring the self-hosted options at [https://econumo.com](https://econumo.com).

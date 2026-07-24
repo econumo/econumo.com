@@ -273,4 +273,4 @@ Life is full of things you have to pay for that aren't monthly—car repairs, ho
 By preparing for both the expected and the unexpected, you turn a potential financial fire into a minor inconvenience you were already ready for.
 
 ---
-Ready to get a handle on your household expenses with a tool that makes collaboration and clarity simple? **Econumo** is designed to help you and your partner manage shared bills, track spending, and build a budget that actually fits your life. [Explore the live demo on https://econumo.com](https://econumo.com) and see how easy shared finances can be.
+Ready to get a handle on your household expenses with a tool that makes collaboration and clarity simple? **Econumo** is designed to help you and your partner manage shared bills, track spending, and build a budget that actually fits your life. [Start a free trial at https://econumo.com](https://app.econumo.com/register) and see how easy shared finances can be.

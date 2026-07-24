@@ -201,4 +201,4 @@ Absolutely. It’s a real thing to be "cash heavy." While a strong emergency fun
 Once you’ve hit that 6-month savings mark, it’s usually a smart move to start directing new savings toward long-term investments. Things like stocks or retirement accounts have a much better shot at growing your wealth, helping you build a future that goes beyond just being prepared for a crisis.
 
 ---
-Ready to get a clear, accurate picture of your liquid assets? **Econumo** makes it easy to track your cash, savings, and other accounts in one place, so you always know where you stand. [Try the live demo and take control of your financial future today](https://econumo.com).
+Ready to get a clear, accurate picture of your liquid assets? **Econumo** makes it easy to track your cash, savings, and other accounts in one place, so you always know where you stand. [Start a free trial and take control of your financial future today](https://app.econumo.com/register).

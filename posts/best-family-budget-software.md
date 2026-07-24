@@ -283,4 +283,4 @@ Most good apps will let you:
 This kind of setup gives you a complete overview of your finances as a team while still respecting each person's financial independence. It's the perfect balance of teamwork and personal freedom.
 
 ---
-Ready to take control of your family’s finances with a tool built for privacy and collaboration? **Econumo** provides the powerful features you need, including multi-user access and multi-currency support, with the security of manual entry and a self-hosting option. [Explore the live demo or get started for free today](https://econumo.com).
+Ready to take control of your family’s finances with a tool built for privacy and collaboration? **Econumo** provides the powerful features you need, including multi-user access and multi-currency support, with the security of manual entry and a self-hosting option. [Start a free trial, or get started for free today](https://econumo.com).

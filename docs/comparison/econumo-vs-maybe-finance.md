@@ -262,7 +262,7 @@ transactions by hand** — which described most of Maybe's users, since the proj
 had tens of thousands of self-hosters and only a few hundred paying customers — and
 what you actually wanted was a budget rather than a report.
 
-Try the [Econumo demo](https://demo.econumo.com) in your browser before deciding.
+Start a free [Econumo trial](https://app.econumo.com/register) before deciding.
 
 ---
 

@@ -31,7 +31,7 @@ The software's adaptive interface is another major strength, delivering a polish
 
 ### Access and Pricing
 
-The core software is accessible via a free, self-hosted Community Edition that you can install on your own infrastructure. For users who prefer a managed solution, Econumo is developing a cloud version with a planned one-time fee (estimated around $20–$30 per user). You can join the waiting list on their website, and early adopters may receive a discount.
+The core software is accessible via a free, self-hosted Community Edition that you can install on your own infrastructure. For users who prefer a managed solution, Econumo also offers a cloud version for a one-time fee of $20 per user, for life. You can start a free trial on their website before you decide.
 
 *   **Website:** [Econumo.com](https://econumo.com)
 
@@ -336,7 +336,7 @@ The platform itself is completely free to use. However, the apps available on it
 
 | Product | Core features | UX / Quality (★) | Price / Value (💰) | Target (👥) | Unique selling points (✨) |
 |---|---|---:|---|---|---|
-| 🏆 **Econumo** | Multi-user & joint accounts, manual entry, multi-currency, API, self-host/community edition | ★★★★☆ — polished, adaptive UI | 💰 Self-host: Free; Cloud (upcoming): one-time ~$20–$30/user | 👥 Couples, families, travelers, privacy-minded power users | ✨ Privacy-first self-hosting, collaborative budgets, API automation, multi-currency |
+| 🏆 **Econumo** | Multi-user & joint accounts, manual entry, multi-currency, API, self-host/community edition | ★★★★☆ — polished, adaptive UI | 💰 Self-host: Free; Cloud: one-time $20/user (lifetime) | 👥 Couples, families, travelers, privacy-minded power users | ✨ Privacy-first self-hosting, collaborative budgets, API automation, multi-currency |
 | Goodbudget | Digital envelope budgeting, cross-device sync, debt tracking | ★★★☆☆ — simple envelope UX | 💰 Free core; Premium for bank sync (US) | 👥 Households using envelope method | ✨ Clear envelope workflow, easy upgrade path |
 | EveryDollar | Zero-based budgeting, category budgets, goal tracking | ★★★☆☆ — focused, straightforward | 💰 Free web; Premium adds bank connections | 👥 Zero-based budgeters, Ramsey followers | ✨ Zero-based workflow, simple planning |
 | Rocket Money | Subscription tracking, bill timeline, spending overview | ★★★☆☆ — good for subscriptions | 💰 Free tier; Premium for advanced features/services | 👥 Users tracking bills & subs | ✨ Recurring bill timeline, optional negotiation services |

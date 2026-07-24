@@ -10,14 +10,12 @@ Econumo provides versatile editions to meet various needs:
 Suited for individuals and families seeking convenience and access, this cloud-hosted solution offers a comprehensive
 suite of financial management tools available anytime, anywhere.
 
-- Demo: [https://demo.econumo.com](https://demo.econumo.com)
-
-_Demo version is available for one week only. After this period, your demo account will be blocked._
+Create an account at [app.econumo.com](https://app.econumo.com/register) to start a free trial — no credit card required.
 
 ---
 ### Econumo (Self-Hosted)
 
-Designed for households needing a self-hosted, collaborative approach. This **free** platform delivers powerful
+Designed for households needing a self-hosted, collaborative approach. This **free**, MIT-licensed platform delivers powerful
 financial management features for those who prioritize privacy and control over their budgeting.
 
 Self-hosted **Econumo** is a single self-contained binary (shipped as a distroless Docker image) that serves both the
