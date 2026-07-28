@@ -117,15 +117,9 @@ budget is done with **Access control**, as described in the
 ## Access status
 
 Econumo can restrict an account to read-only — for example when a
-self-hosted trial period runs out, or an Econumo Cloud subscription lapses.
+trial period runs out.
 Read access, including exporting your data, keeps working; adding or changing
 anything is disabled until access is restored. A connection in this state
 shows a **Read-only** badge (or a countdown, e.g. **Subscription ends in 5
 days**) next to their name in **Settings → Shared access**, along with a
 **Manage subscription** link where a billing portal is configured.
-
-**Note**
-This state doesn't occur on the demo instance, which grants unrestricted
-access by default — the description above is based on the
-[v1.2.0 release notes](/releases/v1.2.0/) and the app's own interface text,
-not a screenshot.
