@@ -41,6 +41,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Accept or decline a sharing request](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request)
   - [Remove connection between users](/docs/user-guide/shared-access/#remove-connection-between-users)
   - [Check shared accounts and budgets](/docs/user-guide/shared-access/#check-shared-accounts-and-budgets)
+  - [Access status](/docs/user-guide/shared-access/#access-status)
 - [Multi-Currency](/docs/user-guide/multi-currency/)
   - [Accounts in different currencies](/docs/user-guide/multi-currency/#accounts-in-different-currencies)
   - [Cross-currency transfers](/docs/user-guide/multi-currency/#cross-currency-transfers)

@@ -126,6 +126,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Accept or decline a sharing request](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request)
   - [Remove connection between users](/docs/user-guide/shared-access/#remove-connection-between-users)
   - [Check shared accounts and budgets](/docs/user-guide/shared-access/#check-shared-accounts-and-budgets)
+  - [Access status](/docs/user-guide/shared-access/#access-status)
 - [Multi-Currency](/docs/user-guide/multi-currency/)
   - [Accounts in different currencies](/docs/user-guide/multi-currency/#accounts-in-different-currencies)
   - [Cross-currency transfers](/docs/user-guide/multi-currency/#cross-currency-transfers)
@@ -837,6 +838,7 @@ managed in **Settings → Shared access**:
 - [Accept or decline a sharing request](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request)
 - [Remove connection between users](/docs/user-guide/shared-access/#remove-connection-between-users)
 - [Check shared accounts and budgets](/docs/user-guide/shared-access/#check-shared-accounts-and-budgets)
+- [Access status](/docs/user-guide/shared-access/#access-status)
 
 ---
 
@@ -929,6 +931,24 @@ The dialog lists only items that are already shared; sharing a new account or
 budget is done with **Access control**, as described in the
 [Accounts](/docs/user-guide/accounts/#shared-access) and
 [Budgets](/docs/user-guide/budgets/#shared-access) sections.
+
+---
+
+## Access status
+
+Econumo can restrict an account to read-only — for example when a
+self-hosted trial period runs out, or an Econumo Cloud subscription lapses.
+Read access, including exporting your data, keeps working; adding or changing
+anything is disabled until access is restored. A connection in this state
+shows a **Read-only** badge (or a countdown, e.g. **Subscription ends in 5
+days**) next to their name in **Settings → Shared access**, along with a
+**Manage subscription** link where a billing portal is configured.
+
+**Note**
+This state doesn't occur on the demo instance, which grants unrestricted
+access by default — the description above is based on the
+[v1.2.0 release notes](/releases/v1.2.0/) and the app's own interface text,
+not a screenshot.
 
 ---
 
@@ -1063,12 +1083,14 @@ automatically.
 
 ### How to change your email
 
-Changing your email is not currently supported in the user interface.
+Choose **Change email** in the Security section, enter your **New email** and
+**Current password**, and press **Send confirmation code**. Econumo emails a
+code to the new address to confirm you own it before the change takes effect;
+your old address gets a notice, and every other session is signed out.
 
-For cloud customers, please contact [Support](mailto:econumo@gmail.com).
+<ScreenshotSet>
 
-For self-hosted Econumo, please use a
-[CLI command](/docs/self-hosting/cli-commands/).
+</ScreenshotSet>
 
 ### How to change your avatar
 
@@ -1147,6 +1169,12 @@ Press **Create token**, give it a name that will remind you what it is for
 A personal access token grants full access to your account over the API — treat
 it like a password. Create a separate token per integration so you can revoke
 one without breaking the others.
+
+The same tokens also authenticate Econumo's built-in MCP server, so an
+MCP-compatible AI assistant (Claude Code, Claude Desktop, Cursor) can list
+your accounts and log transactions on your behalf — see the
+[v1.2.0 release notes](/releases/v1.2.0/#talk-to-your-finances-from-an-ai-assistant)
+for the client setup steps.
 
 ---
 

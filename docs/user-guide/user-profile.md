@@ -38,12 +38,14 @@ automatically.
 
 ### How to change your email
 
-Changing your email is not currently supported in the user interface.
+Choose **Change email** in the Security section, enter your **New email** and
+**Current password**, and press **Send confirmation code**. Econumo emails a
+code to the new address to confirm you own it before the change takes effect;
+your old address gets a notice, and every other session is signed out.
 
-For cloud customers, please contact [Support](mailto:econumo@gmail.com).
+<ScreenshotSet>
 
-For self-hosted Econumo, please use a
-[CLI command](/docs/self-hosting/cli-commands/).
+</ScreenshotSet>
 
 ### How to change your avatar
 
@@ -122,3 +124,9 @@ Press **Create token**, give it a name that will remind you what it is for
 A personal access token grants full access to your account over the API — treat
 it like a password. Create a separate token per integration so you can revoke
 one without breaking the others.
+
+The same tokens also authenticate Econumo's built-in MCP server, so an
+MCP-compatible AI assistant (Claude Code, Claude Desktop, Cursor) can list
+your accounts and log transactions on your behalf — see the
+[v1.2.0 release notes](/releases/v1.2.0/#talk-to-your-finances-from-an-ai-assistant)
+for the client setup steps.
