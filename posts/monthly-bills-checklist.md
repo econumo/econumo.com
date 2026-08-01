@@ -11,7 +11,7 @@ This guide goes beyond simple reminders. We will break down every essential expe
 
 Your rent or mortgage is almost always the largest and most critical line item on your monthly bills checklist. Representing a significant portion of your take-home pay, this payment is the foundation of your household budget. Prioritizing it ensures your most basic need for shelter is met without fail.
 
-While rent is a fixed cost, a mortgage payment is more complex, often bundling principal, interest, taxes, and insurance (PITI). This complexity creates both risks and opportunities. For instance, a couple might see their mortgage payment jump after an 8% property tax reassessment, forcing a budget adjustment. Conversely, they could use a tool like Econumo to track their equity and model refinance scenarios, seeing if a 0.5% rate drop justifies the closing costs. For a deeper dive into these costs, explore this guide to [household monthly expenses](https://econumo.com/posts/household-monthly-expenses/).
+While rent is a fixed cost, a mortgage payment is more complex, often bundling principal, interest, taxes, and insurance (PITI). This complexity creates both risks and opportunities. For instance, a couple might see their mortgage payment jump after an 8% property tax reassessment, forcing a budget adjustment. Conversely, they could use a tool like Econumo to track their equity and model refinance scenarios, seeing if a 0.5% rate drop justifies the closing costs. For a deeper dive into these costs, explore this guide to [household monthly expenses](https://econumo.com/posts/list-of-household-expenses/).
 
 ### Actionable Tips for Housing Payments:
 

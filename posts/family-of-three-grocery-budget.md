@@ -80,7 +80,7 @@ Once you have your number, compare it to a benchmark. Do not use the benchmark a
 
 If your spending is above the USDA range, that does not automatically mean you are careless. It may reflect your region, dietary needs, or how often you buy partially prepared foods to survive busy weeks. If it is below the benchmark, that may mean you are already running a lean kitchen, or it may mean your meals are inconsistent and you are compensating with takeout later.
 
-A broader household view helps too. Looking at your full [household monthly expenses](https://econumo.com/posts/household-monthly-expenses/) can show whether groceries are the problem, or whether grocery stress is really coming from a larger squeeze across the whole budget.
+A broader household view helps too. Looking at your full [household monthly expenses](https://econumo.com/posts/list-of-household-expenses/) can show whether groceries are the problem, or whether grocery stress is really coming from a larger squeeze across the whole budget.
 
 > Your baseline is not a verdict. It is the number that lets you start making better decisions on purpose.
 

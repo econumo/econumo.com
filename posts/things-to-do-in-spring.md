@@ -17,7 +17,7 @@ This activity combines healthy outdoor work with a practical financial payoff. Y
 
 ### Actionable Garden Budgeting Tips
 
-*   **Plan and Budget Together:** Hold a family meeting to decide on a spending limit for seeds, soil, and tools. This ensures everyone is on the same page and helps manage your [household monthly expenses](https://econumo.com/posts/household-monthly-expenses/) effectively.
+*   **Plan and Budget Together:** Hold a family meeting to decide on a spending limit for seeds, soil, and tools. This ensures everyone is on the same page and helps manage your [household monthly expenses](https://econumo.com/posts/list-of-household-expenses/) effectively.
 *   **Track Costs vs. Savings:** Use a budgeting app like Econumo to manually log all garden-related expenses. Compare this spending against the projected market value of your harvest to see your real financial return.
 *   **Start Small for a Realistic ROI:** Begin with 3-5 easy-to-grow crops like tomatoes, lettuce, and herbs. This approach makes the project manageable and provides a satisfying return on your initial investment of time and money.
 
@@ -54,7 +54,7 @@ This approach connects you directly to your food source and provides clear finan
 ### Actionable Farmers Market Tips
 
 *   **Plan Meals Around Availability:** Instead of creating a fixed shopping list, build your weekly menu based on what produce is fresh and well-priced at the market. This flexibility leads to creative cooking and lower costs.
-*   **Set a Market Budget:** Before you go, agree on a spending limit for your market trip. Use a budgeting tool to log expenses on the spot, ensuring you stay within your [household monthly expenses](https://econumo.com/posts/household-monthly-expenses/) and can clearly see your savings.
+*   **Set a Market Budget:** Before you go, agree on a spending limit for your market trip. Use a budgeting tool to log expenses on the spot, ensuring you stay within your [household monthly expenses](https://econumo.com/posts/list-of-household-expenses/) and can clearly see your savings.
 *   **Visit Late for Discounts:** Arriving in the last hour of the market can often lead to better deals. Vendors may be willing to negotiate prices on remaining produce to avoid taking it home.
 
 ## 5. Spring Cleaning and Home Organization
@@ -91,7 +91,7 @@ This approach to recreation highlights accessible fun, as seen with public tenni
 
 *   **Borrow or Buy Used Gear First:** Minimize your initial investment by borrowing equipment from friends or buying used items from local marketplaces. This lets you try a sport without a major financial commitment.
 *   **Schedule Weekly Game Times:** Create a consistent family routine by scheduling a regular weekly game. This builds accountability and ensures you make the most of your free entertainment option.
-*   **Track Savings on Entertainment:** Use a budgeting app to manually log what you would have spent on paid activities. Comparing this to your minimal spending on free sports will clearly show the financial benefit and keep your [household monthly expenses](https://econumo.com/posts/household-monthly-expenses/) in check.
+*   **Track Savings on Entertainment:** Use a budgeting app to manually log what you would have spent on paid activities. Comparing this to your minimal spending on free sports will clearly show the financial benefit and keep your [household monthly expenses](https://econumo.com/posts/list-of-household-expenses/) in check.
 
 ## 8. Spring Travel Planning and Budget Vacation Trips
 
@@ -152,7 +152,7 @@ This activity directly impacts your household finances by reducing expenses and 
 ### Actionable DIY Project Tips
 
 *   **Prioritize and Plan:** Create a list of all needed repairs. Prioritize urgent issues like roof leaks or electrical problems over cosmetic updates to protect your home's structural integrity first.
-*   **Track Costs vs. Contractor Quotes:** Get a professional quote for a project, then use a budgeting app to log your DIY expenses. This clearly documents your savings and helps you manage your [household monthly expenses](https://econumo.com/posts/household-monthly-expenses/) with precision.
+*   **Track Costs vs. Contractor Quotes:** Get a professional quote for a project, then use a budgeting app to log your DIY expenses. This clearly documents your savings and helps you manage your [household monthly expenses](https://econumo.com/posts/list-of-household-expenses/) with precision.
 *   **Invest in a Basic Tool Kit:** Spend $100-$150 on a quality basic tool kit. This one-time purchase equips you for dozens of future repairs, offering an excellent return on investment and preventing repeat spending.
 
 ## 12-Point Comparison of Spring Activities

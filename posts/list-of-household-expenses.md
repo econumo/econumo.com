@@ -9,6 +9,10 @@ This guide is designed to be your definitive roadmap. We will break down every c
 
 More importantly, we will provide actionable tips for tracking, managing, and reducing these costs. We’ll offer practical examples, including how to map these items to a joint account or handle multi-currency workflows in a tool like Econumo for seamless collaboration with a partner. By the end of this guide, you won't just have a list; you'll have a clear, actionable plan to take control of your finances, align on shared goals, and build a more secure future. Let’s dive in and categorize your spending for maximum impact.
 
+## What counts as a household expense?
+
+A household expense is any recurring or one-off cost of running your home and daily life — the shared costs of the roof, the lights, the food, and getting around, whatever the household's income. It helps to sort every item into three types: **fixed** costs that stay roughly the same each month (rent or mortgage, insurance, loan payments), **variable** costs you can influence week to week (groceries, fuel, some utilities), and **periodic** costs that land irregularly but predictably (annual premiums, car servicing, holidays). The ten categories below cover all three — the whole point of a list is that nothing recurring gets to hide outside it.
+
 ## 1. Housing & Rent/Mortgage Payments
 
 As the cornerstone of any budget, housing is almost always the largest item on a **list of household expenses**. This category covers your primary shelter costs, whether you are paying monthly rent to a landlord or making mortgage payments to a lender. It's a foundational expense that directly impacts your financial stability and the budget available for all other spending.
@@ -347,7 +351,7 @@ Visualizing progress is key to staying motivated with savings, a core principle 
 *   **Create a Savings "Expense":** Set up a recurring monthly transaction in Econumo labeled "Transfer to Savings." This ensures it's budgeted for just like rent or utilities.
 *   **Use Savings Goal Trackers:** Create specific savings goals within Econumo (e.g., "Emergency Fund," "New Car"). As you categorize your transfers, you can watch your progress bars fill up.
 *   **Collaborate on Goals:** For couples, setting up shared savings goals in Econumo ensures both partners are aligned and contributing toward a common objective.
-*   **Monitor Net Worth:** As your savings accounts grow, Econumo’s net worth report provides a clear picture of your overall financial health, offering powerful motivation.
+*   **Watch Your Savings Grow:** As you log transfers into savings, Econumo’s account balances and savings-goal progress show your cushion building month over month — powerful motivation to keep going.
 
 By systematically tracking your contributions, you can build a robust financial foundation. To learn more about creating these habits, explore our guide on [how to stick to a budget](https://econumo.com/posts/how-to-stick-to-a-budget/).
 
@@ -383,6 +387,8 @@ Here are your immediate, actionable next steps:
 2.  **Conduct a "Financial Huddle":** For couples and families, this step is non-negotiable. Sit down together with the data from your tracking month. This isn't about blame or judgment; it's a collaborative strategy session. Where are the biggest outflows? Are there any surprises? This conversation is the foundation for creating a shared budget that everyone feels invested in. You can decide how to map specific expenses to joint or personal accounts, ensuring clarity and fairness.
 
 3.  **Identify Your "Big 3" Opportunities:** Once you see the numbers laid out, a few categories will likely stand out as having the most potential for savings. Often, these are Groceries, Dining Out, and Subscriptions. Instead of trying to cut back everywhere at once, which leads to burnout, focus your energy on these "Big 3" areas. Small, consistent changes here will yield the most significant impact on your bottom line.
+
+Once the list is in front of you, two follow-ups turn it into results. First, keep it current — our guide to [tracking your monthly expenses](https://econumo.com/posts/tracking-monthly-expenses/) covers the habit side. Then start trimming: [how to reduce your household expenses](https://econumo.com/posts/how-to-reduce-monthly-expenses/) ranks the cuts by payoff so you know where to begin. To stop the cuts from quietly reverting, turn each category on this list into an [envelope budget](https://econumo.com/docs/user-guide/budgets/) with a monthly limit that carries forward.
 
 ### Beyond the Numbers: Building Mindful Financial Habits
 
