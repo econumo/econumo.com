@@ -26,6 +26,10 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Adding transactions](/docs/user-guide/transactions/#adding-transactions)
   - [Editing a transaction](/docs/user-guide/transactions/#editing-a-transaction)
   - [Deleting a transaction](/docs/user-guide/transactions/#deleting-a-transaction)
+- [Recurring Transactions](/docs/user-guide/recurring-transactions/)
+  - [Creating a recurring transaction](/docs/user-guide/recurring-transactions/#creating-a-recurring-transaction)
+  - [Posting or skipping a payment](/docs/user-guide/recurring-transactions/#posting-or-skipping-a-payment)
+  - [Editing and deleting a schedule](/docs/user-guide/recurring-transactions/#editing-and-deleting-a-schedule)
 - [Classifications](/docs/user-guide/classifications/)
   - [Create a category, tag, or payee](/docs/user-guide/classifications/#create-a-category-tag-or-payee)
   - [Update or delete](/docs/user-guide/classifications/#update-or-delete)
@@ -46,6 +50,10 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Accounts in different currencies](/docs/user-guide/multi-currency/#accounts-in-different-currencies)
   - [Cross-currency transfers](/docs/user-guide/multi-currency/#cross-currency-transfers)
   - [Currency in your budget](/docs/user-guide/multi-currency/#currency-in-your-budget)
+- [Currencies](/docs/user-guide/currencies/)
+  - [Choosing which currencies you see](/docs/user-guide/currencies/#choosing-which-currencies-you-see)
+  - [Adding your own currency](/docs/user-guide/currencies/#adding-your-own-currency)
+  - [Editing or deleting a custom currency](/docs/user-guide/currencies/#editing-or-deleting-a-custom-currency)
 - [User profile](/docs/user-guide/user-profile/)
   - [Updating your user profile](/docs/user-guide/user-profile/#updating-your-user-profile)
   - [Sessions](/docs/user-guide/user-profile/#sessions)
@@ -130,8 +138,9 @@ available in **Settings**.
 ## Finding your way around
 
 Everything that is not day-to-day spending lives in **Settings**: accounts and
-folders, shared access, budgets, categories, tags, payees, and CSV
-import/export. On desktop and tablet, open it from the bottom of the sidebar;
+folders, shared access, budgets, recurring transactions, categories, tags,
+payees, currencies, and CSV import/export. On desktop and tablet, open it from
+the bottom of the sidebar;
 on mobile, from the bottom of the home screen. Your name at the top of the
 screen opens your [profile](/docs/user-guide/user-profile/), and the **API**
 link at the very bottom opens the [API reference](/docs/api/) for your

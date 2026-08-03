@@ -17,10 +17,13 @@ but also has a **Euro Cash** account they top up before travelling to Italy.
 - [Currency in your budget](/docs/user-guide/multi-currency/#currency-in-your-budget)
 
 **Note**
-Which currencies are available, and how their exchange rates are kept up to
-date, is configured by whoever runs your Econumo instance — see
-[Multi-Currency Support](/docs/self-hosting/multi-currency/) in the
-self-hosting docs.
+Which currencies you can pick from is up to you: choose them in
+**Settings → Currencies**, where you can also add
+[a currency of your own](/docs/user-guide/currencies/#adding-your-own-currency)
+with a rate you set. The currencies your server ships with, and how their
+exchange rates are kept up to date, are configured by whoever runs your Econumo
+instance — see [Multi-Currency Support](/docs/self-hosting/multi-currency/) in
+the self-hosting docs.
 
 ---
 

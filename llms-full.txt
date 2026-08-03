@@ -111,6 +111,10 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Adding transactions](/docs/user-guide/transactions/#adding-transactions)
   - [Editing a transaction](/docs/user-guide/transactions/#editing-a-transaction)
   - [Deleting a transaction](/docs/user-guide/transactions/#deleting-a-transaction)
+- [Recurring Transactions](/docs/user-guide/recurring-transactions/)
+  - [Creating a recurring transaction](/docs/user-guide/recurring-transactions/#creating-a-recurring-transaction)
+  - [Posting or skipping a payment](/docs/user-guide/recurring-transactions/#posting-or-skipping-a-payment)
+  - [Editing and deleting a schedule](/docs/user-guide/recurring-transactions/#editing-and-deleting-a-schedule)
 - [Classifications](/docs/user-guide/classifications/)
   - [Create a category, tag, or payee](/docs/user-guide/classifications/#create-a-category-tag-or-payee)
   - [Update or delete](/docs/user-guide/classifications/#update-or-delete)
@@ -131,6 +135,10 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Accounts in different currencies](/docs/user-guide/multi-currency/#accounts-in-different-currencies)
   - [Cross-currency transfers](/docs/user-guide/multi-currency/#cross-currency-transfers)
   - [Currency in your budget](/docs/user-guide/multi-currency/#currency-in-your-budget)
+- [Currencies](/docs/user-guide/currencies/)
+  - [Choosing which currencies you see](/docs/user-guide/currencies/#choosing-which-currencies-you-see)
+  - [Adding your own currency](/docs/user-guide/currencies/#adding-your-own-currency)
+  - [Editing or deleting a custom currency](/docs/user-guide/currencies/#editing-or-deleting-a-custom-currency)
 - [User profile](/docs/user-guide/user-profile/)
   - [Updating your user profile](/docs/user-guide/user-profile/#updating-your-user-profile)
   - [Sessions](/docs/user-guide/user-profile/#sessions)
@@ -215,8 +223,9 @@ available in **Settings**.
 ## Finding your way around
 
 Everything that is not day-to-day spending lives in **Settings**: accounts and
-folders, shared access, budgets, categories, tags, payees, and CSV
-import/export. On desktop and tablet, open it from the bottom of the sidebar;
+folders, shared access, budgets, recurring transactions, categories, tags,
+payees, currencies, and CSV import/export. On desktop and tablet, open it from
+the bottom of the sidebar;
 on mobile, from the bottom of the home screen. Your name at the top of the
 screen opens your [profile](/docs/user-guide/user-profile/), and the **API**
 link at the very bottom opens the [API reference](/docs/api/) for your
@@ -377,6 +386,11 @@ The search field filters the transaction list as you type:
 - [Editing a transaction](/docs/user-guide/transactions/#editing-a-transaction)
 - [Deleting a transaction](/docs/user-guide/transactions/#deleting-a-transaction)
 
+**Note**
+For payments that come back every month — rent, salary, a subscription — set up
+a schedule once instead of typing them in again and again. See
+[Recurring Transactions](/docs/user-guide/recurring-transactions/).
+
 ---
 
 ## Adding transactions
@@ -520,6 +534,90 @@ accounts.
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+---
+
+# Recurring Transactions
+
+URL: https://econumo.com/docs/user-guide/recurring-transactions/
+
+# Recurring Transactions
+
+Rent, salary, subscriptions, an annual insurance premium — payments that repeat
+on a schedule don't need re-typing every time. Set them up once in
+**Settings → Recurring transactions**, and Econumo keeps track of when each one
+is next due.
+
+Econumo never posts anything behind your back. The next occurrence shows up on
+the account page as **Not posted**; you confirm it when the money actually
+moves, or skip it when it doesn't. Either way the schedule rolls forward to the
+following date.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+## In this section
+
+- [Creating a recurring transaction](/docs/user-guide/recurring-transactions/#creating-a-recurring-transaction)
+- [Posting or skipping a payment](/docs/user-guide/recurring-transactions/#posting-or-skipping-a-payment)
+- [Editing and deleting a schedule](/docs/user-guide/recurring-transactions/#editing-and-deleting-a-schedule)
+
+---
+
+## Creating a recurring transaction
+
+Open **Settings → Recurring transactions** and press **Add transaction** (on
+mobile, the **+** button in the header). The dialog is the same one you use for
+[ordinary transactions](/docs/user-guide/transactions/#adding-transactions),
+with one extra field:
+
+- **Type** — **Expense**, **Income**, or **Transfer**, chosen with the tabs at
+  the top.
+- **Date** — in the top-right corner. This is the date of the *next* payment;
+  every following one is calculated from it.
+- **Account**, **Amount** (with the same built-in calculator), **Category**,
+  **Recipient**, **Tags**, and **Notes** — exactly as in a normal transaction.
+- **Repeats** — how often the payment comes back: **Weekly**, **Every 2
+  weeks**, **Monthly**, **Every 3 months**, or **Yearly**.
+
+The list groups your schedules by account, showing the interval, the amount,
+and the date the next payment falls due.
+
+---
+
+## Posting or skipping a payment
+
+The next occurrence of every schedule appears in its account's transaction
+list, greyed out and labelled **Not posted**. It is a placeholder: it does not
+affect your balance until you confirm it.
+
+Select that row to open its details, then choose:
+
+- **Post** — records the payment as a real transaction. Your balance and budget
+  update, and the schedule moves on to the next date.
+- **Skip** — passes on this occurrence without recording anything, and moves
+  the schedule on to the next date.
+
+**Note**
+A payment that is due or overdue shows its date in red, both in the list and on
+the account page — a quick way to spot what is waiting for you.
+
+You can also post a payment straight from **Settings → Recurring
+transactions**: choose **Post** in the schedule's three-dots menu (on mobile,
+tap the row to open the bottom sheet).
+
+---
+
+## Editing and deleting a schedule
+
+Use the three-dots menu next to a schedule — on mobile, tap the row — and
+choose **Edit** to change any of its fields, or **Delete** to remove the
+schedule altogether.
+
+Editing a schedule changes future payments only; transactions you have already
+posted stay exactly as they were. Deleting a schedule likewise leaves posted
+transactions untouched — it only stops future ones from being suggested.
 
 ---
 
@@ -967,10 +1065,13 @@ but also has a **Euro Cash** account they top up before travelling to Italy.
 - [Currency in your budget](/docs/user-guide/multi-currency/#currency-in-your-budget)
 
 **Note**
-Which currencies are available, and how their exchange rates are kept up to
-date, is configured by whoever runs your Econumo instance — see
-[Multi-Currency Support](/docs/self-hosting/multi-currency/) in the
-self-hosting docs.
+Which currencies you can pick from is up to you: choose them in
+**Settings → Currencies**, where you can also add
+[a currency of your own](/docs/user-guide/currencies/#adding-your-own-currency)
+with a rate you set. The currencies your server ships with, and how their
+exchange rates are kept up to date, are configured by whoever runs your Econumo
+instance — see [Multi-Currency Support](/docs/self-hosting/multi-currency/) in
+the self-hosting docs.
 
 ---
 
@@ -1032,6 +1133,87 @@ its spending progress and the average exchange rate used for the period:
 Conversions use the exchange rates loaded into your Econumo instance. If rates
 look off, ask your administrator to refresh them (see
 [Multi-Currency Support](/docs/self-hosting/multi-currency/)).
+
+---
+
+# Currencies
+
+URL: https://econumo.com/docs/user-guide/currencies/
+
+# Currencies
+
+**Settings → Currencies** controls which currencies Econumo offers you when you
+create an account, a budget, or a budget element. It holds two kinds of
+currency:
+
+- **Econumo currencies** — the ones that ship with your server. They are
+  available to everyone on the instance, and their exchange rates are managed
+  centrally and refresh automatically when the server has rate updates
+  configured.
+- **My currencies** — currencies you add yourself. They are visible only to
+  you, and you set their exchange rate by hand.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+## In this section
+
+- [Choosing which currencies you see](/docs/user-guide/currencies/#choosing-which-currencies-you-see)
+- [Adding your own currency](/docs/user-guide/currencies/#adding-your-own-currency)
+- [Editing or deleting a custom currency](/docs/user-guide/currencies/#editing-or-deleting-a-custom-currency)
+
+---
+
+## Choosing which currencies you see
+
+A server can carry a long list of currencies, and you probably use two or
+three. The switch next to each Econumo currency turns it on or off for your
+account: only the currencies you keep enabled appear in the currency picker
+when you [create an account](/docs/user-guide/accounts/#account-creation) or
+budget. **Disable all** clears the list in one go, and the search field at the
+top helps you find a currency in a long list.
+
+**Note**
+Your [default currency](/docs/user-guide/user-profile/#how-to-change-your-default-currency)
+cannot be switched off — its toggle stays on and greyed out. Change the default
+in your profile first if you want to retire that currency.
+
+---
+
+## Adding your own currency
+
+Anything you count in units Econumo doesn't know about — loyalty points,
+airline miles, a local voucher scheme, a cryptocurrency your server doesn't
+carry — can become a currency of your own. Press **Create currency** and fill
+in:
+
+- **Name** — how the currency is labelled, e.g. "Points".
+- **Code** — a short code, e.g. `PTS`.
+- **Symbol** — what is shown next to amounts. Optional; the code is used when
+  you leave it empty.
+- **Decimal places** — the slider sets how many decimals amounts carry
+  (2 by default; set it to 0 for something counted in whole units, like miles).
+- **Exchange rate** — how many units of your currency one unit of your default
+  currency is worth, entered as `1 USD = …`.
+
+Your custom currency then behaves like any other: you can open an account in
+it, budget in it, and it appears in the budget's per-currency switcher. In the
+screenshots throughout this guide, John's "Airline Miles" account uses a custom
+**PTS** currency worth 10 to the dollar.
+
+**Note**
+A custom currency's rate is fixed — Econumo never updates it for you. If the
+real rate moves and it matters to you, edit the currency to bring the number up
+to date.
+
+---
+
+## Editing or deleting a custom currency
+
+Open the three-dots menu next to a currency under **My currencies** and choose
+**Edit** or **Delete**. Econumo currencies can only be switched on and off —
+their details belong to the server, not to you.
 
 ---
 

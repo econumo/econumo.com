@@ -27,6 +27,11 @@ The search field filters the transaction list as you type:
 - [Editing a transaction](/docs/user-guide/transactions/#editing-a-transaction)
 - [Deleting a transaction](/docs/user-guide/transactions/#deleting-a-transaction)
 
+**Note**
+For payments that come back every month — rent, salary, a subscription — set up
+a schedule once instead of typing them in again and again. See
+[Recurring Transactions](/docs/user-guide/recurring-transactions/).
+
 ---
 
 ## Adding transactions
