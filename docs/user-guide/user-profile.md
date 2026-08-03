@@ -74,7 +74,8 @@ currency in Econumo.
 ### How to change the interface language
 
 The **Language** preference sits right below **Currency**. Open it and pick one
-of the available languages — currently **English** and **Русский**. The same
+of the 11 available languages — English, Deutsch, Español, Français, Italiano,
+Nederlands, Polski, Português, Русский, Українська, and 简体中文. The same
 dialog is available from the language badge on the sign-in and sign-up screens,
 before you have an account.
 

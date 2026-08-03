@@ -10,16 +10,17 @@ functionality:
 - Update or delete an existing item.
 - Archive or unarchive any item.
 
-**Categories** answer "what kind of spending is this?" and are required on
-every expense and income. **Tags** cut across categories to group related
-spending (a trip, a renovation). **Payees** record who you paid or who paid
-you.
+**Categories** answer "what kind of spending is this?" — they're optional on a
+transaction, but picking one is what makes a budget useful. **Tags** cut
+across categories to group related spending (a trip, a renovation). **Payees**
+record who you paid or who paid you.
 
 ## In this section
 
 - [Create a category, tag, or payee](/docs/user-guide/classifications/#create-a-category-tag-or-payee)
 - [Update or delete](/docs/user-guide/classifications/#update-or-delete)
 - [Archive or unarchive](/docs/user-guide/classifications/#archive-or-unarchive)
+- [Searching a long list](/docs/user-guide/classifications/#searching-a-long-list)
 
 ---
 
@@ -85,3 +86,11 @@ list, and in a budget if you've budgeted them or had any associated spending.
 Use the switch on the right side of each element to archive or unarchive it.
 The **Active only** toggle at the top of the list controls whether archived
 items are shown.
+
+---
+
+## Searching a long list
+
+Press the search icon next to the page heading to reveal a filter field —
+handy once your list of categories, tags, or payees grows past a quick scan.
+It filters the list as you type.

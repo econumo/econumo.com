@@ -90,6 +90,11 @@ Click a number in the **Budget** column to adjust it — changes apply
 instantly. Overspent elements are highlighted in red (like _Groceries_ in the
 screenshots above).
 
+If a [transaction has no category](/docs/user-guide/transactions/#adding-expenses),
+its amount still counts: it appears at the bottom of the budget as a read-only
+**Uncategorized** element — no **Budget** or **Available** figure, just the
+**Spent** total — instead of being silently left out.
+
 ---
 ### Organizing your budget
 

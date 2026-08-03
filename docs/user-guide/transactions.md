@@ -76,10 +76,15 @@ several receipt lines and press `=`.
 
 **Categories**
 
-Each expense must have a designated category. Click the category field to
-search your categories or create a new one: type a name that does not exist
-yet and press "Enter" (or "Search"/"Submit" on your mobile keyboard). The name
-must be 3–64 characters long.
+Categories are optional — you can save an expense without picking one. Click
+the category field to search your categories or create a new one: type a name
+that does not exist yet and press "Enter" (or "Search"/"Submit" on your mobile
+keyboard). The name must be 3–64 characters long.
+
+**Note**
+Leave a transaction uncategorized and it still counts toward your budget: it
+shows up there as a read-only **Uncategorized** element instead of being left
+out of the totals. See [Budgeting](/docs/user-guide/budgets/#budgeting).
 
 <ScreenshotSet>
 

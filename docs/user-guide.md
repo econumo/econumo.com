@@ -34,6 +34,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Create a category, tag, or payee](/docs/user-guide/classifications/#create-a-category-tag-or-payee)
   - [Update or delete](/docs/user-guide/classifications/#update-or-delete)
   - [Archive or unarchive](/docs/user-guide/classifications/#archive-or-unarchive)
+  - [Searching a long list](/docs/user-guide/classifications/#searching-a-long-list)
 - [Budgets](/docs/user-guide/budgets/)
   - [Budget creation](/docs/user-guide/budgets/#budget-creation)
   - [Update budget details](/docs/user-guide/budgets/#update-budget-details)
