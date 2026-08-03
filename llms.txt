@@ -159,6 +159,7 @@
 
 ## Releases
 
+- [v1.3.0](https://econumo.com/releases/v1.3.0.md): v1.3.0 — adds recurring transactions, user-managed currencies, and 9 new UI languages.
 - [v1.2.1](https://econumo.com/releases/v1.2.1.md): v1.2.1 — a maintenance release that fixes MCP access behind a reverse proxy and a budget drill-down bug.
 - [v1.2.0](https://econumo.com/releases/v1.2.0.md): v1.2.0 — Docker-free single-binary deployment, an embedded MCP server for AI assistants, and first-class PostgreSQL support.
 - [v1.1.0](https://econumo.com/releases/v1.1.0.md): v1.1.0 — adds multi-language support, a redesigned invite-based account sharing flow, exact decimal money handling, and new-release notifications, plus a security-hardening pass.
