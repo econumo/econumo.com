@@ -38,6 +38,7 @@
 
 ## Blog
 
+- [The Best Zero-Based Budgeting Software (Without the Subscription)](https://econumo.com/posts/zero-based-budgeting-software.md): Zero-based budgeting software compared: YNAB, Actual Budget, EveryDollar, and Econumo, on the one rule that actually makes the method work — and what it costs to keep using it.
 - [What Is Creditworthiness? Your Guide to Financial Health](https://econumo.com/posts/what-is-creditworthiness.md): What is creditworthiness - Wondering what is creditworthiness and how lenders see you? Learn key factors, check your standing, and get practical steps to
 - [QIF File Format: Structure, Import, & Best Practices](https://econumo.com/posts/qif-file-format.md): Understand the QIF file format, its structure, and how to easily import financial data into apps like Econumo. Your guide to seamless data portability.
 - [Subscription Management Services: A Household Finance Guide](https://econumo.com/posts/subscription-management-services.md): Tired of surprise charges? Learn what subscription management services are, how to choose one for your family, and track them privately with tools like Econumo.
