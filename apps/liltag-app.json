@@ -15,7 +15,7 @@
     {
       "id": "plausible",
       "trigger": "pageLoad",
-      "content": "<script data-domain=app.econumo.com defer src=https://analytics.flowmitry.com/js/script.tagged-events.js></script><script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>",
+      "content": "<script defer src=\"https://t.kuznetsov.dev/js/script.js\" data-key=\"ak_db92b1508b79976fd728ffc41ecffdb5\" data-identity=\"anonymous\"></script>",
       "location": "head"
     }
   ]
