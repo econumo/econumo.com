@@ -36,12 +36,20 @@ with one extra field:
 - **Date** — in the top-right corner. This is the date of the *next* payment;
   every following one is calculated from it.
 - **Account**, **Amount** (with the same built-in calculator), **Category**,
-  **Recipient**, **Tags**, and **Notes** — exactly as in a normal transaction.
+  **Recipient** (**Sender** on an income schedule), **Tags**, and **Notes** —
+  exactly as in a normal transaction.
 - **Repeats** — how often the payment comes back: **Weekly**, **Every 2
   weeks**, **Monthly**, **Every 3 months**, or **Yearly**.
 
-The list groups your schedules by account, showing the interval, the amount,
-and the date the next payment falls due.
+The list groups your schedules by account, showing the category and interval,
+your notes and recipient, the amount, and the date the next payment falls due.
+
+**Note**
+Schedules follow the account, not the person. On a
+[shared account](/docs/user-guide/shared-access/) everyone with access sees the
+same schedules and can post or skip them — in the screenshots, the rent and the
+grocery run on the Joint Account appear in both John's list and Megan's.
+Schedules on your own accounts stay private to you.
 
 ---
 
@@ -51,12 +59,17 @@ The next occurrence of every schedule appears in its account's transaction
 list, greyed out and labelled **Not posted**. It is a placeholder: it does not
 affect your balance until you confirm it.
 
-Select that row to open its details, then choose:
+Select that row to open its **Transaction details**, which repeats the
+schedule's interval at the bottom and offers two actions:
 
-- **Post** — records the payment as a real transaction. Your balance and budget
+- **POST** — records the payment as a real transaction. Your balance and budget
   update, and the schedule moves on to the next date.
-- **Skip** — passes on this occurrence without recording anything, and moves
-  the schedule on to the next date.
+- **Skip** — the small step-over icon beside it. Passes on this occurrence
+  without recording anything, and moves the schedule on to the next date.
+
+The row's own three-dots menu is not the place to look: on a **Not posted**
+placeholder it offers only **Edit** and **Delete**, both of which act on the
+schedule rather than on this occurrence.
 
 **Note**
 A payment that is due or overdue shows its date in red, both in the list and on

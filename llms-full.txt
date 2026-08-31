@@ -117,7 +117,9 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Editing and deleting a schedule](/docs/user-guide/recurring-transactions/#editing-and-deleting-a-schedule)
 - [Classifications](/docs/user-guide/classifications/)
   - [Create a category, tag, or payee](/docs/user-guide/classifications/#create-a-category-tag-or-payee)
+  - [Budget tags and reporting tags](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
   - [Update or delete](/docs/user-guide/classifications/#update-or-delete)
+  - [Merge duplicates](/docs/user-guide/classifications/#merge-duplicates)
   - [Archive or unarchive](/docs/user-guide/classifications/#archive-or-unarchive)
   - [Searching a long list](/docs/user-guide/classifications/#searching-a-long-list)
 - [Budgets](/docs/user-guide/budgets/)
@@ -125,7 +127,14 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Update budget details](/docs/user-guide/budgets/#update-budget-details)
   - [Manage your budget](/docs/user-guide/budgets/#manage-your-budget)
   - [Budgets list](/docs/user-guide/budgets/#budgets-list)
+  - [Completing, duplicating and archiving a budget](/docs/user-guide/budgets/#completing-duplicating-and-archiving-a-budget)
   - [Shared access](/docs/user-guide/budgets/#shared-access)
+- [Plan](/docs/user-guide/plan/)
+  - [Opening the Plan view](/docs/user-guide/plan/#opening-the-plan-view)
+  - [Reading the sheet](/docs/user-guide/plan/#reading-the-sheet)
+  - [Planning a month](/docs/user-guide/plan/#planning-a-month)
+  - [The Balance row](/docs/user-guide/plan/#the-balance-row)
+  - [Keeping a long sheet readable](/docs/user-guide/plan/#keeping-a-long-sheet-readable)
 - [Shared access](/docs/user-guide/shared-access/)
   - [Connect with another user](/docs/user-guide/shared-access/#connect-with-another-user)
   - [Accept or decline a sharing request](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request)
@@ -223,14 +232,25 @@ available in **Settings**.
 ---
 ## Finding your way around
 
-Everything that is not day-to-day spending lives in **Settings**: accounts and
-folders, shared access, budgets, recurring transactions, categories, tags,
-payees, currencies, and CSV import/export. On desktop and tablet, open it from
-the bottom of the sidebar;
-on mobile, from the bottom of the home screen. Your name at the top of the
-screen opens your [profile](/docs/user-guide/user-profile/), and the **API**
-link at the very bottom opens the [API reference](/docs/api/) for your
-instance.
+Your accounts, grouped into folders, fill the sidebar on desktop and tablet and
+the home screen on mobile; **Budget & Plan** above them opens your
+[budget](/docs/user-guide/budgets/) and its
+[Plan view](/docs/user-guide/plan/).
+
+Everything that is not day-to-day spending lives in **Settings**, in three
+groups:
+
+- **Finances** — [Accounts](/docs/user-guide/accounts/),
+  [Shared access](/docs/user-guide/shared-access/), **Budgets & Plans**, and
+  [Recurring transactions](/docs/user-guide/recurring-transactions/).
+- **Classification** — [Categories, Tags, Payees](/docs/user-guide/classifications/)
+  and [Currencies](/docs/user-guide/currencies/).
+- **Data** — [Import and Export CSV](/docs/user-guide/csv-import-export/).
+
+On desktop and tablet, open Settings from the bottom of the sidebar; on mobile,
+from the bottom of the home screen. Your name at the top of the screen opens
+your [profile](/docs/user-guide/user-profile/), and the **API** link at the
+very bottom opens the [API reference](/docs/api/) for your instance.
 
 <ScreenshotSet>
 
@@ -458,10 +478,19 @@ right from the dialog.
 
 **Tags**
 
-Tags group spending across categories — especially useful for trips or special
-occasions (in the screenshots, the family tags their Italy vacation expenses
-with `Italy 2026`). Pick one of the suggested tags or press the `+` button to
-create a new one (3–64 characters).
+Tags group spending across categories. The **Tags** row lists both kinds side
+by side, and they behave differently when you tap them:
+
+- **Budget tags**, marked with `#`, are for a project or an event — in the
+  screenshots, the family tags its Italy vacation expenses with `Italy 2026`.
+  A transaction takes only one, so picking a second replaces the first.
+- **Reporting tags** track who or what the money went on — a kid, a pet, a
+  second home. Toggle as many as apply.
+
+Press the `+` button to create a new tag without leaving the dialog (3–64
+characters); see
+[Budget tags and reporting tags](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
+for the difference in full.
 
 **Notes**
 
@@ -583,12 +612,20 @@ with one extra field:
 - **Date** — in the top-right corner. This is the date of the *next* payment;
   every following one is calculated from it.
 - **Account**, **Amount** (with the same built-in calculator), **Category**,
-  **Recipient**, **Tags**, and **Notes** — exactly as in a normal transaction.
+  **Recipient** (**Sender** on an income schedule), **Tags**, and **Notes** —
+  exactly as in a normal transaction.
 - **Repeats** — how often the payment comes back: **Weekly**, **Every 2
   weeks**, **Monthly**, **Every 3 months**, or **Yearly**.
 
-The list groups your schedules by account, showing the interval, the amount,
-and the date the next payment falls due.
+The list groups your schedules by account, showing the category and interval,
+your notes and recipient, the amount, and the date the next payment falls due.
+
+**Note**
+Schedules follow the account, not the person. On a
+[shared account](/docs/user-guide/shared-access/) everyone with access sees the
+same schedules and can post or skip them — in the screenshots, the rent and the
+grocery run on the Joint Account appear in both John's list and Megan's.
+Schedules on your own accounts stay private to you.
 
 ---
 
@@ -598,12 +635,17 @@ The next occurrence of every schedule appears in its account's transaction
 list, greyed out and labelled **Not posted**. It is a placeholder: it does not
 affect your balance until you confirm it.
 
-Select that row to open its details, then choose:
+Select that row to open its **Transaction details**, which repeats the
+schedule's interval at the bottom and offers two actions:
 
-- **Post** — records the payment as a real transaction. Your balance and budget
+- **POST** — records the payment as a real transaction. Your balance and budget
   update, and the schedule moves on to the next date.
-- **Skip** — passes on this occurrence without recording anything, and moves
-  the schedule on to the next date.
+- **Skip** — the small step-over icon beside it. Passes on this occurrence
+  without recording anything, and moves the schedule on to the next date.
+
+The row's own three-dots menu is not the place to look: on a **Not posted**
+placeholder it offers only **Edit** and **Delete**, both of which act on the
+schedule rather than on this occurrence.
 
 **Note**
 A payment that is due or overdue shows its date in red, both in the list and on
@@ -639,17 +681,20 @@ functionality:
 
 - Create a new item.
 - Update or delete an existing item.
+- Merge a duplicate into another item.
 - Archive or unarchive any item.
 
 **Categories** answer "what kind of spending is this?" — they're optional on a
 transaction, but picking one is what makes a budget useful. **Tags** cut
-across categories to group related spending (a trip, a renovation). **Payees**
-record who you paid or who paid you.
+across categories to group related spending (a trip, a renovation, the dog).
+**Payees** record who you paid or who paid you.
 
 ## In this section
 
 - [Create a category, tag, or payee](/docs/user-guide/classifications/#create-a-category-tag-or-payee)
+- [Budget tags and reporting tags](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
 - [Update or delete](/docs/user-guide/classifications/#update-or-delete)
+- [Merge duplicates](/docs/user-guide/classifications/#merge-duplicates)
 - [Archive or unarchive](/docs/user-guide/classifications/#archive-or-unarchive)
 - [Searching a long list](/docs/user-guide/classifications/#searching-a-long-list)
 
@@ -658,7 +703,8 @@ record who you paid or who paid you.
 ## Create a category, tag, or payee
 
 To create a new item, go to **Settings → Categories / Tags / Payees** and press
-the **Create** button. Expense and income categories are listed separately:
+**Create category** / **Create tag** / **Create payee** (on mobile, the **+**
+button in the header). Expense and income categories are listed separately:
 
 <ScreenshotSet>
 
@@ -668,17 +714,15 @@ You will need to fill out a few fields, such as:
 
 - **Type** (income/expense) — only for categories
 - **Icon** — only for categories
+- **Kind** (reporting/budget) — only for tags, see
+  [below](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
 - **Name** (3–64 characters)
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
-Tags and payees work the same way — only the list is simpler:
-
-<ScreenshotSet>
-
-</ScreenshotSet>
+Payees need nothing but a name:
 
 <ScreenshotSet>
 
@@ -688,6 +732,41 @@ Tags and payees work the same way — only the list is simpler:
 You can also create categories, tags, and payees on the fly, right from the
 [transaction dialog](/docs/user-guide/transactions/#adding-expenses) — no trip
 to Settings required.
+
+---
+
+## Budget tags and reporting tags
+
+Tags come in two kinds, and the **New tag** dialog asks which one you are
+making before anything else:
+
+- **Budget tag** — *"Plan a project or event. Only one tag per transaction."*
+  A vacation, a wedding, a renovation. Because a transaction can carry only
+  one, its spending adds up cleanly, so a budget tag gets a row in your
+  [budget](/docs/user-guide/budgets/) with a limit of its own. Budget tags are
+  marked with `#`.
+- **Reporting tag** — *"Analyse what the money went on. Several tags per
+  transaction allowed."* A kid, a dog, a second home. A transaction can carry
+  as many as you like, so the totals deliberately overlap and take no part in
+  the budget maths. Reporting tags show up in their own
+  [Reporting tags block](/docs/user-guide/budgets/#reporting-tags) at the foot
+  of the budget page.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The Tags screen keeps the two apart in **BUDGET TAGS** and **REPORTING TAGS**
+sections:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+A tag's kind is fixed when you create it and cannot be changed afterwards. If
+you picked the wrong one, create the tag you meant and
+[merge](/docs/user-guide/classifications/#merge-duplicates) the other into it.
 
 ---
 
@@ -705,6 +784,40 @@ Deleting an item will remove it from all transactions and budgets.
 
 Use **Reorder list** to change the order in which items appear in pickers and
 in the budget.
+
+---
+
+## Merge duplicates
+
+Long-lived data collects duplicates: a "Groceries" and a "Food", two spellings
+of the same shop. **Merge into…** in the same three-dots menu folds one into
+another instead of deleting it and losing the history.
+
+1. Open **Settings → Categories** (or **Tags**, or **Payees**).
+2. Choose **Merge into…** in the duplicate's menu. On a phone the same dialog
+   arrives as a bottom sheet.
+3. Pick the survivor from the list, or find it with the **Search** box. The
+   dialog spells out what will happen: *"All transactions from … will be
+   moved, and … will be deleted."*
+4. Press **MERGE**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Every transaction pointing at the duplicate is moved to the survivor, and the
+duplicate is then deleted.
+
+**Note**
+Merging two categories also merges their budget rows: the planned amounts are
+**added together** per period rather than thrown away. The dialog says so
+before you commit — *"If the two sit in different envelopes, update your
+budget first so you don't lose your planned amounts — limits are added
+together when merging."*
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ---
 
@@ -761,34 +874,53 @@ category:
   - [Organizing your budget](/docs/user-guide/budgets/#organizing-your-budget)
   - [Work with the budget](/docs/user-guide/budgets/#work-with-the-budget)
 - [Budgets list](/docs/user-guide/budgets/#budgets-list)
+- [Completing, duplicating and archiving a budget](/docs/user-guide/budgets/#completing-duplicating-and-archiving-a-budget)
 - [Shared access](/docs/user-guide/budgets/#shared-access)
+
+**Note**
+To plan several months at once instead of one at a time, switch the budget to
+its [Plan view](/docs/user-guide/plan/) — the same budget laid out as a
+month-by-month sheet.
 
 ---
 
 ## Budget creation
 
-Open **Settings → Budgets** and press **Create budget**. Give the budget a
-name, pick its base currency, and choose which accounts participate in
-budgeting — you can exclude, say, a long-term savings account.
+Open **Settings → Budgets & Plans** and press **Create budget** (on mobile, the
+**+** button in the header). Give the budget a name, pick its base currency,
+and switch on the accounts that take part in it — the counter above the list
+keeps track (*"3 of 5 included"*).
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
 **Note**
-All new accounts are included in your budgets by default, but you can exclude
-them later in the budget settings. Budgets start from the current month.
+Account membership is an explicit list, and a new budget starts with every
+switch off — turn on the accounts you actually budget from, and leave out the
+ones you don't, such as a long-term savings account. Budgets start from the
+current month.
 
 ---
 ## Update budget details
 
 Open your budget, press **Configure**, and choose **Budget details**. In the
-dialog you can rename the budget, change its currency, and include or exclude
+dialog you can rename the budget, change its currency, and add or remove
 accounts:
 
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+An account that already carries transactions in past months of this budget
+cannot be removed from it — taking it out would rewrite months you have
+already closed. The dialog says so under the list.
+
+**Note**
+On desktop and tablet, **Configure** sits in the top-right corner of the budget
+page; on a phone it is the icon in the same corner. Besides **Budget details**
+it holds **Edit structure**, **Open budget list**, and — on a phone and a
+tablet — the **Budget** / **Plan** switch.
 
 ---
 ## Manage your budget
@@ -798,8 +930,11 @@ In your budget, you will work with the following entities:
 - **Budget Folders** — to organize your spending conveniently (in the
   screenshots: _Essentials_, _Lifestyle_, _Vacations_).
 - **Categories** — your Econumo categories.
-- **Tags** — your Econumo tags. These aggregate spending across categories
-  (e.g. the whole _Italy 2026_ vacation).
+- **Tags** — your budget [tags](/docs/user-guide/classifications/). These
+  aggregate spending across categories (e.g. the whole _Italy 2026_ vacation).
+  Reporting tags are not budgeted; they get
+  [their own block](/docs/user-guide/budgets/#reporting-tags) at the foot of
+  the page.
 - **Envelopes** — these group several categories into one limit (e.g. an
   envelope for _Food_ could contain _Groceries_, _Drinks_, and _Restaurants_).
 
@@ -808,8 +943,13 @@ In your budget, you will work with the following entities:
 
 The goal of budgeting is to maintain your monthly budget. Ideally, you should
 prepare your budget before the month starts and make minor adjustments during
-the month as needed. The months bar at the top switches between periods, and
-the budget shows how much money remains in your virtual envelopes.
+the month as needed. The months bar at the top switches between periods — on
+desktop the **‹** and **›** arrows beside it step one month at a time — and the
+budget shows how much money remains in your virtual envelopes. The bar is
+clamped to the budget's own lifetime: an open budget runs well into the future,
+while a
+[completed one](/docs/user-guide/budgets/#completing-duplicating-and-archiving-a-budget)
+stops just past its final month.
 
 Each row has three columns:
 
@@ -883,6 +1023,25 @@ column:
 
 </ScreenshotSet>
 
+#### Reporting tags
+
+Below the folders — under the **Uncategorized** row — sits a separate
+**Reporting tags** block. It totals what you spent per
+[reporting tag](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
+in the month: people, pets, places. Expand the block with the chevron beside
+its title, and expand a single tag to see the categories behind its total.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+These rows show a **Spent** figure only — no **Budget**, no **Available** — and
+they sit outside the budget's totals. That is deliberate: a transaction can
+carry several reporting tags at once, so its full amount counts under each of
+them, and adding the block into the budget maths would count the same money
+twice. Use it to answer "what did the dog cost us this month?", not "how much
+is left to spend?".
+
 #### Multi-currency budgets
 
 If your accounts use several currencies, the budget header shows a per-currency
@@ -895,14 +1054,60 @@ exchange rate used for the period. See
 ---
 ## Budgets list
 
-You can access your budgets list at **Settings → Budgets** or via
+You can access your budgets list at **Settings → Budgets & Plans** or via
 **Configure → Open budget list**. Shared budgets show the avatars of everyone
 who uses them, and the bookmark icon marks your default budget — the one that
-opens from **Budget** in the sidebar:
+opens from **Budget & Plan** in the sidebar. Budgets you have archived collapse
+into an **Archived (N)** group at the bottom of the list:
 
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+---
+## Completing, duplicating and archiving a budget
+
+A budget does not have to run forever. Every budget's three-dots menu in
+**Settings → Budgets & Plans** carries its whole life cycle: **Open budget**,
+**Access control**, **Duplicate…**, **Complete…**, **Archive**, and **Delete**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+### Complete a budget
+
+**Complete…** closes a budget off at a chosen month. Pick the **Last month** it
+covers; leave **Continue in a copy starting this month** on to name and start
+its successor in the same step, with **Copy plans** deciding whether the
+planned amounts come along. Turn that switch off and the **Copy plans** and
+**Name** fields disappear — the budget is simply closed, with no successor.
+Press **SAVE** and the budget is archived straight away: it leaves the active
+list immediately and joins the **Archived** group below it.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+### Duplicate a budget
+
+**Duplicate…** copies a budget on its own, without closing the original: its
+structure, folders, envelopes, member accounts and sharing all come across. The
+copy is pre-named after the original with *"(copy)"* appended, keeps **Copy
+plans** on, and can **Start from this month** instead of the original's first
+month.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+### Archive and unarchive
+
+**Archive** files a budget away without completing it. An archived budget stays
+in the list under **Archived (N)** and stays fully browsable — opening it shows
+a banner reading *"This budget is archived and read-only"*, and its numbers
+stay exactly as they were. Its menu offers **Unarchive** in place of
+**Archive**, which brings it back to the active list.
 
 ---
 ## Shared access
@@ -931,6 +1136,119 @@ budget outright — your partner accepts or declines it from the
 Once accepted, your partner sees the budget in their own budget list, and you
 budget the same envelopes together — as John and Megan do with the "Family
 budget" in the screenshots throughout this page.
+
+---
+
+# Plan
+
+URL: https://econumo.com/docs/user-guide/plan/
+
+# Plan
+
+The [budget](/docs/user-guide/budgets/) shows one month at a time: what you
+planned, what you spent, what is left. The **Plan** view shows the same budget
+as a spreadsheet across several months — every envelope, category and tag is a
+row, every month is a column — so you can put next spring's holiday or an
+annual insurance premium into the plan long before the money moves.
+
+Both views belong to the same budget. Switching between them changes nothing
+about your data; it only changes how much of the budget you are looking at.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+## In this section
+
+- [Opening the Plan view](/docs/user-guide/plan/#opening-the-plan-view)
+- [Reading the sheet](/docs/user-guide/plan/#reading-the-sheet)
+- [Planning a month](/docs/user-guide/plan/#planning-a-month)
+- [Copying an amount forward](/docs/user-guide/plan/#copying-an-amount-forward)
+- [The Balance row](/docs/user-guide/plan/#the-balance-row)
+- [Keeping a long sheet readable](/docs/user-guide/plan/#keeping-a-long-sheet-readable)
+
+---
+
+## Opening the Plan view
+
+Open your budget from **Budget & Plan** in the sidebar (on mobile, from the
+home screen), then switch the **BUDGET** / **PLAN** toggle next to the budget
+name to **PLAN**.
+
+On a phone and a tablet there is no toggle in the header: open the
+**Configure** menu in the top-right corner and pick **Plan** at the top of it —
+the view you are on is ticked.
+
+---
+
+## Reading the sheet
+
+Rows are the elements of your budget, in the structure you gave it: categories,
+tags and envelopes grouped into folders, exactly as in the budget view. Income
+categories sit in their own **INCOME** section above the **EXPENSES** section.
+
+Each cell holds two numbers: the amount actually spent or earned on top, in
+small grey type, and the amount you planned below it. An actual figure that
+overshoots the plan is shown in red. A dash means nothing is planned for that
+month yet.
+
+The arrows above the sheet — **Earlier months** and **Later months** — move the
+visible window backwards and forwards in time.
+
+---
+
+## Planning a month
+
+1. Click (or tap) the cell where the row and the month meet.
+2. A small **Budget** field opens with the same calculator keypad
+   (`+`, `−`, `×`, `÷`, `=`) as the
+   [transaction dialog](/docs/user-guide/transactions/#adding-expenses).
+3. Type the amount and press **SAVE**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Income rows are planned exactly the same way — a planned salary is what makes
+the projection at the foot of the sheet worth reading.
+
+---
+
+## Copying an amount forward
+
+Most plans repeat: the same rent, the same phone bill, month after month. When
+a cell is selected, a small square appears at its bottom-right corner —
+**Copy budget to the following months**. Drag it to the right to repeat that
+amount across the months it covers.
+
+---
+
+## The Balance row
+
+The **Balance** row is pinned to the bottom of the sheet, under per-month
+**Income**, **Expenses** and **Transfers** totals. It rolls your money forward
+month by month, starting from your real account balances, so each column shows
+what you would be left with by the end of that month if the plan holds.
+
+That is what makes planning ahead useful: put a two-week trip into next July and
+you can see immediately what it does to the months after it.
+
+---
+
+## Keeping a long sheet readable
+
+A budget with a few dozen elements makes for a tall sheet, and most rows are
+empty in most months. Two things help:
+
+- **Configure → Hide empty rows** drops every row that has neither a planned
+  nor an actual amount anywhere in the visible window.
+- The **INCOME** and **EXPENSES** headers, and each folder header, collapse
+  with the chevron beside them.
+
+**Note**
+On a phone the sheet narrows to a single month column; step through months with
+the same **Earlier months** / **Later months** arrows. The **Balance** row stays
+pinned at the bottom of the screen.
 
 ---
 

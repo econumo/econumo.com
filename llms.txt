@@ -12,6 +12,7 @@
 - [Recurring transactions](https://econumo.com/docs/user-guide/recurring-transactions.md)
 - [Classifications](https://econumo.com/docs/user-guide/classifications.md)
 - [Budgets](https://econumo.com/docs/user-guide/budgets.md)
+- [Plan](https://econumo.com/docs/user-guide/plan.md)
 - [Shared access](https://econumo.com/docs/user-guide/shared-access.md)
 - [Multi-Currency](https://econumo.com/docs/user-guide/multi-currency.md)
 - [Currencies](https://econumo.com/docs/user-guide/currencies.md)

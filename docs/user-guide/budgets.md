@@ -29,34 +29,53 @@ category:
   - [Organizing your budget](/docs/user-guide/budgets/#organizing-your-budget)
   - [Work with the budget](/docs/user-guide/budgets/#work-with-the-budget)
 - [Budgets list](/docs/user-guide/budgets/#budgets-list)
+- [Completing, duplicating and archiving a budget](/docs/user-guide/budgets/#completing-duplicating-and-archiving-a-budget)
 - [Shared access](/docs/user-guide/budgets/#shared-access)
+
+**Note**
+To plan several months at once instead of one at a time, switch the budget to
+its [Plan view](/docs/user-guide/plan/) — the same budget laid out as a
+month-by-month sheet.
 
 ---
 
 ## Budget creation
 
-Open **Settings → Budgets** and press **Create budget**. Give the budget a
-name, pick its base currency, and choose which accounts participate in
-budgeting — you can exclude, say, a long-term savings account.
+Open **Settings → Budgets & Plans** and press **Create budget** (on mobile, the
+**+** button in the header). Give the budget a name, pick its base currency,
+and switch on the accounts that take part in it — the counter above the list
+keeps track (*"3 of 5 included"*).
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
 **Note**
-All new accounts are included in your budgets by default, but you can exclude
-them later in the budget settings. Budgets start from the current month.
+Account membership is an explicit list, and a new budget starts with every
+switch off — turn on the accounts you actually budget from, and leave out the
+ones you don't, such as a long-term savings account. Budgets start from the
+current month.
 
 ---
 ## Update budget details
 
 Open your budget, press **Configure**, and choose **Budget details**. In the
-dialog you can rename the budget, change its currency, and include or exclude
+dialog you can rename the budget, change its currency, and add or remove
 accounts:
 
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+An account that already carries transactions in past months of this budget
+cannot be removed from it — taking it out would rewrite months you have
+already closed. The dialog says so under the list.
+
+**Note**
+On desktop and tablet, **Configure** sits in the top-right corner of the budget
+page; on a phone it is the icon in the same corner. Besides **Budget details**
+it holds **Edit structure**, **Open budget list**, and — on a phone and a
+tablet — the **Budget** / **Plan** switch.
 
 ---
 ## Manage your budget
@@ -66,8 +85,11 @@ In your budget, you will work with the following entities:
 - **Budget Folders** — to organize your spending conveniently (in the
   screenshots: _Essentials_, _Lifestyle_, _Vacations_).
 - **Categories** — your Econumo categories.
-- **Tags** — your Econumo tags. These aggregate spending across categories
-  (e.g. the whole _Italy 2026_ vacation).
+- **Tags** — your budget [tags](/docs/user-guide/classifications/). These
+  aggregate spending across categories (e.g. the whole _Italy 2026_ vacation).
+  Reporting tags are not budgeted; they get
+  [their own block](/docs/user-guide/budgets/#reporting-tags) at the foot of
+  the page.
 - **Envelopes** — these group several categories into one limit (e.g. an
   envelope for _Food_ could contain _Groceries_, _Drinks_, and _Restaurants_).
 
@@ -76,8 +98,13 @@ In your budget, you will work with the following entities:
 
 The goal of budgeting is to maintain your monthly budget. Ideally, you should
 prepare your budget before the month starts and make minor adjustments during
-the month as needed. The months bar at the top switches between periods, and
-the budget shows how much money remains in your virtual envelopes.
+the month as needed. The months bar at the top switches between periods — on
+desktop the **‹** and **›** arrows beside it step one month at a time — and the
+budget shows how much money remains in your virtual envelopes. The bar is
+clamped to the budget's own lifetime: an open budget runs well into the future,
+while a
+[completed one](/docs/user-guide/budgets/#completing-duplicating-and-archiving-a-budget)
+stops just past its final month.
 
 Each row has three columns:
 
@@ -151,6 +178,25 @@ column:
 
 </ScreenshotSet>
 
+#### Reporting tags
+
+Below the folders — under the **Uncategorized** row — sits a separate
+**Reporting tags** block. It totals what you spent per
+[reporting tag](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
+in the month: people, pets, places. Expand the block with the chevron beside
+its title, and expand a single tag to see the categories behind its total.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+These rows show a **Spent** figure only — no **Budget**, no **Available** — and
+they sit outside the budget's totals. That is deliberate: a transaction can
+carry several reporting tags at once, so its full amount counts under each of
+them, and adding the block into the budget maths would count the same money
+twice. Use it to answer "what did the dog cost us this month?", not "how much
+is left to spend?".
+
 #### Multi-currency budgets
 
 If your accounts use several currencies, the budget header shows a per-currency
@@ -163,14 +209,60 @@ exchange rate used for the period. See
 ---
 ## Budgets list
 
-You can access your budgets list at **Settings → Budgets** or via
+You can access your budgets list at **Settings → Budgets & Plans** or via
 **Configure → Open budget list**. Shared budgets show the avatars of everyone
 who uses them, and the bookmark icon marks your default budget — the one that
-opens from **Budget** in the sidebar:
+opens from **Budget & Plan** in the sidebar. Budgets you have archived collapse
+into an **Archived (N)** group at the bottom of the list:
 
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+---
+## Completing, duplicating and archiving a budget
+
+A budget does not have to run forever. Every budget's three-dots menu in
+**Settings → Budgets & Plans** carries its whole life cycle: **Open budget**,
+**Access control**, **Duplicate…**, **Complete…**, **Archive**, and **Delete**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+### Complete a budget
+
+**Complete…** closes a budget off at a chosen month. Pick the **Last month** it
+covers; leave **Continue in a copy starting this month** on to name and start
+its successor in the same step, with **Copy plans** deciding whether the
+planned amounts come along. Turn that switch off and the **Copy plans** and
+**Name** fields disappear — the budget is simply closed, with no successor.
+Press **SAVE** and the budget is archived straight away: it leaves the active
+list immediately and joins the **Archived** group below it.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+### Duplicate a budget
+
+**Duplicate…** copies a budget on its own, without closing the original: its
+structure, folders, envelopes, member accounts and sharing all come across. The
+copy is pre-named after the original with *"(copy)"* appended, keeps **Copy
+plans** on, and can **Start from this month** instead of the original's first
+month.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+### Archive and unarchive
+
+**Archive** files a budget away without completing it. An archived budget stays
+in the list under **Archived (N)** and stays fully browsable — opening it shows
+a banner reading *"This budget is archived and read-only"*, and its numbers
+stay exactly as they were. Its menu offers **Unarchive** in place of
+**Archive**, which brings it back to the active list.
 
 ---
 ## Shared access

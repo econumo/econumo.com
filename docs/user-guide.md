@@ -32,7 +32,9 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Editing and deleting a schedule](/docs/user-guide/recurring-transactions/#editing-and-deleting-a-schedule)
 - [Classifications](/docs/user-guide/classifications/)
   - [Create a category, tag, or payee](/docs/user-guide/classifications/#create-a-category-tag-or-payee)
+  - [Budget tags and reporting tags](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
   - [Update or delete](/docs/user-guide/classifications/#update-or-delete)
+  - [Merge duplicates](/docs/user-guide/classifications/#merge-duplicates)
   - [Archive or unarchive](/docs/user-guide/classifications/#archive-or-unarchive)
   - [Searching a long list](/docs/user-guide/classifications/#searching-a-long-list)
 - [Budgets](/docs/user-guide/budgets/)
@@ -40,7 +42,14 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Update budget details](/docs/user-guide/budgets/#update-budget-details)
   - [Manage your budget](/docs/user-guide/budgets/#manage-your-budget)
   - [Budgets list](/docs/user-guide/budgets/#budgets-list)
+  - [Completing, duplicating and archiving a budget](/docs/user-guide/budgets/#completing-duplicating-and-archiving-a-budget)
   - [Shared access](/docs/user-guide/budgets/#shared-access)
+- [Plan](/docs/user-guide/plan/)
+  - [Opening the Plan view](/docs/user-guide/plan/#opening-the-plan-view)
+  - [Reading the sheet](/docs/user-guide/plan/#reading-the-sheet)
+  - [Planning a month](/docs/user-guide/plan/#planning-a-month)
+  - [The Balance row](/docs/user-guide/plan/#the-balance-row)
+  - [Keeping a long sheet readable](/docs/user-guide/plan/#keeping-a-long-sheet-readable)
 - [Shared access](/docs/user-guide/shared-access/)
   - [Connect with another user](/docs/user-guide/shared-access/#connect-with-another-user)
   - [Accept or decline a sharing request](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request)
@@ -138,14 +147,25 @@ available in **Settings**.
 ---
 ## Finding your way around
 
-Everything that is not day-to-day spending lives in **Settings**: accounts and
-folders, shared access, budgets, recurring transactions, categories, tags,
-payees, currencies, and CSV import/export. On desktop and tablet, open it from
-the bottom of the sidebar;
-on mobile, from the bottom of the home screen. Your name at the top of the
-screen opens your [profile](/docs/user-guide/user-profile/), and the **API**
-link at the very bottom opens the [API reference](/docs/api/) for your
-instance.
+Your accounts, grouped into folders, fill the sidebar on desktop and tablet and
+the home screen on mobile; **Budget & Plan** above them opens your
+[budget](/docs/user-guide/budgets/) and its
+[Plan view](/docs/user-guide/plan/).
+
+Everything that is not day-to-day spending lives in **Settings**, in three
+groups:
+
+- **Finances** — [Accounts](/docs/user-guide/accounts/),
+  [Shared access](/docs/user-guide/shared-access/), **Budgets & Plans**, and
+  [Recurring transactions](/docs/user-guide/recurring-transactions/).
+- **Classification** — [Categories, Tags, Payees](/docs/user-guide/classifications/)
+  and [Currencies](/docs/user-guide/currencies/).
+- **Data** — [Import and Export CSV](/docs/user-guide/csv-import-export/).
+
+On desktop and tablet, open Settings from the bottom of the sidebar; on mobile,
+from the bottom of the home screen. Your name at the top of the screen opens
+your [profile](/docs/user-guide/user-profile/), and the **API** link at the
+very bottom opens the [API reference](/docs/api/) for your instance.
 
 <ScreenshotSet>
 

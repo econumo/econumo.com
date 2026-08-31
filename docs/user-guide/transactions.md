@@ -98,10 +98,19 @@ right from the dialog.
 
 **Tags**
 
-Tags group spending across categories — especially useful for trips or special
-occasions (in the screenshots, the family tags their Italy vacation expenses
-with `Italy 2026`). Pick one of the suggested tags or press the `+` button to
-create a new one (3–64 characters).
+Tags group spending across categories. The **Tags** row lists both kinds side
+by side, and they behave differently when you tap them:
+
+- **Budget tags**, marked with `#`, are for a project or an event — in the
+  screenshots, the family tags its Italy vacation expenses with `Italy 2026`.
+  A transaction takes only one, so picking a second replaces the first.
+- **Reporting tags** track who or what the money went on — a kid, a pet, a
+  second home. Toggle as many as apply.
+
+Press the `+` button to create a new tag without leaving the dialog (3–64
+characters); see
+[Budget tags and reporting tags](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
+for the difference in full.
 
 **Notes**
 
