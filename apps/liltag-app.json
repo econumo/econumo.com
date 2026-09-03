@@ -15,7 +15,7 @@
     {
       "id": "twillingate",
       "trigger": "pageLoad",
-      "content": "<script>window.econumoMask=function(h){var u=new URL(h),n=u.hostname;if(n!==\"econumo.com\"&&n.slice(-12)!==\".econumo.com\")u.hostname=\"self-hosted\";u.pathname=u.pathname.replace(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/gi,\"[id]\");return u.href};</script>\n<script defer src=\"https://t.kuznetsov.dev/js/twillingate.js\" data-key=\"ak_db92b1508b79976fd728ffc41ecffdb5\" data-identity=\"anonymous\" data-mask-url=\"econumoMask\"></script>",
+      "content": "<script defer src=\"https://t.kuznetsov.dev/js/twillingate.js\" data-key=\"ak_db92b1508b79976fd728ffc41ecffdb5\" data-identity=\"anonymous\" data-mask-url=\"uuid\"></script>",
       "location": "head"
     }
   ]
