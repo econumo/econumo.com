@@ -59,24 +59,25 @@ URL: https://econumo.com/docs/edition/
 Econumo provides versatile editions to meet various needs:
 
 ---
-### Econumo Cloud
+### Econumo
 
-Suited for individuals and families seeking convenience and access, this cloud-hosted solution offers a comprehensive
-suite of financial management tools available anytime, anywhere.
+Suited for individuals and families seeking convenience and access, the hosted service at
+[app.econumo.com](https://app.econumo.com/) offers a comprehensive suite of financial management tools available
+anytime, anywhere.
 
 Create an account at [app.econumo.com](https://app.econumo.com/register) to start a free trial — no credit card required.
 
 ---
-### Econumo (Self-Hosted)
+### Econumo Self-Hosted
 
 Designed for households needing a self-hosted, collaborative approach. This **free**, MIT-licensed platform delivers powerful
 financial management features for those who prioritize privacy and control over their budgeting.
 
-Self-hosted **Econumo** is a single self-contained binary (shipped as a distroless Docker image) that serves both the
+**Econumo Self-Hosted** is a single self-contained binary (shipped as a distroless Docker image) that serves both the
 API and the web app and runs on SQLite by default (PostgreSQL is also supported). Users share accounts and budgets by
 [connecting with an invitation](/docs/user-guide/shared-access/) and choosing an access level per item.
 
-To get started with self-hosted **Econumo**, please follow the instructions on
+To get started with **Econumo Self-Hosted**, please follow the instructions on
 the [GitHub repository](https://github.com/econumo/econumo).
 
 ---
@@ -158,35 +159,29 @@ layout, where lists open full-screen and actions live in bottom sheets.
 ---
 ## Sign Up
 
-### Econumo (cloud)
-
-Registration requires a one-time payment. Click **Sign up**, complete the
-payment, and you will receive an email with your credentials.
-
-<ScreenshotSet>
-
-</ScreenshotSet>
-
-### Econumo (self-hosted)
-
-To create an account in self-hosted Econumo, switch to the **Sign up** tab and
-provide your name (or nickname), email, and password (entered twice to
-confirm).
+Switch to the **Sign up** tab and provide your name (or nickname), email, and
+password (entered twice to confirm). The form is the same whether you use
+Econumo at [app.econumo.com](https://app.econumo.com/register) or Econumo
+Self-Hosted.
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
-**Note**
-Self-hosted administrators can disable open registration with the
+**Econumo at app.econumo.com**
+A new account starts with a 45-day free trial, and no payment card is required
+to sign up. To keep using Econumo after the trial, make a one-time payment.
+See [Econumo Editions](/docs/edition/) for details.
+
+**Econumo Self-Hosted**
+Administrators can disable open registration with the
 `ECONUMO_ALLOW_REGISTRATION` environment variable and create users from the
 [CLI](/docs/self-hosting/cli-commands/) instead.
 
 ---
 ## Sign In
 
-To sign in, enter the credentials you provided (or received for Econumo Cloud)
-during sign-up.
+To sign in, enter the email and password you provided during sign-up.
 
 <ScreenshotSet>
 
@@ -1816,7 +1811,7 @@ URL: https://econumo.com/docs/self-hosting/
 
 # Self-Hosting
 
-`Econumo` is designed for self-hosting, providing users with full control over their financial data. This section offers guidance and resources to help you manage and optimize your self-hosted Econumo instance.
+**Econumo Self-Hosted** gives you full control over your financial data by running Econumo on your own infrastructure. This section offers guidance and resources to help you manage and optimize your Econumo Self-Hosted instance.
 
 ---
 ## Contents
@@ -2655,7 +2650,7 @@ hosted account is a **single $20 payment**.
 | **Multi-currency** | ✅ Native, per account | ❌ One currency per budget |
 | **Bank sync** | ❌ CSV import | ✅ Plaid + MX (US, CA, 18 EU countries) |
 | **Mobile apps** | PWA | ✅ Native iOS and Android |
-| **Data ownership** | Your server, or Econumo Cloud | YNAB's servers |
+| **Data ownership** | Your server (Econumo Self-Hosted), or ours (app.econumo.com) | YNAB's servers |
 | **API** | ✅ REST + Swagger, no rate limit | ✅ REST, 200 requests/hour |
 | **Export** | CSV | CSV |
 
@@ -4154,6 +4149,7 @@ We do not share personally identifying information publicly or with third partie
 
 - **For Legal Purposes:** We may disclose your information as required by law or if we believe it is necessary to protect our rights, respond to legal requests, or enforce our policies.
 - **Business Transfers:** If we merge with or are acquired by another company, your information may be transferred as part of the transaction.
+- **Payment Processing:** When you purchase Econumo, the order is processed by [Paddle](https://www.paddle.com/), our third-party payment processor and Merchant of Record. Your payment and billing details (such as name, email address, billing address, and payment card information) are collected and processed by Paddle in accordance with [Paddle's Privacy Policy](https://www.paddle.com/legal/privacy). We do not receive or store your payment card details.
 
 ## 4. Your Choices
 
@@ -4193,7 +4189,7 @@ We may update this Privacy Policy from time to time. We will notify you of any m
 If you have any questions about this Privacy Policy or our practices, please contact us at: econumo@gmail.com
 
 ---
-This policy is effective as of 16 November 2024.
+This policy is effective as of 5 September 2026.
 
 ---
 
@@ -4206,34 +4202,38 @@ URL: https://econumo.com/docs/legal/terms-of-service/
 By using our websites, services, and products (collectively referred to as the "Software"), you agree to these Terms of
 Service ("Terms"). Please read them carefully. If you do not agree, please discontinue using our Software.
 
+Econumo is operated by Dmitry Kuznetsov, sole proprietor, British Columbia, Canada ("we", "us", or "Econumo").
+
 ## 1. Acceptance of Terms
 
-By accessing or using Econumo, you confirm that you accept these Terms and agree to abide by them.
+By accessing or using the Software, you confirm that you accept these Terms and agree to abide by them.
 
 ## 2. Effective Date
 
-These Terms are effective from the date you first use the Econumo application.
+These Terms are effective from the date you first use the Software.
 
 ## 3. Software Versions
 
 Econumo offers different versions to suit your needs:
 
-- **Econumo Cloud**: A cloud-hosted solution for individuals and families who prefer easy, remote access to financial
-  management tools. Hosted by us, it provides lifetime access after a one-time payment.
+- **Econumo**: The hosted service at [app.econumo.com](https://app.econumo.com/), for individuals and families who
+  prefer easy, remote access to financial management tools. Operated by us, it provides lifetime access after a
+  one-time payment.
 
-- **Econumo**: A free, self-hosted platform for individuals and families who value privacy and control over their finances.
+- **Econumo Self-Hosted**: A free, open-source version of the platform that you run on your own infrastructure, for
+  individuals and families who value privacy and control over their finances.
 
 ### Licensing
 
-Econumo includes both open-source and proprietary components. By using Econumo, you agree to comply with the applicable
-licensing terms.
+The Software includes both open-source and proprietary components. By using the Software, you agree to comply with the
+applicable licensing terms.
 
 ## 4. User Accounts
 
-- **Econumo Cloud** Users: Must create an account to access cloud-hosted services. Please provide accurate information
+- **Econumo** Users: Must create an account to access the hosted service. Please provide accurate information
   and keep your login details secure. You're responsible for all activities under your account.
 
-- **Econumo** Users: No account registration with us is necessary.
+- **Econumo Self-Hosted** Users: No account registration with us is necessary.
 
 ## 5. License and Restrictions
 
@@ -4246,14 +4246,21 @@ You agree not to:
 - Attempt to interfere with the proper functioning of the Software.
 - Distribute, modify, or create derivative works of proprietary components without permission.
 
-## 6. Refunds
+## 6. Payments
 
-Due to the nature of digital products:
+The order process for **Econumo** is conducted by our online reseller [Paddle](https://www.paddle.com/), which
+acts as the Merchant of Record for all orders. Paddle handles billing, payment processing, applicable taxes, and
+customer payment inquiries. Your order confirmation and receipt are issued by Paddle. By purchasing Econumo you
+also agree to Paddle's [Checkout Buyer Terms](https://www.paddle.com/legal/checkout-buyer-terms).
 
-- **Econumo Cloud**: All sales are final. However, we may offer refunds at our discretion in exceptional cases, such as
-  unresolved technical issues caused by us.
+### Refunds
 
-We encourage you to start a free trial at [app.econumo.com](https://app.econumo.com/register) or use self-hosted **Econumo** before purchasing **Econumo Cloud** to ensure the Software meets your needs.
+You can request a full refund of an **Econumo** purchase within 14 days of purchase, either through Paddle or by
+contacting us. After that period, refunds are issued at our discretion. Refunds are paid to the original payment
+method, and your statutory consumer rights are not affected. See our [Refund Policy](/docs/legal/refund-policy/)
+for full details.
+
+We encourage you to start a free trial at [app.econumo.com](https://app.econumo.com/register) or use **Econumo Self-Hosted** before purchasing **Econumo** to ensure the Software meets your needs.
 
 ## 7. Third-Party Links
 
@@ -4319,4 +4326,68 @@ These Terms are governed by the laws of Canada, without regard to conflict of la
 If you have any questions or concerns, please reach out: econumo@gmail.com
 
 ---
-Last Updated: January 25, 2026
+Last Updated: September 5, 2026
+
+---
+
+# Refund Policy
+
+URL: https://econumo.com/docs/legal/refund-policy/
+
+# Refund Policy
+
+This Refund Policy applies to purchases of **Econumo**, the hosted service at
+[app.econumo.com](https://app.econumo.com/). **Econumo Self-Hosted** is free and open source, so no refunds apply to it. Please read this policy together with our [Terms of Service](/docs/legal/terms-of-service/).
+
+## 1. Purchases and Merchant of Record
+
+Purchases of Econumo are processed by [Paddle](https://www.paddle.com/), which acts as the Merchant of Record
+for our orders. This means Paddle handles billing, payment processing, applicable taxes, and payment-related
+customer inquiries. Your order confirmation and receipt are issued by Paddle, and the charge on your statement will
+appear under Paddle's name.
+
+## 2. Try Before You Buy
+
+We recommend evaluating Econumo before purchasing. Every new account comes with a **45-day free trial**, and no
+payment card is required to start it. You can sign up at [app.econumo.com](https://app.econumo.com/register). You
+can also run **Econumo Self-Hosted** for free to see whether the Software meets your needs.
+
+## 3. Refund Window
+
+If Econumo does not work out for you, you can request a **full refund within 14 days of purchase**, no questions
+asked. To request a refund, either:
+
+- Contact Paddle directly at [paddle.net](https://paddle.net/), using the email address you used at checkout or the
+  order details from your receipt; or
+- Email us at [econumo@gmail.com](mailto:econumo@gmail.com) with your order number, and we will arrange the refund
+  with Paddle on your behalf.
+
+## 4. After the Refund Window
+
+After the 14-day window has passed, refunds are issued at our discretion. We will consider a refund in exceptional
+cases, for example when a technical issue caused by us prevents you from using Econumo and we have been unable
+to resolve it. Please contact us at [econumo@gmail.com](mailto:econumo@gmail.com) and describe the problem.
+
+## 5. How Refunds Are Paid
+
+Refunds are issued to the original payment method used for the purchase. Depending on your bank or card issuer, it
+may take several business days for the refund to appear on your statement. Once a refund is issued, access to
+Econumo for the refunded purchase is revoked.
+
+## 6. Your Statutory Rights
+
+Nothing in this policy limits any rights you have under applicable consumer protection law. In particular, if you are
+a consumer in the European Union, the United Kingdom, or another jurisdiction with statutory withdrawal or
+cancellation rights, those rights are not affected by this policy.
+
+## 7. Changes to This Policy
+
+We may update this Refund Policy from time to time. We will post changes on this page with a new effective date.
+Changes do not affect purchases made before they take effect.
+
+## 8. Contact Us
+
+If you have any questions about this Refund Policy, please reach out: econumo@gmail.com
+
+---
+Last Updated: September 5, 2026

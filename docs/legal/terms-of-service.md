@@ -5,34 +5,38 @@ URL: https://econumo.com/docs/legal/terms-of-service/
 By using our websites, services, and products (collectively referred to as the "Software"), you agree to these Terms of
 Service ("Terms"). Please read them carefully. If you do not agree, please discontinue using our Software.
 
+Econumo is operated by Dmitry Kuznetsov, sole proprietor, British Columbia, Canada ("we", "us", or "Econumo").
+
 ## 1. Acceptance of Terms
 
-By accessing or using Econumo, you confirm that you accept these Terms and agree to abide by them.
+By accessing or using the Software, you confirm that you accept these Terms and agree to abide by them.
 
 ## 2. Effective Date
 
-These Terms are effective from the date you first use the Econumo application.
+These Terms are effective from the date you first use the Software.
 
 ## 3. Software Versions
 
 Econumo offers different versions to suit your needs:
 
-- **Econumo Cloud**: A cloud-hosted solution for individuals and families who prefer easy, remote access to financial
-  management tools. Hosted by us, it provides lifetime access after a one-time payment.
+- **Econumo**: The hosted service at [app.econumo.com](https://app.econumo.com/), for individuals and families who
+  prefer easy, remote access to financial management tools. Operated by us, it provides lifetime access after a
+  one-time payment.
 
-- **Econumo**: A free, self-hosted platform for individuals and families who value privacy and control over their finances.
+- **Econumo Self-Hosted**: A free, open-source version of the platform that you run on your own infrastructure, for
+  individuals and families who value privacy and control over their finances.
 
 ### Licensing
 
-Econumo includes both open-source and proprietary components. By using Econumo, you agree to comply with the applicable
-licensing terms.
+The Software includes both open-source and proprietary components. By using the Software, you agree to comply with the
+applicable licensing terms.
 
 ## 4. User Accounts
 
-- **Econumo Cloud** Users: Must create an account to access cloud-hosted services. Please provide accurate information
+- **Econumo** Users: Must create an account to access the hosted service. Please provide accurate information
   and keep your login details secure. You're responsible for all activities under your account.
 
-- **Econumo** Users: No account registration with us is necessary.
+- **Econumo Self-Hosted** Users: No account registration with us is necessary.
 
 ## 5. License and Restrictions
 
@@ -45,14 +49,21 @@ You agree not to:
 - Attempt to interfere with the proper functioning of the Software.
 - Distribute, modify, or create derivative works of proprietary components without permission.
 
-## 6. Refunds
+## 6. Payments
 
-Due to the nature of digital products:
+The order process for **Econumo** is conducted by our online reseller [Paddle](https://www.paddle.com/), which
+acts as the Merchant of Record for all orders. Paddle handles billing, payment processing, applicable taxes, and
+customer payment inquiries. Your order confirmation and receipt are issued by Paddle. By purchasing Econumo you
+also agree to Paddle's [Checkout Buyer Terms](https://www.paddle.com/legal/checkout-buyer-terms).
 
-- **Econumo Cloud**: All sales are final. However, we may offer refunds at our discretion in exceptional cases, such as
-  unresolved technical issues caused by us.
+### Refunds
 
-We encourage you to start a free trial at [app.econumo.com](https://app.econumo.com/register) or use self-hosted **Econumo** before purchasing **Econumo Cloud** to ensure the Software meets your needs.
+You can request a full refund of an **Econumo** purchase within 14 days of purchase, either through Paddle or by
+contacting us. After that period, refunds are issued at our discretion. Refunds are paid to the original payment
+method, and your statutory consumer rights are not affected. See our [Refund Policy](/docs/legal/refund-policy/)
+for full details.
+
+We encourage you to start a free trial at [app.econumo.com](https://app.econumo.com/register) or use **Econumo Self-Hosted** before purchasing **Econumo** to ensure the Software meets your needs.
 
 ## 7. Third-Party Links
 
@@ -118,4 +129,4 @@ These Terms are governed by the laws of Canada, without regard to conflict of la
 If you have any questions or concerns, please reach out: econumo@gmail.com
 
 ---
-Last Updated: January 25, 2026
+Last Updated: September 5, 2026

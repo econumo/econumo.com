@@ -2,7 +2,7 @@ URL: https://econumo.com/docs/self-hosting/
 
 # Self-Hosting
 
-`Econumo` is designed for self-hosting, providing users with full control over their financial data. This section offers guidance and resources to help you manage and optimize your self-hosted Econumo instance.
+**Econumo Self-Hosted** gives you full control over your financial data by running Econumo on your own infrastructure. This section offers guidance and resources to help you manage and optimize your Econumo Self-Hosted instance.
 
 ---
 ## Contents

@@ -35,7 +35,7 @@ hosted account is a **single $20 payment**.
 | **Multi-currency** | ✅ Native, per account | ❌ One currency per budget |
 | **Bank sync** | ❌ CSV import | ✅ Plaid + MX (US, CA, 18 EU countries) |
 | **Mobile apps** | PWA | ✅ Native iOS and Android |
-| **Data ownership** | Your server, or Econumo Cloud | YNAB's servers |
+| **Data ownership** | Your server (Econumo Self-Hosted), or ours (app.econumo.com) | YNAB's servers |
 | **API** | ✅ REST + Swagger, no rate limit | ✅ REST, 200 requests/hour |
 | **Export** | CSV | CSV |
 

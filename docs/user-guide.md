@@ -73,35 +73,29 @@ layout, where lists open full-screen and actions live in bottom sheets.
 ---
 ## Sign Up
 
-### Econumo (cloud)
-
-Registration requires a one-time payment. Click **Sign up**, complete the
-payment, and you will receive an email with your credentials.
-
-<ScreenshotSet>
-
-</ScreenshotSet>
-
-### Econumo (self-hosted)
-
-To create an account in self-hosted Econumo, switch to the **Sign up** tab and
-provide your name (or nickname), email, and password (entered twice to
-confirm).
+Switch to the **Sign up** tab and provide your name (or nickname), email, and
+password (entered twice to confirm). The form is the same whether you use
+Econumo at [app.econumo.com](https://app.econumo.com/register) or Econumo
+Self-Hosted.
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
-**Note**
-Self-hosted administrators can disable open registration with the
+**Econumo at app.econumo.com**
+A new account starts with a 45-day free trial, and no payment card is required
+to sign up. To keep using Econumo after the trial, make a one-time payment.
+See [Econumo Editions](/docs/edition/) for details.
+
+**Econumo Self-Hosted**
+Administrators can disable open registration with the
 `ECONUMO_ALLOW_REGISTRATION` environment variable and create users from the
 [CLI](/docs/self-hosting/cli-commands/) instead.
 
 ---
 ## Sign In
 
-To sign in, enter the credentials you provided (or received for Econumo Cloud)
-during sign-up.
+To sign in, enter the email and password you provided during sign-up.
 
 <ScreenshotSet>
 

@@ -29,6 +29,7 @@ We do not share personally identifying information publicly or with third partie
 
 - **For Legal Purposes:** We may disclose your information as required by law or if we believe it is necessary to protect our rights, respond to legal requests, or enforce our policies.
 - **Business Transfers:** If we merge with or are acquired by another company, your information may be transferred as part of the transaction.
+- **Payment Processing:** When you purchase Econumo, the order is processed by [Paddle](https://www.paddle.com/), our third-party payment processor and Merchant of Record. Your payment and billing details (such as name, email address, billing address, and payment card information) are collected and processed by Paddle in accordance with [Paddle's Privacy Policy](https://www.paddle.com/legal/privacy). We do not receive or store your payment card details.
 
 ## 4. Your Choices
 
@@ -68,4 +69,4 @@ We may update this Privacy Policy from time to time. We will notify you of any m
 If you have any questions about this Privacy Policy or our practices, please contact us at: econumo@gmail.com
 
 ---
-This policy is effective as of 16 November 2024.
+This policy is effective as of 5 September 2026.

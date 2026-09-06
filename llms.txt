@@ -36,6 +36,7 @@
 - [Contact Us](https://econumo.com/docs/contact-us.md)
 - [Privacy Policy](https://econumo.com/docs/legal/privacy-policy.md)
 - [Terms of Service](https://econumo.com/docs/legal/terms-of-service.md)
+- [Refund Policy](https://econumo.com/docs/legal/refund-policy.md)
 
 ## Blog
 
