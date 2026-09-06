@@ -27,7 +27,7 @@ per-user sharing.
 | | Econumo | Firefly III |
 |---|---|---|
 | **Licence** | MIT | AGPL-3.0-or-later |
-| **Price** | Free self-hosted; $20 one-time cloud | Free, self-host only |
+| **Price** | Free self-hosted; $29.99 one-time cloud | Free, self-host only |
 | **GitHub stars** | 79 | 24,070 |
 | **Forks** | 2 | 2,229 |
 | **Contributors** | small core team | 177 (89% of commits by one person) |
@@ -72,7 +72,7 @@ through GitHub Sponsors, Patreon, Ko-fi and Liberapay, and the author describes 
 plainly as *"a side gig."*
 
 Econumo's self-hosted edition is likewise free, with an optional hosted account at
-**$20 one-time per user** for those who would rather not run a server. Firefly III
+**$29.99 one-time per user** for those who would rather not run a server. Firefly III
 has no equivalent — third-party hosts list it, but that is not a project offering.
 
 ---
@@ -310,7 +310,7 @@ dead since January 2020. The project positions its REST API as the mobile story.
 - **Multi-currency budgeting** — budgets that actually combine currencies
 - **Setup** — one small binary versus a PHP stack, cron job and second app
 - **Licence** — MIT rather than AGPL
-- **Hosted option** — $20 one-time, or self-host free
+- **Hosted option** — $29.99 one-time, or self-host free
 
 ---
 
@@ -331,7 +331,7 @@ dead since January 2020. The project positions its REST API as the mobile story.
 - You want to **share a budget with your household**, each person with their own login
 - You want **multi-currency budgets** that combine into one set of totals
 - You want a small, simple deployment
-- You want the option of a hosted account for a single $20 payment
+- You want the option of a hosted account for a single $29.99 payment
 
 Start a free [Econumo trial](https://app.econumo.com/register), or try the
 [Firefly III demo](https://demo.firefly-iii.org) — both run in a browser.

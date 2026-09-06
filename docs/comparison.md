@@ -47,7 +47,7 @@ Across every comparison, the same three differences keep appearing:
    level per account and per budget — no identity provider to run. See
    [Shared Access](/docs/user-guide/shared-access/).
 3. **Hosting is a one-time payment.** Self-hosting is free forever; the hosted
-   cloud is a single $20 payment per user rather than a subscription. See
+   cloud is a single $29.99 payment per user rather than a subscription. See
    [Editions](/docs/edition/).
 
 And the recurring trade-off to be aware of:

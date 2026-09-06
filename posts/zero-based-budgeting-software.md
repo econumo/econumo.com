@@ -40,7 +40,7 @@ Four tools, three pricing shapes. The method fit column matters more than it loo
 | **YNAB** | Zero-based, the method's best-known name | Subscription — **$14.99/mo or $109/yr**, 34-day trial | Web, iOS, Android | Bank-linked by default |
 | **Actual Budget** | Zero-based, open-source alternative to YNAB's older model | **Free**, MIT-licensed; self-host or a partner host (~$1.50/mo) | Web, self-hosted server | Self-hosted; manual or bank sync |
 | **EveryDollar** | Zero-based, Dave Ramsey's own method | Free tier manual entry; **$59.99 for 3 months then $129.99/yr** for bank sync | Web, iOS, Android | Bank-linked on the paid tier |
-| **Econumo** | Envelope budgeting with rollover — the same rule under a different name | Free self-host, or **$20 one-time** Cloud (per user; $40 family licence), 45-day trial | Web, installable app (PWA) | Manual entry, CSV import & REST API; self-host option |
+| **Econumo** | Envelope budgeting with rollover — the same rule under a different name | Free self-host, or **$29.99 one-time** Cloud (per user), 45-day trial | Web, installable app (PWA) | Manual entry, CSV import & REST API; self-host option |
 
 **YNAB** popularised the modern take on zero-based budgeting and is the reason most people searching for this method know the term at all. Its category rollover and "Age of Money" tracking are genuinely built for the method — the cost is a subscription that keeps running for as long as you use it.
 

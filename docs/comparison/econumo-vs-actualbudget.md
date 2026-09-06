@@ -26,7 +26,7 @@ want **built-in family sharing** without standing up an identity provider, or wa
 |---|---|---|
 | **Licence** | MIT | MIT |
 | **Self-hosted price** | Free | Free |
-| **Hosted price** | $20 one-time, per user | No first-party hosting (PikaPods ≈ $1.50/mo) |
+| **Hosted price** | $29.99 one-time, per user | No first-party hosting (PikaPods ≈ $1.50/mo) |
 | **GitHub stars** | 79 | 27,595 |
 | **Contributors** | Small core team | 463 |
 | **Releases to date** | 24 | 59 |
@@ -68,14 +68,14 @@ network use of a modified version obliges you to publish your changes.
 | | Econumo | Actual Budget |
 |---|---|---|
 | Self-hosted | **Free** | **Free** |
-| Hosted by the project | **$20 one-time**, per user | Not offered |
+| Hosted by the project | **$29.99 one-time**, per user | Not offered |
 | Hosted by a partner | — | PikaPods, ≈ $1.50/month |
 | Funding model | Cloud licences | Donations (Open Collective, GitHub Sponsors) |
 
 Self-hosting either app costs nothing but your own infrastructure. The difference
 is what happens when you would rather not run a server.
 
-Econumo sells a **hosted cloud account for a single $20 payment per user**.
+Econumo sells a **hosted cloud account for a single $29.99 payment per user**.
 There is no subscription and no recurring renewal.
 
 Actual Budget has **no first-party hosted option at all** — a deliberate choice,
@@ -84,7 +84,7 @@ documented route is its hosting partner [PikaPods](https://actualbudget.org/docs
 at roughly $1.50 per month as of November 2025, which works out near $18/year
 recurring and shares revenue back with the project.
 
-Over five years the hosted paths land at roughly $20 for Econumo against roughly
+Over five years the hosted paths land at roughly $29.99 for Econumo against roughly
 $90 for PikaPods-hosted Actual — though PikaPods is a general hosting service and
 that comparison flatters Econumo slightly, since you are also paying for compute.
 
@@ -304,7 +304,7 @@ server.
 - You budget across **multiple currencies**
 - You want **family sharing that works out of the box**, without running an
   identity provider
-- You want a **hosted account for a single $20 payment** rather than self-hosting
+- You want a **hosted account for a single $29.99 payment** rather than self-hosting
   or a subscription
 - You are running on constrained hardware and want a ~10 MB single binary
 - You prefer deliberate manual entry to automatic import

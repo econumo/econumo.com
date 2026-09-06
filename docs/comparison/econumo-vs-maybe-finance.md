@@ -56,7 +56,7 @@ better served waiting rather than switching twice.
 |---|---|---|---|
 | **Status** | ✅ Active | ❌ **Archived Jul 2025** | ✅ Active |
 | **Licence** | MIT | AGPL-3.0 | AGPL-3.0 |
-| **Price** | Free self-hosted; $20 one-time cloud | — | Free, self-hosted |
+| **Price** | Free self-hosted; $29.99 one-time cloud | — | Free, self-hosted |
 | **GitHub stars** | 79 | 54,351 (frozen) | 9,065 |
 | **Last release** | v1.1.1 (19 Jul 2026) | v0.6.0 (24 Jul 2025) | v0.7.2 (1 Jul 2026) |
 | **Total releases** | 24 | 28 | 20 |
@@ -238,7 +238,7 @@ Maybe's Synth shutdown could not happen to it.
 trademarked its name, which is why the fork had to be renamed — that is what
 AGPL-plus-trademark looks like in practice.
 
-**A hosted option.** $20 one-time per user, or self-host free. Sure offers
+**A hosted option.** $29.99 one-time per user, or self-host free. Sure offers
 self-hosting only.
 
 ---

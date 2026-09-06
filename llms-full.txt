@@ -2240,7 +2240,7 @@ Across every comparison, the same three differences keep appearing:
    level per account and per budget — no identity provider to run. See
    [Shared Access](/docs/user-guide/shared-access/).
 3. **Hosting is a one-time payment.** Self-hosting is free forever; the hosted
-   cloud is a single $20 payment per user rather than a subscription. See
+   cloud is a single $29.99 payment per user rather than a subscription. See
    [Editions](/docs/edition/).
 
 And the recurring trade-off to be aware of:
@@ -2282,7 +2282,7 @@ want **built-in family sharing** without standing up an identity provider, or wa
 |---|---|---|
 | **Licence** | MIT | MIT |
 | **Self-hosted price** | Free | Free |
-| **Hosted price** | $20 one-time, per user | No first-party hosting (PikaPods ≈ $1.50/mo) |
+| **Hosted price** | $29.99 one-time, per user | No first-party hosting (PikaPods ≈ $1.50/mo) |
 | **GitHub stars** | 79 | 27,595 |
 | **Contributors** | Small core team | 463 |
 | **Releases to date** | 24 | 59 |
@@ -2324,14 +2324,14 @@ network use of a modified version obliges you to publish your changes.
 | | Econumo | Actual Budget |
 |---|---|---|
 | Self-hosted | **Free** | **Free** |
-| Hosted by the project | **$20 one-time**, per user | Not offered |
+| Hosted by the project | **$29.99 one-time**, per user | Not offered |
 | Hosted by a partner | — | PikaPods, ≈ $1.50/month |
 | Funding model | Cloud licences | Donations (Open Collective, GitHub Sponsors) |
 
 Self-hosting either app costs nothing but your own infrastructure. The difference
 is what happens when you would rather not run a server.
 
-Econumo sells a **hosted cloud account for a single $20 payment per user**.
+Econumo sells a **hosted cloud account for a single $29.99 payment per user**.
 There is no subscription and no recurring renewal.
 
 Actual Budget has **no first-party hosted option at all** — a deliberate choice,
@@ -2340,7 +2340,7 @@ documented route is its hosting partner [PikaPods](https://actualbudget.org/docs
 at roughly $1.50 per month as of November 2025, which works out near $18/year
 recurring and shares revenue back with the project.
 
-Over five years the hosted paths land at roughly $20 for Econumo against roughly
+Over five years the hosted paths land at roughly $29.99 for Econumo against roughly
 $90 for PikaPods-hosted Actual — though PikaPods is a general hosting service and
 that comparison flatters Econumo slightly, since you are also paying for compute.
 
@@ -2560,7 +2560,7 @@ server.
 - You budget across **multiple currencies**
 - You want **family sharing that works out of the box**, without running an
   identity provider
-- You want a **hosted account for a single $20 payment** rather than self-hosting
+- You want a **hosted account for a single $29.99 payment** rather than self-hosting
   or a subscription
 - You are running on constrained hardware and want a ~10 MB single binary
 - You prefer deliberate manual entry to automatic import
@@ -2632,7 +2632,7 @@ Choose **YNAB** if you want automatic bank import, best-in-class native mobile
 apps, and a mature, supported product — and the price is acceptable to you.
 Choose **Econumo** if you want to **own your data**, budget in **more than one
 currency**, or stop paying a subscription: self-hosting is free forever, and the
-hosted account is a **single $20 payment**.
+hosted account is a **single $29.99 payment**.
 
 ---
 
@@ -2642,10 +2642,10 @@ hosted account is a **single $20 payment**.
 |---|---|---|
 | **Licence** | MIT, open source | Proprietary, closed source |
 | **Self-hosting** | ✅ | ❌ Cloud only |
-| **Price** | Free self-hosted; $20 one-time cloud | **$14.99/mo or $109/yr** |
+| **Price** | Free self-hosted; $29.99 one-time cloud | **$14.99/mo or $109/yr** |
 | **Free trial** | Free forever, self-hosted | 34 days, no card required |
 | **Student offer** | n/a — free | Free for 365 days |
-| **People per plan** | $20 per user (one-time) | Up to 6 people, one subscription |
+| **People per plan** | $29.99 per user (one-time) | Up to 6 people, one subscription |
 | **Budgeting method** | Envelope | Zero-based envelope (the Four Rules) |
 | **Multi-currency** | ✅ Native, per account | ❌ One currency per budget |
 | **Bank sync** | ❌ CSV import | ✅ Plaid + MX (US, CA, 18 EU countries) |
@@ -2663,18 +2663,18 @@ hosted account is a **single $20 payment**.
 | | Econumo | YNAB |
 |---|---|---|
 | Self-hosted | **Free, forever** | Not possible |
-| Hosted, 1 year | $20 one-time | $109 |
-| Hosted, 3 years | $20 one-time | $327 |
-| Hosted, 5 years | $20 one-time | $545 |
+| Hosted, 1 year | $29.99 one-time | $109 |
+| Hosted, 3 years | $29.99 one-time | $327 |
+| Hosted, 5 years | $29.99 one-time | $545 |
 
 YNAB costs **$14.99 per month, or $109 per year** if paid annually. It offers a
 generous **34-day free trial with no credit card**, and students get a **free
 365-day subscription** with proof of enrolment.
 
 Econumo's self-hosted edition is free indefinitely. The hosted cloud account is a
-**single $20 payment per user** — not a subscription.
+**single $29.99 payment per user** — not a subscription.
 
-Over five years that is roughly **$20 against $545**.
+Over five years that is roughly **$29.99 against $545**.
 
 To be fair to YNAB: a single subscription covers **up to six people** with shared
 data, so a large household spreads that cost further than the per-user comparison
@@ -2769,7 +2769,7 @@ support are all things a subscription pays for.
 
 ## Where Econumo is better
 
-**Price.** $20 once against $109 every year.
+**Price.** $29.99 once against $109 every year.
 
 **You own it.** MIT-licensed, self-hostable, and yours to keep. No subscription
 lapse can lock you out of your own history.
@@ -2802,7 +2802,7 @@ at 200 requests per hour and requires an active subscription.
 - You want to **own and self-host** your financial data
 - You budget across **multiple currencies**
 - You are comfortable entering transactions manually or via CSV
-- You want a hosted account for a **single $20 payment**
+- You want a hosted account for a **single $29.99 payment**
 
 If you like the YNAB method but want it free and open source, Econumo and
 [Actual Budget](/docs/comparison/econumo-vs-actualbudget/) are the two strongest
@@ -2882,7 +2882,7 @@ per-user sharing.
 | | Econumo | Firefly III |
 |---|---|---|
 | **Licence** | MIT | AGPL-3.0-or-later |
-| **Price** | Free self-hosted; $20 one-time cloud | Free, self-host only |
+| **Price** | Free self-hosted; $29.99 one-time cloud | Free, self-host only |
 | **GitHub stars** | 79 | 24,070 |
 | **Forks** | 2 | 2,229 |
 | **Contributors** | small core team | 177 (89% of commits by one person) |
@@ -2927,7 +2927,7 @@ through GitHub Sponsors, Patreon, Ko-fi and Liberapay, and the author describes 
 plainly as *"a side gig."*
 
 Econumo's self-hosted edition is likewise free, with an optional hosted account at
-**$20 one-time per user** for those who would rather not run a server. Firefly III
+**$29.99 one-time per user** for those who would rather not run a server. Firefly III
 has no equivalent — third-party hosts list it, but that is not a project offering.
 
 ---
@@ -3165,7 +3165,7 @@ dead since January 2020. The project positions its REST API as the mobile story.
 - **Multi-currency budgeting** — budgets that actually combine currencies
 - **Setup** — one small binary versus a PHP stack, cron job and second app
 - **Licence** — MIT rather than AGPL
-- **Hosted option** — $20 one-time, or self-host free
+- **Hosted option** — $29.99 one-time, or self-host free
 
 ---
 
@@ -3186,7 +3186,7 @@ dead since January 2020. The project positions its REST API as the mobile story.
 - You want to **share a budget with your household**, each person with their own login
 - You want **multi-currency budgets** that combine into one set of totals
 - You want a small, simple deployment
-- You want the option of a hosted account for a single $20 payment
+- You want the option of a hosted account for a single $29.99 payment
 
 Start a free [Econumo trial](https://app.econumo.com/register), or try the
 [Firefly III demo](https://demo.firefly-iii.org) — both run in a browser.
@@ -3292,7 +3292,7 @@ better served waiting rather than switching twice.
 |---|---|---|---|
 | **Status** | ✅ Active | ❌ **Archived Jul 2025** | ✅ Active |
 | **Licence** | MIT | AGPL-3.0 | AGPL-3.0 |
-| **Price** | Free self-hosted; $20 one-time cloud | — | Free, self-hosted |
+| **Price** | Free self-hosted; $29.99 one-time cloud | — | Free, self-hosted |
 | **GitHub stars** | 79 | 54,351 (frozen) | 9,065 |
 | **Last release** | v1.1.1 (19 Jul 2026) | v0.6.0 (24 Jul 2025) | v0.7.2 (1 Jul 2026) |
 | **Total releases** | 24 | 28 | 20 |
@@ -3474,7 +3474,7 @@ Maybe's Synth shutdown could not happen to it.
 trademarked its name, which is why the fork had to be renamed — that is what
 AGPL-plus-trademark looks like in practice.
 
-**A hosted option.** $20 one-time per user, or self-host free. Sure offers
+**A hosted option.** $29.99 one-time per user, or self-host free. Sure offers
 self-hosting only.
 
 ---
@@ -3570,7 +3570,7 @@ excellent at that.
 | | Econumo | ezBookkeeping |
 |---|---|---|
 | **Licence** | MIT | MIT |
-| **Price** | Free self-hosted; $20 one-time cloud | Free, self-host only |
+| **Price** | Free self-hosted; $29.99 one-time cloud | Free, self-host only |
 | **GitHub stars** | 79 | 5,239 |
 | **Releases to date** | 24 | 22 |
 | **In development since** | 2020 | October 2020 |
@@ -3602,7 +3602,7 @@ The projects differ in how they sustain themselves. ezBookkeeping is unusually
 absolutist — its FAQ states there are no paid features and that the project
 **does not accept donations or sponsorships**, and there is no official hosted
 service. Econumo funds development through an optional hosted cloud account
-(**$20 one-time per user**) while the self-hosted edition stays free.
+(**$29.99 one-time per user**) while the self-hosted edition stays free.
 
 If you object on principle to a project having any commercial arm at all,
 ezBookkeeping's position is the purer one. If you would rather pay once and not
@@ -3819,7 +3819,7 @@ three well.
 | | Econumo | GnuCash |
 |---|---|---|
 | **Licence** | MIT | GPL-2.0-or-later / GPL-3.0 |
-| **Price** | Free self-hosted; $20 one-time cloud | Free |
+| **Price** | Free self-hosted; $29.99 one-time cloud | Free |
 | **In development since** | 2020 | 1997 |
 | **First public release** | November 2024 | 1998 |
 | **GitHub stars** | 79 | 4,290 |
@@ -3865,7 +3865,7 @@ any later version", with an OpenSSL linking exception on some files.*
 
 Both are free. GnuCash has no paid tier, no hosted service and no commercial
 edition — it is funded by donations. Econumo's self-hosted edition is likewise
-free, with an optional hosted cloud account at **$20 one-time per user**.
+free, with an optional hosted cloud account at **$29.99 one-time per user**.
 
 Since GnuCash runs on your own desktop, there is nothing to host and no running
 cost either way.
@@ -4040,7 +4040,7 @@ Econumo asks you to understand envelopes, and nothing more.
 - You want to use it **from a phone or any browser**
 - You want to **share a budget with your partner or family**, each with a login
 - You want multi-currency budgeting without an accounting course
-- You want a hosted option for a single $20 payment
+- You want a hosted option for a single $29.99 payment
 
 These tools are different enough that "both" is a reasonable answer — GnuCash for
 the books and investments, Econumo for the household budget. You can try Econumo

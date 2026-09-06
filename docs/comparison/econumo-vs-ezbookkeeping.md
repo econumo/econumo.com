@@ -27,7 +27,7 @@ excellent at that.
 | | Econumo | ezBookkeeping |
 |---|---|---|
 | **Licence** | MIT | MIT |
-| **Price** | Free self-hosted; $20 one-time cloud | Free, self-host only |
+| **Price** | Free self-hosted; $29.99 one-time cloud | Free, self-host only |
 | **GitHub stars** | 79 | 5,239 |
 | **Releases to date** | 24 | 22 |
 | **In development since** | 2020 | October 2020 |
@@ -59,7 +59,7 @@ The projects differ in how they sustain themselves. ezBookkeeping is unusually
 absolutist — its FAQ states there are no paid features and that the project
 **does not accept donations or sponsorships**, and there is no official hosted
 service. Econumo funds development through an optional hosted cloud account
-(**$20 one-time per user**) while the self-hosted edition stays free.
+(**$29.99 one-time per user**) while the self-hosted edition stays free.
 
 If you object on principle to a project having any commercial arm at all,
 ezBookkeeping's position is the purer one. If you would rather pay once and not

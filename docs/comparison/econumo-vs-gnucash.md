@@ -26,7 +26,7 @@ three well.
 | | Econumo | GnuCash |
 |---|---|---|
 | **Licence** | MIT | GPL-2.0-or-later / GPL-3.0 |
-| **Price** | Free self-hosted; $20 one-time cloud | Free |
+| **Price** | Free self-hosted; $29.99 one-time cloud | Free |
 | **In development since** | 2020 | 1997 |
 | **First public release** | November 2024 | 1998 |
 | **GitHub stars** | 79 | 4,290 |
@@ -72,7 +72,7 @@ any later version", with an OpenSSL linking exception on some files.*
 
 Both are free. GnuCash has no paid tier, no hosted service and no commercial
 edition — it is funded by donations. Econumo's self-hosted edition is likewise
-free, with an optional hosted cloud account at **$20 one-time per user**.
+free, with an optional hosted cloud account at **$29.99 one-time per user**.
 
 Since GnuCash runs on your own desktop, there is nothing to host and no running
 cost either way.
@@ -247,7 +247,7 @@ Econumo asks you to understand envelopes, and nothing more.
 - You want to use it **from a phone or any browser**
 - You want to **share a budget with your partner or family**, each with a login
 - You want multi-currency budgeting without an accounting course
-- You want a hosted option for a single $20 payment
+- You want a hosted option for a single $29.99 payment
 
 These tools are different enough that "both" is a reasonable answer — GnuCash for
 the books and investments, Econumo for the household budget. You can try Econumo

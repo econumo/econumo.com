@@ -36,7 +36,7 @@ Econumo's feature set is built for real-world family scenarios. Here’s how it 
 
 ### Pricing and Availability
 
-Econumo has two editions and no subscription. Self-host the open-source community edition for **free** on your own server, or use the managed Cloud for a **one-time payment of $20 per user** — a single family licence covering the household is **$40 one-time**. You pay once; there is no recurring fee on either edition. The Cloud plan comes with a **45-day free trial**, so a household can try it together before committing.
+Econumo has two editions and no subscription. Self-host the open-source community edition for **free** on your own server, or use the managed Cloud for a **one-time payment of $29.99 per user**. You pay once; there is no recurring fee on either edition. The Cloud plan comes with a **45-day free trial**, so a household can try it together before committing.
 
 ### Pros and Cons
 
@@ -222,7 +222,7 @@ The table leads with the sharing model, because for a household that is the deci
 
 | Product | Sharing model | Price model | Platforms | Privacy / data |
 |---|---|---|---|---|
-| **Econumo** | Separate logins; access set per account and per budget | Free self‑host, or **$20 one‑time** Cloud (no subscription) | Web + installable app (PWA) | Manual entry, CSV import & REST API; self‑host option; no bank sync |
+| **Econumo** | Separate logins; access set per account and per budget | Free self‑host, or **$29.99 one‑time** Cloud (no subscription) | Web + installable app (PWA) | Manual entry, CSV import & REST API; self‑host option; no bank sync |
 | YNAB (You Need A Budget) | One plan shared with up to 6 people | Subscription; 34‑day free trial | Web, iOS, Android | Bank‑linked (US, CA, UK, EU) |
 | Monarch Money | Unlimited collaborators; shared household view plus private accounts | Subscription; no permanent free tier | Web, iOS, Android | Bank‑linked |
 | Quicken Simplifi | Space Sharing: invite one extra member who signs in with their own Quicken ID — no shared credentials | Subscription (billed annually) | Web, iOS, Android | Bank‑linked (US only) |

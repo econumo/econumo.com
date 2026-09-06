@@ -17,7 +17,7 @@ Choose **YNAB** if you want automatic bank import, best-in-class native mobile
 apps, and a mature, supported product — and the price is acceptable to you.
 Choose **Econumo** if you want to **own your data**, budget in **more than one
 currency**, or stop paying a subscription: self-hosting is free forever, and the
-hosted account is a **single $20 payment**.
+hosted account is a **single $29.99 payment**.
 
 ---
 
@@ -27,10 +27,10 @@ hosted account is a **single $20 payment**.
 |---|---|---|
 | **Licence** | MIT, open source | Proprietary, closed source |
 | **Self-hosting** | ✅ | ❌ Cloud only |
-| **Price** | Free self-hosted; $20 one-time cloud | **$14.99/mo or $109/yr** |
+| **Price** | Free self-hosted; $29.99 one-time cloud | **$14.99/mo or $109/yr** |
 | **Free trial** | Free forever, self-hosted | 34 days, no card required |
 | **Student offer** | n/a — free | Free for 365 days |
-| **People per plan** | $20 per user (one-time) | Up to 6 people, one subscription |
+| **People per plan** | $29.99 per user (one-time) | Up to 6 people, one subscription |
 | **Budgeting method** | Envelope | Zero-based envelope (the Four Rules) |
 | **Multi-currency** | ✅ Native, per account | ❌ One currency per budget |
 | **Bank sync** | ❌ CSV import | ✅ Plaid + MX (US, CA, 18 EU countries) |
@@ -48,18 +48,18 @@ hosted account is a **single $20 payment**.
 | | Econumo | YNAB |
 |---|---|---|
 | Self-hosted | **Free, forever** | Not possible |
-| Hosted, 1 year | $20 one-time | $109 |
-| Hosted, 3 years | $20 one-time | $327 |
-| Hosted, 5 years | $20 one-time | $545 |
+| Hosted, 1 year | $29.99 one-time | $109 |
+| Hosted, 3 years | $29.99 one-time | $327 |
+| Hosted, 5 years | $29.99 one-time | $545 |
 
 YNAB costs **$14.99 per month, or $109 per year** if paid annually. It offers a
 generous **34-day free trial with no credit card**, and students get a **free
 365-day subscription** with proof of enrolment.
 
 Econumo's self-hosted edition is free indefinitely. The hosted cloud account is a
-**single $20 payment per user** — not a subscription.
+**single $29.99 payment per user** — not a subscription.
 
-Over five years that is roughly **$20 against $545**.
+Over five years that is roughly **$29.99 against $545**.
 
 To be fair to YNAB: a single subscription covers **up to six people** with shared
 data, so a large household spreads that cost further than the per-user comparison
@@ -154,7 +154,7 @@ support are all things a subscription pays for.
 
 ## Where Econumo is better
 
-**Price.** $20 once against $109 every year.
+**Price.** $29.99 once against $109 every year.
 
 **You own it.** MIT-licensed, self-hostable, and yours to keep. No subscription
 lapse can lock you out of your own history.
@@ -187,7 +187,7 @@ at 200 requests per hour and requires an active subscription.
 - You want to **own and self-host** your financial data
 - You budget across **multiple currencies**
 - You are comfortable entering transactions manually or via CSV
-- You want a hosted account for a **single $20 payment**
+- You want a hosted account for a **single $29.99 payment**
 
 If you like the YNAB method but want it free and open source, Econumo and
 [Actual Budget](/docs/comparison/econumo-vs-actualbudget/) are the two strongest
