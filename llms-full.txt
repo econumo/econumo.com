@@ -4124,7 +4124,7 @@ URL: https://econumo.com/docs/legal/privacy-policy/
 
 ## Introduction
 
-Your privacy is important to us. It is Econumo's policy to respect your privacy regarding any information we may collect from you across our website, econumo.com, its subdomains, and other sites we own and operate (collectively, the "Sites"), and through the Econumo application itself, whether you use Econumo or run a self-hosted installation (the "App"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit any of our Sites or use the App. Please read this policy carefully to understand our practices regarding your information.
+Your privacy is important to us. It is Econumo's policy to respect your privacy regarding any information we may collect from you across our website, econumo.com, its subdomains, and other sites we own and operate (collectively, the "Sites"), and through the Econumo application itself, whether you use **Econumo** or **Econumo Self-Hosted** (the "App"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit any of our Sites or use the App. Please read this policy carefully to understand our practices regarding your information.
 
 ## 1. Information We Collect
 
@@ -4146,7 +4146,7 @@ We use the information we collect for the following purposes:
 
 ## 3. How We Share Your Information
 
-We do not share personally identifying information publicly or with third parties, except when required by law. Product analytics data (Section 5) is never sold, shared with advertisers, or handed to anyone else.
+We do not share personally identifying information publicly or with third parties, except as described below or when required by law. Product analytics data (Section 5) is never sold, shared with advertisers, or handed to anyone else.
 
 - **For Legal Purposes:** We may disclose your information as required by law or if we believe it is necessary to protect our rights, respond to legal requests, or enforce our policies.
 - **Business Transfers:** If we merge with or are acquired by another company, your information may be transferred as part of the transaction.
@@ -4163,13 +4163,13 @@ You have the following choices regarding your information:
 
 ## 5. Product Analytics
 
-The App sends us usage analytics so we can see which features are used and where people get stuck. This applies to Econumo and to self-hosted installations alike.
+The App sends us usage analytics so we can see which features are used and where people get stuck. This applies to Econumo and to Econumo Self-Hosted alike.
 
-**What we collect.** Each event carries a pseudonymous identifier derived from your account by a one-way hash, so we can connect events from the same account over time. Alongside it we record how you use the App (which features and actions, as event names only) and general characteristics of your account and setup, such as how large your account is (counts, not the items themselves), roughly when you registered, the App version and platform, your display language, your subscription status, and whether you use Econumo or a self-hosted installation (a self-hosted installation is identified by a one-way derived value, not by its address).
+**What we collect.** Each event carries a pseudonymous identifier derived from your account by a one-way hash, so we can connect events from the same account over time. Alongside it we record how you use the App (which features and actions, as event names only) and general characteristics of your account and setup, such as how large your account is (counts, not the items themselves), roughly when you registered, the App version and platform, your display language, your subscription status, and whether you use Econumo or Econumo Self-Hosted (a self-hosted installation is identified by a one-way derived value, not by its address).
 
 **What we never collect.** No financial data: no amounts, balances, transaction descriptions, or transaction dates. No names of your accounts, categories, payees, or tags. No email address or name. Your installation's hostname and network address reach our collector as part of any web request, but we do not store them.
 
-**Linking to your account.** The identifier is pseudonymous, not anonymous: it lets us see that events belong to the same account without telling us whose account it is. On Econumo we can match it back to your account when there is a reason to, such as investigating a support request. On a self-hosted installation the identifier is derived inside your own environment, so we have no way to match it to you.
+**Linking to your account.** The identifier is pseudonymous, not anonymous: it lets us see that events belong to the same account without telling us whose account it is. On Econumo we can match it back to your account when there is a reason to, such as investigating a support request. On Econumo Self-Hosted the identifier is derived inside your own environment, so we have no way to match it to you.
 
 **Turning it off.** Open **Settings → Profile** in the App and use the "Privacy" section. It takes effect immediately and applies to that account only; other accounts you have access to keep their own setting. You can turn it back on the same way. This is how you object to this processing, which we carry out on the basis of our legitimate interest in improving Econumo.
 
