@@ -15,7 +15,7 @@
     {
       "id": "twillingate",
       "trigger": "pageLoad",
-      "content": "<script defer src=\"https://t.kuznetsov.dev/js/twillingate.js\" data-key=\"ak_db92b1508b79976fd728ffc41ecffdb5\" data-identity=\"anonymous\" data-mask-url=\"uuid\"></script>",
+      "content": "<script defer src=\"https://t.econumo.com/js/twillingate.js\" data-key=\"ak_db92b1508b79976fd728ffc41ecffdb5\" data-identity=\"anonymous\" data-mask-url=\"uuid\"></script>",
       "location": "head"
     }
   ]
