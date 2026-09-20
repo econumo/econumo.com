@@ -164,6 +164,7 @@
 
 ## Releases
 
+- [v1.5.0](https://econumo.com/releases/v1.5.0.md): v1.5.0 — single sign-on: sign in with Google, Apple, or your own OpenID Connect provider, and link a provider to the account you already have.
 - [v1.4.3](https://econumo.com/releases/v1.4.3.md): v1.4.3 — a maintenance release that fixes transfers being saved without a recipient account, leaving broken rows that couldn't be edited or deleted.
 - [v1.4.2](https://econumo.com/releases/v1.4.2.md): v1.4.2 — pins due and overdue recurring transactions to the top of Today in your account, and posts them dated today instead of their missed schedule.
 - [v1.4.1](https://econumo.com/releases/v1.4.1.md): v1.4.1 — adds a Privacy switch to opt out of in-app usage analytics, and moves product analytics off PostHog onto Econumo's own collector.
