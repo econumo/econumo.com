@@ -59,6 +59,12 @@ The next occurrence of every schedule appears in its account's transaction
 list, greyed out and labelled **Not posted**. It is a placeholder: it does not
 affect your balance until you confirm it.
 
+A schedule that is due today or overdue is pinned to the top of the account's
+**Today** group, ahead of today's real transactions — so it reads as
+something still waiting on you, not as something that already happened. A
+schedule that is still ahead of its next date is untouched: it stays grouped
+further down the list, at its own future date.
+
 Select that row to open its **Transaction details**, which repeats the
 schedule's interval at the bottom and offers two actions:
 
@@ -77,7 +83,10 @@ the account page — a quick way to spot what is waiting for you.
 
 You can also post a payment straight from **Settings → Recurring
 transactions**: choose **Post** in the schedule's three-dots menu (on mobile,
-tap the row to open the bottom sheet).
+tap the row to open the bottom sheet). The review dialog opens with its date
+chip pre-filled to today for a due or overdue schedule — not the missed
+scheduled date — though you can still edit it; a schedule that isn't overdue
+keeps pre-filling its own scheduled date, as before.
 
 ---
 

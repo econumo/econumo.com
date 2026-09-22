@@ -95,11 +95,21 @@ Administrators can disable open registration with the
 ---
 ## Sign In
 
-To sign in, enter the email and password you provided during sign-up.
+To sign in, enter the email and password you provided during sign-up. If your
+Econumo instance enables single sign-on, an **or continue with** divider below
+the form offers **Google**, **Apple**, or a custom OpenID Connect provider —
+password sign-in stays available either way.
 
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+**Note**
+Signing in through a provider for the first time creates a new, passwordless
+account if your server allows registration. You can add a password afterwards
+from **Settings → Profile → Change password**, or link the provider to an
+account you already have from
+[Sign-in methods](/docs/user-guide/user-profile/#sign-in-methods).
 
 ---
 ## Password Recovery
@@ -117,6 +127,12 @@ Enter the code, choose a new password, and press **Reset password**:
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+**Note**
+Resetting your password is a deliberate account reclaim, not just a password
+change: it signs you out everywhere, revokes API tokens, and unlinks any
+sign-in provider that vouches for a different email address than your own.
+Your shared budgets and connections are left alone.
 
 ---
 ## Getting started checklist
