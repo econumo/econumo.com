@@ -164,6 +164,7 @@
 
 ## Releases
 
+- [v1.5.2](https://econumo.com/releases/v1.5.2.md): v1.5.2 — self-hosters can switch email and password sign-in off and let people in only through Google, Apple, or their own OpenID Connect provider.
 - [v1.5.1](https://econumo.com/releases/v1.5.1.md): v1.5.1 — fixes a white band left below the app shell on iOS home-screen installs after signing in with Apple.
 - [v1.5.0](https://econumo.com/releases/v1.5.0.md): v1.5.0 — single sign-on: sign in with Google, Apple, or your own OpenID Connect provider, and link a provider to the account you already have.
 - [v1.4.3](https://econumo.com/releases/v1.4.3.md): v1.4.3 — a maintenance release that fixes transfers being saved without a recipient account, leaving broken rows that couldn't be edited or deleted.
