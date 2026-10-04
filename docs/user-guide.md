@@ -97,8 +97,8 @@ Administrators can disable open registration with the
 
 To sign in, enter the email and password you provided during sign-up. If your
 Econumo instance enables single sign-on, an **or continue with** divider below
-the form offers **Google**, **Apple**, or a custom OpenID Connect provider —
-password sign-in stays available either way.
+the form offers **Google**, **Apple**, or a custom OpenID Connect provider,
+alongside the password form.
 
 <ScreenshotSet>
 
@@ -110,6 +110,14 @@ account if your server allows registration. You can add a password afterwards
 from **Settings → Profile → Change password**, or link the provider to an
 account you already have from
 [Sign-in methods](/docs/user-guide/user-profile/#sign-in-methods).
+
+**Econumo Self-Hosted**
+Administrators can turn password sign-in off entirely with the
+`ECONUMO_PASSWORD_LOGIN` environment variable. On such an instance the sign-in
+and sign-up screens show only the provider buttons — no email/password
+fields, no **or continue with** divider, and no **Forgot password?** link —
+and **Settings → Profile → Security** no longer offers **Change password** or
+**Set a password**.
 
 ---
 ## Password Recovery

@@ -183,8 +183,8 @@ Administrators can disable open registration with the
 
 To sign in, enter the email and password you provided during sign-up. If your
 Econumo instance enables single sign-on, an **or continue with** divider below
-the form offers **Google**, **Apple**, or a custom OpenID Connect provider —
-password sign-in stays available either way.
+the form offers **Google**, **Apple**, or a custom OpenID Connect provider,
+alongside the password form.
 
 <ScreenshotSet>
 
@@ -196,6 +196,14 @@ account if your server allows registration. You can add a password afterwards
 from **Settings → Profile → Change password**, or link the provider to an
 account you already have from
 [Sign-in methods](/docs/user-guide/user-profile/#sign-in-methods).
+
+**Econumo Self-Hosted**
+Administrators can turn password sign-in off entirely with the
+`ECONUMO_PASSWORD_LOGIN` environment variable. On such an instance the sign-in
+and sign-up screens show only the provider buttons — no email/password
+fields, no **or continue with** divider, and no **Forgot password?** link —
+and **Settings → Profile → Security** no longer offers **Change password** or
+**Set a password**.
 
 ---
 ## Password Recovery
@@ -1647,6 +1655,12 @@ password, then the new one twice:
 
 </ScreenshotSet>
 
+**Note**
+On a self-hosted instance with password sign-in turned off
+(`ECONUMO_PASSWORD_LOGIN=false`), neither **Change password** nor **Set a
+password** appears here — every sign-in goes through a linked provider
+instead.
+
 ### How to change your default currency
 
 The **Currency** preference in the Preferences section sets your default
@@ -1683,9 +1697,11 @@ or with that provider.
 
 **Note**
 Unlinking is the same button in reverse. If a linked provider is the *only*
-way into your account (a passwordless account created by signing in through a
-provider), Econumo won't let you remove the last one — set a password first
-from **Change password**.
+way into your account, Econumo won't let you remove the last one. For a
+passwordless account, set a password first from **Change password**. On an
+instance with password sign-in turned off, a stored password no longer counts
+as a way in either, so the last remaining provider can't be unlinked at all —
+the button is disabled with a note explaining why.
 
 Linking or unlinking a provider emails you a notice, so gaining or losing a
 way into your account never happens without you knowing.

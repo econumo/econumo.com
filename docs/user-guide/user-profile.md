@@ -68,6 +68,12 @@ password, then the new one twice:
 
 </ScreenshotSet>
 
+**Note**
+On a self-hosted instance with password sign-in turned off
+(`ECONUMO_PASSWORD_LOGIN=false`), neither **Change password** nor **Set a
+password** appears here — every sign-in goes through a linked provider
+instead.
+
 ### How to change your default currency
 
 The **Currency** preference in the Preferences section sets your default
@@ -104,9 +110,11 @@ or with that provider.
 
 **Note**
 Unlinking is the same button in reverse. If a linked provider is the *only*
-way into your account (a passwordless account created by signing in through a
-provider), Econumo won't let you remove the last one — set a password first
-from **Change password**.
+way into your account, Econumo won't let you remove the last one. For a
+passwordless account, set a password first from **Change password**. On an
+instance with password sign-in turned off, a stored password no longer counts
+as a way in either, so the last remaining provider can't be unlinked at all —
+the button is disabled with a note explaining why.
 
 Linking or unlinking a provider emails you a notice, so gaining or losing a
 way into your account never happens without you knowing.
