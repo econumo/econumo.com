@@ -10,6 +10,8 @@
 - [Accounts](https://econumo.com/docs/user-guide/accounts.md)
 - [Transactions](https://econumo.com/docs/user-guide/transactions.md)
 - [Recurring transactions](https://econumo.com/docs/user-guide/recurring-transactions.md)
+- [Search](https://econumo.com/docs/user-guide/search.md)
+- [Inbox](https://econumo.com/docs/user-guide/inbox.md)
 - [Classifications](https://econumo.com/docs/user-guide/classifications.md)
 - [Budgets](https://econumo.com/docs/user-guide/budgets.md)
 - [Plan](https://econumo.com/docs/user-guide/plan.md)

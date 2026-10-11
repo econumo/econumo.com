@@ -6,7 +6,8 @@ This section provides an overview of Transactions in Econumo.
 
 Transactions form the core of Econumo, as all budgeting is based on the
 transactions you enter. Open any account to see its transaction list, search
-it, and add new records.
+it, and add new records. To find a transaction across all your accounts at
+once, use [Search](/docs/user-guide/search/) (**Ctrl+K** / **⌘K**).
 
 <ScreenshotSet>
 

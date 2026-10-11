@@ -4,9 +4,10 @@ URL: https://econumo.com/docs/user-guide/plan/
 
 The [budget](/docs/user-guide/budgets/) shows one month at a time: what you
 planned, what you spent, what is left. The **Plan** view shows the same budget
-as a spreadsheet across several months — every envelope, category and tag is a
-row, every month is a column — so you can put next spring's holiday or an
-annual insurance premium into the plan long before the money moves.
+as a spreadsheet across several months — one row per envelope, category, tag
+or savings account, one column per month — so you can put next spring's
+holiday or an annual insurance premium into the plan long before the money
+moves.
 
 Both views belong to the same budget. Switching between them changes nothing
 about your data; it only changes how much of the budget you are looking at.
@@ -21,6 +22,7 @@ about your data; it only changes how much of the budget you are looking at.
 - [Reading the sheet](/docs/user-guide/plan/#reading-the-sheet)
 - [Planning a month](/docs/user-guide/plan/#planning-a-month)
 - [Copying an amount forward](/docs/user-guide/plan/#copying-an-amount-forward)
+- [Adding up a selection](/docs/user-guide/plan/#adding-up-a-selection)
 - [The Balance row](/docs/user-guide/plan/#the-balance-row)
 - [Keeping a long sheet readable](/docs/user-guide/plan/#keeping-a-long-sheet-readable)
 
@@ -28,46 +30,54 @@ about your data; it only changes how much of the budget you are looking at.
 
 ## Opening the Plan view
 
-Open your budget from **Budget & Plan** in the sidebar (on mobile, from the
-home screen), then switch the **BUDGET** / **PLAN** toggle next to the budget
-name to **PLAN**.
+Open your budget from **Budget & Plan** in the sidebar, then switch the
+**Budget** / **Plan** tabs beside the months bar to **Plan**. The Plan view
+works on desktop and on a tablet.
 
-On a phone and a tablet there is no toggle in the header: open the
-**Configure** menu in the top-right corner and pick **Plan** at the top of it —
-the view you are on is ticked.
+On a phone there is no grid: the budget stays a single-month view, and you
+plan a month from each row's sheet — tap the row's figures and press **Set
+budget** (**Set plan** on a savings row). See
+[Budgeting](/docs/user-guide/budgets/#budgeting).
 
 ---
 
 ## Reading the sheet
 
-Rows are the elements of your budget, in the structure you gave it: categories,
-tags and envelopes grouped into folders, exactly as in the budget view. Income
-categories sit in their own **INCOME** section above the **EXPENSES** section.
+Rows are the elements of your budget, in the structure you gave it, under the
+same **Income**, **Savings** and **Expenses** sections as the budget view.
 
-Each cell holds two numbers: the amount actually spent or earned on top, in
-small grey type, and the amount you planned below it. An actual figure that
-overshoots the plan is shown in red. A dash means nothing is planned for that
-month yet.
+Each cell shows the amount actually spent or earned on the left, in small grey
+type, next to the amount you planned. An actual figure that overshoots the
+plan is shown in red. A blank cell means nothing is planned for that month and
+nothing happened. On a savings row, the small figure is the account's balance
+at the end of that month.
 
-The arrows above the sheet — **Earlier months** and **Later months** — move the
-visible window backwards and forwards in time.
+Click an actual figure to list that month's transactions behind it.
+
+The **‹** and **›** arrows above the sheet move the visible window to earlier
+and later months.
 
 ---
 
 ## Planning a month
 
-1. Click (or tap) the cell where the row and the month meet.
-2. A small **Budget** field opens with the same calculator keypad
-   (`+`, `−`, `×`, `÷`, `=`) as the
-   [transaction dialog](/docs/user-guide/transactions/#adding-expenses).
-3. Type the amount and press **SAVE**.
+The sheet works like a spreadsheet:
+
+1. Click a cell to select it, or move to it with the arrow keys.
+2. Type the amount, or press **F2** to edit the amount already there.
+3. Press **Enter** to save, or **Escape** to leave the cell as it was.
+
+**Delete** clears a cell's plan, and you can paste an amount copied from
+elsewhere.
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
 Income rows are planned exactly the same way — a planned salary is what makes
-the projection at the foot of the sheet worth reading.
+the projection at the foot of the sheet worth reading. A selected cell with a
+[comment](/docs/user-guide/budgets/#comments) opens its thread with
+**Shift+F2**.
 
 ---
 
@@ -80,12 +90,22 @@ amount across the months it covers.
 
 ---
 
+## Adding up a selection
+
+On desktop you can select several cells at once — drag across them,
+**Shift**+click the far corner of a range, or **Ctrl**+click (**⌘**+click on a
+Mac) to add single cells. A small label under the selection adds them up: how
+many cells, their **Plan** total and their **Actual** total.
+
+---
+
 ## The Balance row
 
-The **Balance** row is pinned to the bottom of the sheet, under per-month
-**Income**, **Expenses** and **Transfers** totals. It rolls your money forward
-month by month, starting from your real account balances, so each column shows
-what you would be left with by the end of that month if the plan holds.
+The foot of the sheet sums each month: **Income**, **Expenses**, **Savings**
+and **Total savings**, with the **Balance** row pinned underneath. Balance
+rolls your money forward month by month, starting from your real account
+balances, so each column shows what you would be left with by the end of that
+month if the plan holds.
 
 That is what makes planning ahead useful: put a two-week trip into next July and
 you can see immediately what it does to the months after it.
@@ -94,15 +114,12 @@ you can see immediately what it does to the months after it.
 
 ## Keeping a long sheet readable
 
-A budget with a few dozen elements makes for a tall sheet, and most rows are
-empty in most months. Two things help:
+A budget with a few dozen elements makes for a tall sheet. A few things help:
 
-- **Configure → Hide empty rows** drops every row that has neither a planned
-  nor an actual amount anywhere in the visible window.
-- The **INCOME** and **EXPENSES** headers, and each folder header, collapse
-  with the chevron beside them.
-
-**Note**
-On a phone the sheet narrows to a single month column; step through months with
-the same **Earlier months** / **Later months** arrows. The **Balance** row stays
-pinned at the bottom of the screen.
+- The **Income**, **Savings** and **Expenses** headers, and each folder
+  header, collapse with the chevron beside them. The Plan view remembers its
+  own folding, separately from the budget view.
+- The **Σ** button on a section or folder header shows that group's sums on
+  its header row.
+- Drag the right edge of the name column to make it wider or narrower;
+  double-click the edge to reset it.

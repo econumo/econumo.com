@@ -38,7 +38,7 @@ You have the following choices regarding your information:
 
 - **Access and Correction:** You may request access to the personal information we hold about you and correct any inaccuracies.
 - **Opt-Out:** You may opt out of receiving promotional emails from us by following the unsubscribe link or contacting us directly.
-- **Product Analytics:** You can turn product analytics off at any time from within the App, under **Settings → Profile**, in the "Privacy" section. See Section 5 for details.
+- **Product Analytics:** You can turn product analytics off at any time from within the App, under **Settings → Personal settings**, in the "Privacy" section. See Section 5 for details.
 - **Cookie Preferences:** You can modify your browser settings to manage cookie preferences.
 
 ## 5. Product Analytics
@@ -51,7 +51,7 @@ The App sends us usage analytics so we can see which features are used and where
 
 **Linking to your account.** The identifier is pseudonymous, not anonymous: it lets us see that events belong to the same account without telling us whose account it is. On Econumo we can match it back to your account when there is a reason to, such as investigating a support request. On Econumo Self-Hosted the identifier is derived inside your own environment, so we have no way to match it to you.
 
-**Turning it off.** Open **Settings → Profile** in the App and use the "Privacy" section. It takes effect immediately and applies to that account only; other accounts you have access to keep their own setting. You can turn it back on the same way. This is how you object to this processing, which we carry out on the basis of our legitimate interest in improving Econumo.
+**Turning it off.** Open **Settings → Personal settings** in the App and use the "Privacy" section. It takes effect immediately and applies to that account only; other accounts you have access to keep their own setting. You can turn it back on the same way. This is how you object to this processing, which we carry out on the basis of our legitimate interest in improving Econumo.
 
 **Storage and sharing.** We run the analytics collector ourselves, on our own infrastructure. No third-party analytics service is involved, and the data is never sold, shared with advertisers, or passed to anyone else. Events are kept for up to 3 years and then deleted.
 

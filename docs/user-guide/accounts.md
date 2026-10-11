@@ -106,7 +106,7 @@ Econumo offers three levels of shared access:
 Granting access doesn't add the account to your partner's account list right
 away: Econumo sends them a **pending invite** instead of sharing it outright.
 They accept it — choosing which folder to file the account under — or decline
-it, from the **Sharing requests** panel described in
+it, from their [Inbox](/docs/user-guide/inbox/) — see
 [Shared Access](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request).
 Until they respond, the Access control dialog shows **invitation pending**
 next to their name. Once accepted, the shared account shows the avatars of

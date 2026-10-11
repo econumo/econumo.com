@@ -26,16 +26,18 @@ category:
 - [Update budget details](/docs/user-guide/budgets/#update-budget-details)
 - [Manage your budget](/docs/user-guide/budgets/#manage-your-budget)
   - [Budgeting](/docs/user-guide/budgets/#budgeting)
+  - [Savings accounts](/docs/user-guide/budgets/#savings-accounts)
   - [Organizing your budget](/docs/user-guide/budgets/#organizing-your-budget)
   - [Work with the budget](/docs/user-guide/budgets/#work-with-the-budget)
+  - [Comments](/docs/user-guide/budgets/#comments)
 - [Budgets list](/docs/user-guide/budgets/#budgets-list)
 - [Completing, duplicating and archiving a budget](/docs/user-guide/budgets/#completing-duplicating-and-archiving-a-budget)
 - [Shared access](/docs/user-guide/budgets/#shared-access)
 
 **Note**
 To plan several months at once instead of one at a time, switch the budget to
-its [Plan view](/docs/user-guide/plan/) — the same budget laid out as a
-month-by-month sheet.
+its [Plan view](/docs/user-guide/plan/) with the **Budget** / **Plan** tabs
+beside the months bar — the same budget laid out as a month-by-month sheet.
 
 ---
 
@@ -44,7 +46,9 @@ month-by-month sheet.
 Open **Settings → Budgets & Plans** and press **Create budget** (on mobile, the
 **+** button in the header). Give the budget a name, pick its base currency,
 and switch on the accounts that take part in it — the counter above the list
-keeps track (*"3 of 5 included"*).
+keeps track (*"3 of 5 included"*). Once accounts are in, **Savings accounts**
+lets you mark some of them as
+[savings](/docs/user-guide/budgets/#savings-accounts).
 
 <ScreenshotSet>
 
@@ -52,16 +56,17 @@ keeps track (*"3 of 5 included"*).
 
 **Note**
 Account membership is an explicit list, and a new budget starts with every
-switch off — turn on the accounts you actually budget from, and leave out the
-ones you don't, such as a long-term savings account. Budgets start from the
-current month.
+switch off — turn on the accounts you actually budget from. Budgets start from
+the current month.
 
 ---
 ## Update budget details
 
-Open your budget, press **Configure**, and choose **Budget details**. In the
-dialog you can rename the budget, change its currency, and add or remove
-accounts:
+Open your budget and press **Configure** in the top-right corner. On desktop it
+opens **Budget settings** straight away; on a tablet or a phone it opens a
+short menu — choose **Budget settings** there. In the dialog you can rename
+the budget, change its currency, add or remove accounts, and choose which of
+them are savings accounts:
 
 <ScreenshotSet>
 
@@ -71,16 +76,26 @@ An account that already carries transactions in past months of this budget
 cannot be removed from it — taking it out would rewrite months you have
 already closed. The dialog says so under the list.
 
-**Note**
-On desktop and tablet, **Configure** sits in the top-right corner of the budget
-page; on a phone it is the icon in the same corner. Besides **Budget details**
-it holds **Edit structure**, **Open budget list**, and — on a phone and a
-tablet — the **Budget** / **Plan** switch.
+The other entry in the tablet and phone **Configure** menu, **Edit
+structure**, is described in
+[Organizing your budget](/docs/user-guide/budgets/#organizing-your-budget).
 
 ---
 ## Manage your budget
 
-In your budget, you will work with the following entities:
+The budget page has three sections, in the same order on every screen size:
+
+- **Income** — what you expect to earn: **Planned**, **Received** and what
+  is still **To receive**.
+- **Savings** — your [savings accounts](/docs/user-guide/budgets/#savings-accounts):
+  **Planned**, **Saved** and the **Balance** at month end.
+- **Expenses** — what you plan to spend: **Budget**, **Spent** and
+  **Available**.
+
+Underneath sit the totals for the month, ending with your **Balance at month
+end**.
+
+Inside the sections you work with these entities:
 
 - **Budget Folders** — to organize your spending conveniently (in the
   screenshots: _Essentials_, _Lifestyle_, _Vacations_).
@@ -92,6 +107,7 @@ In your budget, you will work with the following entities:
   the page.
 - **Envelopes** — these group several categories into one limit (e.g. an
   envelope for _Food_ could contain _Groceries_, _Drinks_, and _Restaurants_).
+  Both Income and Expenses can hold envelopes.
 
 ---
 ### Budgeting
@@ -99,49 +115,117 @@ In your budget, you will work with the following entities:
 The goal of budgeting is to maintain your monthly budget. Ideally, you should
 prepare your budget before the month starts and make minor adjustments during
 the month as needed. The months bar at the top switches between periods — on
-desktop the **‹** and **›** arrows beside it step one month at a time — and the
-budget shows how much money remains in your virtual envelopes. The bar is
-clamped to the budget's own lifetime: an open budget runs well into the future,
-while a
+desktop and tablet the **‹** and **›** arrows beside it step through the
+months — and the budget shows how much money remains in your virtual
+envelopes. The bar is clamped to the budget's own lifetime: an open budget runs
+well into the future, while a
 [completed one](/docs/user-guide/budgets/#completing-duplicating-and-archiving-a-budget)
 stops just past its final month.
 
-Each row has three columns:
+Each expense row has three columns:
 
-1. **Budget** — the amount you plan to spend or save.
+1. **Budget** — the amount you plan to spend this month. A small figure in
+   front of it, such as `-1,923.02 +`, is what is left from earlier months.
 2. **Spent** — the amount you have actually spent.
 3. **Available** — what is left: the budgeted amount plus anything carried
-   over from previous months.
+   over. It shows as a green pill, or a red one when the row is overspent.
 
-Click a number in the **Budget** column to adjust it — changes apply
-instantly. Overspent elements are highlighted in red (like _Groceries_ in the
-screenshots above).
-
-If a [transaction has no category](/docs/user-guide/transactions/#adding-expenses),
-its amount still counts: it appears at the bottom of the budget as a read-only
-**Uncategorized** element — no **Budget** or **Available** figure, just the
-**Spent** total — instead of being silently left out.
-
----
-### Organizing your budget
-
-The default structure of your budget may not be optimal. To change it, press
-**Configure** and select **Edit structure**. In this mode you can create
-folders and envelopes, drag elements between folders, and change element
-currencies. Once you are finished, press **Done editing**.
+On desktop, click a number in the **Budget** column to change it. The amount
+field takes the same calculator keypad (`+`, `−`, `×`, `÷`, `=`) as the
+[transaction dialog](/docs/user-guide/transactions/#adding-expenses); press
+**Save**. On a tablet or a phone, tap the row's figures to open its sheet and
+press **Set budget**:
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
-**Folders.** Press **Create folder** to add one. The three-dots menu on a
-folder lets you rename it (an empty folder can also be deleted there). Drag
-folders and elements around using the dots handle. The built-in **Default
-folder** is always last: it cannot be renamed or removed, and when it is empty
-it just shows a hint inviting you to move elements into it.
+On a phone the budget is a single-month view. Each row shows **Budget** and
+**Spent**, with a thin progress bar under it that turns red once spending runs
+past the budget. Tap a row's figures to open its sheet: the month's figures,
+the latest comment, **Transactions** to list what was spent, and **Set
+budget** (**Set plan** on a savings row). The pencil icon in the sheet's
+header edits the item itself. On a tablet, the desktop-style rows open the
+same sheet when you tap their figures:
 
-**Envelopes.** To create an envelope, press the **+** button on the folder
-header. Choose a name, currency, icon, and the categories you want to include:
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+If a [transaction has no category](/docs/user-guide/transactions/#adding-expenses),
+its amount still counts: it appears as a read-only **Uncategorized** line at
+the end of the Income or Expenses section — no **Budget** or **Available**
+figure, just the amount — instead of being silently left out. Assign a
+category to those transactions and they move into the rows above.
+
+---
+### Savings accounts
+
+Money you move into a savings account isn't spent — it's saved. Mark any of
+the budget's accounts as savings in **Budget settings → Savings accounts**
+(the **Savings** section's three-dots menu has a shortcut to the same list):
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Each savings account gets its own row in the **Savings** section:
+
+- **Planned** — how much you mean to put away this month.
+- **Saved** — the account's whole net change for the month: transfers in and
+  out, interest and fees.
+- **Balance** — the account's balance at the end of the month. For future
+  months it is projected from your plans.
+
+The totals under the budget add a **Savings** line for the month and a **Total
+savings** line for the combined balance.
+
+The savings flag belongs to the budget, not to the account, so the same
+account can be savings in one budget and everyday money in another. Turning an
+account's savings flag off deletes the planned amounts and comments of its
+savings row in this budget; the saved amounts and the transactions themselves
+are not touched.
+
+---
+### Organizing your budget
+
+You change the structure right on the budget page.
+
+**On desktop**, hover a row: a drag handle appears on its left and a
+three-dots menu beside its name. Drag rows and folders by the handle to
+reorder them or move them between folders, and use the menus for everything
+else.
+
+**On a tablet or a phone**, press **Configure** and choose **Edit structure**.
+Every row then shows its handle and three-dots menu; press **Done editing**
+when you are finished.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The menus offer:
+
+- **Income** and **Expenses** section headers — **Create folder**, **New
+  envelope**, **New category**.
+- A **folder** — **New envelope**, **New category**, **Edit** (rename), and
+  **Delete folder**.
+- A **category, tag or envelope** — **Edit**, **Change currency**, **Move to
+  folder…**, **Archive**, **Merge into…** and **Delete**.
+
+An action you can't take right now is greyed out and says why — a folder that
+still holds items reads **Delete folder (not empty)**, and an item you don't
+own reads **(no access)**:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Items that are not in any folder collect under **No folder** at the end of
+their section.
+
+**Envelopes.** Choose **New envelope** in a section or folder menu. Pick a
+name, currency, icon, and the categories you want to include:
 
 <ScreenshotSet>
 
@@ -162,8 +246,8 @@ and available for that element are converted automatically.
 
 #### Tag and envelope breakdown
 
-Tags and envelopes aggregate several categories. Expand one with the chevron
-next to its name to see where the money actually went:
+Tags and envelopes aggregate several categories. Expand one by clicking its
+name to see where the money actually went:
 
 <ScreenshotSet>
 
@@ -172,7 +256,7 @@ next to its name to see where the money actually went:
 #### Spending details
 
 To see the transactions behind any number, click the amount in the **Spent**
-column:
+column (on a phone, open the row's sheet and press **Transactions**):
 
 <ScreenshotSet>
 
@@ -180,11 +264,11 @@ column:
 
 #### Reporting tags
 
-Below the folders — under the **Uncategorized** row — sits a separate
+Below the expenses — under the **Uncategorized** line — sits a separate
 **Reporting tags** block. It totals what you spent per
 [reporting tag](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
-in the month: people, pets, places. Expand the block with the chevron beside
-its title, and expand a single tag to see the categories behind its total.
+in the month: people, pets, places. Expand the block by clicking its title,
+and expand a single tag to see the categories behind its total.
 
 <ScreenshotSet>
 
@@ -199,18 +283,36 @@ is left to spend?".
 
 #### Multi-currency budgets
 
-If your accounts use several currencies, the budget header shows a per-currency
-switcher (in the screenshots: `$` and `€`), and elements in foreign currencies
-are converted to the budget's currency for folder totals. Select a currency in
-the switcher to see its spending progress for the month and the average
-exchange rate used for the period. See
-[Multi-Currency](/docs/user-guide/multi-currency/) for the full picture.
+Elements budgeted in a foreign currency are converted to the budget's currency
+for folder and budget totals. See
+[Multi-Currency](/docs/user-guide/multi-currency/#currency-in-your-budget) for
+the full picture.
+
+---
+### Comments
+
+Any budget cell — one item in one month — can carry a comment thread: a note
+like "trip to Lisbon" or "new TV" that explains a number. A small coloured
+triangle in the cell's corner marks the cells that have one; on desktop,
+hovering it previews the latest comments.
+
+Click the marker to open the thread, type in **Comment** (up to 500
+characters), and press **Post**. On a phone, the row's sheet shows the latest
+comment — tap **Comments (N)** to open the whole thread. In the
+[Plan view](/docs/user-guide/plan/) you can also open a selected cell's thread
+with **Shift+F2**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Everyone with access to the budget can read the comments and add their own —
+including people you shared it with as **View only**.
 
 ---
 ## Budgets list
 
-You can access your budgets list at **Settings → Budgets & Plans** or via
-**Configure → Open budget list**. Shared budgets show the avatars of everyone
+You can access your budgets list at **Settings → Budgets & Plans**. Shared budgets show the avatars of everyone
 who uses them, and the bookmark icon marks your default budget — the one that
 opens from **Budget & Plan** in the sidebar. Budgets you have archived collapse
 into an **Archived (N)** group at the bottom of the list:
@@ -285,8 +387,8 @@ Econumo supports the following access levels for budgets:
   rename the budget.
 
 As with accounts, this sends a **pending invite** rather than sharing the
-budget outright — your partner accepts or declines it from the
-**Sharing requests** panel described in
+budget outright — your partner accepts or declines it from their
+[Inbox](/docs/user-guide/inbox/), as described in
 [Shared Access](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request).
 Once accepted, your partner sees the budget in their own budget list, and you
 budget the same envelopes together — as John and Megan do with the "Family

@@ -58,7 +58,7 @@ in:
   currency is worth, entered as `1 USD = …`.
 
 Your custom currency then behaves like any other: you can open an account in
-it, budget in it, and it appears in the budget's per-currency switcher. In the
+it, and pick it for a budget or a single budget element. In the
 screenshots throughout this guide, John's "Airline Miles" account uses a custom
 **PTS** currency worth 10 to the dollar.
 

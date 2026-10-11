@@ -88,6 +88,11 @@ chip pre-filled to today for a due or overdue schedule — not the missed
 scheduled date — though you can still edit it; a schedule that isn't overdue
 keeps pre-filling its own scheduled date, as before.
 
+Payments that are due today or overdue also collect in your
+[Inbox](/docs/user-guide/inbox/), across all your accounts, under
+**Scheduled transactions**. Select one there to open the same **Transaction
+details** with **POST** and **Skip**, without going to the account first.
+
 ---
 
 ## Editing and deleting a schedule

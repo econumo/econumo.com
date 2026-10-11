@@ -116,6 +116,12 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Creating a recurring transaction](/docs/user-guide/recurring-transactions/#creating-a-recurring-transaction)
   - [Posting or skipping a payment](/docs/user-guide/recurring-transactions/#posting-or-skipping-a-payment)
   - [Editing and deleting a schedule](/docs/user-guide/recurring-transactions/#editing-and-deleting-a-schedule)
+- [Search](/docs/user-guide/search/)
+  - [Finding things](/docs/user-guide/search/#finding-things)
+  - [Acting on a result](/docs/user-guide/search/#acting-on-a-result)
+- [Inbox](/docs/user-guide/inbox/)
+  - [Scheduled transactions](/docs/user-guide/inbox/#scheduled-transactions)
+  - [Sharing invites](/docs/user-guide/inbox/#sharing-invites)
 - [Classifications](/docs/user-guide/classifications/)
   - [Create a category, tag, or payee](/docs/user-guide/classifications/#create-a-category-tag-or-payee)
   - [Budget tags and reporting tags](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
@@ -134,6 +140,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Opening the Plan view](/docs/user-guide/plan/#opening-the-plan-view)
   - [Reading the sheet](/docs/user-guide/plan/#reading-the-sheet)
   - [Planning a month](/docs/user-guide/plan/#planning-a-month)
+  - [Adding up a selection](/docs/user-guide/plan/#adding-up-a-selection)
   - [The Balance row](/docs/user-guide/plan/#the-balance-row)
   - [Keeping a long sheet readable](/docs/user-guide/plan/#keeping-a-long-sheet-readable)
 - [Shared access](/docs/user-guide/shared-access/)
@@ -154,6 +161,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Updating your user profile](/docs/user-guide/user-profile/#updating-your-user-profile)
   - [Sessions](/docs/user-guide/user-profile/#sessions)
   - [API tokens](/docs/user-guide/user-profile/#api-tokens)
+  - [Connected apps](/docs/user-guide/user-profile/#connected-apps)
 - [CSV Import & Export](/docs/user-guide/csv-import-export/)
 
 ---
@@ -193,7 +201,7 @@ alongside the password form.
 **Note**
 Signing in through a provider for the first time creates a new, passwordless
 account if your server allows registration. You can add a password afterwards
-from **Settings → Profile → Change password**, or link the provider to an
+from **Settings → Personal settings → Change password**, or link the provider to an
 account you already have from
 [Sign-in methods](/docs/user-guide/user-profile/#sign-in-methods).
 
@@ -202,7 +210,7 @@ Administrators can turn password sign-in off entirely with the
 `ECONUMO_PASSWORD_LOGIN` environment variable. On such an instance the sign-in
 and sign-up screens show only the provider buttons — no email/password
 fields, no **or continue with** divider, and no **Forgot password?** link —
-and **Settings → Profile → Security** no longer offers **Change password** or
+and **Settings → Personal settings → Security** no longer offers **Change password** or
 **Set a password**.
 
 ---
@@ -254,7 +262,10 @@ available in **Settings**.
 Your accounts, grouped into folders, fill the sidebar on desktop and tablet and
 the home screen on mobile; **Budget & Plan** above them opens your
 [budget](/docs/user-guide/budgets/) and its
-[Plan view](/docs/user-guide/plan/).
+[Plan view](/docs/user-guide/plan/). Next to the Econumo logo at the top sit
+two buttons: [Search](/docs/user-guide/search/) (also on **Ctrl+K** / **⌘K**)
+and the [Inbox](/docs/user-guide/inbox/), whose badge counts what is waiting on
+you.
 
 Everything that is not day-to-day spending lives in **Settings**, in three
 groups:
@@ -264,12 +275,14 @@ groups:
   [Recurring transactions](/docs/user-guide/recurring-transactions/).
 - **Classification** — [Categories, Tags, Payees](/docs/user-guide/classifications/)
   and [Currencies](/docs/user-guide/currencies/).
-- **Data** — [Import and Export CSV](/docs/user-guide/csv-import-export/).
+- **Data** — **Import & export**, for
+  [CSV import and export](/docs/user-guide/csv-import-export/).
 
 On desktop and tablet, open Settings from the bottom of the sidebar; on mobile,
-from the bottom of the home screen. Your name at the top of the screen opens
-your [profile](/docs/user-guide/user-profile/), and the **API** link at the
-very bottom opens the [API reference](/docs/api/) for your instance.
+from the bottom of the home screen. The card with your name at the top opens
+your [Personal settings](/docs/user-guide/user-profile/), **Log out** sits
+right under it, and the **API** link at the very bottom opens the
+[API reference](/docs/api/) for your instance.
 
 <ScreenshotSet>
 
@@ -387,7 +400,7 @@ Econumo offers three levels of shared access:
 Granting access doesn't add the account to your partner's account list right
 away: Econumo sends them a **pending invite** instead of sharing it outright.
 They accept it — choosing which folder to file the account under — or decline
-it, from the **Sharing requests** panel described in
+it, from their [Inbox](/docs/user-guide/inbox/) — see
 [Shared Access](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request).
 Until they respond, the Access control dialog shows **invitation pending**
 next to their name. Once accepted, the shared account shows the avatars of
@@ -405,7 +418,8 @@ This section provides an overview of Transactions in Econumo.
 
 Transactions form the core of Econumo, as all budgeting is based on the
 transactions you enter. Open any account to see its transaction list, search
-it, and add new records.
+it, and add new records. To find a transaction across all your accounts at
+once, use [Search](/docs/user-guide/search/) (**Ctrl+K** / **⌘K**).
 
 <ScreenshotSet>
 
@@ -683,6 +697,11 @@ chip pre-filled to today for a due or overdue schedule — not the missed
 scheduled date — though you can still edit it; a schedule that isn't overdue
 keeps pre-filling its own scheduled date, as before.
 
+Payments that are due today or overdue also collect in your
+[Inbox](/docs/user-guide/inbox/), across all your accounts, under
+**Scheduled transactions**. Select one there to open the same **Transaction
+details** with **POST** and **Skip**, without going to the account first.
+
 ---
 
 ## Editing and deleting a schedule
@@ -694,6 +713,118 @@ schedule altogether.
 Editing a schedule changes future payments only; transactions you have already
 posted stay exactly as they were. Deleting a schedule likewise leaves posted
 transactions untouched — it only stops future ones from being suggested.
+
+---
+
+# Search
+
+URL: https://econumo.com/docs/user-guide/search/
+
+# Search
+
+One search box finds anything in Econumo: accounts, categories, payees, tags,
+reporting tags and transactions. Open it from anywhere with **Ctrl+K**
+(**⌘K** on a Mac), or with the magnifying-glass button at the top of the
+sidebar (on mobile, at the top of the home screen).
+
+Before you type, the search lists your most recent transactions, newest first:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+## In this section
+
+- [Finding things](/docs/user-guide/search/#finding-things)
+- [Acting on a result](/docs/user-guide/search/#acting-on-a-result)
+
+---
+
+## Finding things
+
+Start typing and the results group by kind — **Accounts**, **Categories**,
+**Payees**, **Tags**, **Labels** (reporting tags) and **Transactions** — with
+the best matches first.
+
+You don't have to spell things exactly: missing letters are forgiven, so
+*grcries* still finds **Groceries**, along with the transactions filed under
+it. Amounts work too — type a figure the way it is stored or the way it is
+displayed.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The recent list leaves out transactions dated in the future, but a search
+still finds them.
+
+**Note**
+The same matcher drives every picker you can type into — the category, payee,
+account and currency pickers in the transaction dialog and elsewhere — so a
+typo there finds the right item too.
+
+---
+
+## Acting on a result
+
+Pick a category, payee or tag to list its transactions right inside the
+search window. Results also carry a three-dots menu with the actions that fit
+them — for a category, **Edit**, **Archive**, **Merge into…** and **Delete**,
+the same as in [Settings → Categories](/docs/user-guide/classifications/) — so
+you can tidy up a duplicate the moment you spot it.
+
+---
+
+# Inbox
+
+URL: https://econumo.com/docs/user-guide/inbox/
+
+# Inbox
+
+The Inbox collects everything that is waiting on you in one place. Open it with
+the tray icon at the top of the sidebar (on mobile, at the top of the home
+screen); its badge shows how many things are waiting.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+## In this section
+
+- [Scheduled transactions](/docs/user-guide/inbox/#scheduled-transactions)
+- [Sharing invites](/docs/user-guide/inbox/#sharing-invites)
+
+With nothing pending, the page simply reads *"All caught up"*.
+
+---
+
+## Scheduled transactions
+
+[Recurring transactions](/docs/user-guide/recurring-transactions/) that are
+due today or overdue come first, across all your accounts. Each row shows the
+schedule's category, interval, note, payee, amount and account, and when it
+was due — *"Overdue · Aug 28"*.
+
+Select a row to open its **Transaction details**, then:
+
+- **POST** — records the payment as a real transaction, and the schedule
+  moves on to its next date.
+- **Skip** — the step-over icon beside it — passes on this occurrence without
+  recording anything.
+
+Either way the schedule moves on to its next date.
+
+---
+
+## Sharing invites
+
+When someone shares an [account](/docs/user-guide/accounts/#shared-access) or
+a [budget](/docs/user-guide/budgets/#shared-access) with you, the invite waits
+in the **Sharing** group at the bottom of the Inbox, saying who invited you
+and to what. **Accept** it — for an account, you first choose the folder to
+file it under — or **Decline** it. See
+[Shared Access](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request)
+for the details.
 
 ---
 
@@ -899,16 +1030,18 @@ category:
 - [Update budget details](/docs/user-guide/budgets/#update-budget-details)
 - [Manage your budget](/docs/user-guide/budgets/#manage-your-budget)
   - [Budgeting](/docs/user-guide/budgets/#budgeting)
+  - [Savings accounts](/docs/user-guide/budgets/#savings-accounts)
   - [Organizing your budget](/docs/user-guide/budgets/#organizing-your-budget)
   - [Work with the budget](/docs/user-guide/budgets/#work-with-the-budget)
+  - [Comments](/docs/user-guide/budgets/#comments)
 - [Budgets list](/docs/user-guide/budgets/#budgets-list)
 - [Completing, duplicating and archiving a budget](/docs/user-guide/budgets/#completing-duplicating-and-archiving-a-budget)
 - [Shared access](/docs/user-guide/budgets/#shared-access)
 
 **Note**
 To plan several months at once instead of one at a time, switch the budget to
-its [Plan view](/docs/user-guide/plan/) — the same budget laid out as a
-month-by-month sheet.
+its [Plan view](/docs/user-guide/plan/) with the **Budget** / **Plan** tabs
+beside the months bar — the same budget laid out as a month-by-month sheet.
 
 ---
 
@@ -917,7 +1050,9 @@ month-by-month sheet.
 Open **Settings → Budgets & Plans** and press **Create budget** (on mobile, the
 **+** button in the header). Give the budget a name, pick its base currency,
 and switch on the accounts that take part in it — the counter above the list
-keeps track (*"3 of 5 included"*).
+keeps track (*"3 of 5 included"*). Once accounts are in, **Savings accounts**
+lets you mark some of them as
+[savings](/docs/user-guide/budgets/#savings-accounts).
 
 <ScreenshotSet>
 
@@ -925,16 +1060,17 @@ keeps track (*"3 of 5 included"*).
 
 **Note**
 Account membership is an explicit list, and a new budget starts with every
-switch off — turn on the accounts you actually budget from, and leave out the
-ones you don't, such as a long-term savings account. Budgets start from the
-current month.
+switch off — turn on the accounts you actually budget from. Budgets start from
+the current month.
 
 ---
 ## Update budget details
 
-Open your budget, press **Configure**, and choose **Budget details**. In the
-dialog you can rename the budget, change its currency, and add or remove
-accounts:
+Open your budget and press **Configure** in the top-right corner. On desktop it
+opens **Budget settings** straight away; on a tablet or a phone it opens a
+short menu — choose **Budget settings** there. In the dialog you can rename
+the budget, change its currency, add or remove accounts, and choose which of
+them are savings accounts:
 
 <ScreenshotSet>
 
@@ -944,16 +1080,26 @@ An account that already carries transactions in past months of this budget
 cannot be removed from it — taking it out would rewrite months you have
 already closed. The dialog says so under the list.
 
-**Note**
-On desktop and tablet, **Configure** sits in the top-right corner of the budget
-page; on a phone it is the icon in the same corner. Besides **Budget details**
-it holds **Edit structure**, **Open budget list**, and — on a phone and a
-tablet — the **Budget** / **Plan** switch.
+The other entry in the tablet and phone **Configure** menu, **Edit
+structure**, is described in
+[Organizing your budget](/docs/user-guide/budgets/#organizing-your-budget).
 
 ---
 ## Manage your budget
 
-In your budget, you will work with the following entities:
+The budget page has three sections, in the same order on every screen size:
+
+- **Income** — what you expect to earn: **Planned**, **Received** and what
+  is still **To receive**.
+- **Savings** — your [savings accounts](/docs/user-guide/budgets/#savings-accounts):
+  **Planned**, **Saved** and the **Balance** at month end.
+- **Expenses** — what you plan to spend: **Budget**, **Spent** and
+  **Available**.
+
+Underneath sit the totals for the month, ending with your **Balance at month
+end**.
+
+Inside the sections you work with these entities:
 
 - **Budget Folders** — to organize your spending conveniently (in the
   screenshots: _Essentials_, _Lifestyle_, _Vacations_).
@@ -965,6 +1111,7 @@ In your budget, you will work with the following entities:
   the page.
 - **Envelopes** — these group several categories into one limit (e.g. an
   envelope for _Food_ could contain _Groceries_, _Drinks_, and _Restaurants_).
+  Both Income and Expenses can hold envelopes.
 
 ---
 ### Budgeting
@@ -972,49 +1119,117 @@ In your budget, you will work with the following entities:
 The goal of budgeting is to maintain your monthly budget. Ideally, you should
 prepare your budget before the month starts and make minor adjustments during
 the month as needed. The months bar at the top switches between periods — on
-desktop the **‹** and **›** arrows beside it step one month at a time — and the
-budget shows how much money remains in your virtual envelopes. The bar is
-clamped to the budget's own lifetime: an open budget runs well into the future,
-while a
+desktop and tablet the **‹** and **›** arrows beside it step through the
+months — and the budget shows how much money remains in your virtual
+envelopes. The bar is clamped to the budget's own lifetime: an open budget runs
+well into the future, while a
 [completed one](/docs/user-guide/budgets/#completing-duplicating-and-archiving-a-budget)
 stops just past its final month.
 
-Each row has three columns:
+Each expense row has three columns:
 
-1. **Budget** — the amount you plan to spend or save.
+1. **Budget** — the amount you plan to spend this month. A small figure in
+   front of it, such as `-1,923.02 +`, is what is left from earlier months.
 2. **Spent** — the amount you have actually spent.
 3. **Available** — what is left: the budgeted amount plus anything carried
-   over from previous months.
+   over. It shows as a green pill, or a red one when the row is overspent.
 
-Click a number in the **Budget** column to adjust it — changes apply
-instantly. Overspent elements are highlighted in red (like _Groceries_ in the
-screenshots above).
-
-If a [transaction has no category](/docs/user-guide/transactions/#adding-expenses),
-its amount still counts: it appears at the bottom of the budget as a read-only
-**Uncategorized** element — no **Budget** or **Available** figure, just the
-**Spent** total — instead of being silently left out.
-
----
-### Organizing your budget
-
-The default structure of your budget may not be optimal. To change it, press
-**Configure** and select **Edit structure**. In this mode you can create
-folders and envelopes, drag elements between folders, and change element
-currencies. Once you are finished, press **Done editing**.
+On desktop, click a number in the **Budget** column to change it. The amount
+field takes the same calculator keypad (`+`, `−`, `×`, `÷`, `=`) as the
+[transaction dialog](/docs/user-guide/transactions/#adding-expenses); press
+**Save**. On a tablet or a phone, tap the row's figures to open its sheet and
+press **Set budget**:
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
-**Folders.** Press **Create folder** to add one. The three-dots menu on a
-folder lets you rename it (an empty folder can also be deleted there). Drag
-folders and elements around using the dots handle. The built-in **Default
-folder** is always last: it cannot be renamed or removed, and when it is empty
-it just shows a hint inviting you to move elements into it.
+On a phone the budget is a single-month view. Each row shows **Budget** and
+**Spent**, with a thin progress bar under it that turns red once spending runs
+past the budget. Tap a row's figures to open its sheet: the month's figures,
+the latest comment, **Transactions** to list what was spent, and **Set
+budget** (**Set plan** on a savings row). The pencil icon in the sheet's
+header edits the item itself. On a tablet, the desktop-style rows open the
+same sheet when you tap their figures:
 
-**Envelopes.** To create an envelope, press the **+** button on the folder
-header. Choose a name, currency, icon, and the categories you want to include:
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+If a [transaction has no category](/docs/user-guide/transactions/#adding-expenses),
+its amount still counts: it appears as a read-only **Uncategorized** line at
+the end of the Income or Expenses section — no **Budget** or **Available**
+figure, just the amount — instead of being silently left out. Assign a
+category to those transactions and they move into the rows above.
+
+---
+### Savings accounts
+
+Money you move into a savings account isn't spent — it's saved. Mark any of
+the budget's accounts as savings in **Budget settings → Savings accounts**
+(the **Savings** section's three-dots menu has a shortcut to the same list):
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Each savings account gets its own row in the **Savings** section:
+
+- **Planned** — how much you mean to put away this month.
+- **Saved** — the account's whole net change for the month: transfers in and
+  out, interest and fees.
+- **Balance** — the account's balance at the end of the month. For future
+  months it is projected from your plans.
+
+The totals under the budget add a **Savings** line for the month and a **Total
+savings** line for the combined balance.
+
+The savings flag belongs to the budget, not to the account, so the same
+account can be savings in one budget and everyday money in another. Turning an
+account's savings flag off deletes the planned amounts and comments of its
+savings row in this budget; the saved amounts and the transactions themselves
+are not touched.
+
+---
+### Organizing your budget
+
+You change the structure right on the budget page.
+
+**On desktop**, hover a row: a drag handle appears on its left and a
+three-dots menu beside its name. Drag rows and folders by the handle to
+reorder them or move them between folders, and use the menus for everything
+else.
+
+**On a tablet or a phone**, press **Configure** and choose **Edit structure**.
+Every row then shows its handle and three-dots menu; press **Done editing**
+when you are finished.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The menus offer:
+
+- **Income** and **Expenses** section headers — **Create folder**, **New
+  envelope**, **New category**.
+- A **folder** — **New envelope**, **New category**, **Edit** (rename), and
+  **Delete folder**.
+- A **category, tag or envelope** — **Edit**, **Change currency**, **Move to
+  folder…**, **Archive**, **Merge into…** and **Delete**.
+
+An action you can't take right now is greyed out and says why — a folder that
+still holds items reads **Delete folder (not empty)**, and an item you don't
+own reads **(no access)**:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Items that are not in any folder collect under **No folder** at the end of
+their section.
+
+**Envelopes.** Choose **New envelope** in a section or folder menu. Pick a
+name, currency, icon, and the categories you want to include:
 
 <ScreenshotSet>
 
@@ -1035,8 +1250,8 @@ and available for that element are converted automatically.
 
 #### Tag and envelope breakdown
 
-Tags and envelopes aggregate several categories. Expand one with the chevron
-next to its name to see where the money actually went:
+Tags and envelopes aggregate several categories. Expand one by clicking its
+name to see where the money actually went:
 
 <ScreenshotSet>
 
@@ -1045,7 +1260,7 @@ next to its name to see where the money actually went:
 #### Spending details
 
 To see the transactions behind any number, click the amount in the **Spent**
-column:
+column (on a phone, open the row's sheet and press **Transactions**):
 
 <ScreenshotSet>
 
@@ -1053,11 +1268,11 @@ column:
 
 #### Reporting tags
 
-Below the folders — under the **Uncategorized** row — sits a separate
+Below the expenses — under the **Uncategorized** line — sits a separate
 **Reporting tags** block. It totals what you spent per
 [reporting tag](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
-in the month: people, pets, places. Expand the block with the chevron beside
-its title, and expand a single tag to see the categories behind its total.
+in the month: people, pets, places. Expand the block by clicking its title,
+and expand a single tag to see the categories behind its total.
 
 <ScreenshotSet>
 
@@ -1072,18 +1287,36 @@ is left to spend?".
 
 #### Multi-currency budgets
 
-If your accounts use several currencies, the budget header shows a per-currency
-switcher (in the screenshots: `$` and `€`), and elements in foreign currencies
-are converted to the budget's currency for folder totals. Select a currency in
-the switcher to see its spending progress for the month and the average
-exchange rate used for the period. See
-[Multi-Currency](/docs/user-guide/multi-currency/) for the full picture.
+Elements budgeted in a foreign currency are converted to the budget's currency
+for folder and budget totals. See
+[Multi-Currency](/docs/user-guide/multi-currency/#currency-in-your-budget) for
+the full picture.
+
+---
+### Comments
+
+Any budget cell — one item in one month — can carry a comment thread: a note
+like "trip to Lisbon" or "new TV" that explains a number. A small coloured
+triangle in the cell's corner marks the cells that have one; on desktop,
+hovering it previews the latest comments.
+
+Click the marker to open the thread, type in **Comment** (up to 500
+characters), and press **Post**. On a phone, the row's sheet shows the latest
+comment — tap **Comments (N)** to open the whole thread. In the
+[Plan view](/docs/user-guide/plan/) you can also open a selected cell's thread
+with **Shift+F2**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Everyone with access to the budget can read the comments and add their own —
+including people you shared it with as **View only**.
 
 ---
 ## Budgets list
 
-You can access your budgets list at **Settings → Budgets & Plans** or via
-**Configure → Open budget list**. Shared budgets show the avatars of everyone
+You can access your budgets list at **Settings → Budgets & Plans**. Shared budgets show the avatars of everyone
 who uses them, and the bookmark icon marks your default budget — the one that
 opens from **Budget & Plan** in the sidebar. Budgets you have archived collapse
 into an **Archived (N)** group at the bottom of the list:
@@ -1158,8 +1391,8 @@ Econumo supports the following access levels for budgets:
   rename the budget.
 
 As with accounts, this sends a **pending invite** rather than sharing the
-budget outright — your partner accepts or declines it from the
-**Sharing requests** panel described in
+budget outright — your partner accepts or declines it from their
+[Inbox](/docs/user-guide/inbox/), as described in
 [Shared Access](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request).
 Once accepted, your partner sees the budget in their own budget list, and you
 budget the same envelopes together — as John and Megan do with the "Family
@@ -1175,9 +1408,10 @@ URL: https://econumo.com/docs/user-guide/plan/
 
 The [budget](/docs/user-guide/budgets/) shows one month at a time: what you
 planned, what you spent, what is left. The **Plan** view shows the same budget
-as a spreadsheet across several months — every envelope, category and tag is a
-row, every month is a column — so you can put next spring's holiday or an
-annual insurance premium into the plan long before the money moves.
+as a spreadsheet across several months — one row per envelope, category, tag
+or savings account, one column per month — so you can put next spring's
+holiday or an annual insurance premium into the plan long before the money
+moves.
 
 Both views belong to the same budget. Switching between them changes nothing
 about your data; it only changes how much of the budget you are looking at.
@@ -1192,6 +1426,7 @@ about your data; it only changes how much of the budget you are looking at.
 - [Reading the sheet](/docs/user-guide/plan/#reading-the-sheet)
 - [Planning a month](/docs/user-guide/plan/#planning-a-month)
 - [Copying an amount forward](/docs/user-guide/plan/#copying-an-amount-forward)
+- [Adding up a selection](/docs/user-guide/plan/#adding-up-a-selection)
 - [The Balance row](/docs/user-guide/plan/#the-balance-row)
 - [Keeping a long sheet readable](/docs/user-guide/plan/#keeping-a-long-sheet-readable)
 
@@ -1199,46 +1434,54 @@ about your data; it only changes how much of the budget you are looking at.
 
 ## Opening the Plan view
 
-Open your budget from **Budget & Plan** in the sidebar (on mobile, from the
-home screen), then switch the **BUDGET** / **PLAN** toggle next to the budget
-name to **PLAN**.
+Open your budget from **Budget & Plan** in the sidebar, then switch the
+**Budget** / **Plan** tabs beside the months bar to **Plan**. The Plan view
+works on desktop and on a tablet.
 
-On a phone and a tablet there is no toggle in the header: open the
-**Configure** menu in the top-right corner and pick **Plan** at the top of it —
-the view you are on is ticked.
+On a phone there is no grid: the budget stays a single-month view, and you
+plan a month from each row's sheet — tap the row's figures and press **Set
+budget** (**Set plan** on a savings row). See
+[Budgeting](/docs/user-guide/budgets/#budgeting).
 
 ---
 
 ## Reading the sheet
 
-Rows are the elements of your budget, in the structure you gave it: categories,
-tags and envelopes grouped into folders, exactly as in the budget view. Income
-categories sit in their own **INCOME** section above the **EXPENSES** section.
+Rows are the elements of your budget, in the structure you gave it, under the
+same **Income**, **Savings** and **Expenses** sections as the budget view.
 
-Each cell holds two numbers: the amount actually spent or earned on top, in
-small grey type, and the amount you planned below it. An actual figure that
-overshoots the plan is shown in red. A dash means nothing is planned for that
-month yet.
+Each cell shows the amount actually spent or earned on the left, in small grey
+type, next to the amount you planned. An actual figure that overshoots the
+plan is shown in red. A blank cell means nothing is planned for that month and
+nothing happened. On a savings row, the small figure is the account's balance
+at the end of that month.
 
-The arrows above the sheet — **Earlier months** and **Later months** — move the
-visible window backwards and forwards in time.
+Click an actual figure to list that month's transactions behind it.
+
+The **‹** and **›** arrows above the sheet move the visible window to earlier
+and later months.
 
 ---
 
 ## Planning a month
 
-1. Click (or tap) the cell where the row and the month meet.
-2. A small **Budget** field opens with the same calculator keypad
-   (`+`, `−`, `×`, `÷`, `=`) as the
-   [transaction dialog](/docs/user-guide/transactions/#adding-expenses).
-3. Type the amount and press **SAVE**.
+The sheet works like a spreadsheet:
+
+1. Click a cell to select it, or move to it with the arrow keys.
+2. Type the amount, or press **F2** to edit the amount already there.
+3. Press **Enter** to save, or **Escape** to leave the cell as it was.
+
+**Delete** clears a cell's plan, and you can paste an amount copied from
+elsewhere.
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
 Income rows are planned exactly the same way — a planned salary is what makes
-the projection at the foot of the sheet worth reading.
+the projection at the foot of the sheet worth reading. A selected cell with a
+[comment](/docs/user-guide/budgets/#comments) opens its thread with
+**Shift+F2**.
 
 ---
 
@@ -1251,12 +1494,22 @@ amount across the months it covers.
 
 ---
 
+## Adding up a selection
+
+On desktop you can select several cells at once — drag across them,
+**Shift**+click the far corner of a range, or **Ctrl**+click (**⌘**+click on a
+Mac) to add single cells. A small label under the selection adds them up: how
+many cells, their **Plan** total and their **Actual** total.
+
+---
+
 ## The Balance row
 
-The **Balance** row is pinned to the bottom of the sheet, under per-month
-**Income**, **Expenses** and **Transfers** totals. It rolls your money forward
-month by month, starting from your real account balances, so each column shows
-what you would be left with by the end of that month if the plan holds.
+The foot of the sheet sums each month: **Income**, **Expenses**, **Savings**
+and **Total savings**, with the **Balance** row pinned underneath. Balance
+rolls your money forward month by month, starting from your real account
+balances, so each column shows what you would be left with by the end of that
+month if the plan holds.
 
 That is what makes planning ahead useful: put a two-week trip into next July and
 you can see immediately what it does to the months after it.
@@ -1265,18 +1518,15 @@ you can see immediately what it does to the months after it.
 
 ## Keeping a long sheet readable
 
-A budget with a few dozen elements makes for a tall sheet, and most rows are
-empty in most months. Two things help:
+A budget with a few dozen elements makes for a tall sheet. A few things help:
 
-- **Configure → Hide empty rows** drops every row that has neither a planned
-  nor an actual amount anywhere in the visible window.
-- The **INCOME** and **EXPENSES** headers, and each folder header, collapse
-  with the chevron beside them.
-
-**Note**
-On a phone the sheet narrows to a single month column; step through months with
-the same **Earlier months** / **Later months** arrows. The **Balance** row stays
-pinned at the bottom of the screen.
+- The **Income**, **Savings** and **Expenses** headers, and each folder
+  header, collapse with the chevron beside them. The Plan view remembers its
+  own folding, separately from the budget view.
+- The **Σ** button on a section or folder header shows that group's sums on
+  its header row.
+- Drag the right edge of the name column to make it wider or narrower;
+  double-click the edge to reset it.
 
 ---
 
@@ -1336,16 +1586,18 @@ list, and you can start sharing
 
 Sharing an account or budget with someone doesn't hand it over immediately —
 Econumo sends a **pending invite** that the other person has to accept or
-decline first. Whenever you have invites waiting, a counter badge appears on
-a **Sharing requests** button in the top navigation; open it to see who
-invited you and to what.
+decline first. Invites land in your [Inbox](/docs/user-guide/inbox/) — the
+tray icon at the top of the sidebar (on mobile, at the top of the home
+screen), whose badge counts everything waiting on you. Sharing invites sit in
+the **Sharing** group at the bottom of the Inbox, each one saying who invited
+you and whether it is an **Account** or a **Budget**.
 
 For each request:
 
 - **Accept** — for an account, you first choose which folder to file it
   under (or leave it in **General**, which is created automatically if it
   doesn't exist yet); a budget is added straight to your budgets list.
-- **Decline** — the invite is dismissed.
+- **Decline** — Econumo asks you to confirm, then the invite is dismissed.
 
 While a request is still pending, the person who sent it sees
 **invitation pending** next to your name in the Access control dialog.
@@ -1478,22 +1730,19 @@ cash account.
 
 ## Currency in your budget
 
-A budget is kept in a single base currency, but individual elements
-(categories, tags, envelopes) can be budgeted in their own currency. Open an
-element's menu in **Edit structure** mode and choose **Change currency**:
+A budget is kept in a single base currency — the code above the first column
+of the budget, `USD` in the screenshots — but individual elements (categories,
+tags, envelopes) can be budgeted in their own currency. Open the element's
+three-dots menu and choose **Change currency**. On desktop the menu appears
+when you hover the row; on a tablet or a phone, turn on **Configure → Edit
+structure** first.
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
 Spending in a foreign currency is converted to the budget's currency for folder
-and budget totals. When your accounts span several currencies, the budget header
-shows a per-currency switcher (the `$` / `€` toggle); select a currency to see
-its spending progress and the average exchange rate used for the period:
-
-<ScreenshotSet>
-
-</ScreenshotSet>
+and budget totals.
 
 **Note**
 Conversions use the exchange rates loaded into your Econumo instance. If rates
@@ -1564,7 +1813,7 @@ in:
   currency is worth, entered as `1 USD = …`.
 
 Your custom currency then behaves like any other: you can open an account in
-it, budget in it, and it appears in the budget's per-currency switcher. In the
+it, and pick it for a budget or a single budget element. In the
 screenshots throughout this guide, John's "Airline Miles" account uses a custom
 **PTS** currency worth 10 to the dollar.
 
@@ -1604,14 +1853,17 @@ This section provides an overview of user profiles in Econumo.
 - [Sign-in methods](/docs/user-guide/user-profile/#sign-in-methods)
 - [Sessions](/docs/user-guide/user-profile/#sessions)
 - [API tokens](/docs/user-guide/user-profile/#api-tokens)
+- [Connected apps](/docs/user-guide/user-profile/#connected-apps)
 - [Privacy](/docs/user-guide/user-profile/#privacy)
 
 ---
 ## Accessing your user profile
 
-Click on your avatar in the left sidebar (or open **Settings** and tap your
-name there). The profile screen shows your personal details, preferences, and
-security settings, and is also where you **log out**:
+Open **Settings** and select the card with your name at the top of it — it is
+labelled **Personal settings**, and so is the page it opens. The page shows
+your personal details, preferences, security and privacy settings. To sign
+out, press **Log out**: it sits under that card on the Settings page and at the
+top of Personal settings.
 
 <ScreenshotSet>
 
@@ -1749,11 +2001,43 @@ A personal access token grants full access to your account over the API — trea
 it like a password. Create a separate token per integration so you can revoke
 one without breaking the others.
 
-The same tokens also authenticate Econumo's built-in MCP server, so an
-MCP-compatible AI assistant (Claude Code, Claude Desktop, Cursor) can list
-your accounts and log transactions on your behalf — see the
-[v1.2.0 release notes](/releases/v1.2.0/#talk-to-your-finances-from-an-ai-assistant)
-for the client setup steps.
+The same tokens also authenticate Econumo's built-in MCP server. Claude and
+Codex no longer need one — they sign in through the browser, see
+[Connected apps](/docs/user-guide/user-profile/#connected-apps) — but a token
+still works for any MCP client that can't.
+
+---
+## Connected apps
+
+Econumo has a built-in MCP server, so an AI assistant such as Claude or Codex
+can check your balances and budgets or log transactions for you, straight from
+a chat. Connecting one takes only your Econumo address — there is no token to
+create or paste.
+
+Open **Security → Connected apps**. The page shows the address to use — for
+Econumo, `https://app.econumo.com/mcp` — with a **Copy** button beside it:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+1. In Claude (on the web, desktop or mobile), Claude Code or Codex, add a
+   custom connector — an MCP server — with that address.
+2. The app opens Econumo in your browser. Sign in if you are asked to.
+3. Econumo asks you to **Allow** the app access to your account. An app you
+   allow can read and change all of your Econumo data.
+
+Every app you have allowed is listed on the same page, with when it was
+connected and when it was last used. **Revoke** signs an app out right away.
+
+**Note**
+On a self-hosted server, connecting by address needs `ECONUMO_URL` set to the
+server's public **https** address, with no path. Without it, Connected apps
+reads *"Connecting AI apps isn't available on this server"* and the MCP server
+accepts [API tokens](/docs/user-guide/user-profile/#api-tokens) only. Claude
+on the web, desktop and mobile connects from Anthropic's servers, so for those
+the server must be reachable from the internet; Claude Code and Codex only need
+to reach it from your computer.
 
 ---
 ## Privacy
@@ -1798,7 +2082,7 @@ or for backup purposes.
 
 To export your transactions:
 
-1. Navigate to **Settings**.
+1. Navigate to **Settings → Import & export**.
 2. Click on **Export CSV**.
 3. Select the account(s) you want to export transactions from.
 4. Click **Export** to download the CSV file.
@@ -1825,7 +2109,7 @@ columns, "Inflow" and "Outflow," instead of "Amount".
 
 To import transactions from a CSV file:
 
-1. Navigate to **Settings**.
+1. Navigate to **Settings → Import & export**.
 2. Click on **Import CSV**.
 3. Choose the CSV file you want to import (up to 10 MB).
 4. Map the CSV columns to the corresponding fields in Econumo — the required
@@ -4247,7 +4531,7 @@ You have the following choices regarding your information:
 
 - **Access and Correction:** You may request access to the personal information we hold about you and correct any inaccuracies.
 - **Opt-Out:** You may opt out of receiving promotional emails from us by following the unsubscribe link or contacting us directly.
-- **Product Analytics:** You can turn product analytics off at any time from within the App, under **Settings → Profile**, in the "Privacy" section. See Section 5 for details.
+- **Product Analytics:** You can turn product analytics off at any time from within the App, under **Settings → Personal settings**, in the "Privacy" section. See Section 5 for details.
 - **Cookie Preferences:** You can modify your browser settings to manage cookie preferences.
 
 ## 5. Product Analytics
@@ -4260,7 +4544,7 @@ The App sends us usage analytics so we can see which features are used and where
 
 **Linking to your account.** The identifier is pseudonymous, not anonymous: it lets us see that events belong to the same account without telling us whose account it is. On Econumo we can match it back to your account when there is a reason to, such as investigating a support request. On Econumo Self-Hosted the identifier is derived inside your own environment, so we have no way to match it to you.
 
-**Turning it off.** Open **Settings → Profile** in the App and use the "Privacy" section. It takes effect immediately and applies to that account only; other accounts you have access to keep their own setting. You can turn it back on the same way. This is how you object to this processing, which we carry out on the basis of our legitimate interest in improving Econumo.
+**Turning it off.** Open **Settings → Personal settings** in the App and use the "Privacy" section. It takes effect immediately and applies to that account only; other accounts you have access to keep their own setting. You can turn it back on the same way. This is how you object to this processing, which we carry out on the basis of our legitimate interest in improving Econumo.
 
 **Storage and sharing.** We run the analytics collector ourselves, on our own infrastructure. No third-party analytics service is involved, and the data is never sold, shared with advertisers, or passed to anyone else. Events are kept for up to 3 years and then deleted.
 

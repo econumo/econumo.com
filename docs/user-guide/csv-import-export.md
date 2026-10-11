@@ -17,7 +17,7 @@ or for backup purposes.
 
 To export your transactions:
 
-1. Navigate to **Settings**.
+1. Navigate to **Settings → Import & export**.
 2. Click on **Export CSV**.
 3. Select the account(s) you want to export transactions from.
 4. Click **Export** to download the CSV file.
@@ -44,7 +44,7 @@ columns, "Inflow" and "Outflow," instead of "Amount".
 
 To import transactions from a CSV file:
 
-1. Navigate to **Settings**.
+1. Navigate to **Settings → Import & export**.
 2. Click on **Import CSV**.
 3. Choose the CSV file you want to import (up to 10 MB).
 4. Map the CSV columns to the corresponding fields in Econumo — the required

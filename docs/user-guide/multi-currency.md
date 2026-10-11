@@ -64,22 +64,19 @@ cash account.
 
 ## Currency in your budget
 
-A budget is kept in a single base currency, but individual elements
-(categories, tags, envelopes) can be budgeted in their own currency. Open an
-element's menu in **Edit structure** mode and choose **Change currency**:
+A budget is kept in a single base currency — the code above the first column
+of the budget, `USD` in the screenshots — but individual elements (categories,
+tags, envelopes) can be budgeted in their own currency. Open the element's
+three-dots menu and choose **Change currency**. On desktop the menu appears
+when you hover the row; on a tablet or a phone, turn on **Configure → Edit
+structure** first.
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
 Spending in a foreign currency is converted to the budget's currency for folder
-and budget totals. When your accounts span several currencies, the budget header
-shows a per-currency switcher (the `$` / `€` toggle); select a currency to see
-its spending progress and the average exchange rate used for the period:
-
-<ScreenshotSet>
-
-</ScreenshotSet>
+and budget totals.
 
 **Note**
 Conversions use the exchange rates loaded into your Econumo instance. If rates

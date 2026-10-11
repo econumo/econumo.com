@@ -30,6 +30,12 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Creating a recurring transaction](/docs/user-guide/recurring-transactions/#creating-a-recurring-transaction)
   - [Posting or skipping a payment](/docs/user-guide/recurring-transactions/#posting-or-skipping-a-payment)
   - [Editing and deleting a schedule](/docs/user-guide/recurring-transactions/#editing-and-deleting-a-schedule)
+- [Search](/docs/user-guide/search/)
+  - [Finding things](/docs/user-guide/search/#finding-things)
+  - [Acting on a result](/docs/user-guide/search/#acting-on-a-result)
+- [Inbox](/docs/user-guide/inbox/)
+  - [Scheduled transactions](/docs/user-guide/inbox/#scheduled-transactions)
+  - [Sharing invites](/docs/user-guide/inbox/#sharing-invites)
 - [Classifications](/docs/user-guide/classifications/)
   - [Create a category, tag, or payee](/docs/user-guide/classifications/#create-a-category-tag-or-payee)
   - [Budget tags and reporting tags](/docs/user-guide/classifications/#budget-tags-and-reporting-tags)
@@ -48,6 +54,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Opening the Plan view](/docs/user-guide/plan/#opening-the-plan-view)
   - [Reading the sheet](/docs/user-guide/plan/#reading-the-sheet)
   - [Planning a month](/docs/user-guide/plan/#planning-a-month)
+  - [Adding up a selection](/docs/user-guide/plan/#adding-up-a-selection)
   - [The Balance row](/docs/user-guide/plan/#the-balance-row)
   - [Keeping a long sheet readable](/docs/user-guide/plan/#keeping-a-long-sheet-readable)
 - [Shared access](/docs/user-guide/shared-access/)
@@ -68,6 +75,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Updating your user profile](/docs/user-guide/user-profile/#updating-your-user-profile)
   - [Sessions](/docs/user-guide/user-profile/#sessions)
   - [API tokens](/docs/user-guide/user-profile/#api-tokens)
+  - [Connected apps](/docs/user-guide/user-profile/#connected-apps)
 - [CSV Import & Export](/docs/user-guide/csv-import-export/)
 
 ---
@@ -107,7 +115,7 @@ alongside the password form.
 **Note**
 Signing in through a provider for the first time creates a new, passwordless
 account if your server allows registration. You can add a password afterwards
-from **Settings → Profile → Change password**, or link the provider to an
+from **Settings → Personal settings → Change password**, or link the provider to an
 account you already have from
 [Sign-in methods](/docs/user-guide/user-profile/#sign-in-methods).
 
@@ -116,7 +124,7 @@ Administrators can turn password sign-in off entirely with the
 `ECONUMO_PASSWORD_LOGIN` environment variable. On such an instance the sign-in
 and sign-up screens show only the provider buttons — no email/password
 fields, no **or continue with** divider, and no **Forgot password?** link —
-and **Settings → Profile → Security** no longer offers **Change password** or
+and **Settings → Personal settings → Security** no longer offers **Change password** or
 **Set a password**.
 
 ---
@@ -168,7 +176,10 @@ available in **Settings**.
 Your accounts, grouped into folders, fill the sidebar on desktop and tablet and
 the home screen on mobile; **Budget & Plan** above them opens your
 [budget](/docs/user-guide/budgets/) and its
-[Plan view](/docs/user-guide/plan/).
+[Plan view](/docs/user-guide/plan/). Next to the Econumo logo at the top sit
+two buttons: [Search](/docs/user-guide/search/) (also on **Ctrl+K** / **⌘K**)
+and the [Inbox](/docs/user-guide/inbox/), whose badge counts what is waiting on
+you.
 
 Everything that is not day-to-day spending lives in **Settings**, in three
 groups:
@@ -178,12 +189,14 @@ groups:
   [Recurring transactions](/docs/user-guide/recurring-transactions/).
 - **Classification** — [Categories, Tags, Payees](/docs/user-guide/classifications/)
   and [Currencies](/docs/user-guide/currencies/).
-- **Data** — [Import and Export CSV](/docs/user-guide/csv-import-export/).
+- **Data** — **Import & export**, for
+  [CSV import and export](/docs/user-guide/csv-import-export/).
 
 On desktop and tablet, open Settings from the bottom of the sidebar; on mobile,
-from the bottom of the home screen. Your name at the top of the screen opens
-your [profile](/docs/user-guide/user-profile/), and the **API** link at the
-very bottom opens the [API reference](/docs/api/) for your instance.
+from the bottom of the home screen. The card with your name at the top opens
+your [Personal settings](/docs/user-guide/user-profile/), **Log out** sits
+right under it, and the **API** link at the very bottom opens the
+[API reference](/docs/api/) for your instance.
 
 <ScreenshotSet>
 

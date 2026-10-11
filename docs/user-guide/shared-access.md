@@ -52,16 +52,18 @@ list, and you can start sharing
 
 Sharing an account or budget with someone doesn't hand it over immediately —
 Econumo sends a **pending invite** that the other person has to accept or
-decline first. Whenever you have invites waiting, a counter badge appears on
-a **Sharing requests** button in the top navigation; open it to see who
-invited you and to what.
+decline first. Invites land in your [Inbox](/docs/user-guide/inbox/) — the
+tray icon at the top of the sidebar (on mobile, at the top of the home
+screen), whose badge counts everything waiting on you. Sharing invites sit in
+the **Sharing** group at the bottom of the Inbox, each one saying who invited
+you and whether it is an **Account** or a **Budget**.
 
 For each request:
 
 - **Accept** — for an account, you first choose which folder to file it
   under (or leave it in **General**, which is created automatically if it
   doesn't exist yet); a budget is added straight to your budgets list.
-- **Decline** — the invite is dismissed.
+- **Decline** — Econumo asks you to confirm, then the invite is dismissed.
 
 While a request is still pending, the person who sent it sees
 **invitation pending** next to your name in the Access control dialog.
