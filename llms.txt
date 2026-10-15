@@ -166,6 +166,7 @@
 
 ## Releases
 
+- [v1.6.1](https://econumo.com/releases/v1.6.1.md): v1.6.1 — polish for the redesigned budget: a hover highlight on totals rows, a new tag option in folder menus, and four fixes to the Plan grid and transaction rows.
 - [v1.6.0](https://econumo.com/releases/v1.6.0.md): v1.6.0 — a redesigned budget with a spreadsheet-style plan, savings accounts, cell comments, global search, an Inbox, and Claude sign-in by URL.
 - [v1.5.2](https://econumo.com/releases/v1.5.2.md): v1.5.2 — self-hosters can switch email and password sign-in off and let people in only through Google, Apple, or their own OpenID Connect provider.
 - [v1.5.1](https://econumo.com/releases/v1.5.1.md): v1.5.1 — fixes a white band left below the app shell on iOS home-screen installs after signing in with Apple.
