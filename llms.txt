@@ -20,6 +20,7 @@
 - [Currencies](https://econumo.com/docs/user-guide/currencies.md)
 - [User profile](https://econumo.com/docs/user-guide/user-profile.md)
 - [CSV Import & Export](https://econumo.com/docs/user-guide/csv-import-export.md)
+- [Apple Wallet](https://econumo.com/docs/user-guide/apple-wallet.md)
 - [Apps](https://econumo.com/docs/apps.md)
 - [Self-Hosting](https://econumo.com/docs/self-hosting.md)
 - [Multi-Currency Support](https://econumo.com/docs/self-hosting/multi-currency.md)

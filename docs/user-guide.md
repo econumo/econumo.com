@@ -77,6 +77,9 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [API tokens](/docs/user-guide/user-profile/#api-tokens)
   - [Connected apps](/docs/user-guide/user-profile/#connected-apps)
 - [CSV Import & Export](/docs/user-guide/csv-import-export/)
+- [Apple Wallet](/docs/user-guide/apple-wallet/)
+  - [Set up on iOS 26 or iOS 27](/docs/user-guide/apple-wallet/#setup)
+  - [Map your cards to accounts](/docs/user-guide/apple-wallet/#map-your-cards-to-accounts)
 
 ---
 ## Sign Up
