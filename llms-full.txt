@@ -102,8 +102,10 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Sign Up](/docs/user-guide/#sign-up)
   - [Sign In](/docs/user-guide/#sign-in)
   - [Password Recovery](/docs/user-guide/#password-recovery)
-  - [Getting started checklist](/docs/user-guide/#getting-started-checklist)
+  - [Getting started](/docs/user-guide/#getting-started)
   - [Finding your way around](/docs/user-guide/#finding-your-way-around)
+  - [Installing Econumo as an app](/docs/user-guide/#installing-econumo-as-an-app)
+  - [Working offline](/docs/user-guide/#working-offline)
 - [Accounts](/docs/user-guide/accounts/)
   - [Account creation](/docs/user-guide/accounts/#account-creation)
   - [Managing your accounts](/docs/user-guide/accounts/#managing-your-accounts)
@@ -121,6 +123,8 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Acting on a result](/docs/user-guide/search/#acting-on-a-result)
 - [Inbox](/docs/user-guide/inbox/)
   - [Scheduled transactions](/docs/user-guide/inbox/#scheduled-transactions)
+  - [Imported transactions](/docs/user-guide/inbox/#imported-transactions)
+  - [Changes that weren't saved](/docs/user-guide/inbox/#changes-that-werent-saved)
   - [Sharing invites](/docs/user-guide/inbox/#sharing-invites)
 - [Classifications](/docs/user-guide/classifications/)
   - [Create a category, tag, or payee](/docs/user-guide/classifications/#create-a-category-tag-or-payee)
@@ -131,6 +135,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Searching a long list](/docs/user-guide/classifications/#searching-a-long-list)
 - [Budgets](/docs/user-guide/budgets/)
   - [Budget creation](/docs/user-guide/budgets/#budget-creation)
+  - [Month start day](/docs/user-guide/budgets/#month-start-day)
   - [Update budget details](/docs/user-guide/budgets/#update-budget-details)
   - [Manage your budget](/docs/user-guide/budgets/#manage-your-budget)
   - [Budgets list](/docs/user-guide/budgets/#budgets-list)
@@ -143,6 +148,15 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Adding up a selection](/docs/user-guide/plan/#adding-up-a-selection)
   - [The Balance row](/docs/user-guide/plan/#the-balance-row)
   - [Keeping a long sheet readable](/docs/user-guide/plan/#keeping-a-long-sheet-readable)
+- [Debts](/docs/user-guide/debts/)
+  - [Tracking a loan as a debt](/docs/user-guide/debts/#tracking-a-loan-as-a-debt)
+  - [Debt details](/docs/user-guide/debts/#debt-details)
+  - [Debts in your budget and plan](/docs/user-guide/debts/#debts-in-your-budget-and-plan)
+  - [Debts in a shared budget](/docs/user-guide/debts/#debts-in-a-shared-budget)
+- [Reports](/docs/user-guide/reports/)
+  - [Net worth](/docs/user-guide/reports/#net-worth)
+  - [Report tabs](/docs/user-guide/reports/#report-tabs)
+  - [Suggest a report](/docs/user-guide/reports/#suggest-a-report)
 - [Shared access](/docs/user-guide/shared-access/)
   - [Connect with another user](/docs/user-guide/shared-access/#connect-with-another-user)
   - [Accept or decline a sharing request](/docs/user-guide/shared-access/#accept-or-decline-a-sharing-request)
@@ -159,13 +173,23 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Editing or deleting a custom currency](/docs/user-guide/currencies/#editing-or-deleting-a-custom-currency)
 - [User profile](/docs/user-guide/user-profile/)
   - [Updating your user profile](/docs/user-guide/user-profile/#updating-your-user-profile)
+  - [Usage statistics and AI features](/docs/user-guide/user-profile/#usage-statistics-and-ai-features)
   - [Sessions](/docs/user-guide/user-profile/#sessions)
+  - [App lock](/docs/user-guide/user-profile/#app-lock)
   - [API tokens](/docs/user-guide/user-profile/#api-tokens)
   - [Connected apps](/docs/user-guide/user-profile/#connected-apps)
-- [CSV Import & Export](/docs/user-guide/csv-import-export/)
-- [Apple Wallet](/docs/user-guide/apple-wallet/)
-  - [Set up on iOS 26 or iOS 27](/docs/user-guide/apple-wallet/#setup)
-  - [Map your cards to accounts](/docs/user-guide/apple-wallet/#map-your-cards-to-accounts)
+- [Import data](/docs/user-guide/import-data/)
+  - [CSV Import & Export](/docs/user-guide/csv-import-export/)
+  - [Apple Wallet](/docs/user-guide/apple-wallet/)
+    - [Set up on iOS 26 or iOS 27](/docs/user-guide/apple-wallet/#setup)
+    - [Map your cards to accounts](/docs/user-guide/apple-wallet/#map-your-cards-to-accounts)
+  - [SimpleFIN](/docs/user-guide/simplefin/)
+    - [Connecting SimpleFIN](/docs/user-guide/simplefin/#connecting-simplefin)
+    - [Mapping bank accounts](/docs/user-guide/simplefin/#mapping-bank-accounts)
+    - [Syncing](/docs/user-guide/simplefin/#syncing)
+  - [Import rules](/docs/user-guide/import-rules/)
+    - [Creating a rule](/docs/user-guide/import-rules/#creating-a-rule)
+    - [AI rule suggestions](/docs/user-guide/import-rules/#ai-rule-suggestions)
 
 ---
 ## Sign Up
@@ -240,24 +264,38 @@ sign-in provider that vouches for a different email address than your own.
 Your shared budgets and connections are left alone.
 
 ---
-## Getting started checklist
+## Getting started
 
-After your first sign-in, Econumo greets you with the **Getting started**
-checklist — a guided tour through the initial setup: add your accounts, enter
-(or import) your first transaction, review categories, tags, and payees, pick
-an avatar, connect with your partner, and create your budget. Each step links
-to the matching section of this guide, and completed steps are ticked off
-automatically.
+After your first sign-in, Econumo walks you through setup in a few short
+steps. The bar at the top shows where you are (*"Getting started · 2 of 5"*);
+tap a step to jump to it.
+
+1. **Import** *(optional)* — **Bring in your history**: choose a CSV export
+   from your bank or another app, and Econumo creates accounts, categories and
+   transactions in one go (see [CSV Import](/docs/user-guide/csv-import-export/#importing-transactions-from-csv)).
+   No file? Press **I don't have one**.
+2. **Categories** — **What do you spend on?** Econumo suggests a starting list
+   of expense and income categories. Remove what you don't need, rename them,
+   change their icons, or add your own.
+3. **Accounts** — **Where's your money right now?** Add your accounts with
+   their current balances and currencies; no history is needed.
+4. **Budget & plan** — **Plan this month**: enter rough planned amounts for
+   your income and expenses. You can adjust them later.
+5. **Connect** — **Connect your accounts** so transactions come in on their
+   own: set up [Apple Wallet](/docs/user-guide/apple-wallet/) or
+   [SimpleFIN](/docs/user-guide/simplefin/), or copy the MCP address for an AI
+   assistant such as Claude or ChatGPT.
+
+When your browser can install Econumo, an extra step offers to add it to your
+home screen (see
+[Installing Econumo as an app](/docs/user-guide/#installing-econumo-as-an-app)).
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
-Work through the steps in any order — the shortcut buttons (**Add account**,
-**Import transactions**, **Choose your avatar**) open the same dialogs
-described later in this guide. When you are done, press **Finish setup** at
-the bottom of the list. Nothing is lost by finishing early: every step remains
-available in **Settings**.
+Press **Complete setup** when you are done — you can do it from any step.
+Everything the wizard sets up stays available in **Settings** afterwards.
 
 ---
 ## Finding your way around
@@ -268,18 +306,29 @@ the home screen on mobile; **Budget & Plan** above them opens your
 [Plan view](/docs/user-guide/plan/). Next to the Econumo logo at the top sit
 two buttons: [Search](/docs/user-guide/search/) (also on **Ctrl+K** / **⌘K**)
 and the [Inbox](/docs/user-guide/inbox/), whose badge counts what is waiting on
-you.
+you. At the bottom, next to **Settings**, the chart icon opens
+[Reports](/docs/user-guide/reports/) and the sync button refreshes your data
+(and syncs [SimpleFIN](/docs/user-guide/simplefin/), if you use it).
 
-Everything that is not day-to-day spending lives in **Settings**, in three
+Everything that is not day-to-day spending lives in **Settings**, in these
 groups:
 
+- **Billing** — **Manage subscription**, on econumo.com (not on self-hosted
+  servers).
 - **Finances** — [Accounts](/docs/user-guide/accounts/),
   [Shared access](/docs/user-guide/shared-access/), **Budgets & Plans**, and
   [Recurring transactions](/docs/user-guide/recurring-transactions/).
 - **Classification** — [Categories, Tags, Payees](/docs/user-guide/classifications/)
   and [Currencies](/docs/user-guide/currencies/).
-- **Data** — **Import & export**, for
-  [CSV import and export](/docs/user-guide/csv-import-export/).
+- **Data** — the ways to [import data](/docs/user-guide/import-data/):
+  **Import & export** for
+  [CSV import and export](/docs/user-guide/csv-import-export/),
+  [Apple Wallet](/docs/user-guide/apple-wallet/),
+  [SimpleFIN](/docs/user-guide/simplefin/),
+  [Import rules](/docs/user-guide/import-rules/), and **Clear cache and
+  reload**, which downloads all your data again.
+- **Feedback** — **Send feedback**: tell us what you like, ask for a feature,
+  or report a bug.
 
 On desktop and tablet, open Settings from the bottom of the sidebar; on mobile,
 from the bottom of the home screen. The card with your name at the top opens
@@ -290,6 +339,29 @@ right under it, and the **API** link at the very bottom opens the
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+---
+## Installing Econumo as an app
+
+Econumo can live on your home screen or in your Dock and open full-screen, like
+any other app. When your browser supports it, **Settings** shows **Install the
+app**; it opens your browser's install prompt or step-by-step instructions —
+on an iPhone or iPad, for example, **Share → Add to Home Screen**.
+
+Once installed, Econumo starts even without a connection.
+
+---
+## Working offline
+
+Econumo keeps your recent data on the device, so you can keep going when the
+connection drops: the sync button turns into a no-connection icon, and you can
+still add, edit and delete transactions and change your budget plans. The
+changes wait on the device and are sent when you are back online. The default
+budget's previous, current and next months are kept for offline use; anything
+that isn't stored on the device shows **Not available offline**.
+
+If the server doesn't accept a change made offline, you'll find it in the
+[Inbox](/docs/user-guide/inbox/#changes-that-werent-saved).
 
 ---
 
@@ -352,6 +424,11 @@ the left sidebar on desktop and on the home screen on mobile.
 Use the folder menu (the three dots on the folder row) to edit a folder's name,
 move it up or down, or hide it. A hidden folder disappears from the main screen —
 handy for accounts you rarely use — and can be shown again from the same menu.
+Its accounts also stay out of the account pickers when you add or edit a
+transaction or a recurring schedule; type three or more letters of an
+account's name to find it anyway — it is marked **Hidden folder**. Its
+[recurring schedules](/docs/user-guide/recurring-transactions/) still appear
+in **Settings → Recurring transactions**, in a group marked **Hidden folder**.
 
 <ScreenshotSet>
 
@@ -795,6 +872,8 @@ screen); its badge shows how many things are waiting.
 ## In this section
 
 - [Scheduled transactions](/docs/user-guide/inbox/#scheduled-transactions)
+- [Imported transactions](/docs/user-guide/inbox/#imported-transactions)
+- [Changes that weren't saved](/docs/user-guide/inbox/#changes-that-werent-saved)
 - [Sharing invites](/docs/user-guide/inbox/#sharing-invites)
 
 With nothing pending, the page simply reads *"All caught up"*.
@@ -806,7 +885,7 @@ With nothing pending, the page simply reads *"All caught up"*.
 [Recurring transactions](/docs/user-guide/recurring-transactions/) that are
 due today or overdue come first, across all your accounts. Each row shows the
 schedule's category, interval, note, payee, amount and account, and when it
-was due — *"Overdue · Aug 28"*.
+was due — *"Overdue · Nov 12"*.
 
 Select a row to open its **Transaction details**, then:
 
@@ -816,6 +895,34 @@ Select a row to open its **Transaction details**, then:
   recording anything.
 
 Either way the schedule moves on to its next date.
+
+---
+
+## Imported transactions
+
+If you connect [Apple Wallet](/docs/user-guide/apple-wallet/) or
+[SimpleFIN](/docs/user-guide/simplefin/), the Inbox also collects what the
+import couldn't finish on its own:
+
+- **Sync problems** — a SimpleFIN sync that failed or finished with errors,
+  with the time of the last attempt.
+- **Failed imports** and **To review** — transactions that couldn't go
+  straight into an account, with the reason: a card or bank account that isn't
+  mapped yet, an account you no longer have access to, or a currency without an
+  exchange rate. **Import** one into an account, **Skip** it (skipped ones stay
+  under **Skipped** and can be restored), **Retry** it, or **Discard** it.
+- **Suggested rules** — [AI rule suggestions](/docs/user-guide/import-rules/#ai-rule-suggestions)
+  for imported transactions that no rule classified.
+
+---
+
+## Changes that weren't saved
+
+Econumo keeps working when you lose your connection: transactions you add,
+edit or delete, and plan changes, wait on the device and are sent when you are
+back online. If the server doesn't accept one of them, it lands under **Not
+saved**, showing what the change was. **Try again** sends it once more;
+**Discard** drops it.
 
 ---
 
@@ -1030,6 +1137,7 @@ category:
 ## In this section
 
 - [Budget creation](/docs/user-guide/budgets/#budget-creation)
+  - [Month start day](/docs/user-guide/budgets/#month-start-day)
 - [Update budget details](/docs/user-guide/budgets/#update-budget-details)
 - [Manage your budget](/docs/user-guide/budgets/#manage-your-budget)
   - [Budgeting](/docs/user-guide/budgets/#budgeting)
@@ -1052,7 +1160,8 @@ beside the months bar — the same budget laid out as a month-by-month sheet.
 
 Open **Settings → Budgets & Plans** and press **Create budget** (on mobile, the
 **+** button in the header). Give the budget a name, pick its base currency,
-and switch on the accounts that take part in it — the counter above the list
+choose the **Month start day**, and switch on the accounts that take part in
+it — the counter above the list
 keeps track (*"3 of 5 included"*). Once accounts are in, **Savings accounts**
 lets you mark some of them as
 [savings](/docs/user-guide/budgets/#savings-accounts).
@@ -1066,14 +1175,33 @@ Account membership is an explicit list, and a new budget starts with every
 switch off — turn on the accounts you actually budget from. Budgets start from
 the current month.
 
+### Month start day
+
+Budget months don't have to follow the calendar. Pick any day from **1** to
+**28** as the **Month start day** to run the budget from payday to payday. Each
+month is named after the month it starts in: with day 25, *November* covers
+25 November to 24 December. The months bar and the
+[Plan view](/docs/user-guide/plan/) show each month's dates under its name.
+
+The start day belongs to the budget, so everyone sharing it sees the same
+months. You can change it later in
+[Budget settings](/docs/user-guide/budgets/#update-budget-details) — your plans
+stay on their months, and only the dates each month covers change. Only the
+budget's owner, or someone with full control of it, can change the start day.
+
+**Note**
+Reports, recurring schedules, account pages and CSV exports keep using
+calendar months.
+
 ---
 ## Update budget details
 
 Open your budget and press **Configure** in the top-right corner. On desktop it
 opens **Budget settings** straight away; on a tablet or a phone it opens a
 short menu — choose **Budget settings** there. In the dialog you can rename
-the budget, change its currency, add or remove accounts, and choose which of
-them are savings accounts:
+the budget, change its currency and its
+[month start day](/docs/user-guide/budgets/#month-start-day), add or remove
+accounts, and choose which of them are savings accounts:
 
 <ScreenshotSet>
 
@@ -1082,6 +1210,10 @@ them are savings accounts:
 An account that already carries transactions in past months of this budget
 cannot be removed from it — taking it out would rewrite months you have
 already closed. The dialog says so under the list.
+
+A note under the accounts reminds you that
+[debts](/docs/user-guide/debts/) in this budget are shown by name, with their
+payments and balances, to everyone who has access to it.
 
 The other entry in the tablet and phone **Configure** menu, **Edit
 structure**, is described in
@@ -1115,6 +1247,9 @@ Inside the sections you work with these entities:
 - **Envelopes** — these group several categories into one limit (e.g. an
   envelope for _Food_ could contain _Groceries_, _Drinks_, and _Restaurants_).
   Both Income and Expenses can hold envelopes.
+- **Debts** — an expense category or envelope that tracks a loan shows the
+  payments left and its payoff date under its name. See
+  [Debts](/docs/user-guide/debts/).
 
 ---
 ### Budgeting
@@ -1533,6 +1668,218 @@ A budget with a few dozen elements makes for a tall sheet. A few things help:
 
 ---
 
+# Debts
+
+URL: https://econumo.com/docs/user-guide/debts/
+
+# Debts
+
+A debt tracks a loan — a mortgage, a car loan, a student loan — inside your
+[budget](/docs/user-guide/budgets/), without opening an account for it. Your
+net worth and account totals stay clean, and the budget still shows how the
+loan is going: how many payments are left, how much of each payment is
+interest, and when the loan will be paid off.
+
+A debt sits on an expense category (or an envelope). The expenses you already
+record in that category are its payments, so nothing changes in how you enter
+or import transactions. Each payment is split bank-style into **interest** and
+**principal**, and Econumo works out the rate your lender is charging from the
+loan's terms — you never have to type it in.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+## In this section
+
+- [Tracking a loan as a debt](/docs/user-guide/debts/#tracking-a-loan-as-a-debt)
+- [Debt details](/docs/user-guide/debts/#debt-details)
+  - [Overview](/docs/user-guide/debts/#overview)
+  - [Balance](/docs/user-guide/debts/#balance)
+  - [Settings](/docs/user-guide/debts/#settings)
+  - [Paying off or deleting a debt](/docs/user-guide/debts/#paying-off-or-deleting-a-debt)
+- [Debts in your budget and plan](/docs/user-guide/debts/#debts-in-your-budget-and-plan)
+- [Debts in a shared budget](/docs/user-guide/debts/#debts-in-a-shared-budget)
+
+---
+
+## Tracking a loan as a debt
+
+Give the loan its own expense category first (for example _Car Loan_) and
+record its payments there, from an account that belongs to the budget. Then,
+on the budget page:
+
+1. Open the category row's **⋮** menu and choose **Track as debt**. On a
+   tablet or a phone, press **Configure → Edit structure** first — the rows
+   get their **⋮** menus there.
+2. Enter the regular **Payment** — Econumo suggests the amount planned for the
+   row — and how often it **Repeats** (every week, every 2 weeks, every month,
+   every quarter or every year).
+3. Press **Add**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The debt starts collecting its payments straight away. To see the balance, the
+payments left and the payoff date, finish setting it up: open
+[Debt details](/docs/user-guide/debts/#debt-details), go to **Settings**, and
+enter the **Amount borrowed**, the **Start date** (when the loan began) and the
+**Last payment date** (when the loan ends).
+
+**Note**
+Only expenses on the budget's own accounts count as payments. If you pay the
+loan from an account that isn't part of the budget, add that account in
+[Budget settings](/docs/user-guide/budgets/#update-budget-details) first.
+
+---
+
+## Debt details
+
+Open the debt row's **⋮** menu and choose **Debt → Debt details**. On a phone,
+tap the row and then **Debt details** in its sheet. The details open in a
+dialog with four tabs.
+
+### Overview
+
+The top shows how many payments are left, with a bar for the payments made so
+far (*"6 of 45 paid"*). Under it, **Loan** lists the balance today and the rate
+Econumo worked out, the amount borrowed and when, the payment and how often it
+repeats, the next and the last payment, and how much you have paid — and still
+plan to pay — on top of the schedule. **Payments** lists every payment with its
+interest, principal and the balance after it; **Show future payments** adds
+the schedule ahead.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+### Balance
+
+**Balance today** compares Econumo's figure with your bank statement. When your
+lender sends a statement, press **Add a statement** and enter the balance it
+shows; Econumo uses it from that date on. **Rate today** shows the rate and the
+payment in force. If your lender changes the rate, press **Add a rate change**.
+
+### Settings
+
+The loan's terms: **Amount borrowed**, **Start date**, **Last payment date**,
+**Payment** and **Repeats**. Correct them here if you entered something wrong;
+Econumo splits every payment again with the new terms.
+
+### Paying off or deleting a debt
+
+The **Danger zone** tab has two buttons:
+
+- **Mark as paid off** sets what is owed to zero and stops counting down the
+  payments — use it when you settle the last small amount.
+- **Delete** removes the debt and its history. Your transactions are not
+  changed.
+
+Both are also in the row's **⋮** menu under **Debt**.
+
+---
+
+## Debts in your budget and plan
+
+A debt stays in its row. Under the name it shows the payments left and the
+payoff date (*"40 payments left · Paid off by Feb 2030"*), and its **Budget**
+and **Spent** columns work like any other row.
+
+Plan the debt as you would any category, in the budget or the
+[Plan view](/docs/user-guide/plan/). Planning more than the scheduled payment
+counts as an extra payment: the payoff date moves earlier, and the overview
+shows it under **Planned extra**.
+
+---
+
+## Debts in a shared budget
+
+Everyone with access to the budget sees each debt by name, with its payments
+and balance — the **Budget settings** dialog says so under the accounts. People
+who can manage the budget can also open and change its details; with view-only
+access, you can look but not edit.
+
+---
+
+# Reports
+
+URL: https://econumo.com/docs/user-guide/reports/
+
+# Reports
+
+Reports answer bigger questions than a single month's budget. Open them with
+the chart icon at the bottom of the sidebar, next to the sync button (on
+mobile, at the bottom of the home screen).
+
+The first screen is a list of reports to choose from. The picker in its
+top-right corner sets the **scope**: **My accounts**, or one of your budgets —
+a shared budget covers everyone taking part in it. Each report card previews
+its answer; **Net worth** shows today's total and how much it changed this
+year.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+## In this section
+
+- [Net worth](/docs/user-guide/reports/#net-worth)
+- [Report tabs](/docs/user-guide/reports/#report-tabs)
+- [Suggest a report](/docs/user-guide/reports/#suggest-a-report)
+
+---
+
+## Net worth
+
+**Net worth** answers *"Am I getting richer or poorer?"*. It draws one line
+for the total of your accounts over time, with the change for the period
+underneath. Pick the period with **1y**, **3y** or **All** — **All** starts
+at your first transaction.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The table under the chart shows where the change came from, with **Start**,
+**Now** and **Change** columns:
+
+- For **My accounts**, one row per account folder; open a folder to see its
+  accounts.
+- For a budget, one row per person taking part in it. Open a row to see that
+  person's savings accounts by name, plus one **Everyday accounts** total for
+  the rest. Another person's accounts that aren't shared with you are never
+  listed one by one — only their total.
+
+Select an account row to list its transactions.
+
+To look at a shorter stretch, **drag across the chart**. The figures follow
+your selection, which replaces the period buttons, and a **Transactions**
+button lists what happened in that range.
+
+**Note**
+Deleted accounts are left out of the report completely, including their
+history.
+
+---
+
+## Report tabs
+
+Reports open in tabs at the top of the page, so you can keep several open side
+by side — for example, net worth for your own accounts in one tab and for the
+family budget in another. **+** opens a new tab with the report list. A tab's
+menu can rename, duplicate or close it. Tabs are remembered on the device you
+use.
+
+---
+
+## Suggest a report
+
+Missing a report you need? The **Suggest a report** card opens the feedback
+form with **Feature request** already chosen. Tell us what you'd like to see.
+
+---
+
 # Shared Access
 
 URL: https://econumo.com/docs/user-guide/shared-access/
@@ -1853,18 +2200,20 @@ This section provides an overview of user profiles in Econumo.
   - [How to change your password](/docs/user-guide/user-profile/#how-to-change-your-password)
   - [How to change your default currency](/docs/user-guide/user-profile/#how-to-change-your-default-currency)
   - [How to change the interface language](/docs/user-guide/user-profile/#how-to-change-the-interface-language)
+  - [How to switch to dark mode](/docs/user-guide/user-profile/#how-to-switch-to-dark-mode)
+- [Usage statistics and AI features](/docs/user-guide/user-profile/#usage-statistics-and-ai-features)
 - [Sign-in methods](/docs/user-guide/user-profile/#sign-in-methods)
 - [Sessions](/docs/user-guide/user-profile/#sessions)
+- [App lock](/docs/user-guide/user-profile/#app-lock)
 - [API tokens](/docs/user-guide/user-profile/#api-tokens)
 - [Connected apps](/docs/user-guide/user-profile/#connected-apps)
-- [Privacy](/docs/user-guide/user-profile/#privacy)
 
 ---
 ## Accessing your user profile
 
 Open **Settings** and select the card with your name at the top of it — it is
 labelled **Personal settings**, and so is the page it opens. The page shows
-your personal details, preferences, security and privacy settings. To sign
+your personal details, preferences and security settings. To sign
 out, press **Log out**: it sits under that card on the Settings page and at the
 top of Personal settings.
 
@@ -1933,6 +2282,41 @@ before you have an account.
 
 </ScreenshotSet>
 
+### How to switch to dark mode
+
+**Theme**, under **Language**, switches Econumo between **Light** and **Dark**.
+**System** follows your device's appearance. The theme applies only to the
+device you set it on.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+---
+## Usage statistics and AI features
+
+The last two Preferences each open a dialog with a single switch:
+
+- **Usage statistics** → **Help improve Econumo**. Usage statistics show us
+  which features are most popular and what to improve. Switching it off stops
+  Econumo from sending in-app usage events right away, and the setting follows
+  your account across devices.
+- **AI features** → **Use AI features**. AI helps keep your finances organized
+  — for example with [rule suggestions](/docs/user-guide/import-rules/#ai-rule-suggestions)
+  for imported transactions. This preference appears only when your Econumo
+  server has AI set up, and it is on by default. Turning it off stops
+  everything that would send your data to the AI and removes your open
+  suggestions.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+Neither switch touches your budgets, transactions, or any other data in your
+account. Your financial data and personal information, such as your name or
+email, are never included in usage statistics and never sent to the AI.
+
 ---
 ## Sign-in methods
 
@@ -1979,6 +2363,29 @@ session except the current one.
 **Note**
 If you spot a session you do not recognise, revoke it and
 [change your password](/docs/user-guide/user-profile/#how-to-change-your-password).
+
+---
+## App lock
+
+**Security → App lock** asks for a PIN or a pattern whenever Econumo opens on
+this device — useful on a shared tablet or a phone you hand to your kids.
+
+1. Switch on **App lock**.
+2. Choose **PIN** (4 to 8 digits) or **Pattern** (connect at least 4 dots),
+   enter it, and enter it again to confirm.
+3. Under **Lock after**, choose when Econumo locks once you leave it:
+   **Immediately**, after **1 minute**, **5 minutes** or **15 minutes**.
+
+**Change PIN or pattern** asks for the current one first.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+The lock protects Econumo on this device only, and it doesn't encrypt the data
+stored on the device. If you forget the PIN or pattern, choose **Forgot PIN?**
+(or **Forgot pattern?**) on the lock screen and log in again.
 
 ---
 ## API tokens
@@ -2043,24 +2450,31 @@ the server must be reachable from the internet; Claude Code and Codex only need
 to reach it from your computer.
 
 ---
-## Privacy
 
-The **Privacy** section, below Security, holds a single switch: **Share usage
-statistics**.
+# Import data
 
-<ScreenshotSet>
+URL: https://econumo.com/docs/user-guide/import-data/
 
-</ScreenshotSet>
+# Import data
 
-Sharing is on by default. Switching it off stops Econumo from sending
-in-app usage events right away — no page reload needed, and the setting
-follows your account across devices.
+Econumo was built around entering transactions by hand, and that still works
+everywhere, with any bank. When you'd rather not type everything in, there are
+three ways to bring transactions in, and you can mix them with manual entry
+freely. All of them live in the **Data** group of **Settings**.
 
-**Note**
-Turning usage sharing off never touches your budgets, transactions, or any
-other data in your account. Financial data and personal information such as
-your name or email are never sent either way, whichever way the switch is
-set.
+| | What it brings in | Good for |
+|---|---|---|
+| [CSV Import & Export](/docs/user-guide/csv-import-export/) | A file exported from your bank or another app | Your history, or a bank with no other connection; also exports your data |
+| [Apple Wallet](/docs/user-guide/apple-wallet/) | Each Apple Pay purchase you tap to pay, as it happens | Card spending on an iPhone |
+| [SimpleFIN](/docs/user-guide/simplefin/) | Your bank's transactions, each time you sync | Banks in the US and Canada, through the paid SimpleFIN Bridge service |
+
+Transactions that arrive from Apple Wallet or SimpleFIN come with the bank's
+text rather than your categories. [Import rules](/docs/user-guide/import-rules/)
+classify them for you — or skip the ones you don't want — and with AI available
+on your server, Econumo suggests rules as new imports come in.
+
+Anything an import can't place on its own waits for you in the
+[Inbox](/docs/user-guide/inbox/#imported-transactions).
 
 ---
 
@@ -2380,6 +2794,191 @@ For more about the Wallet trigger, see Apple's
 [Shortcuts User Guide for iOS 26](https://support.apple.com/en-mide/guide/shortcuts/apd65c67538a/9.0/ios/26).
 For the redesigned Shortcuts app, see
 [Add automations on iOS 27](https://support.apple.com/en-mide/guide/shortcuts/apdfbdbd7123/10.0/ios/27).
+
+---
+
+# SimpleFIN
+
+URL: https://econumo.com/docs/user-guide/simplefin/
+
+# SimpleFIN
+
+[SimpleFIN Bridge](https://bridge.simplefin.org/) is a paid third-party
+service that connects to your bank — mostly banks in the US and Canada. Once
+you connect it, Econumo pulls your bank transactions from it each time you
+sync, so you don't have to type them in.
+
+**Note**
+Econumo is not affiliated with SimpleFIN. SimpleFIN Bridge has its own terms,
+and you use it at your own risk.
+
+## In this section
+
+- [Connecting SimpleFIN](/docs/user-guide/simplefin/#connecting-simplefin)
+- [Mapping bank accounts](/docs/user-guide/simplefin/#mapping-bank-accounts)
+- [Syncing](/docs/user-guide/simplefin/#syncing)
+- [Using SimpleFIN on another device](/docs/user-guide/simplefin/#using-simplefin-on-another-device)
+- [Disconnecting](/docs/user-guide/simplefin/#disconnecting)
+
+---
+
+## Connecting SimpleFIN
+
+1. In SimpleFIN Bridge, create a **New connection** and copy its **setup
+   token**. A token can be used only once.
+2. In Econumo, open **Settings → SimpleFIN** and paste the token into
+   **Setup token**.
+3. Choose a **Passphrase** (at least 8 characters) and type it again under
+   **Repeat passphrase**.
+4. Press **Connect**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+Your SimpleFIN credentials are encrypted on your device with the passphrase,
+and the server only ever stores them encrypted.
+
+**The passphrase can't be recovered.** Nobody, including us, can restore it. If
+you forget it, reconnect with a new setup token and a new passphrase — your
+account mappings are kept.
+
+SimpleFIN needs Econumo to be opened over **https** (or on `localhost`), because
+the browser only encrypts the credentials on a secure page. On a self-hosted
+server without https, ask your administrator to set it up.
+
+The [Getting started](/docs/user-guide/#getting-started) wizard links here
+from its **Connect** step, too.
+
+---
+
+## Mapping bank accounts
+
+After the first sync, **Accounts** lists the bank accounts SimpleFIN reports.
+An account marked **Needs mapping** has transactions waiting for you:
+
+- **Map to account** — pick the Econumo account its transactions go to. The
+  waiting transactions are imported right away (*"12 imported, 3 matched,
+  0 skipped"*).
+- **Ignore** — for a bank account you don't want in Econumo.
+
+A mapped account can be **Remap**ped to another Econumo account or **Unmap**ped.
+After unmapping, its new transactions wait for review until you map it again.
+
+When an imported transaction matches one you already entered by hand — a
+transfer between your own accounts, say — Econumo matches the two instead of
+adding a duplicate.
+
+---
+
+## Syncing
+
+Press **Sync now** on the SimpleFIN page, or the sync button at the bottom of
+the sidebar. The page shows when you last synced and from which date
+transactions are fetched (*"Syncs transactions since …"*); press **Change** to
+fetch from an earlier or later date.
+
+Imported transactions are classified by your
+[import rules](/docs/user-guide/import-rules/). Anything Econumo can't place —
+a bank account that isn't mapped yet, a currency without an exchange rate —
+waits in the [Inbox](/docs/user-guide/inbox/#imported-transactions).
+
+**Import history** lists every sync with what it imported, matched, updated,
+queued or skipped. Open a run to see its transactions; one you deleted by
+mistake can be imported again from there.
+
+---
+
+## Using SimpleFIN on another device
+
+On a device where you haven't used SimpleFIN yet, the page asks for your
+passphrase — enter it and press **Unlock**. If you changed the passphrase on
+another device, the page asks for the new one.
+
+---
+
+## Disconnecting
+
+Press **Disconnect SimpleFIN** and confirm. The connection is removed from
+Econumo; transactions imported earlier stay where they are.
+
+---
+
+# Import rules
+
+URL: https://econumo.com/docs/user-guide/import-rules/
+
+# Import rules
+
+Transactions that arrive on their own — from [Apple Wallet](/docs/user-guide/apple-wallet/)
+or [SimpleFIN](/docs/user-guide/simplefin/) — come with the bank's text, not
+your categories. Import rules close that gap: a rule looks for some text in an
+imported transaction and then classifies it, or skips it.
+
+Rules apply only to imported transactions. Transactions you enter yourself are
+never touched.
+
+## In this section
+
+- [Creating a rule](/docs/user-guide/import-rules/#creating-a-rule)
+- [Rules from your corrections](/docs/user-guide/import-rules/#rules-from-your-corrections)
+- [AI rule suggestions](/docs/user-guide/import-rules/#ai-rule-suggestions)
+- [Ordering, editing and deleting rules](/docs/user-guide/import-rules/#ordering-editing-and-deleting-rules)
+
+---
+
+## Creating a rule
+
+Open **Settings → Import rules** and press **Add rule**.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+1. Under **When**, choose what to look at — the **Payee** or the
+   **Description** the bank sent — and how to compare: **contains**, **starts
+   with** or **is exactly**. Type the text to look for, for example
+   _STARBUCKS_. The **Aa** button makes the match case-sensitive.
+2. Under **Then**, choose what happens:
+   - **Classify** — set a **Category** (pick **Expense** or **Income**: only
+     transactions of that type get it), a **Payee**, and tags — a budget tag
+     and any reporting tags.
+   - **Skip** — matching transactions are not imported at all.
+3. Press **Save**.
+
+---
+
+## Rules from your corrections
+
+You don't have to write every rule by hand. When you change the category,
+payee, tag or reporting tags of an imported transaction, Econumo offers to
+**Create an import rule** for similar imports, with the match text filled in.
+It can also apply the new rule to the other imported transactions it would
+change.
+
+---
+
+## AI rule suggestions
+
+When AI is available on your Econumo server, new imported transactions that no
+rule classified get **rule suggestions** in your [Inbox](/docs/user-guide/inbox/#imported-transactions)
+— one per merchant, for example *"BLUE BOTTLE · 3 transactions → Coffee · Blue
+Bottle"*. Tap a suggestion to open the rule editor with the match text,
+category and payee filled in. Saving creates the rule and fills in only the
+**empty** fields of those transactions. **Dismiss** removes the suggestion.
+
+The AI only picks from your existing categories and payees, and it never
+changes a transaction by itself. On a shared account, suggestions go to the
+account's owner.
+
+To turn AI features off, open **Personal settings → AI features** — see
+[User profile](/docs/user-guide/user-profile/#usage-statistics-and-ai-features).
+
+---
+
+## Ordering, editing and deleting rules
+
+Rules run from top to bottom; drag a rule to change the order. Each rule's menu has **Edit** and **Delete**.
 
 ---
 
@@ -4712,14 +5311,26 @@ URL: https://econumo.com/docs/faq/
 
 # Frequently Asked Questions
 
-## Do you have plans to add automated import of transactions from banks?
+## Can Econumo import transactions from my bank automatically?
 
-Automated import of transactions from banks and other sources is not a priority at this point.
-However, it might be added in the future as an optional feature.
+Yes, now it can. Econumo was built around entering transactions by hand: it's
+quick, it keeps you aware of every expense, and it works with any bank in any
+country. Manual entry is still at the heart of the app, but you no longer have
+to type everything in:
 
-As an alternative, you can use [CSV import](/docs/user-guide/csv-import-export/#exporting-your-transactions-to-csv).
+- **[Apple Wallet](/docs/user-guide/apple-wallet/)** — an iPhone Shortcut sends
+  every Apple Pay purchase you make with a tap to Econumo.
+- **[SimpleFIN](/docs/user-guide/simplefin/)** — SimpleFIN Bridge, a paid
+  third-party service, connects to your bank (mostly in the US and Canada), and
+  Econumo pulls your transactions from it each time you sync.
 
-If you have development skills and want to contribute, you are welcome to do so by using Econumo's API.
+[Import rules](/docs/user-guide/import-rules/) then classify imported
+transactions for you. Both integrations are optional; you can mix them with
+manual entry, and use [CSV import](/docs/user-guide/csv-import-export/#importing-transactions-from-csv)
+for anything else.
+
+If you have development skills and want to connect another source, you are
+welcome to do so through Econumo's [API](/docs/api/).
 
 ---
 

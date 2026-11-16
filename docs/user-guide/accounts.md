@@ -55,6 +55,11 @@ the left sidebar on desktop and on the home screen on mobile.
 Use the folder menu (the three dots on the folder row) to edit a folder's name,
 move it up or down, or hide it. A hidden folder disappears from the main screen —
 handy for accounts you rarely use — and can be shown again from the same menu.
+Its accounts also stay out of the account pickers when you add or edit a
+transaction or a recurring schedule; type three or more letters of an
+account's name to find it anyway — it is marked **Hidden folder**. Its
+[recurring schedules](/docs/user-guide/recurring-transactions/) still appear
+in **Settings → Recurring transactions**, in a group marked **Hidden folder**.
 
 <ScreenshotSet>
 

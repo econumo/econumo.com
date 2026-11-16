@@ -23,6 +23,7 @@ category:
 ## In this section
 
 - [Budget creation](/docs/user-guide/budgets/#budget-creation)
+  - [Month start day](/docs/user-guide/budgets/#month-start-day)
 - [Update budget details](/docs/user-guide/budgets/#update-budget-details)
 - [Manage your budget](/docs/user-guide/budgets/#manage-your-budget)
   - [Budgeting](/docs/user-guide/budgets/#budgeting)
@@ -45,7 +46,8 @@ beside the months bar — the same budget laid out as a month-by-month sheet.
 
 Open **Settings → Budgets & Plans** and press **Create budget** (on mobile, the
 **+** button in the header). Give the budget a name, pick its base currency,
-and switch on the accounts that take part in it — the counter above the list
+choose the **Month start day**, and switch on the accounts that take part in
+it — the counter above the list
 keeps track (*"3 of 5 included"*). Once accounts are in, **Savings accounts**
 lets you mark some of them as
 [savings](/docs/user-guide/budgets/#savings-accounts).
@@ -59,14 +61,33 @@ Account membership is an explicit list, and a new budget starts with every
 switch off — turn on the accounts you actually budget from. Budgets start from
 the current month.
 
+### Month start day
+
+Budget months don't have to follow the calendar. Pick any day from **1** to
+**28** as the **Month start day** to run the budget from payday to payday. Each
+month is named after the month it starts in: with day 25, *November* covers
+25 November to 24 December. The months bar and the
+[Plan view](/docs/user-guide/plan/) show each month's dates under its name.
+
+The start day belongs to the budget, so everyone sharing it sees the same
+months. You can change it later in
+[Budget settings](/docs/user-guide/budgets/#update-budget-details) — your plans
+stay on their months, and only the dates each month covers change. Only the
+budget's owner, or someone with full control of it, can change the start day.
+
+**Note**
+Reports, recurring schedules, account pages and CSV exports keep using
+calendar months.
+
 ---
 ## Update budget details
 
 Open your budget and press **Configure** in the top-right corner. On desktop it
 opens **Budget settings** straight away; on a tablet or a phone it opens a
 short menu — choose **Budget settings** there. In the dialog you can rename
-the budget, change its currency, add or remove accounts, and choose which of
-them are savings accounts:
+the budget, change its currency and its
+[month start day](/docs/user-guide/budgets/#month-start-day), add or remove
+accounts, and choose which of them are savings accounts:
 
 <ScreenshotSet>
 
@@ -75,6 +96,10 @@ them are savings accounts:
 An account that already carries transactions in past months of this budget
 cannot be removed from it — taking it out would rewrite months you have
 already closed. The dialog says so under the list.
+
+A note under the accounts reminds you that
+[debts](/docs/user-guide/debts/) in this budget are shown by name, with their
+payments and balances, to everyone who has access to it.
 
 The other entry in the tablet and phone **Configure** menu, **Edit
 structure**, is described in
@@ -108,6 +133,9 @@ Inside the sections you work with these entities:
 - **Envelopes** — these group several categories into one limit (e.g. an
   envelope for _Food_ could contain _Groceries_, _Drinks_, and _Restaurants_).
   Both Income and Expenses can hold envelopes.
+- **Debts** — an expense category or envelope that tracks a loan shows the
+  payments left and its payoff date under its name. See
+  [Debts](/docs/user-guide/debts/).
 
 ---
 ### Budgeting

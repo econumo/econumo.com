@@ -14,18 +14,20 @@ This section provides an overview of user profiles in Econumo.
   - [How to change your password](/docs/user-guide/user-profile/#how-to-change-your-password)
   - [How to change your default currency](/docs/user-guide/user-profile/#how-to-change-your-default-currency)
   - [How to change the interface language](/docs/user-guide/user-profile/#how-to-change-the-interface-language)
+  - [How to switch to dark mode](/docs/user-guide/user-profile/#how-to-switch-to-dark-mode)
+- [Usage statistics and AI features](/docs/user-guide/user-profile/#usage-statistics-and-ai-features)
 - [Sign-in methods](/docs/user-guide/user-profile/#sign-in-methods)
 - [Sessions](/docs/user-guide/user-profile/#sessions)
+- [App lock](/docs/user-guide/user-profile/#app-lock)
 - [API tokens](/docs/user-guide/user-profile/#api-tokens)
 - [Connected apps](/docs/user-guide/user-profile/#connected-apps)
-- [Privacy](/docs/user-guide/user-profile/#privacy)
 
 ---
 ## Accessing your user profile
 
 Open **Settings** and select the card with your name at the top of it — it is
 labelled **Personal settings**, and so is the page it opens. The page shows
-your personal details, preferences, security and privacy settings. To sign
+your personal details, preferences and security settings. To sign
 out, press **Log out**: it sits under that card on the Settings page and at the
 top of Personal settings.
 
@@ -94,6 +96,41 @@ before you have an account.
 
 </ScreenshotSet>
 
+### How to switch to dark mode
+
+**Theme**, under **Language**, switches Econumo between **Light** and **Dark**.
+**System** follows your device's appearance. The theme applies only to the
+device you set it on.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+---
+## Usage statistics and AI features
+
+The last two Preferences each open a dialog with a single switch:
+
+- **Usage statistics** → **Help improve Econumo**. Usage statistics show us
+  which features are most popular and what to improve. Switching it off stops
+  Econumo from sending in-app usage events right away, and the setting follows
+  your account across devices.
+- **AI features** → **Use AI features**. AI helps keep your finances organized
+  — for example with [rule suggestions](/docs/user-guide/import-rules/#ai-rule-suggestions)
+  for imported transactions. This preference appears only when your Econumo
+  server has AI set up, and it is on by default. Turning it off stops
+  everything that would send your data to the AI and removes your open
+  suggestions.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+Neither switch touches your budgets, transactions, or any other data in your
+account. Your financial data and personal information, such as your name or
+email, are never included in usage statistics and never sent to the AI.
+
 ---
 ## Sign-in methods
 
@@ -140,6 +177,29 @@ session except the current one.
 **Note**
 If you spot a session you do not recognise, revoke it and
 [change your password](/docs/user-guide/user-profile/#how-to-change-your-password).
+
+---
+## App lock
+
+**Security → App lock** asks for a PIN or a pattern whenever Econumo opens on
+this device — useful on a shared tablet or a phone you hand to your kids.
+
+1. Switch on **App lock**.
+2. Choose **PIN** (4 to 8 digits) or **Pattern** (connect at least 4 dots),
+   enter it, and enter it again to confirm.
+3. Under **Lock after**, choose when Econumo locks once you leave it:
+   **Immediately**, after **1 minute**, **5 minutes** or **15 minutes**.
+
+**Change PIN or pattern** asks for the current one first.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+The lock protects Econumo on this device only, and it doesn't encrypt the data
+stored on the device. If you forget the PIN or pattern, choose **Forgot PIN?**
+(or **Forgot pattern?**) on the lock screen and log in again.
 
 ---
 ## API tokens
@@ -202,23 +262,3 @@ accepts [API tokens](/docs/user-guide/user-profile/#api-tokens) only. Claude
 on the web, desktop and mobile connects from Anthropic's servers, so for those
 the server must be reachable from the internet; Claude Code and Codex only need
 to reach it from your computer.
-
----
-## Privacy
-
-The **Privacy** section, below Security, holds a single switch: **Share usage
-statistics**.
-
-<ScreenshotSet>
-
-</ScreenshotSet>
-
-Sharing is on by default. Switching it off stops Econumo from sending
-in-app usage events right away — no page reload needed, and the setting
-follows your account across devices.
-
-**Note**
-Turning usage sharing off never touches your budgets, transactions, or any
-other data in your account. Financial data and personal information such as
-your name or email are never sent either way, whichever way the switch is
-set.
