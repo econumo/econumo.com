@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preload" href="/_astro/plus-jakarta-sans-latin-wght-normal.eXO_dkmS.woff2" as="font" type="font/woff2" crossorigin><title>Single sign-on — Econumo</title><meta name="description" content="Single sign-on # Econumo can add Sign in with Google, Sign in with Apple and a button for your own OpenID Connect provider (Authentik, Keycloak, Zitadel, Okta, Cloudflare Access, …) to the sign-in and sign-up pages. Buttons can sit next to email and password, or replace them. Each provider is an optional slot, configured only through environment variables. You can enable all three at once. Most self-hosted instances enable one."><link rel="canonical" href="https://econumo.com/docs/self-hosting/single-sign-on/"><link rel="shortcut icon" href="/favicon.svg" type="image/png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><meta property="og:site_name" content="Econumo"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Single sign-on — Econumo"><meta property="og:description" content="Single sign-on # Econumo can add Sign in with Google, Sign in with Apple and a button for your own OpenID Connect provider (Authentik, Keycloak, Zitadel, Okta, Cloudflare Access, …) to the sign-in and sign-up pages. Buttons can sit next to email and password, or replace them. Each provider is an optional slot, configured only through environment variables. You can enable all three at once. Most self-hosted instances enable one."><meta property="og:url" content="https://econumo.com/docs/self-hosting/single-sign-on/"><meta property="og:image" content="https://econumo.com/econumo-og-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-11-15T00:00:00.000Z"><meta property="article:modified_time" content="2026-11-15T00:00:00.000Z"><meta property="article:section" content="docs"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Single sign-on — Econumo"><meta name="twitter:description" content="Single sign-on # Econumo can add Sign in with Google, Sign in with Apple and a button for your own OpenID Connect provider (Authentik, Keycloak, Zitadel, Okta, Cloudflare Access, …) to the sign-in and sign-up pages. Buttons can sit next to email and password, or replace them. Each provider is an optional slot, configured only through environment variables. You can enable all three at once. Most self-hosted instances enable one."><meta name="twitter:image" content="https://econumo.com/econumo-og-image.png"><link rel="alternate" type="application/rss+xml" title="Econumo" href="/index.xml"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Econumo","item":"https://econumo.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://econumo.com/docs/"},{"@type":"ListItem","position":3,"name":"Single sign-on","item":"https://econumo.com/docs/self-hosting/single-sign-on/"}]}</script><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40"><meta name="color-scheme" content="light dark"><!-- Google Tag Manager --><script>(function(){const GTM_ID = "GTM-MQM3JZ62";
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',GTM_ID);})();</script><!-- End Google Tag Manager --><!-- Analytics. data-vitals is the Web Vitals sample rate: at ~200 views/day
+         every page load is needed for stable percentiles. --><script defer src="https://t.kuznetsov.dev/js/twillingate.js" data-key="ak_9a0e50f1282dfa72888cc0ac8aa053f7" data-identity="anonymous" data-vitals="1"></script><!-- Fires the plausible-event-name--* CTA classes at the tracker above.
+         Served by the collector, so it never drifts from the tracker. --><script defer src="https://t.kuznetsov.dev/js/plausible-shim.js"></script><!-- End Analytics --><link rel="stylesheet" href="/_astro/Layout.DPngzuOz.css"></head> <body> <!-- Google Tag Manager (noscript) --><noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQM3JZ62" height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <div id="topBarWrapper" class="top-bar-wrapper fixed inset-x-0 top-0 z-50"> <div class="top-bar mx-auto max-w-6xl px-5 sm:px-8"> <div class="desktop-wrapper flex h-16 items-center gap-6"> <label for="menu-control" class="menu-icon" aria-label="Documentation"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2 5H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 12H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 19H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> </svg> </label> <nav class="flex flex-1 items-center gap-8"> <a href="/" class="logo menu-link"></a> <div class="nav-wrapper hidden flex-1 items-center justify-end gap-8 min-[961px]:flex"> <ul id="main-nav" class="main-nav part-1 flex items-center gap-7"> <li><a class="menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="menu-link" href="/#sPricing">Pricing</a></li> </ul> <div class="divider h-5 w-px bg-ink/15"></div> <ul class="main-nav part-2 flex items-center"> <li><a href="/docs/">Docs</a></li> </ul> </div> </nav> <div class="btn btn-small btn-fill btn-yellow"> <a href="https://app.econumo.com" target="_blank" class="plausible-event-name--signin plausible-event-position--topbar"> Sign In </a> </div> <input type="hidden" name="page-lang" id="page-lang" value="en"> </div> <div id="mobile-menu" class="mobile-wrapper"> <div class="mobile-menu-wrapper"> <ul id="mobile-nav" class="mobile-nav part-1"> <li><a class="mobile-menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="mobile-menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="mobile-menu-link" href="/#sPricing">Pricing</a></li> </ul> <ul class="mobile-nav part-2"> <li><a href="/docs/">Docs</a></li> </ul> </div> </div> </div> </div> <div class="main-overlay"></div>  <div class="content-wrapper"> <div class="content"> <input type="checkbox" class="hidden toggle" id="menu-control"> <input type="checkbox" class="hidden toggle" id="toc-control"> <main class="container flex gap-10"> <aside class="book-menu"> <div class="book-menu-content"> <nav> <div class="book-search"> <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"> <div class="book-search-spinner hidden"></div> <ul id="book-search-results"></ul> </div> <ul> <li> <a href="/docs/"> Getting Started </a>   </li><li> <a href="/docs/edition/"> Editions </a>   </li><li> <a href="/docs/user-guide/"> User Guide </a> <ul> <li> <a href="/docs/user-guide/accounts/"> Accounts </a>  </li><li> <a href="/docs/user-guide/transactions/"> Transactions </a>  </li><li> <a href="/docs/user-guide/recurring-transactions/"> Recurring transactions </a>  </li><li> <a href="/docs/user-guide/search/"> Search </a>  </li><li> <a href="/docs/user-guide/inbox/"> Inbox </a>  </li><li> <a href="/docs/user-guide/classifications/"> Classifications </a>  </li><li> <a href="/docs/user-guide/budgets/"> Budgets </a>  </li><li> <a href="/docs/user-guide/plan/"> Plan </a>  </li><li> <a href="/docs/user-guide/debts/"> Debts </a>  </li><li> <a href="/docs/user-guide/reports/"> Reports </a>  </li><li> <a href="/docs/user-guide/shared-access/"> Shared access </a>  </li><li> <a href="/docs/user-guide/multi-currency/"> Multi-Currency </a>  </li><li> <a href="/docs/user-guide/currencies/"> Currencies </a>  </li><li> <a href="/docs/user-guide/user-profile/"> User profile </a>  </li><li> <a href="/docs/user-guide/import-data/"> Import data </a> <ul> <li> <a href="/docs/user-guide/csv-import-export/"> CSV Import &amp; Export </a> </li><li> <a href="/docs/user-guide/apple-wallet/"> Apple Wallet </a> </li><li> <a href="/docs/user-guide/simplefin/"> SimpleFIN </a> </li><li> <a href="/docs/user-guide/import-rules/"> Import rules </a> </li> </ul> </li> </ul>  </li><li> <a href="/docs/apps/"> Apps </a>   </li><li> <a href="/docs/self-hosting/"> Self-Hosting </a> <ul> <li> <a href="/docs/self-hosting/installation/"> Installation </a>  </li><li> <a href="/docs/self-hosting/configuration/"> Configuration </a>  </li><li> <a href="/docs/self-hosting/single-sign-on/" class="active"> Single sign-on </a>  </li><li> <a href="/docs/self-hosting/multi-currency/"> Multi-Currency Support </a>  </li><li> <a href="/docs/self-hosting/backups/"> Backups </a>  </li><li> <a href="/docs/self-hosting/cli-commands/"> CLI commands </a>  </li><li> <a href="/docs/self-hosting/debug/"> Debug </a>  </li> </ul>  </li><li> <a href="/docs/api/"> API </a>   </li><li> <a href="/docs/comparison/"> Econumo compared </a> <ul> <li> <a href="/docs/comparison/econumo-vs-actualbudget/"> vs Actual Budget </a>  </li><li> <a href="/docs/comparison/econumo-vs-ynab/"> vs YNAB </a>  </li><li> <a href="/docs/comparison/econumo-vs-firefly-iii/"> vs Firefly III </a>  </li><li> <a href="/docs/comparison/econumo-vs-maybe-finance/"> vs Maybe Finance </a>  </li><li> <a href="/docs/comparison/econumo-vs-ezbookkeeping/"> vs ezBookkeeping </a>  </li><li> <a href="/docs/comparison/econumo-vs-gnucash/"> vs GnuCash </a>  </li> </ul>  </li><li> <a href="/docs/faq/"> FAQ </a>   </li><li> <a href="/docs/contact-us/"> Contact Us </a>  <br> </li><li> <a href="/posts/"> Blog </a>   </li><li> <a href="/releases/"> Releases </a>  <br> </li><li> <a href="/docs/legal/privacy-policy/"> Privacy Policy </a>   </li><li> <a href="/docs/legal/terms-of-service/"> Terms of Service </a>   </li><li> <a href="/docs/legal/refund-policy/"> Refund Policy </a>  <br> </li> </ul> <ul> <li> <a href="https://github.com/econumo" target="_blank" rel="noopener"> GitHub </a> </li><li> <a href="https://x.com/econumo" target="_blank" rel="noopener"> X (Twitter) </a> </li> </ul> </nav> </div> </aside> <div class="book-page"> <header class="book-header"> <div class="flex align-center justify-between"> <strong>Single sign-on</strong> <label for="toc-control"></label> </div> </header>  <article class="book-article"> <h1 id="single-sign-on">Single sign-on <a class="anchor" href="#single-sign-on">#</a></h1>
+<p>Econumo can add <strong>Sign in with Google</strong>, <strong>Sign in with Apple</strong> and a button
+for your own OpenID Connect provider (Authentik, Keycloak, Zitadel, Okta,
+Cloudflare Access, …) to the sign-in and sign-up pages. Buttons can sit next
+to email and password, or replace them.</p>
+<p>Each provider is an optional slot, configured only through environment
+variables. You can enable all three at once. Most self-hosted instances enable
+one.</p>
+<h2 id="in-this-section">In this section <a class="anchor" href="#in-this-section">#</a></h2>
+<ul>
+<li><a href="/docs/self-hosting/single-sign-on/#before-you-start">Before you start</a></li>
+<li><a href="/docs/self-hosting/single-sign-on/#your-own-openid-connect-provider">Your own OpenID Connect provider</a></li>
+<li><a href="/docs/self-hosting/single-sign-on/#google">Google</a></li>
+<li><a href="/docs/self-hosting/single-sign-on/#apple">Apple</a></li>
+<li><a href="/docs/self-hosting/single-sign-on/#provider-only-sign-in">Provider-only sign-in</a></li>
+<li><a href="/docs/self-hosting/single-sign-on/#how-accounts-are-matched">How accounts are matched</a></li>
+</ul>
+<hr/>
+<h2 id="before-you-start">Before you start <a class="anchor" href="#before-you-start">#</a></h2>
+<p>Every slot needs <code>ECONUMO_URL</code>, the public URL of your instance:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#FFAB70">ECONUMO_URL</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">https://money.example.com</span></span></code></pre>
+<p>You never configure the callback URL. Econumo builds it from <code>ECONUMO_URL</code>, and
+it is the one value you register with the provider:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>&lt;ECONUMO_URL&gt;/api/v1/oauth/callback-&lt;google|apple|oidc&gt;</span></span></code></pre>
+<p>A slot is all-or-nothing. If you set some of its variables but not all, the
+server refuses to start and names the one that is missing.</p>
+<hr/>
+<h2 id="your-own-openid-connect-provider">Your own OpenID Connect provider <a class="anchor" href="#your-own-openid-connect-provider">#</a></h2>
+<p>This slot works with any standards-compliant OpenID Connect provider. Here is
+the setup in <a href="https://goauthentik.io/">Authentik</a>. Other providers follow the
+same steps:</p>
+<ol>
+<li>Create an <strong>OAuth2/OpenID Provider</strong> (<strong>Applications → Providers →
+Create</strong>).</li>
+<li>Set <strong>Redirect URIs</strong> to <code>&lt;ECONUMO_URL&gt;/api/v1/oauth/callback-oidc</code>.</li>
+<li>Under <strong>Advanced protocol settings</strong>, pick an RSA <strong>Signing Key</strong>. Econumo
+accepts ID tokens signed with RS256 or ES256.</li>
+<li>Note the <strong>Client ID</strong>, <strong>Client Secret</strong> and <strong>OpenID Configuration URL</strong>.
+The issuer URL is that address without the trailing
+<code>/.well-known/openid-configuration</code>.</li>
+<li>Create an <strong>Application</strong> and attach it to the provider.</li>
+<li>Optional: to have signing out of Econumo also sign the user out of
+Authentik (web only), add <code>&lt;ECONUMO_URL&gt;/login</code> as a post-logout redirect
+URI on the provider.</li>
+<li>Configure Econumo:</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#FFAB70">ECONUMO_OIDC_ISSUER_URL</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">https://auth.example.com/application/o/econumo/</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OIDC_CLIENT_ID</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">&lt;client id&gt;</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OIDC_CLIENT_SECRET</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">&lt;client secret&gt;</span></span>
+<span class="line"><span style="color:#6A737D"># the button label</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OIDC_NAME</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">Authentik</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OIDC_SCOPES</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">openid,profile,email</span></span></code></pre>
+<h3 id="cloudflare-access">Cloudflare Access <a class="anchor" href="#cloudflare-access">#</a></h3>
+<p><a href="https://developers.cloudflare.com/cloudflare-one/applications/configure-apps/saas-apps/generic-oidc-saas-app/">Cloudflare Access for SaaS</a>
+can act as the OpenID Connect provider. Every identity provider and Access
+group you have already connected to Access then becomes a way to sign in to
+Econumo. In Zero Trust, go to <strong>Access → Applications → Add an application →
+SaaS</strong>, choose <strong>OIDC</strong>, and set the redirect URL to the callback above. Then:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#FFAB70">ECONUMO_OIDC_ISSUER_URL</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">https://&lt;team&gt;.cloudflareaccess.com/cdn-cgi/access/sso/oidc/&lt;client-id&gt;</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OIDC_CLIENT_ID</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">&lt;client id&gt;</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OIDC_CLIENT_SECRET</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">&lt;client secret&gt;</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OIDC_NAME</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">SSO</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OIDC_TRUST_EMAIL</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">true</span></span></code></pre>
+<blockquote class="book-hint warning"><p><strong>Unverified emails are rejected</strong>
+Econumo accepts a provider’s email only when the ID token marks it as
+verified (<code>email_verified</code>). Cloudflare Access never sends that claim. Without
+<code>ECONUMO_OIDC_TRUST_EMAIL=true</code>, every sign-in fails with <em>“The sign-in
+provider has not verified this email address.”</em> Set it only for a provider
+that already lets only verified identities through.</p></blockquote>
+<hr/>
+<h2 id="google">Google <a class="anchor" href="#google">#</a></h2>
+<ol>
+<li>In the <a href="https://console.cloud.google.com/">Google Cloud console</a>, open
+<strong>APIs &amp; Services → Credentials</strong>. If you are asked to, configure the
+<strong>OAuth consent screen</strong> first. The External user type is fine. While the
+app stays in Testing mode, add yourself as a test user.</li>
+<li><strong>Create Credentials → OAuth client ID</strong>, type <strong>Web application</strong>.</li>
+<li>Under <strong>Authorized redirect URIs</strong>, add
+<code>&lt;ECONUMO_URL&gt;/api/v1/oauth/callback-google</code>.</li>
+<li>Copy the client ID and secret:</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#FFAB70">ECONUMO_OAUTH_GOOGLE_CLIENT_ID</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">&lt;client id&gt;</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OAUTH_GOOGLE_CLIENT_SECRET</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">&lt;client secret&gt;</span></span></code></pre>
+<hr/>
+<h2 id="apple">Apple <a class="anchor" href="#apple">#</a></h2>
+<p>Sign in with Apple needs a paid Apple Developer account.</p>
+<ol>
+<li>In the <a href="https://developer.apple.com/account/resources/identifiers/list">developer portal</a>,
+note your <strong>Team ID</strong>.</li>
+<li>Register an <strong>App ID</strong> with the <strong>Sign in with Apple</strong> capability.</li>
+<li>Register a <strong>Services ID</strong>, e.g. <code>com.example.econumo.signin</code>. This is
+your client ID.</li>
+<li>Edit the Services ID and enable <strong>Sign in with Apple</strong>. Associate it with
+the App ID, and set the <strong>Return URL</strong> to
+<code>&lt;ECONUMO_URL&gt;/api/v1/oauth/callback-apple</code>.</li>
+<li>Under <strong>Keys</strong>, create a key with <strong>Sign in with Apple</strong> enabled and
+download the <code>.p8</code> file. You can download it only once. Note its <strong>Key ID</strong>.</li>
+<li>Make the <code>.p8</code> file readable by the server, but only by the server. In
+Docker, mount it into the container, e.g.
+<code>./secrets/apple.p8:/etc/econumo/apple.p8:ro</code>, and point the variable at
+the path inside the container:</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#FFAB70">ECONUMO_OAUTH_APPLE_CLIENT_ID</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">com.example.econumo.signin</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OAUTH_APPLE_TEAM_ID</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">&lt;team id&gt;</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OAUTH_APPLE_KEY_ID</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">&lt;key id&gt;</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_OAUTH_APPLE_PRIVATE_KEY_FILE</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">/etc/econumo/apple.p8</span></span></code></pre>
+<p>Keep the <code>.p8</code> file exactly as Apple produced it. The older
+<code>ECONUMO_OAUTH_APPLE_PRIVATE_KEY</code> variable, which took the key inline, is no
+longer accepted: a server that still sets it refuses to start.</p>
+<hr/>
+<h2 id="provider-only-sign-in">Provider-only sign-in <a class="anchor" href="#provider-only-sign-in">#</a></h2>
+<p>Set <code>ECONUMO_PASSWORD_LOGIN=false</code> to turn email and password off. The sign-in
+page then shows only the provider buttons. Password sign-in, sign-up, reset
+and change are all refused. Existing sessions and
+<a href="/docs/user-guide/user-profile/#api-tokens">API tokens</a> keep working. The
+server does not start in this mode unless at least one provider is
+configured.</p>
+<p><code>ECONUMO_ALLOW_REGISTRATION</code> then applies to providers alone. With <code>true</code>,
+anyone who can sign in at your provider gets an account on their first
+sign-in, so you manage users in the identity provider. With <code>false</code>, only
+existing accounts can sign in.</p>
+<blockquote class="book-hint warning"><p><strong>Link providers before you turn passwords off</strong>
+Econumo never links a provider to an account that has a password on its own,
+and once passwords are off that account can no longer sign in to link one.
+Before you switch, have every existing user sign in with their password and
+link the provider under
+<a href="/docs/user-guide/user-profile/#sign-in-methods">Sign-in methods</a>. Users
+created with <code>user:create</code> always have a password, so this applies to them too.</p></blockquote>
+<hr/>
+<h2 id="how-accounts-are-matched">How accounts are matched <a class="anchor" href="#how-accounts-are-matched">#</a></h2>
+<ul>
+<li><strong>First sign-in, no matching account.</strong> Econumo creates a new account
+without a password, if registration is allowed. The user can add a password
+later.</li>
+<li><strong>Same email as an account without a password.</strong> The provider is linked
+automatically, and the account owner gets an email about it.</li>
+<li><strong>Same email as an account with a password.</strong> The sign-in is refused. The
+user signs in with their password once, or resets it, and links the provider
+from Settings. Econumo does not merge a provider into an account whose owner
+has not signed in, because a password account is no proof that its holder
+owns the address.</li>
+<li><strong>A password reset reclaims the account.</strong> It signs out every session,
+revokes API tokens, and unlinks every provider that reports a <em>different</em>
+email address.</li>
+<li><strong>Changing <code>ECONUMO_OIDC_ISSUER_URL</code> later</strong> makes every user’s old link
+stale. Accounts without a password are matched again by their verified
+email on their next sign-in. Accounts with a password are refused, as
+above: their owners sign in with the password and link the provider again.
+With <code>ECONUMO_PASSWORD_LOGIN=false</code> this locks them out, so turn password
+sign-in back on while they re-link.</li>
+</ul>
+<p>The full reference, with more edge cases, is
+<a href="https://github.com/econumo/econumo/blob/main/docs/oidc-setup.md"><code>docs/oidc-setup.md</code></a>
+in the repository.</p> </article>  <footer class="book-footer"> <div class="flex flex-wrap justify-between"></div> </footer> <label for="menu-control" class="book-menu-overlay"></label> </div> </main> </div> </div>  <script defer src="/scripts/top-bar.js"></script> <script defer src="/scripts/navigation.js"></script><script defer src="/scripts/mobile.js"></script><script defer src="/scripts/book.js"></script> <script defer src="/scripts/search.js"></script> </body> </html>

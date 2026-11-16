@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preload" href="/_astro/plus-jakarta-sans-latin-wght-normal.eXO_dkmS.woff2" as="font" type="font/woff2" crossorigin><title>Configuration — Econumo</title><meta name="description" content="Configuration # Econumo is configured entirely through environment variables. There is no admin screen. With Docker they go in .env. With the single binary they go in /etc/econumo/env (see Installation). After a change, apply it with docker compose up -d, which recreates the container (docker compose restart keeps the old values), or with sudo systemctl restart econumo. The repository has two templates: .env.example holds the settings most setups need. docs/full.env.example"><link rel="canonical" href="https://econumo.com/docs/self-hosting/configuration/"><link rel="shortcut icon" href="/favicon.svg" type="image/png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><meta property="og:site_name" content="Econumo"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Configuration — Econumo"><meta property="og:description" content="Configuration # Econumo is configured entirely through environment variables. There is no admin screen. With Docker they go in .env. With the single binary they go in /etc/econumo/env (see Installation). After a change, apply it with docker compose up -d, which recreates the container (docker compose restart keeps the old values), or with sudo systemctl restart econumo. The repository has two templates: .env.example holds the settings most setups need. docs/full.env.example"><meta property="og:url" content="https://econumo.com/docs/self-hosting/configuration/"><meta property="og:image" content="https://econumo.com/econumo-og-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-11-15T00:00:00.000Z"><meta property="article:modified_time" content="2026-11-15T00:00:00.000Z"><meta property="article:section" content="docs"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Configuration — Econumo"><meta name="twitter:description" content="Configuration # Econumo is configured entirely through environment variables. There is no admin screen. With Docker they go in .env. With the single binary they go in /etc/econumo/env (see Installation). After a change, apply it with docker compose up -d, which recreates the container (docker compose restart keeps the old values), or with sudo systemctl restart econumo. The repository has two templates: .env.example holds the settings most setups need. docs/full.env.example"><meta name="twitter:image" content="https://econumo.com/econumo-og-image.png"><link rel="alternate" type="application/rss+xml" title="Econumo" href="/index.xml"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Econumo","item":"https://econumo.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://econumo.com/docs/"},{"@type":"ListItem","position":3,"name":"Configuration","item":"https://econumo.com/docs/self-hosting/configuration/"}]}</script><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40"><meta name="color-scheme" content="light dark"><!-- Google Tag Manager --><script>(function(){const GTM_ID = "GTM-MQM3JZ62";
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',GTM_ID);})();</script><!-- End Google Tag Manager --><!-- Analytics. data-vitals is the Web Vitals sample rate: at ~200 views/day
+         every page load is needed for stable percentiles. --><script defer src="https://t.kuznetsov.dev/js/twillingate.js" data-key="ak_9a0e50f1282dfa72888cc0ac8aa053f7" data-identity="anonymous" data-vitals="1"></script><!-- Fires the plausible-event-name--* CTA classes at the tracker above.
+         Served by the collector, so it never drifts from the tracker. --><script defer src="https://t.kuznetsov.dev/js/plausible-shim.js"></script><!-- End Analytics --><link rel="stylesheet" href="/_astro/Layout.DPngzuOz.css"></head> <body> <!-- Google Tag Manager (noscript) --><noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQM3JZ62" height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <div id="topBarWrapper" class="top-bar-wrapper fixed inset-x-0 top-0 z-50"> <div class="top-bar mx-auto max-w-6xl px-5 sm:px-8"> <div class="desktop-wrapper flex h-16 items-center gap-6"> <label for="menu-control" class="menu-icon" aria-label="Documentation"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2 5H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 12H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 19H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> </svg> </label> <nav class="flex flex-1 items-center gap-8"> <a href="/" class="logo menu-link"></a> <div class="nav-wrapper hidden flex-1 items-center justify-end gap-8 min-[961px]:flex"> <ul id="main-nav" class="main-nav part-1 flex items-center gap-7"> <li><a class="menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="menu-link" href="/#sPricing">Pricing</a></li> </ul> <div class="divider h-5 w-px bg-ink/15"></div> <ul class="main-nav part-2 flex items-center"> <li><a href="/docs/">Docs</a></li> </ul> </div> </nav> <div class="btn btn-small btn-fill btn-yellow"> <a href="https://app.econumo.com" target="_blank" class="plausible-event-name--signin plausible-event-position--topbar"> Sign In </a> </div> <input type="hidden" name="page-lang" id="page-lang" value="en"> </div> <div id="mobile-menu" class="mobile-wrapper"> <div class="mobile-menu-wrapper"> <ul id="mobile-nav" class="mobile-nav part-1"> <li><a class="mobile-menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="mobile-menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="mobile-menu-link" href="/#sPricing">Pricing</a></li> </ul> <ul class="mobile-nav part-2"> <li><a href="/docs/">Docs</a></li> </ul> </div> </div> </div> </div> <div class="main-overlay"></div>  <div class="content-wrapper"> <div class="content"> <input type="checkbox" class="hidden toggle" id="menu-control"> <input type="checkbox" class="hidden toggle" id="toc-control"> <main class="container flex gap-10"> <aside class="book-menu"> <div class="book-menu-content"> <nav> <div class="book-search"> <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"> <div class="book-search-spinner hidden"></div> <ul id="book-search-results"></ul> </div> <ul> <li> <a href="/docs/"> Getting Started </a>   </li><li> <a href="/docs/edition/"> Editions </a>   </li><li> <a href="/docs/user-guide/"> User Guide </a> <ul> <li> <a href="/docs/user-guide/accounts/"> Accounts </a>  </li><li> <a href="/docs/user-guide/transactions/"> Transactions </a>  </li><li> <a href="/docs/user-guide/recurring-transactions/"> Recurring transactions </a>  </li><li> <a href="/docs/user-guide/search/"> Search </a>  </li><li> <a href="/docs/user-guide/inbox/"> Inbox </a>  </li><li> <a href="/docs/user-guide/classifications/"> Classifications </a>  </li><li> <a href="/docs/user-guide/budgets/"> Budgets </a>  </li><li> <a href="/docs/user-guide/plan/"> Plan </a>  </li><li> <a href="/docs/user-guide/debts/"> Debts </a>  </li><li> <a href="/docs/user-guide/reports/"> Reports </a>  </li><li> <a href="/docs/user-guide/shared-access/"> Shared access </a>  </li><li> <a href="/docs/user-guide/multi-currency/"> Multi-Currency </a>  </li><li> <a href="/docs/user-guide/currencies/"> Currencies </a>  </li><li> <a href="/docs/user-guide/user-profile/"> User profile </a>  </li><li> <a href="/docs/user-guide/import-data/"> Import data </a> <ul> <li> <a href="/docs/user-guide/csv-import-export/"> CSV Import &amp; Export </a> </li><li> <a href="/docs/user-guide/apple-wallet/"> Apple Wallet </a> </li><li> <a href="/docs/user-guide/simplefin/"> SimpleFIN </a> </li><li> <a href="/docs/user-guide/import-rules/"> Import rules </a> </li> </ul> </li> </ul>  </li><li> <a href="/docs/apps/"> Apps </a>   </li><li> <a href="/docs/self-hosting/"> Self-Hosting </a> <ul> <li> <a href="/docs/self-hosting/installation/"> Installation </a>  </li><li> <a href="/docs/self-hosting/configuration/" class="active"> Configuration </a>  </li><li> <a href="/docs/self-hosting/single-sign-on/"> Single sign-on </a>  </li><li> <a href="/docs/self-hosting/multi-currency/"> Multi-Currency Support </a>  </li><li> <a href="/docs/self-hosting/backups/"> Backups </a>  </li><li> <a href="/docs/self-hosting/cli-commands/"> CLI commands </a>  </li><li> <a href="/docs/self-hosting/debug/"> Debug </a>  </li> </ul>  </li><li> <a href="/docs/api/"> API </a>   </li><li> <a href="/docs/comparison/"> Econumo compared </a> <ul> <li> <a href="/docs/comparison/econumo-vs-actualbudget/"> vs Actual Budget </a>  </li><li> <a href="/docs/comparison/econumo-vs-ynab/"> vs YNAB </a>  </li><li> <a href="/docs/comparison/econumo-vs-firefly-iii/"> vs Firefly III </a>  </li><li> <a href="/docs/comparison/econumo-vs-maybe-finance/"> vs Maybe Finance </a>  </li><li> <a href="/docs/comparison/econumo-vs-ezbookkeeping/"> vs ezBookkeeping </a>  </li><li> <a href="/docs/comparison/econumo-vs-gnucash/"> vs GnuCash </a>  </li> </ul>  </li><li> <a href="/docs/faq/"> FAQ </a>   </li><li> <a href="/docs/contact-us/"> Contact Us </a>  <br> </li><li> <a href="/posts/"> Blog </a>   </li><li> <a href="/releases/"> Releases </a>  <br> </li><li> <a href="/docs/legal/privacy-policy/"> Privacy Policy </a>   </li><li> <a href="/docs/legal/terms-of-service/"> Terms of Service </a>   </li><li> <a href="/docs/legal/refund-policy/"> Refund Policy </a>  <br> </li> </ul> <ul> <li> <a href="https://github.com/econumo" target="_blank" rel="noopener"> GitHub </a> </li><li> <a href="https://x.com/econumo" target="_blank" rel="noopener"> X (Twitter) </a> </li> </ul> </nav> </div> </aside> <div class="book-page"> <header class="book-header"> <div class="flex align-center justify-between"> <strong>Configuration</strong> <label for="toc-control"></label> </div> </header>  <article class="book-article"> <h1 id="configuration">Configuration <a class="anchor" href="#configuration">#</a></h1>
+<p>Econumo is configured entirely through environment variables. There is no
+admin screen. With Docker they go in <code>.env</code>. With the single binary they go in
+<code>/etc/econumo/env</code> (see <a href="/docs/self-hosting/installation/">Installation</a>).
+After a change, apply it with <code>docker compose up -d</code>, which recreates the
+container (<code>docker compose restart</code> keeps the old values), or with
+<code>sudo systemctl restart econumo</code>.</p>
+<p>The repository has two templates:</p>
+<ul>
+<li><a href="https://github.com/econumo/econumo/blob/main/.env.example"><code>.env.example</code></a>
+holds the settings most setups need.</li>
+<li><a href="https://github.com/econumo/econumo/blob/main/docs/full.env.example"><code>docs/full.env.example</code></a>
+is the commented reference for every setting.</li>
+</ul>
+<p>This page walks through the ones you are most likely to touch.</p>
+<blockquote class="book-hint info"><p><strong>Note</strong>
+Values are checked strictly at start-up. A typo in a number or a boolean, or a
+sign-in provider with a variable missing, stops the server with a message that
+names the variable. If the container keeps restarting, check
+<code>docker compose logs econumo</code>.</p></blockquote>
+<h2 id="in-this-section">In this section <a class="anchor" href="#in-this-section">#</a></h2>
+<ul>
+<li><a href="/docs/self-hosting/configuration/#essentials">Essentials</a></li>
+<li><a href="/docs/self-hosting/configuration/#database-sqlite-or-postgresql">Database: SQLite or PostgreSQL</a></li>
+<li><a href="/docs/self-hosting/configuration/#email">Email</a></li>
+<li><a href="/docs/self-hosting/configuration/#sign-up-and-access">Sign-up and access</a></li>
+<li><a href="/docs/self-hosting/configuration/#optional-features">Optional features</a></li>
+<li><a href="/docs/self-hosting/configuration/#reverse-proxy-and-rate-limits">Reverse proxy and rate limits</a></li>
+</ul>
+<hr/>
+<h2 id="essentials">Essentials <a class="anchor" href="#essentials">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Variable</th><th>Default</th><th>What it does</th></tr></thead><tbody><tr><td><code>DATABASE_URL</code></td><td>— (required)</td><td>Where the data lives. The scheme picks the engine: <code>sqlite://…</code> or <code>postgres://…</code>.</td></tr><tr><td><code>PORT</code></td><td>— (required)</td><td>The HTTP port. Keep <code>80</code> in Docker; the bundled compose file maps it to <code>8181</code>.</td></tr><tr><td><code>ECONUMO_URL</code></td><td>—</td><td>The public URL of your instance, e.g. <code>https://money.example.com</code>. It adds a link to emails, and you need it for <a href="/docs/self-hosting/single-sign-on/">single sign-on</a> and for connecting AI apps by signing in.</td></tr><tr><td><code>ECONUMO_ALLOW_REGISTRATION</code></td><td><code>true</code></td><td>Lets new users sign up. Turn it off once everyone has an account.</td></tr><tr><td><code>ECONUMO_CURRENCY_BASE</code></td><td><code>USD</code></td><td>The base currency for conversions. See <a href="/docs/self-hosting/multi-currency/">Multi-Currency Support</a>.</td></tr><tr><td><code>OPEN_EXCHANGE_RATES_TOKEN</code></td><td>—</td><td>The App ID that fetches exchange rates.</td></tr><tr><td><code>ECONUMO_CURRENCY_UPDATE_INTERVAL</code></td><td>off</td><td>Refreshes exchange rates automatically every N days (1–31).</td></tr><tr><td><code>ECONUMO_LOG_LEVEL</code></td><td><code>info</code></td><td><code>debug</code>, <code>info</code>, <code>warn</code> or <code>error</code>. See <a href="/docs/self-hosting/debug/">Debug</a>.</td></tr></tbody></table>
+<hr/>
+<h2 id="database-sqlite-or-postgresql">Database: SQLite or PostgreSQL <a class="anchor" href="#database-sqlite-or-postgresql">#</a></h2>
+<p>SQLite is the default and needs no setup: the whole database is one file, and
+backing it up means copying that file. For a household instance it is the
+right choice.</p>
+<p>To run on PostgreSQL, point <code>DATABASE_URL</code> at an empty database. Econumo
+creates the schema on first start:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#FFAB70">DATABASE_URL</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">postgres://econumo:econumo@postgres:5432/econumo?sslmode=disable</span></span></code></pre>
+<p>The repository’s <code>docker-compose.yml</code> contains a commented-out <code>postgres</code>
+service (and a <code>pgdata</code> volume) that matches this URL. Uncomment both to run
+PostgreSQL next to the app.</p>
+<h3 id="moving-an-existing-instance-from-sqlite-to-postgresql">Moving an existing instance from SQLite to PostgreSQL <a class="anchor" href="#moving-an-existing-instance-from-sqlite-to-postgresql">#</a></h3>
+<p>The <code>data:import-sqlite</code> command copies everything from a SQLite file into the
+PostgreSQL database that <code>DATABASE_URL</code> points to:</p>
+<ol>
+<li>
+<p>Back up the SQLite file (see <a href="/docs/self-hosting/backups/">Backups</a>).</p>
+</li>
+<li>
+<p>Stop the whole stack (<code>docker compose stop</code>), including a Litestream
+sidecar if you have one, so nothing writes to the SQLite file during the
+copy.</p>
+</li>
+<li>
+<p>Set <code>DATABASE_URL</code> to the new PostgreSQL database. If you use the bundled
+<code>postgres</code> service, start it and wait until it is healthy:
+<code>docker compose up -d postgres</code>.</p>
+</li>
+<li>
+<p>Run the import, with the SQLite file still reachable by the binary. In
+Docker the old <code>db</code> volume is still mounted at <code>/app/var/db</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> compose</span><span style="color:#9ECBFF"> run</span><span style="color:#79B8FF"> --rm</span><span style="color:#79B8FF"> --entrypoint</span><span style="color:#9ECBFF"> /app/econumo</span><span style="color:#9ECBFF"> econumo</span><span style="color:#9ECBFF"> data:import-sqlite</span><span style="color:#9ECBFF"> /app/var/db/db.sqlite</span></span></code></pre>
+</li>
+<li>
+<p>Start Econumo again: <code>docker compose up -d</code>.</p>
+</li>
+</ol>
+<p>The command creates the schema if needed and prints the number of rows copied
+per table. It refuses to write into a database that already has data. Add
+<code>--force</code> to wipe the target and copy again.</p>
+<hr/>
+<h2 id="email">Email <a class="anchor" href="#email">#</a></h2>
+<p>Econumo sends email for password resets, verification codes and email
+changes. With no mailer configured, emails are printed to the server log
+instead. That is fine for trying Econumo out, but users cannot reset a
+forgotten password themselves.</p>
+<p>Set <code>MAILER_DSN</code> to one of:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#6A737D"># Resend</span></span>
+<span class="line"><span style="color:#FFAB70">MAILER_DSN</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">resend://re_xxxxxxxx?from=noreply@yourdomain.com&amp;reply_to=support@yourdomain.com</span></span>
+<span class="line"><span style="color:#6A737D"># Any SMTP server with STARTTLS (default port 587)</span></span>
+<span class="line"><span style="color:#FFAB70">MAILER_DSN</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">smtp://user:pass@smtp.example.com:587?from=Econumo%20%3Cnoreply@yourdomain.com%3E</span></span>
+<span class="line"><span style="color:#6A737D"># SMTP over TLS (default port 465)</span></span>
+<span class="line"><span style="color:#FFAB70">MAILER_DSN</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">smtps://user:pass@smtp.example.com:465?from=noreply@yourdomain.com</span></span>
+<span class="line"><span style="color:#6A737D"># A relay without TLS on a trusted network, e.g. a Postfix container</span></span>
+<span class="line"><span style="color:#FFAB70">MAILER_DSN</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">smtp://postfix:25?from=noreply@yourdomain.com&amp;insecure=true</span></span></code></pre>
+<p>Percent-encode special characters in the user name and password (<code>@</code> becomes
+<code>%40</code>, <code>/</code> becomes <code>%2F</code>, <code>:</code> becomes <code>%3A</code>).</p>
+<hr/>
+<h2 id="sign-up-and-access">Sign-up and access <a class="anchor" href="#sign-up-and-access">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Variable</th><th>Default</th><th>What it does</th></tr></thead><tbody><tr><td><code>ECONUMO_ALLOW_REGISTRATION</code></td><td><code>true</code></td><td>Open sign-up. When it is off, create users with <a href="/docs/self-hosting/cli-commands/#user-management"><code>user:create</code></a>.</td></tr><tr><td><code>ECONUMO_EMAIL_VERIFICATION</code></td><td><code>false</code></td><td>New users must confirm their email with a code at their first sign-in. Configure <code>MAILER_DSN</code> first, otherwise the codes only reach the server log.</td></tr><tr><td><code>ECONUMO_PASSWORD_LOGIN</code></td><td><code>true</code></td><td>Set <code>false</code> to allow sign-in only through a provider. See <a href="/docs/self-hosting/single-sign-on/#provider-only-sign-in">Single sign-on</a>.</td></tr><tr><td><code>ECONUMO_TRIAL</code></td><td><code>0</code></td><td>Trial length, in days, for users who sign up themselves. After the trial they become read-only. <code>0</code> means full access forever.</td></tr><tr><td><code>ECONUMO_ALLOW_CUSTOM_API</code></td><td><code>false</code></td><td>Shows the “use my own server” option on the sign-in and sign-up pages.</td></tr></tbody></table>
+<p>To give a user full access again, or to make one read-only, use
+<a href="/docs/self-hosting/cli-commands/#user-management"><code>user:set-access</code></a>.</p>
+<p>Single sign-on with Google, Apple or your own OpenID Connect provider
+(Authentik, Keycloak, Cloudflare Access, …) has its own page:
+<a href="/docs/self-hosting/single-sign-on/">Single sign-on</a>.</p>
+<hr/>
+<h2 id="optional-features">Optional features <a class="anchor" href="#optional-features">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Variable</th><th>Default</th><th>What it does</th></tr></thead><tbody><tr><td><code>ECONUMO_IMPORT_SIMPLEFIN</code></td><td><code>true</code></td><td>Bank sync through <a href="/docs/user-guide/simplefin/">SimpleFIN Bridge</a>, a third-party service not affiliated with Econumo. Set <code>false</code> to hide it. <a href="/docs/user-guide/csv-import-export/">CSV import</a> and <a href="/docs/user-guide/apple-wallet/">Apple Wallet</a> are always on.</td></tr><tr><td><code>ECONUMO_IMPORT_ALLOW_PRIVATE_HOSTS</code></td><td><code>false</code></td><td>Lets SimpleFIN reach private or LAN addresses. Turn it on only for a bridge on your own network.</td></tr><tr><td><code>ECONUMO_FEEDBACK</code></td><td><code>true</code></td><td>The in-app <strong>Send feedback</strong> form. Messages go from the browser to econumo.com.</td></tr><tr><td><code>ECONUMO_CHECK_UPDATES</code></td><td><code>true</code></td><td>A daily check for new releases: one request to econumo.com.</td></tr></tbody></table>
+<blockquote class="book-hint info"><p><strong>Note</strong>
+In v1.7.3 and earlier, SimpleFIN is <strong>off</strong> by default. Set
+<code>ECONUMO_IMPORT_SIMPLEFIN=true</code> to turn it on.</p></blockquote>
+<h3 id="ai-apps-mcp">AI apps (MCP) <a class="anchor" href="#ai-apps-mcp">#</a></h3>
+<p>Econumo has a built-in <a href="/docs/user-guide/user-profile/#connected-apps">MCP server</a>
+at <code>&lt;ECONUMO_URL&gt;/mcp</code>. Users connect Claude, Claude Code or Codex to it by
+signing in through the browser. This works only when <code>ECONUMO_URL</code> is set to an
+<code>https</code> origin with no path. Without it, <code>/mcp</code> accepts only
+<a href="/docs/user-guide/user-profile/#api-tokens">API tokens</a>.</p>
+<p>Claude on the web, desktop and mobile connects from Anthropic’s servers, so
+for those the instance must be reachable from the internet. Claude Code and
+Codex only need to reach it from the user’s computer.</p>
+<hr/>
+<h2 id="reverse-proxy-and-rate-limits">Reverse proxy and rate limits <a class="anchor" href="#reverse-proxy-and-rate-limits">#</a></h2>
+<p>Econumo rate-limits sign-in attempts, password resets, sign-ups and a few
+other sensitive endpoints, per email address and per client IP. It also caps
+requests per endpoint per client IP (<code>ECONUMO_RATE_LIMIT_IP</code>, 60 a minute).</p>
+<p>Behind a reverse proxy every request seems to come from the proxy’s address,
+so all your users share one limit. Tell Econumo which header carries the real
+client IP:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#6A737D"># e.g. behind Cloudflare</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_CLIENT_IP_HEADER</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">CF-Connecting-IP</span></span>
+<span class="line"><span style="color:#6A737D"># or list your proxies; the header then defaults to X-Forwarded-For</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_CLIENT_IP_TRUSTED_PROXIES</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">10.0.0.0/8,172.16.0.0/12</span></span></code></pre>
+<p>Make sure only the proxy can reach Econumo directly. Otherwise a client can
+send the header itself.</p>
+<p>Every limit has its own variable (<code>ECONUMO_RATE_LIMIT_LOGIN</code>,
+<code>ECONUMO_RATE_LIMIT_REGISTER</code>, …, over the <code>ECONUMO_RATE_LIMIT_WINDOW</code>
+window, 15 minutes by default), and <code>0</code> turns a check off. See
+<a href="https://github.com/econumo/econumo/blob/main/docs/full.env.example"><code>full.env.example</code></a>
+for the list.</p>
+<blockquote class="book-hint info"><p><strong>Note</strong>
+<code>ECONUMO_CLIENT_IP_HEADER</code>, <code>ECONUMO_CLIENT_IP_TRUSTED_PROXIES</code> and
+<code>ECONUMO_RATE_LIMIT_IP</code> arrive in the release after v1.7.3. In v1.7.3 and
+earlier, the per-endpoint cap is <code>ECONUMO_RATE_LIMIT_GLOBAL</code>, and it is shared
+by all clients.</p></blockquote> </article>  <footer class="book-footer"> <div class="flex flex-wrap justify-between"></div> </footer> <label for="menu-control" class="book-menu-overlay"></label> </div> </main> </div> </div>  <script defer src="/scripts/top-bar.js"></script> <script defer src="/scripts/navigation.js"></script><script defer src="/scripts/mobile.js"></script><script defer src="/scripts/book.js"></script> <script defer src="/scripts/search.js"></script> </body> </html>

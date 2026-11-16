@@ -77,8 +77,9 @@ financial management features for those who prioritize privacy and control over 
 API and the web app and runs on SQLite by default (PostgreSQL is also supported). Users share accounts and budgets by
 [connecting with an invitation](/docs/user-guide/shared-access/) and choosing an access level per item.
 
-To get started with **Econumo Self-Hosted**, please follow the instructions on
-the [GitHub repository](https://github.com/econumo/econumo).
+To get started with **Econumo Self-Hosted**, follow the
+[installation guide](/docs/self-hosting/installation/); the source code is on
+[GitHub](https://github.com/econumo/econumo).
 
 ---
 
@@ -3029,15 +3030,652 @@ URL: https://econumo.com/docs/self-hosting/
 
 # Self-Hosting
 
-**Econumo Self-Hosted** gives you full control over your financial data by running Econumo on your own infrastructure. This section offers guidance and resources to help you manage and optimize your Econumo Self-Hosted instance.
+**Econumo Self-Hosted** gives you full control over your financial data by
+running Econumo on your own infrastructure. It is free and MIT-licensed, and it
+ships as a single self-contained binary: one small Docker image, or one Linux
+executable, serving both the API and the web app. It stores data in SQLite by
+default, with PostgreSQL as an option.
+
+This section covers installing, configuring and running your instance.
 
 ---
 ## Contents
 
-- [Multi-Currency Support](/docs/self-hosting/multi-currency/)
-- [Backups](/docs/self-hosting/backups/)
-- [CLI commands](/docs/self-hosting/cli-commands/)
-- [Debug](/docs/self-hosting/debug/)
+- [Installation](/docs/self-hosting/installation/): Docker or a single binary, HTTPS, upgrading
+- [Configuration](/docs/self-hosting/configuration/): environment variables, database, email, sign-up, optional features
+- [Single sign-on](/docs/self-hosting/single-sign-on/): Google, Apple, or your own OpenID Connect provider
+- [Multi-Currency Support](/docs/self-hosting/multi-currency/): currencies and exchange rates
+- [Backups](/docs/self-hosting/backups/): copying, restoring, continuous replication
+- [CLI commands](/docs/self-hosting/cli-commands/): managing users, currencies and data from the terminal
+- [Debug](/docs/self-hosting/debug/): logs, health checks, start-up errors
+
+The source code, issue tracker and release notes are on
+[GitHub](https://github.com/econumo/econumo).
+
+---
+
+# Installation
+
+URL: https://econumo.com/docs/self-hosting/installation/
+
+# Installation
+
+Econumo is a single, self-contained Go binary. It serves both the API and the
+web app, runs database migrations by itself on every start, and stores data in
+SQLite by default (PostgreSQL is also supported). It is light: the server uses
+around 10 MB of RAM.
+
+You can run it with Docker (recommended) or as a plain binary under systemd.
+
+## In this section
+
+- [Docker](/docs/self-hosting/installation/#docker)
+- [Without Docker (single binary)](/docs/self-hosting/installation/#without-docker-single-binary)
+- [Create the first user](/docs/self-hosting/installation/#create-the-first-user)
+- [HTTPS and a reverse proxy](/docs/self-hosting/installation/#https-and-a-reverse-proxy)
+- [Upgrading](/docs/self-hosting/installation/#upgrading)
+
+---
+## Docker
+
+You need [Docker](https://docs.docker.com/engine/install/) with
+[Compose](https://docs.docker.com/compose/install/).
+
+```sh
+git clone --single-branch https://github.com/econumo/econumo
+cd econumo
+cp .env.example .env && chmod 600 .env
+docker compose pull && docker compose up -d
+```
+
+Then open `http://localhost:8181`. The bundled `docker-compose.yml` runs the
+published image `ghcr.io/econumo/econumo:latest`, maps port `8181` on the host
+to port `80` in the container, and keeps the SQLite database in the `db`
+named volume (`/app/var/db`). The container reports its health to Docker
+through the built-in `healthcheck` command, which probes the `/health`
+endpoint.
+
+All settings live in `.env`. The defaults work out of the box: SQLite storage
+and open registration. See [Configuration](/docs/self-hosting/configuration/)
+for everything else.
+
+**Note**
+The image is published to the **GitHub Container Registry**
+(`ghcr.io/econumo/econumo`). The old Docker Hub image `econumo/econumo-ce`
+belongs to v0.x and is no longer updated.
+
+If you'd rather not clone the repository, a minimal `docker-compose.yml` is all
+you need next to your `.env`:
+
+```yml
+services:
+  econumo:
+    image: ghcr.io/econumo/econumo:latest
+    env_file:
+      - .env
+    ports:
+      - "8181:80"
+    volumes:
+      - db:/app/var/db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "/app/econumo", "healthcheck"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 12
+      start_period: 30s
+
+volumes:
+  db:
+```
+
+with a `.env` holding at least:
+
+```dotenv
+DATABASE_URL=sqlite:///app/var/db/db.sqlite
+PORT=80
+ECONUMO_ALLOW_REGISTRATION=true
+```
+
+---
+## Without Docker (single binary)
+
+Every [release](https://github.com/econumo/econumo/releases/latest) also ships
+self-contained Linux binaries for `linux/amd64` and `linux/arm64`, with the web
+app embedded. Download the binary for your architecture and verify it.
+On arm64 (e.g. a Raspberry Pi), use `econumo-linux-arm64` here and below:
+
+```sh
+curl -LO https://github.com/econumo/econumo/releases/latest/download/econumo-linux-amd64
+curl -LO https://github.com/econumo/econumo/releases/latest/download/SHA256SUMS
+sha256sum --check --ignore-missing SHA256SUMS
+```
+
+Create a system user and the directories, install the binary, and write the
+environment file:
+
+```sh
+sudo useradd --system --home-dir /var/lib/econumo --shell /usr/sbin/nologin econumo
+sudo mkdir -p /opt/econumo /var/lib/econumo /etc/econumo
+sudo chown econumo:econumo /var/lib/econumo
+sudo chmod 700 /var/lib/econumo
+sudo install -m 0755 econumo-linux-amd64 /opt/econumo/econumo
+sudo install -m 0600 /dev/null /etc/econumo/env
+sudoedit /etc/econumo/env
+```
+
+A minimal `/etc/econumo/env`:
+
+```dotenv
+DATABASE_URL=sqlite:///var/lib/econumo/db.sqlite
+PORT=8181
+```
+
+Save this unit as `/etc/systemd/system/econumo.service`:
+
+```ini
+[Unit]
+Description=Econumo personal finance server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=econumo
+Group=econumo
+WorkingDirectory=/var/lib/econumo
+EnvironmentFile=/etc/econumo/env
+ExecStart=/opt/econumo/econumo serve
+Restart=on-failure
+RestartSec=5
+
+# Hardening: the process only ever writes its database directory.
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/var/lib/econumo
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
+```
+
+and start it:
+
+```sh
+sudo systemctl daemon-reload && sudo systemctl enable --now econumo
+```
+
+The binary also reads a `.env` file from its working directory if one exists,
+but variables already set in the environment always win.
+
+---
+## Create the first user
+
+Open the app and sign up — registration is on by default. Once everyone in
+your household has an account, set `ECONUMO_ALLOW_REGISTRATION=false` and
+apply it with `docker compose up -d`.
+
+You can also create users from the command line, with registration turned
+off:
+
+```sh
+docker compose exec econumo /app/econumo user:create "Name" user@example.com password
+```
+
+See [CLI commands](/docs/self-hosting/cli-commands/) for this and the other
+management commands.
+
+---
+## HTTPS and a reverse proxy
+
+Econumo speaks plain HTTP. To reach it from outside your network, put it
+behind a reverse proxy that terminates TLS (Caddy, nginx, Traefik, a
+Cloudflare Tunnel, …) and forwards requests to port `8181`.
+
+Then tell Econumo its public address:
+
+```dotenv
+ECONUMO_URL=https://money.example.com
+```
+
+`ECONUMO_URL` adds a link to every email, and it is required for
+[single sign-on](/docs/self-hosting/single-sign-on/) and for connecting AI
+apps such as Claude to the built-in
+[MCP server](/docs/user-guide/user-profile/#connected-apps) by signing in.
+For MCP it must be an `https` origin with no path (plain `http` is accepted
+only for `localhost`).
+
+Some features need the app to be opened over HTTPS (or on `localhost`):
+connecting a bank through [SimpleFIN](/docs/user-guide/simplefin/), for
+example, because the browser only encrypts the credentials on a secure page.
+
+Behind a proxy, also see
+[Reverse proxy and rate limits](/docs/self-hosting/configuration/#reverse-proxy-and-rate-limits).
+
+---
+## Upgrading
+
+Back up first (see [Backups](/docs/self-hosting/backups/)), then:
+
+```sh
+# Docker
+docker compose pull && docker compose up -d
+
+# Single binary: replace the file, then restart
+sudo install -m 0755 econumo-linux-amd64 /opt/econumo/econumo
+sudo systemctl restart econumo
+```
+
+Database migrations run automatically on start. `/app/econumo version` (or
+`/opt/econumo/econumo version`) prints the installed version, and the server
+checks once a day for a newer release and shows it in **Settings** (set
+`ECONUMO_CHECK_UPDATES=false` to turn that off). Release notes are on
+[GitHub Releases](https://github.com/econumo/econumo/releases) and on
+[econumo.com](/releases/).
+
+### Upgrading from v0.x
+
+v1 is a full rewrite — the PHP backend became the Go binary and the Vue.js
+frontend became a React app — but it reuses your database in place: accounts,
+passwords and data keep working. The image name, the `.env` variables and the
+volumes changed, so follow the
+[migration guide](https://github.com/econumo/econumo/blob/main/docs/migration-v0-to-v1.md)
+step by step.
+
+---
+
+# Configuration
+
+URL: https://econumo.com/docs/self-hosting/configuration/
+
+# Configuration
+
+Econumo is configured entirely through environment variables. There is no
+admin screen. With Docker they go in `.env`. With the single binary they go in
+`/etc/econumo/env` (see [Installation](/docs/self-hosting/installation/)).
+After a change, apply it with `docker compose up -d`, which recreates the
+container (`docker compose restart` keeps the old values), or with
+`sudo systemctl restart econumo`.
+
+The repository has two templates:
+
+- [`.env.example`](https://github.com/econumo/econumo/blob/main/.env.example)
+  holds the settings most setups need.
+- [`docs/full.env.example`](https://github.com/econumo/econumo/blob/main/docs/full.env.example)
+  is the commented reference for every setting.
+
+This page walks through the ones you are most likely to touch.
+
+**Note**
+Values are checked strictly at start-up. A typo in a number or a boolean, or a
+sign-in provider with a variable missing, stops the server with a message that
+names the variable. If the container keeps restarting, check
+`docker compose logs econumo`.
+
+## In this section
+
+- [Essentials](/docs/self-hosting/configuration/#essentials)
+- [Database: SQLite or PostgreSQL](/docs/self-hosting/configuration/#database-sqlite-or-postgresql)
+- [Email](/docs/self-hosting/configuration/#email)
+- [Sign-up and access](/docs/self-hosting/configuration/#sign-up-and-access)
+- [Optional features](/docs/self-hosting/configuration/#optional-features)
+- [Reverse proxy and rate limits](/docs/self-hosting/configuration/#reverse-proxy-and-rate-limits)
+
+---
+## Essentials
+
+| Variable | Default | What it does |
+|---|---|---|
+| `DATABASE_URL` | — (required) | Where the data lives. The scheme picks the engine: `sqlite://…` or `postgres://…`. |
+| `PORT` | — (required) | The HTTP port. Keep `80` in Docker; the bundled compose file maps it to `8181`. |
+| `ECONUMO_URL` | — | The public URL of your instance, e.g. `https://money.example.com`. It adds a link to emails, and you need it for [single sign-on](/docs/self-hosting/single-sign-on/) and for connecting AI apps by signing in. |
+| `ECONUMO_ALLOW_REGISTRATION` | `true` | Lets new users sign up. Turn it off once everyone has an account. |
+| `ECONUMO_CURRENCY_BASE` | `USD` | The base currency for conversions. See [Multi-Currency Support](/docs/self-hosting/multi-currency/). |
+| `OPEN_EXCHANGE_RATES_TOKEN` | — | The App ID that fetches exchange rates. |
+| `ECONUMO_CURRENCY_UPDATE_INTERVAL` | off | Refreshes exchange rates automatically every N days (1–31). |
+| `ECONUMO_LOG_LEVEL` | `info` | `debug`, `info`, `warn` or `error`. See [Debug](/docs/self-hosting/debug/). |
+
+---
+## Database: SQLite or PostgreSQL
+
+SQLite is the default and needs no setup: the whole database is one file, and
+backing it up means copying that file. For a household instance it is the
+right choice.
+
+To run on PostgreSQL, point `DATABASE_URL` at an empty database. Econumo
+creates the schema on first start:
+
+```dotenv
+DATABASE_URL=postgres://econumo:econumo@postgres:5432/econumo?sslmode=disable
+```
+
+The repository's `docker-compose.yml` contains a commented-out `postgres`
+service (and a `pgdata` volume) that matches this URL. Uncomment both to run
+PostgreSQL next to the app.
+
+### Moving an existing instance from SQLite to PostgreSQL
+
+The `data:import-sqlite` command copies everything from a SQLite file into the
+PostgreSQL database that `DATABASE_URL` points to:
+
+1. Back up the SQLite file (see [Backups](/docs/self-hosting/backups/)).
+2. Stop the whole stack (`docker compose stop`), including a Litestream
+   sidecar if you have one, so nothing writes to the SQLite file during the
+   copy.
+3. Set `DATABASE_URL` to the new PostgreSQL database. If you use the bundled
+   `postgres` service, start it and wait until it is healthy:
+   `docker compose up -d postgres`.
+4. Run the import, with the SQLite file still reachable by the binary. In
+   Docker the old `db` volume is still mounted at `/app/var/db`:
+
+   ```sh
+   docker compose run --rm --entrypoint /app/econumo econumo data:import-sqlite /app/var/db/db.sqlite
+   ```
+
+5. Start Econumo again: `docker compose up -d`.
+
+The command creates the schema if needed and prints the number of rows copied
+per table. It refuses to write into a database that already has data. Add
+`--force` to wipe the target and copy again.
+
+---
+## Email
+
+Econumo sends email for password resets, verification codes and email
+changes. With no mailer configured, emails are printed to the server log
+instead. That is fine for trying Econumo out, but users cannot reset a
+forgotten password themselves.
+
+Set `MAILER_DSN` to one of:
+
+```dotenv
+# Resend
+MAILER_DSN=resend://re_xxxxxxxx?from=noreply@yourdomain.com&reply_to=support@yourdomain.com
+# Any SMTP server with STARTTLS (default port 587)
+MAILER_DSN=smtp://user:pass@smtp.example.com:587?from=Econumo%20%3Cnoreply@yourdomain.com%3E
+# SMTP over TLS (default port 465)
+MAILER_DSN=smtps://user:pass@smtp.example.com:465?from=noreply@yourdomain.com
+# A relay without TLS on a trusted network, e.g. a Postfix container
+MAILER_DSN=smtp://postfix:25?from=noreply@yourdomain.com&insecure=true
+```
+
+Percent-encode special characters in the user name and password (`@` becomes
+`%40`, `/` becomes `%2F`, `:` becomes `%3A`).
+
+---
+## Sign-up and access
+
+| Variable | Default | What it does |
+|---|---|---|
+| `ECONUMO_ALLOW_REGISTRATION` | `true` | Open sign-up. When it is off, create users with [`user:create`](/docs/self-hosting/cli-commands/#user-management). |
+| `ECONUMO_EMAIL_VERIFICATION` | `false` | New users must confirm their email with a code at their first sign-in. Configure `MAILER_DSN` first, otherwise the codes only reach the server log. |
+| `ECONUMO_PASSWORD_LOGIN` | `true` | Set `false` to allow sign-in only through a provider. See [Single sign-on](/docs/self-hosting/single-sign-on/#provider-only-sign-in). |
+| `ECONUMO_TRIAL` | `0` | Trial length, in days, for users who sign up themselves. After the trial they become read-only. `0` means full access forever. |
+| `ECONUMO_ALLOW_CUSTOM_API` | `false` | Shows the "use my own server" option on the sign-in and sign-up pages. |
+
+To give a user full access again, or to make one read-only, use
+[`user:set-access`](/docs/self-hosting/cli-commands/#user-management).
+
+Single sign-on with Google, Apple or your own OpenID Connect provider
+(Authentik, Keycloak, Cloudflare Access, …) has its own page:
+[Single sign-on](/docs/self-hosting/single-sign-on/).
+
+---
+## Optional features
+
+| Variable | Default | What it does |
+|---|---|---|
+| `ECONUMO_IMPORT_SIMPLEFIN` | `true` | Bank sync through [SimpleFIN Bridge](/docs/user-guide/simplefin/), a third-party service not affiliated with Econumo. Set `false` to hide it. [CSV import](/docs/user-guide/csv-import-export/) and [Apple Wallet](/docs/user-guide/apple-wallet/) are always on. |
+| `ECONUMO_IMPORT_ALLOW_PRIVATE_HOSTS` | `false` | Lets SimpleFIN reach private or LAN addresses. Turn it on only for a bridge on your own network. |
+| `ECONUMO_FEEDBACK` | `true` | The in-app **Send feedback** form. Messages go from the browser to econumo.com. |
+| `ECONUMO_CHECK_UPDATES` | `true` | A daily check for new releases: one request to econumo.com. |
+
+**Note**
+In v1.7.3 and earlier, SimpleFIN is **off** by default. Set
+`ECONUMO_IMPORT_SIMPLEFIN=true` to turn it on.
+
+### AI apps (MCP)
+
+Econumo has a built-in [MCP server](/docs/user-guide/user-profile/#connected-apps)
+at `<ECONUMO_URL>/mcp`. Users connect Claude, Claude Code or Codex to it by
+signing in through the browser. This works only when `ECONUMO_URL` is set to an
+`https` origin with no path. Without it, `/mcp` accepts only
+[API tokens](/docs/user-guide/user-profile/#api-tokens).
+
+Claude on the web, desktop and mobile connects from Anthropic's servers, so
+for those the instance must be reachable from the internet. Claude Code and
+Codex only need to reach it from the user's computer.
+
+---
+## Reverse proxy and rate limits
+
+Econumo rate-limits sign-in attempts, password resets, sign-ups and a few
+other sensitive endpoints, per email address and per client IP. It also caps
+requests per endpoint per client IP (`ECONUMO_RATE_LIMIT_IP`, 60 a minute).
+
+Behind a reverse proxy every request seems to come from the proxy's address,
+so all your users share one limit. Tell Econumo which header carries the real
+client IP:
+
+```dotenv
+# e.g. behind Cloudflare
+ECONUMO_CLIENT_IP_HEADER=CF-Connecting-IP
+# or list your proxies; the header then defaults to X-Forwarded-For
+ECONUMO_CLIENT_IP_TRUSTED_PROXIES=10.0.0.0/8,172.16.0.0/12
+```
+
+Make sure only the proxy can reach Econumo directly. Otherwise a client can
+send the header itself.
+
+Every limit has its own variable (`ECONUMO_RATE_LIMIT_LOGIN`,
+`ECONUMO_RATE_LIMIT_REGISTER`, …, over the `ECONUMO_RATE_LIMIT_WINDOW`
+window, 15 minutes by default), and `0` turns a check off. See
+[`full.env.example`](https://github.com/econumo/econumo/blob/main/docs/full.env.example)
+for the list.
+
+**Note**
+`ECONUMO_CLIENT_IP_HEADER`, `ECONUMO_CLIENT_IP_TRUSTED_PROXIES` and
+`ECONUMO_RATE_LIMIT_IP` arrive in the release after v1.7.3. In v1.7.3 and
+earlier, the per-endpoint cap is `ECONUMO_RATE_LIMIT_GLOBAL`, and it is shared
+by all clients.
+
+---
+
+# Single sign-on
+
+URL: https://econumo.com/docs/self-hosting/single-sign-on/
+
+# Single sign-on
+
+Econumo can add **Sign in with Google**, **Sign in with Apple** and a button
+for your own OpenID Connect provider (Authentik, Keycloak, Zitadel, Okta,
+Cloudflare Access, …) to the sign-in and sign-up pages. Buttons can sit next
+to email and password, or replace them.
+
+Each provider is an optional slot, configured only through environment
+variables. You can enable all three at once. Most self-hosted instances enable
+one.
+
+## In this section
+
+- [Before you start](/docs/self-hosting/single-sign-on/#before-you-start)
+- [Your own OpenID Connect provider](/docs/self-hosting/single-sign-on/#your-own-openid-connect-provider)
+- [Google](/docs/self-hosting/single-sign-on/#google)
+- [Apple](/docs/self-hosting/single-sign-on/#apple)
+- [Provider-only sign-in](/docs/self-hosting/single-sign-on/#provider-only-sign-in)
+- [How accounts are matched](/docs/self-hosting/single-sign-on/#how-accounts-are-matched)
+
+---
+## Before you start
+
+Every slot needs `ECONUMO_URL`, the public URL of your instance:
+
+```dotenv
+ECONUMO_URL=https://money.example.com
+```
+
+You never configure the callback URL. Econumo builds it from `ECONUMO_URL`, and
+it is the one value you register with the provider:
+
+```
+<ECONUMO_URL>/api/v1/oauth/callback-<google|apple|oidc>
+```
+
+A slot is all-or-nothing. If you set some of its variables but not all, the
+server refuses to start and names the one that is missing.
+
+---
+## Your own OpenID Connect provider
+
+This slot works with any standards-compliant OpenID Connect provider. Here is
+the setup in [Authentik](https://goauthentik.io/). Other providers follow the
+same steps:
+
+1. Create an **OAuth2/OpenID Provider** (**Applications → Providers →
+   Create**).
+2. Set **Redirect URIs** to `<ECONUMO_URL>/api/v1/oauth/callback-oidc`.
+3. Under **Advanced protocol settings**, pick an RSA **Signing Key**. Econumo
+   accepts ID tokens signed with RS256 or ES256.
+4. Note the **Client ID**, **Client Secret** and **OpenID Configuration URL**.
+   The issuer URL is that address without the trailing
+   `/.well-known/openid-configuration`.
+5. Create an **Application** and attach it to the provider.
+6. Optional: to have signing out of Econumo also sign the user out of
+   Authentik (web only), add `<ECONUMO_URL>/login` as a post-logout redirect
+   URI on the provider.
+7. Configure Econumo:
+
+```dotenv
+ECONUMO_OIDC_ISSUER_URL=https://auth.example.com/application/o/econumo/
+ECONUMO_OIDC_CLIENT_ID=<client id>
+ECONUMO_OIDC_CLIENT_SECRET=<client secret>
+# the button label
+ECONUMO_OIDC_NAME=Authentik
+ECONUMO_OIDC_SCOPES=openid,profile,email
+```
+
+### Cloudflare Access
+
+[Cloudflare Access for SaaS](https://developers.cloudflare.com/cloudflare-one/applications/configure-apps/saas-apps/generic-oidc-saas-app/)
+can act as the OpenID Connect provider. Every identity provider and Access
+group you have already connected to Access then becomes a way to sign in to
+Econumo. In Zero Trust, go to **Access → Applications → Add an application →
+SaaS**, choose **OIDC**, and set the redirect URL to the callback above. Then:
+
+```dotenv
+ECONUMO_OIDC_ISSUER_URL=https://<team>.cloudflareaccess.com/cdn-cgi/access/sso/oidc/<client-id>
+ECONUMO_OIDC_CLIENT_ID=<client id>
+ECONUMO_OIDC_CLIENT_SECRET=<client secret>
+ECONUMO_OIDC_NAME=SSO
+ECONUMO_OIDC_TRUST_EMAIL=true
+```
+
+**Unverified emails are rejected**
+Econumo accepts a provider's email only when the ID token marks it as
+verified (`email_verified`). Cloudflare Access never sends that claim. Without
+`ECONUMO_OIDC_TRUST_EMAIL=true`, every sign-in fails with *"The sign-in
+provider has not verified this email address."* Set it only for a provider
+that already lets only verified identities through.
+
+---
+## Google
+
+1. In the [Google Cloud console](https://console.cloud.google.com/), open
+   **APIs & Services → Credentials**. If you are asked to, configure the
+   **OAuth consent screen** first. The External user type is fine. While the
+   app stays in Testing mode, add yourself as a test user.
+2. **Create Credentials → OAuth client ID**, type **Web application**.
+3. Under **Authorized redirect URIs**, add
+   `<ECONUMO_URL>/api/v1/oauth/callback-google`.
+4. Copy the client ID and secret:
+
+```dotenv
+ECONUMO_OAUTH_GOOGLE_CLIENT_ID=<client id>
+ECONUMO_OAUTH_GOOGLE_CLIENT_SECRET=<client secret>
+```
+
+---
+## Apple
+
+Sign in with Apple needs a paid Apple Developer account.
+
+1. In the [developer portal](https://developer.apple.com/account/resources/identifiers/list),
+   note your **Team ID**.
+2. Register an **App ID** with the **Sign in with Apple** capability.
+3. Register a **Services ID**, e.g. `com.example.econumo.signin`. This is
+   your client ID.
+4. Edit the Services ID and enable **Sign in with Apple**. Associate it with
+   the App ID, and set the **Return URL** to
+   `<ECONUMO_URL>/api/v1/oauth/callback-apple`.
+5. Under **Keys**, create a key with **Sign in with Apple** enabled and
+   download the `.p8` file. You can download it only once. Note its **Key ID**.
+6. Make the `.p8` file readable by the server, but only by the server. In
+   Docker, mount it into the container, e.g.
+   `./secrets/apple.p8:/etc/econumo/apple.p8:ro`, and point the variable at
+   the path inside the container:
+
+```dotenv
+ECONUMO_OAUTH_APPLE_CLIENT_ID=com.example.econumo.signin
+ECONUMO_OAUTH_APPLE_TEAM_ID=<team id>
+ECONUMO_OAUTH_APPLE_KEY_ID=<key id>
+ECONUMO_OAUTH_APPLE_PRIVATE_KEY_FILE=/etc/econumo/apple.p8
+```
+
+Keep the `.p8` file exactly as Apple produced it. The older
+`ECONUMO_OAUTH_APPLE_PRIVATE_KEY` variable, which took the key inline, is no
+longer accepted: a server that still sets it refuses to start.
+
+---
+## Provider-only sign-in
+
+Set `ECONUMO_PASSWORD_LOGIN=false` to turn email and password off. The sign-in
+page then shows only the provider buttons. Password sign-in, sign-up, reset
+and change are all refused. Existing sessions and
+[API tokens](/docs/user-guide/user-profile/#api-tokens) keep working. The
+server does not start in this mode unless at least one provider is
+configured.
+
+`ECONUMO_ALLOW_REGISTRATION` then applies to providers alone. With `true`,
+anyone who can sign in at your provider gets an account on their first
+sign-in, so you manage users in the identity provider. With `false`, only
+existing accounts can sign in.
+
+**Link providers before you turn passwords off**
+Econumo never links a provider to an account that has a password on its own,
+and once passwords are off that account can no longer sign in to link one.
+Before you switch, have every existing user sign in with their password and
+link the provider under
+[Sign-in methods](/docs/user-guide/user-profile/#sign-in-methods). Users
+created with `user:create` always have a password, so this applies to them too.
+
+---
+## How accounts are matched
+
+- **First sign-in, no matching account.** Econumo creates a new account
+  without a password, if registration is allowed. The user can add a password
+  later.
+- **Same email as an account without a password.** The provider is linked
+  automatically, and the account owner gets an email about it.
+- **Same email as an account with a password.** The sign-in is refused. The
+  user signs in with their password once, or resets it, and links the provider
+  from Settings. Econumo does not merge a provider into an account whose owner
+  has not signed in, because a password account is no proof that its holder
+  owns the address.
+- **A password reset reclaims the account.** It signs out every session,
+  revokes API tokens, and unlinks every provider that reports a *different*
+  email address.
+- **Changing `ECONUMO_OIDC_ISSUER_URL` later** makes every user's old link
+  stale. Accounts without a password are matched again by their verified
+  email on their next sign-in. Accounts with a password are refused, as
+  above: their owners sign in with the password and link the provider again.
+  With `ECONUMO_PASSWORD_LOGIN=false` this locks them out, so turn password
+  sign-in back on while they re-link.
+
+The full reference, with more edge cases, is
+[`docs/oidc-setup.md`](https://github.com/econumo/econumo/blob/main/docs/oidc-setup.md)
+in the repository.
 
 ---
 
@@ -3047,64 +3685,128 @@ URL: https://econumo.com/docs/self-hosting/multi-currency/
 
 # Multi-Currency Support
 
-Econumo offers multi-currency functionality. To get started, you need to:
+Econumo works with any number of currencies. On a self-hosted instance you
+decide which currencies the server offers, and where the exchange rates come
+from.
 
-1. Load the currencies you use into your Econumo instance.
-2. Set up regular exchange-rate updates (if needed).
+There are two kinds of currencies:
+
+- **Global currencies** are available to everyone on the instance. You add
+  them from the command line, and their rates come from
+  [Open Exchange Rates](https://openexchangerates.org).
+- **Custom currencies** belong to one user, who creates them under
+  [Settings → Currencies](/docs/user-guide/currencies/) and sets their exchange
+  rate by hand. Use them for loyalty points, airline miles, or a currency your
+  rate provider doesn't carry. You don't need to configure anything for them.
+
+Users choose which global currencies show up in their own pickers, so a long
+list on the server does no harm.
+
+## In this section
+
+- [Adding a currency](/docs/self-hosting/multi-currency/#adding-a-currency)
+- [Keeping exchange rates up to date](/docs/self-hosting/multi-currency/#keeping-exchange-rates-up-to-date)
+- [Filling in missing rates](/docs/self-hosting/multi-currency/#filling-in-missing-rates)
+- [The base currency](/docs/self-hosting/multi-currency/#the-base-currency)
 
 ---
+## Adding a currency
 
-## How to add a new currency
-
-Econumo preloads **USD** by default (or whatever you set as
-`ECONUMO_CURRENCY_BASE`). To use another currency, add it with the
-`currency:add` command — pass the ISO code, and optionally a display name and
-the number of fraction digits:
+A fresh instance has only **USD**. Add each currency you need with
+`currency:add`. Pass the ISO code, and optionally a display name and the number
+of fraction digits:
 
 ```sh
 docker compose exec econumo /app/econumo currency:add EUR Euro 2
+docker compose exec econumo /app/econumo currency:add CAD
 ```
 
-If you want to add several currencies and keep exchange rates up to date, see
-the next step.
+The command is safe to repeat: for a currency that already exists, it says so
+and changes nothing.
 
 ---
-
-## How to update exchange rates
-
-To keep exchange rates current:
+## Keeping exchange rates up to date
 
 1. Create a free account at [Open Exchange Rates](https://openexchangerates.org).
-2. Obtain your App ID from the Open Exchange Rates dashboard.
-3. Set the `OPEN_EXCHANGE_RATES_TOKEN` environment variable in your `.env` and
-   restart the container.
-4. Run the update command (it accepts an optional `YYYY-MM-DD` date, defaulting
-   to today):
+2. Copy your App ID from its dashboard.
+3. Set it in your `.env`, and choose how often Econumo refreshes the rates,
+   in days (1–31):
+
+```dotenv
+OPEN_EXCHANGE_RATES_TOKEN=<your app id>
+ECONUMO_CURRENCY_UPDATE_INTERVAL=1
+```
+
+4. Restart the container: `docker compose up -d`.
+
+The server loads rates on start and then every N days, for every global
+currency it knows. It skips the request while the stored rates are newer than
+the interval, so restarts don't use up your API quota.
+
+If you'd rather drive updates yourself, leave
+`ECONUMO_CURRENCY_UPDATE_INTERVAL` unset and run the command from a cron job
+on the host. It takes an optional `YYYY-MM-DD` date and defaults to today:
 
 ```sh
 docker compose exec econumo /app/econumo currency:update-rates
 ```
 
-To keep rates fresh, schedule this command from a cron job on the host, e.g.
-once a day.
+**Note**
+A currency added after the last update has no rate until the next one. Run
+`currency:update-rates` once after `currency:add` to fill it in right away.
 
-Econumo's base currency defaults to USD and is configurable with the
-`ECONUMO_CURRENCY_BASE` environment variable. Note that a free Open Exchange
-Rates account only supports USD as its base currency, so keep the base at USD
-unless you have a paid plan. The **base currency is not your default
-currency** — it is used only for conversions.
+---
+## Filling in missing rates
 
-For example, if you have most of your accounts in CAD (Canadian Dollar) and one savings account in USD and another in EUR, currency conversions will occur in two scenarios:
+Econumo converts amounts with the rate for the month they belong to. If you
+add a currency later, or the server was off for a while, older months can be
+missing rates. Two commands find and fill those gaps:
 
-1. When you transfer money from your CAD account to your USD/EUR accounts.
-2. In your budget, if you choose to convert your spending to other currencies.
+```sh
+# List the months without a rate for any currency in use
+docker compose exec econumo /app/econumo currency:show-rate-gaps
 
-Econumo will use the following conversions:
+# Load them from Open Exchange Rates, starting from a given month
+docker compose exec econumo /app/econumo currency:backfill-rates 2025-01
+```
+
+Both take an optional end date, and `--daily` to work in days instead of
+months. Each missing period costs one API request, so `currency:backfill-rates`
+needs a start date. That way a single run can't spend your whole monthly
+quota.
+
+---
+## The base currency
+
+Econumo stores every rate against one **base currency**: `USD` by default, or
+whatever you set in `ECONUMO_CURRENCY_BASE`. The base currency must be a
+global currency, otherwise the server does not start. If you change it, add
+the currency with `currency:add` first. If the container is already stuck
+restarting, run the command in a one-off container:
+
+```sh
+docker compose run --rm --entrypoint /app/econumo econumo currency:add EUR Euro 2
+```
+
+A free Open Exchange Rates account
+only supports USD as the base, so keep `USD` unless you have a paid plan.
+
+The **base currency is not your default currency**. Econumo uses it only for
+conversions. Each user picks their own default currency in their
+[profile](/docs/user-guide/user-profile/#how-to-change-your-default-currency).
+
+Say most of your accounts are in CAD (Canadian dollar), with one savings
+account in USD and another in EUR. Econumo converts currencies when you
+transfer money from a CAD account to the USD or EUR account, and when your
+budget shows spending in another currency.
+
+With USD as the base, Econumo converts:
 
 1. CAD ↔ USD directly.
-2. CAD → USD (base) → EUR and EUR → USD (base) → CAD
+2. CAD → USD (base) → EUR, and EUR → USD (base) → CAD.
 
-Converting using the base currency usually results in minimal or no difference compared to direct conversions.
+Converting through the base currency usually gives the same result as a direct
+conversion, or very close to it.
 
 ---
 
@@ -3114,53 +3816,126 @@ URL: https://econumo.com/docs/self-hosting/backups/
 
 # Backups
 
-Econumo does not come with a built-in backup mechanism; it is your
-responsibility to configure backups for your instance.
+Econumo has no built-in backup mechanism, so setting up backups for your
+instance is up to you.
 
-By default Econumo stores its data in a single SQLite file, so backups are
-easy. In the Docker setup that file lives in the `db` volume at
-`/app/var/db/db.sqlite` (the path your `DATABASE_URL` points to). The `jwt`
-volume (`/app/var/jwt`) holds the JWT keypair — back it up too, or existing
-login tokens become invalid after a restore.
+By default Econumo keeps all its data in a single SQLite file, which makes
+backups easy. In the Docker setup that file is in the `db` volume, at
+`/app/var/db/db.sqlite` (the path in your `DATABASE_URL`). With the
+[single binary](/docs/self-hosting/installation/#without-docker-single-binary)
+it is wherever your `DATABASE_URL` points, `/var/lib/econumo/db.sqlite` in the
+example setup. The database is the only state. Settings live in your `.env`
+file (`/etc/econumo/env` for the single binary), so keep a copy of that too.
 
 **Note**
-Always take a manual backup before upgrading your Econumo version, and store a
-copy on a separate device.
+Always take a manual backup before you upgrade Econumo, and keep a copy on a
+separate device.
+
+## In this section
+
+- [Simple file copy](/docs/self-hosting/backups/#simple-file-copy)
+- [Restoring a backup](/docs/self-hosting/backups/#restoring-a-backup)
+- [Litestream (continuous replication)](/docs/self-hosting/backups/#litestream-continuous-replication)
+- [PostgreSQL](/docs/self-hosting/backups/#postgresql)
 
 ---
 ## Simple file copy
 
-The most reliable backup is a copy of the database file taken while nothing is
-writing to it. Stop the container, copy the file, and start it again:
+The most reliable backup is a copy of the database taken while nothing is
+writing to it. Stop the stack, copy the files, and start it again:
 
 ```sh
-docker compose stop econumo
+docker compose stop
 docker run --rm -v econumo_db:/data -v "$PWD":/backup alpine \
-  cp /data/db.sqlite /backup/db-$(date +%F).sqlite
-docker compose start econumo
+  sh -c 'd=/backup/db-$(date +%F) && mkdir -p $d && cp /data/db.sqlite* $d/'
+docker compose start
 ```
 
-(Replace `econumo_db` with your actual volume name — check `docker volume ls`.)
+The `db.sqlite*` pattern also picks up the `-wal` file, if there is one. In
+WAL mode (see [Litestream](/docs/self-hosting/backups/#litestream-continuous-replication)),
+recent changes can still be in that file rather than in `db.sqlite`.
 
-For a scheduled version, run the same copy from a cron job. A short pause while
-the container is stopped is fine for a personal instance.
+Replace `econumo_db` with your volume's actual name. Compose names it
+`<project>_db`, after the directory you run `docker compose` from. Check
+with `docker volume ls`.
+
+With the single binary:
+
+```sh
+sudo systemctl stop econumo
+sudo sh -c 'd=/root/econumo-backups/db-$(date +%F) && mkdir -p $d && cp /var/lib/econumo/db.sqlite* $d/'
+sudo systemctl start econumo
+```
+
+To schedule backups, run the same steps from a cron job. A short pause while
+the server is stopped is fine for a personal instance.
+
+---
+## Restoring a backup
+
+Stop Econumo, put the file back, and give it to the user the server runs as.
+In Docker that is the non-root user with UID/GID **65532**. Stop the whole
+stack, not just the app: a running Litestream sidecar keeps the database open
+and can write the old data into the restored file.
+
+Set `BACKUP` to the folder the backup command created. The commands check
+that it holds a database before they touch the live one, and the stack only
+starts again if the copy succeeded:
+
+```sh
+BACKUP=db-2026-11-01   # your backup folder
+test -f "$BACKUP/db.sqlite" && docker compose stop && \
+docker run --rm -v econumo_db:/data -v "$PWD/$BACKUP":/restore:ro alpine \
+  sh -c 'rm -rf /data/.old && mkdir /data/.old && mv /data/db.sqlite* /data/.old/ ; cp /restore/db.sqlite* /data/ && chown -R 65532:65532 /data' && \
+docker compose start
+```
+
+The previous database files are kept in `.old` inside the volume. Delete
+that folder once the restored instance works.
+
+As with the backup, replace `econumo_db` with your volume's actual name.
+Otherwise Docker quietly creates a new, empty volume and your instance keeps
+running on the old data.
+
+With the single binary:
+
+```sh
+BACKUP=/root/econumo-backups/db-2026-11-01   # your backup folder
+sudo test -f "$BACKUP/db.sqlite" && sudo systemctl stop econumo && \
+sudo sh -c "rm -rf /var/lib/econumo/.old && mkdir /var/lib/econumo/.old && mv /var/lib/econumo/db.sqlite* /var/lib/econumo/.old/ ; cp $BACKUP/db.sqlite* /var/lib/econumo/" && \
+sudo chown -R econumo:econumo /var/lib/econumo && \
+sudo systemctl start econumo
+```
+
+The server must be able to write both the file and the directory it is in.
+SQLite writes a journal file next to the database. If either one is owned by
+root, the server fails to start with `attempt to write a readonly database`.
+
+**Using Litestream?**
+Restore from the replica with
+[`litestream restore`](https://litestream.io/reference/restore/) rather than
+from an old file copy. If you start the stack on a restored file that is older
+than the replica, Litestream treats it as the current state and replicates it
+over your newer backup.
 
 ---
 ## Litestream (continuous replication)
 
 [Litestream](https://litestream.io/getting-started/) streams SQLite changes to
-object storage (S3, Cloudflare R2, …) continuously, so you never lose more than
-a few seconds of data. It requires the database to be in WAL mode.
+object storage (S3, Cloudflare R2, …) as they happen, so you never lose more
+than a few seconds of data. It needs the database in WAL mode.
 
 **WARNING!**
-Econumo runs SQLite with a single pinned connection and does not enable WAL
-mode itself. Enabling WAL for Litestream is an advanced setup: take a backup
-first, and test a restore before relying on it.
+Econumo uses SQLite through a single connection and does not turn on WAL mode
+itself. Enabling WAL for Litestream is an advanced setup: take a backup first,
+and test a restore before you rely on it.
 
 1. Take a manual backup (see above).
-2. Enable WAL mode on the database file (one-off; the setting is stored in the
-   file). With the container stopped, run it against the copied file, e.g.
-   `sqlite3 db.sqlite 'PRAGMA journal_mode=WAL;'`, then put it back.
+2. Turn on WAL mode in the database file. You do this once, because the
+   setting is stored in the file. With the container stopped, run
+   `sqlite3 db.sqlite 'PRAGMA journal_mode=WAL;'` against a copy of the file,
+   then put it back as described in
+   [Restoring a backup](/docs/self-hosting/backups/#restoring-a-backup).
 3. Create a `litestream.yml` next to your `docker-compose.yml`:
 
 ```yml
@@ -3173,14 +3948,14 @@ dbs:
         bucket: backup-econumo-sqlite
 ```
 
-4. Provide the credentials to the Litestream service (via its own environment):
+4. Give Litestream its credentials through its own environment:
 
 ```
 LITESTREAM_ACCESS_KEY_ID=<REPLACE_WITH_YOUR_VALUE>
 LITESTREAM_SECRET_ACCESS_KEY=<REPLACE_WITH_YOUR_VALUE>
 ```
 
-5. Add Litestream as a sidecar sharing the `db` volume:
+5. Add Litestream as a sidecar that shares the `db` volume:
 
 ```yml
 services:
@@ -3192,11 +3967,11 @@ services:
       - "8181:80"
     volumes:
       - db:/app/var/db
-      - jwt:/app/var/jwt
     restart: unless-stopped
 
   litestream:
     image: litestream/litestream:latest
+    user: "65532:65532"
     environment:
       - LITESTREAM_ACCESS_KEY_ID
       - LITESTREAM_SECRET_ACCESS_KEY
@@ -3210,18 +3985,17 @@ services:
 
 volumes:
   db:
-  jwt:
 ```
 
 6. Restart the stack: `docker compose pull && docker compose down && docker compose up -d`
-7. Verify that replication is working and practice a restore.
+7. Check that replication works, and practise a restore.
 
 ---
 ## PostgreSQL
 
-If you run Econumo on PostgreSQL instead of SQLite (set `DATABASE_URL` to a
-`postgres://…` URL), use your usual PostgreSQL backup tooling — for example a
-scheduled `pg_dump` — instead of the SQLite steps above.
+If you run Econumo on [PostgreSQL](/docs/self-hosting/configuration/#database-sqlite-or-postgresql)
+instead of SQLite, back it up with your usual PostgreSQL tools, for example
+a scheduled `pg_dump`, instead of following the SQLite steps above.
 
 ---
 
@@ -3231,66 +4005,152 @@ URL: https://econumo.com/docs/self-hosting/cli-commands/
 
 # CLI (terminal) commands
 
-Econumo ships as a single binary that is subcommand-driven: `serve` runs the
-server, and everything else is a management command. In the Docker image the
-binary lives at `/app/econumo`, so you run commands with `docker exec`:
+Econumo ships as a single binary driven by subcommands. `serve` runs the
+server, and the `resource:action` commands handle management. In the Docker
+image the binary is `/app/econumo`, so you run commands with `docker compose exec`:
 
 ```sh
 docker compose exec econumo /app/econumo <command> [args]
 ```
 
-Running the binary with no command (or an unknown one) prints the full usage,
-so `docker compose exec econumo /app/econumo` is the quickest way to see what
-is available on your version.
+With the [single binary](/docs/self-hosting/installation/#without-docker-single-binary),
+run commands as the service user, with the environment file loaded the same
+way systemd loads it for the service:
+
+```sh
+sudo systemd-run --uid=econumo --gid=econumo --pipe --wait --collect \
+  -p EnvironmentFile=/etc/econumo/env -p WorkingDirectory=/var/lib/econumo \
+  /opt/econumo/econumo <command> [args]
+```
+
+Don't load the file with `. /etc/econumo/env` in a shell: values with `&`,
+such as a `MAILER_DSN` with several parameters, are cut short there.
+
+Run the binary with no command, or with `help`, to print every command your
+version has.
 
 **Note**
-The image is distroless — it has no shell. Run the `/app/econumo` binary
-directly as shown above; `docker compose exec econumo bash` will not work.
+The image is distroless: it has no shell. Run the `/app/econumo` binary
+directly as shown above. `docker compose exec econumo bash` does not work.
+
+## In this section
+
+- [Server](/docs/self-hosting/cli-commands/#server)
+- [User management](/docs/self-hosting/cli-commands/#user-management)
+- [Currencies](/docs/self-hosting/cli-commands/#currencies)
+- [Data](/docs/self-hosting/cli-commands/#data)
+- [Access tokens and apps](/docs/self-hosting/cli-commands/#access-tokens-and-apps)
+
+---
+## Server
+
+```sh
+econumo serve         # start the server (the image's entrypoint)
+econumo healthcheck   # probe the running server's /health endpoint; exit code 0 or 1
+econumo version       # print the version
+```
+
+Any command takes `-v`, `-vv` or `-vvv` for debug output and `-q` for quiet.
 
 ---
 ## User management
 
 ```sh
-# Create a user
+# Create a user (works even when registration is off)
 docker compose exec econumo /app/econumo user:create "<name>" <email> <password>
 
-# Change a user's email
-docker compose exec econumo /app/econumo user:change-email <old-email> <new-email>
+# Show a user's profile and access level
+docker compose exec econumo /app/econumo user:show <email>
 
-# Change a user's password
+# Change a user's email or password
+docker compose exec econumo /app/econumo user:change-email <old-email> <new-email>
 docker compose exec econumo /app/econumo user:change-password <email> <password>
+
+# Mark a user's email as verified (with ECONUMO_EMAIL_VERIFICATION on)
+docker compose exec econumo /app/econumo user:verify-email <email>
 
 # Activate or deactivate a user
 docker compose exec econumo /app/econumo user:activate <email>
 docker compose exec econumo /app/econumo user:deactivate <email>
+
+# Set access: full or readonly, optionally until a date
+docker compose exec econumo /app/econumo user:set-access <email> full
+docker compose exec econumo /app/econumo user:set-access <email> full 2027-01-01
 ```
+
+`user:set-access` matters when you use a trial (`ECONUMO_TRIAL`). It gives a
+user whose trial ended full access again, or makes a user read-only. Pass a
+date to make the access level expire.
 
 ---
 ## Currencies
 
 ```sh
-# Add a currency: code, optional name, optional fraction digits
+# Add a currency for everyone: code, optional name, optional fraction digits
 docker compose exec econumo /app/econumo currency:add EUR Euro 2
 
 # Load exchange rates from Open Exchange Rates (optional date, defaults to today)
 docker compose exec econumo /app/econumo currency:update-rates
+docker compose exec econumo /app/econumo currency:update-rates 2026-10-31
+
+# List the months (or days) with no rate for a currency in use
+docker compose exec econumo /app/econumo currency:show-rate-gaps [start] [end] [--daily]
+
+# Load the missing rates, one API request per month (or per day)
+docker compose exec econumo /app/econumo currency:backfill-rates <start> [end] [--daily]
 ```
 
-See [Multi-Currency Support](/docs/self-hosting/multi-currency/) for the full
-setup, including the `OPEN_EXCHANGE_RATES_TOKEN` variable.
+Dates are `YYYY-MM-DD` or `YYYY-MM`. See
+[Multi-Currency Support](/docs/self-hosting/multi-currency/) for the full
+setup.
 
 ---
-## Maintenance
+## Data
 
 ```sh
-# Generate the RS256 JWT keypair (skips if one already exists; --force overwrites)
-docker compose exec econumo /app/econumo jwt:generate
+# Copy all data from a SQLite file into the PostgreSQL database in DATABASE_URL
+# (with Econumo stopped and DATABASE_URL already pointing at PostgreSQL)
+docker compose run --rm --entrypoint /app/econumo econumo data:import-sqlite [--force] <sqlite-path>
+
+# Upgrading from v0.x only: decrypt emails so ECONUMO_DATA_SALT can be removed
+docker compose exec econumo /app/econumo data:remove-salt
+```
+
+See [Moving from SQLite to PostgreSQL](/docs/self-hosting/configuration/#moving-an-existing-instance-from-sqlite-to-postgresql)
+and the
+[v0 to v1 migration guide](https://github.com/econumo/econumo/blob/main/docs/migration-v0-to-v1.md).
+
+The `migration:*` commands are one-off data repairs. The server runs them
+by itself during upgrades, so you don't need to run them.
+
+---
+## Access tokens and apps
+
+```sh
+# Delete expired or revoked access tokens older than N days (default 30)
+docker compose exec econumo /app/econumo token:purge [days]
+```
+
+The next release adds `app:*` commands for the OAuth apps that AI clients
+use to connect to the [MCP server](/docs/user-guide/user-profile/#connected-apps).
+Clients such as Claude and Codex register themselves, so you only need these
+commands to inspect, disconnect or remove apps:
+
+```sh
+app:list [--global] [--user]                # list apps
+app:show <id>                               # an app and its connections
+app:disconnect <id> [--user <user-id>]      # revoke an app's connections
+app:delete <id>                             # revoke and delete an app
+app:register <name> <redirect-uri>... [--public]   # register an app open to every user
+app:update <id> [--name <name>] [--redirect-uri <uri>]...
+app:make-global <id>                        # open a user's app to every user
+app:rotate-secret <id>                      # replace a confidential app's secret
 ```
 
 **Note**
-The JWT keypair is generated automatically on first boot and persisted in the
-`jwt` volume (`/app/var/jwt`), so you normally never need to run
-`jwt:generate` by hand.
+Earlier versions had a `jwt:generate` command and a `jwt` volume. Econumo now
+uses opaque access tokens stored in the database, so neither is needed. You
+can remove the `jwt` volume from your `docker-compose.yml`.
 
 ---
 
@@ -3300,49 +4160,102 @@ URL: https://econumo.com/docs/self-hosting/debug/
 
 # Overview
 
-Econumo uses the following HTTP response codes:
+Econumo uses these HTTP response codes:
 
-1. **HTTP 2xx** — everything is fine.
-2. **HTTP 4xx** — an error in the user's input.
-3. **HTTP 5xx** — a server error.
+1. **HTTP 2xx**: everything is fine.
+2. **HTTP 4xx**: a problem with the user's input.
+3. **HTTP 5xx**: a server error.
 
-Every response also carries an `X-Request-Id` header (a UUID). When reporting a
-problem, include it — it lets you find the exact request in the logs.
+Every response also carries an `X-Request-Id` header (a UUID). Include it when
+you report a problem: it finds the exact request in the logs.
+
+## In this section
+
+- [Is the server up?](/docs/self-hosting/debug/#is-the-server-up)
+- [Reading the logs](/docs/self-hosting/debug/#reading-the-logs)
+- [How to debug 5xx errors](/docs/self-hosting/debug/#how-to-debug-5xx-errors)
+- [The server does not start](/docs/self-hosting/debug/#the-server-does-not-start)
+
+---
+## Is the server up?
+
+`GET /health` returns `200` when the server is healthy. Docker checks it
+through the image's built-in healthcheck, so `docker compose ps` shows the
+container as `healthy` or `unhealthy`. You can also probe it by hand:
+
+```sh
+curl -i http://localhost:8181/health
+docker compose exec econumo /app/econumo healthcheck; echo $?   # 0 = healthy
+```
 
 ---
 ## Reading the logs
 
-Econumo writes structured logs to standard output, so you read them with
-Docker rather than from a file inside the container:
+Econumo writes structured logs to standard output, not to a file:
 
 ```sh
+# Docker
 docker compose logs -f econumo
+
+# Single binary under systemd
+journalctl -u econumo -f
 ```
 
-Each request produces one result line (the operation name, its `status`,
-`route`, and `request_id`), logged at `INFO` for 2xx, `WARN` for 4xx, and
-`ERROR` for 5xx and recovered panics.
+Each request produces one result line with the operation name, its `status`,
+its `route` and its `request_id`. The line is logged at `INFO` for 2xx, `WARN`
+for 4xx, and `ERROR` for 5xx and recovered panics. On start-up the server also
+logs the database engine, the version, and the migrations it applied.
 
 ---
 ## How to debug 5xx errors
 
-If you hit a **500** response, find the matching `ERROR` line in the logs by its
-`request_id`. To get more detail, raise the log level and, on a non-public
-instance, expose stack traces in the response body:
+If you get a **500** response, find the matching `ERROR` line in the logs by
+its `request_id`. For a crash (a recovered panic), the log has a separate
+`panic recovered` record with the full stack trace. The response body itself
+never contains internals, so it is safe to show to users.
+
+For more detail, raise the log level and apply it with `docker compose up -d`:
 
 ```dotenv
 # in your .env
 ECONUMO_LOG_LEVEL=debug
-ECONUMO_DEBUG=true
 ```
 
-Restart the container to apply. `ECONUMO_DEBUG=true` includes the stack trace in
-the 500 response envelope — useful while debugging, but leave it off (the
-default) on a public instance so internals aren't exposed.
+At `debug`, every request also logs a transport line. Management commands take
+`-v`, `-vv` or `-vvv` for the same effect, e.g.
+`docker compose exec econumo /app/econumo currency:update-rates -v`.
+Set the level back to `info` when you are done.
+
+**Note**
+Older versions had an `ECONUMO_DEBUG` variable that put stack traces in the
+500 response. It no longer exists: stack traces only ever go to the log.
+
+---
+## The server does not start
+
+The server checks its configuration at start-up and stops with a clear
+message rather than running half-configured. Look at the last lines of
+`docker compose logs econumo`. Common causes:
+
+- **`PORT is required`** or a missing `DATABASE_URL`: the two required
+  variables are not set.
+- **A malformed value**: a typo in a number or a boolean, e.g.
+  `ECONUMO_CURRENCY_UPDATE_INTERVAL=daily`. The message names the variable.
+- **An incomplete sign-in provider**: some of a provider's variables are set
+  but not all, or `ECONUMO_URL` is missing. See
+  [Single sign-on](/docs/self-hosting/single-sign-on/).
+- **`ECONUMO_CURRENCY_BASE="…" does not match any global currency`**: add
+  the currency with `currency:add` first. See
+  [Multi-Currency Support](/docs/self-hosting/multi-currency/).
+- **`attempt to write a readonly database`**: the database file or its
+  directory is not owned by the container user (UID 65532). This often
+  happens after a restore or a v0.x upgrade. See
+  [Restoring a backup](/docs/self-hosting/backups/#restoring-a-backup).
 
 **Note**
 The image is distroless and has no shell, so you cannot `exec` into the
-container to `tail` a log file. Use `docker compose logs` as shown above.
+container to look around. Use `docker compose logs` and the `/app/econumo`
+commands shown above.
 
 ---
 
@@ -3383,7 +4296,7 @@ Authorization: Bearer {ACCESS_TOKEN}
 
 ### Health check
 
-Econumo includes a `/_/health-check` endpoint. For example: https://app.econumo.com/_/health-check.
+Econumo includes a `/health` endpoint that returns `200` when the server and its database are healthy. For example: https://app.econumo.com/health.
 
 You can configure your monitoring tools to check if Econumo is functioning properly.
 

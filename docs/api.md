@@ -33,7 +33,7 @@ Authorization: Bearer {ACCESS_TOKEN}
 
 ### Health check
 
-Econumo includes a `/_/health-check` endpoint. For example: https://app.econumo.com/_/health-check.
+Econumo includes a `/health` endpoint that returns `200` when the server and its database are healthy. For example: https://app.econumo.com/health.
 
 You can configure your monitoring tools to check if Econumo is functioning properly.
 

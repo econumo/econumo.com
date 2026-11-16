@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preload" href="/_astro/plus-jakarta-sans-latin-wght-normal.eXO_dkmS.woff2" as="font" type="font/woff2" crossorigin><title>Installation — Econumo</title><meta name="description" content="Installation # Econumo is a single, self-contained Go binary. It serves both the API and the web app, runs database migrations by itself on every start, and stores data in SQLite by default (PostgreSQL is also supported). It is light: the server uses around 10 MB of RAM. You can run it with Docker (recommended) or as a plain binary under systemd. In this section # Docker Without Docker (single"><link rel="canonical" href="https://econumo.com/docs/self-hosting/installation/"><link rel="shortcut icon" href="/favicon.svg" type="image/png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><meta property="og:site_name" content="Econumo"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Installation — Econumo"><meta property="og:description" content="Installation # Econumo is a single, self-contained Go binary. It serves both the API and the web app, runs database migrations by itself on every start, and stores data in SQLite by default (PostgreSQL is also supported). It is light: the server uses around 10 MB of RAM. You can run it with Docker (recommended) or as a plain binary under systemd. In this section # Docker Without Docker (single"><meta property="og:url" content="https://econumo.com/docs/self-hosting/installation/"><meta property="og:image" content="https://econumo.com/econumo-og-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-11-15T00:00:00.000Z"><meta property="article:modified_time" content="2026-11-15T00:00:00.000Z"><meta property="article:section" content="docs"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Installation — Econumo"><meta name="twitter:description" content="Installation # Econumo is a single, self-contained Go binary. It serves both the API and the web app, runs database migrations by itself on every start, and stores data in SQLite by default (PostgreSQL is also supported). It is light: the server uses around 10 MB of RAM. You can run it with Docker (recommended) or as a plain binary under systemd. In this section # Docker Without Docker (single"><meta name="twitter:image" content="https://econumo.com/econumo-og-image.png"><link rel="alternate" type="application/rss+xml" title="Econumo" href="/index.xml"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Econumo","item":"https://econumo.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://econumo.com/docs/"},{"@type":"ListItem","position":3,"name":"Installation","item":"https://econumo.com/docs/self-hosting/installation/"}]}</script><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40"><meta name="color-scheme" content="light dark"><!-- Google Tag Manager --><script>(function(){const GTM_ID = "GTM-MQM3JZ62";
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',GTM_ID);})();</script><!-- End Google Tag Manager --><!-- Analytics. data-vitals is the Web Vitals sample rate: at ~200 views/day
+         every page load is needed for stable percentiles. --><script defer src="https://t.kuznetsov.dev/js/twillingate.js" data-key="ak_9a0e50f1282dfa72888cc0ac8aa053f7" data-identity="anonymous" data-vitals="1"></script><!-- Fires the plausible-event-name--* CTA classes at the tracker above.
+         Served by the collector, so it never drifts from the tracker. --><script defer src="https://t.kuznetsov.dev/js/plausible-shim.js"></script><!-- End Analytics --><link rel="stylesheet" href="/_astro/Layout.DPngzuOz.css"></head> <body> <!-- Google Tag Manager (noscript) --><noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQM3JZ62" height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <div id="topBarWrapper" class="top-bar-wrapper fixed inset-x-0 top-0 z-50"> <div class="top-bar mx-auto max-w-6xl px-5 sm:px-8"> <div class="desktop-wrapper flex h-16 items-center gap-6"> <label for="menu-control" class="menu-icon" aria-label="Documentation"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2 5H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 12H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> <path d="M2 19H22" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"></path> </svg> </label> <nav class="flex flex-1 items-center gap-8"> <a href="/" class="logo menu-link"></a> <div class="nav-wrapper hidden flex-1 items-center justify-end gap-8 min-[961px]:flex"> <ul id="main-nav" class="main-nav part-1 flex items-center gap-7"> <li><a class="menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="menu-link" href="/#sPricing">Pricing</a></li> </ul> <div class="divider h-5 w-px bg-ink/15"></div> <ul class="main-nav part-2 flex items-center"> <li><a href="/docs/">Docs</a></li> </ul> </div> </nav> <div class="btn btn-small btn-fill btn-yellow"> <a href="https://app.econumo.com" target="_blank" class="plausible-event-name--signin plausible-event-position--topbar"> Sign In </a> </div> <input type="hidden" name="page-lang" id="page-lang" value="en"> </div> <div id="mobile-menu" class="mobile-wrapper"> <div class="mobile-menu-wrapper"> <ul id="mobile-nav" class="mobile-nav part-1"> <li><a class="mobile-menu-link" href="/#sKeyFeatures">Key Features</a></li> <li><a class="mobile-menu-link" href="/#sScreenshots">Screenshots</a></li> <li><a class="mobile-menu-link" href="/#sPricing">Pricing</a></li> </ul> <ul class="mobile-nav part-2"> <li><a href="/docs/">Docs</a></li> </ul> </div> </div> </div> </div> <div class="main-overlay"></div>  <div class="content-wrapper"> <div class="content"> <input type="checkbox" class="hidden toggle" id="menu-control"> <input type="checkbox" class="hidden toggle" id="toc-control"> <main class="container flex gap-10"> <aside class="book-menu"> <div class="book-menu-content"> <nav> <div class="book-search"> <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"> <div class="book-search-spinner hidden"></div> <ul id="book-search-results"></ul> </div> <ul> <li> <a href="/docs/"> Getting Started </a>   </li><li> <a href="/docs/edition/"> Editions </a>   </li><li> <a href="/docs/user-guide/"> User Guide </a> <ul> <li> <a href="/docs/user-guide/accounts/"> Accounts </a>  </li><li> <a href="/docs/user-guide/transactions/"> Transactions </a>  </li><li> <a href="/docs/user-guide/recurring-transactions/"> Recurring transactions </a>  </li><li> <a href="/docs/user-guide/search/"> Search </a>  </li><li> <a href="/docs/user-guide/inbox/"> Inbox </a>  </li><li> <a href="/docs/user-guide/classifications/"> Classifications </a>  </li><li> <a href="/docs/user-guide/budgets/"> Budgets </a>  </li><li> <a href="/docs/user-guide/plan/"> Plan </a>  </li><li> <a href="/docs/user-guide/debts/"> Debts </a>  </li><li> <a href="/docs/user-guide/reports/"> Reports </a>  </li><li> <a href="/docs/user-guide/shared-access/"> Shared access </a>  </li><li> <a href="/docs/user-guide/multi-currency/"> Multi-Currency </a>  </li><li> <a href="/docs/user-guide/currencies/"> Currencies </a>  </li><li> <a href="/docs/user-guide/user-profile/"> User profile </a>  </li><li> <a href="/docs/user-guide/import-data/"> Import data </a> <ul> <li> <a href="/docs/user-guide/csv-import-export/"> CSV Import &amp; Export </a> </li><li> <a href="/docs/user-guide/apple-wallet/"> Apple Wallet </a> </li><li> <a href="/docs/user-guide/simplefin/"> SimpleFIN </a> </li><li> <a href="/docs/user-guide/import-rules/"> Import rules </a> </li> </ul> </li> </ul>  </li><li> <a href="/docs/apps/"> Apps </a>   </li><li> <a href="/docs/self-hosting/"> Self-Hosting </a> <ul> <li> <a href="/docs/self-hosting/installation/" class="active"> Installation </a>  </li><li> <a href="/docs/self-hosting/configuration/"> Configuration </a>  </li><li> <a href="/docs/self-hosting/single-sign-on/"> Single sign-on </a>  </li><li> <a href="/docs/self-hosting/multi-currency/"> Multi-Currency Support </a>  </li><li> <a href="/docs/self-hosting/backups/"> Backups </a>  </li><li> <a href="/docs/self-hosting/cli-commands/"> CLI commands </a>  </li><li> <a href="/docs/self-hosting/debug/"> Debug </a>  </li> </ul>  </li><li> <a href="/docs/api/"> API </a>   </li><li> <a href="/docs/comparison/"> Econumo compared </a> <ul> <li> <a href="/docs/comparison/econumo-vs-actualbudget/"> vs Actual Budget </a>  </li><li> <a href="/docs/comparison/econumo-vs-ynab/"> vs YNAB </a>  </li><li> <a href="/docs/comparison/econumo-vs-firefly-iii/"> vs Firefly III </a>  </li><li> <a href="/docs/comparison/econumo-vs-maybe-finance/"> vs Maybe Finance </a>  </li><li> <a href="/docs/comparison/econumo-vs-ezbookkeeping/"> vs ezBookkeeping </a>  </li><li> <a href="/docs/comparison/econumo-vs-gnucash/"> vs GnuCash </a>  </li> </ul>  </li><li> <a href="/docs/faq/"> FAQ </a>   </li><li> <a href="/docs/contact-us/"> Contact Us </a>  <br> </li><li> <a href="/posts/"> Blog </a>   </li><li> <a href="/releases/"> Releases </a>  <br> </li><li> <a href="/docs/legal/privacy-policy/"> Privacy Policy </a>   </li><li> <a href="/docs/legal/terms-of-service/"> Terms of Service </a>   </li><li> <a href="/docs/legal/refund-policy/"> Refund Policy </a>  <br> </li> </ul> <ul> <li> <a href="https://github.com/econumo" target="_blank" rel="noopener"> GitHub </a> </li><li> <a href="https://x.com/econumo" target="_blank" rel="noopener"> X (Twitter) </a> </li> </ul> </nav> </div> </aside> <div class="book-page"> <header class="book-header"> <div class="flex align-center justify-between"> <strong>Installation</strong> <label for="toc-control"></label> </div> </header>  <article class="book-article"> <h1 id="installation">Installation <a class="anchor" href="#installation">#</a></h1>
+<p>Econumo is a single, self-contained Go binary. It serves both the API and the
+web app, runs database migrations by itself on every start, and stores data in
+SQLite by default (PostgreSQL is also supported). It is light: the server uses
+around 10 MB of RAM.</p>
+<p>You can run it with Docker (recommended) or as a plain binary under systemd.</p>
+<h2 id="in-this-section">In this section <a class="anchor" href="#in-this-section">#</a></h2>
+<ul>
+<li><a href="/docs/self-hosting/installation/#docker">Docker</a></li>
+<li><a href="/docs/self-hosting/installation/#without-docker-single-binary">Without Docker (single binary)</a></li>
+<li><a href="/docs/self-hosting/installation/#create-the-first-user">Create the first user</a></li>
+<li><a href="/docs/self-hosting/installation/#https-and-a-reverse-proxy">HTTPS and a reverse proxy</a></li>
+<li><a href="/docs/self-hosting/installation/#upgrading">Upgrading</a></li>
+</ul>
+<hr/>
+<h2 id="docker">Docker <a class="anchor" href="#docker">#</a></h2>
+<p>You need <a href="https://docs.docker.com/engine/install/">Docker</a> with
+<a href="https://docs.docker.com/compose/install/">Compose</a>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#79B8FF"> --single-branch</span><span style="color:#9ECBFF"> https://github.com/econumo/econumo</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> econumo</span></span>
+<span class="line"><span style="color:#B392F0">cp</span><span style="color:#9ECBFF"> .env.example</span><span style="color:#9ECBFF"> .env</span><span style="color:#E1E4E8"> &amp;&amp; </span><span style="color:#B392F0">chmod</span><span style="color:#79B8FF"> 600</span><span style="color:#9ECBFF"> .env</span></span>
+<span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> compose</span><span style="color:#9ECBFF"> pull</span><span style="color:#E1E4E8"> &amp;&amp; </span><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> compose</span><span style="color:#9ECBFF"> up</span><span style="color:#79B8FF"> -d</span></span></code></pre>
+<p>Then open <code>http://localhost:8181</code>. The bundled <code>docker-compose.yml</code> runs the
+published image <code>ghcr.io/econumo/econumo:latest</code>, maps port <code>8181</code> on the host
+to port <code>80</code> in the container, and keeps the SQLite database in the <code>db</code>
+named volume (<code>/app/var/db</code>). The container reports its health to Docker
+through the built-in <code>healthcheck</code> command, which probes the <code>/health</code>
+endpoint.</p>
+<p>All settings live in <code>.env</code>. The defaults work out of the box: SQLite storage
+and open registration. See <a href="/docs/self-hosting/configuration/">Configuration</a>
+for everything else.</p>
+<blockquote class="book-hint info"><p><strong>Note</strong>
+The image is published to the <strong>GitHub Container Registry</strong>
+(<code>ghcr.io/econumo/econumo</code>). The old Docker Hub image <code>econumo/econumo-ce</code>
+belongs to v0.x and is no longer updated.</p></blockquote>
+<p>If you’d rather not clone the repository, a minimal <code>docker-compose.yml</code> is all
+you need next to your <code>.env</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="yml"><code><span class="line"><span style="color:#85E89D">services</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  econumo</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">    image</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ghcr.io/econumo/econumo:latest</span></span>
+<span class="line"><span style="color:#85E89D">    env_file</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">      - </span><span style="color:#9ECBFF">.env</span></span>
+<span class="line"><span style="color:#85E89D">    ports</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">      - </span><span style="color:#9ECBFF">&quot;8181:80&quot;</span></span>
+<span class="line"><span style="color:#85E89D">    volumes</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">      - </span><span style="color:#9ECBFF">db:/app/var/db</span></span>
+<span class="line"><span style="color:#85E89D">    restart</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">unless-stopped</span></span>
+<span class="line"><span style="color:#85E89D">    healthcheck</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">      test</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;CMD&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;/app/econumo&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;healthcheck&quot;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#85E89D">      interval</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">1m30s</span></span>
+<span class="line"><span style="color:#85E89D">      timeout</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">10s</span></span>
+<span class="line"><span style="color:#85E89D">      retries</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">12</span></span>
+<span class="line"><span style="color:#85E89D">      start_period</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">30s</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">volumes</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  db</span><span style="color:#E1E4E8">:</span></span></code></pre>
+<p>with a <code>.env</code> holding at least:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#FFAB70">DATABASE_URL</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">sqlite:///app/var/db/db.sqlite</span></span>
+<span class="line"><span style="color:#FFAB70">PORT</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">80</span></span>
+<span class="line"><span style="color:#FFAB70">ECONUMO_ALLOW_REGISTRATION</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">true</span></span></code></pre>
+<hr/>
+<h2 id="without-docker-single-binary">Without Docker (single binary) <a class="anchor" href="#without-docker-single-binary">#</a></h2>
+<p>Every <a href="https://github.com/econumo/econumo/releases/latest">release</a> also ships
+self-contained Linux binaries for <code>linux/amd64</code> and <code>linux/arm64</code>, with the web
+app embedded. Download the binary for your architecture and verify it.
+On arm64 (e.g. a Raspberry Pi), use <code>econumo-linux-arm64</code> here and below:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -LO</span><span style="color:#9ECBFF"> https://github.com/econumo/econumo/releases/latest/download/econumo-linux-amd64</span></span>
+<span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -LO</span><span style="color:#9ECBFF"> https://github.com/econumo/econumo/releases/latest/download/SHA256SUMS</span></span>
+<span class="line"><span style="color:#B392F0">sha256sum</span><span style="color:#79B8FF"> --check</span><span style="color:#79B8FF"> --ignore-missing</span><span style="color:#9ECBFF"> SHA256SUMS</span></span></code></pre>
+<p>Create a system user and the directories, install the binary, and write the
+environment file:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> useradd</span><span style="color:#79B8FF"> --system</span><span style="color:#79B8FF"> --home-dir</span><span style="color:#9ECBFF"> /var/lib/econumo</span><span style="color:#79B8FF"> --shell</span><span style="color:#9ECBFF"> /usr/sbin/nologin</span><span style="color:#9ECBFF"> econumo</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> mkdir</span><span style="color:#79B8FF"> -p</span><span style="color:#9ECBFF"> /opt/econumo</span><span style="color:#9ECBFF"> /var/lib/econumo</span><span style="color:#9ECBFF"> /etc/econumo</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> chown</span><span style="color:#9ECBFF"> econumo:econumo</span><span style="color:#9ECBFF"> /var/lib/econumo</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> chmod</span><span style="color:#79B8FF"> 700</span><span style="color:#9ECBFF"> /var/lib/econumo</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -m</span><span style="color:#79B8FF"> 0755</span><span style="color:#9ECBFF"> econumo-linux-amd64</span><span style="color:#9ECBFF"> /opt/econumo/econumo</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -m</span><span style="color:#79B8FF"> 0600</span><span style="color:#9ECBFF"> /dev/null</span><span style="color:#9ECBFF"> /etc/econumo/env</span></span>
+<span class="line"><span style="color:#B392F0">sudoedit</span><span style="color:#9ECBFF"> /etc/econumo/env</span></span></code></pre>
+<p>A minimal <code>/etc/econumo/env</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#FFAB70">DATABASE_URL</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">sqlite:///var/lib/econumo/db.sqlite</span></span>
+<span class="line"><span style="color:#FFAB70">PORT</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">8181</span></span></code></pre>
+<p>Save this unit as <code>/etc/systemd/system/econumo.service</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="ini"><code><span class="line"><span style="color:#B392F0">[Unit]</span></span>
+<span class="line"><span style="color:#F97583">Description</span><span style="color:#E1E4E8">=Econumo personal finance server</span></span>
+<span class="line"><span style="color:#F97583">After</span><span style="color:#E1E4E8">=network-online.target</span></span>
+<span class="line"><span style="color:#F97583">Wants</span><span style="color:#E1E4E8">=network-online.target</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">[Service]</span></span>
+<span class="line"><span style="color:#F97583">Type</span><span style="color:#E1E4E8">=simple</span></span>
+<span class="line"><span style="color:#F97583">User</span><span style="color:#E1E4E8">=econumo</span></span>
+<span class="line"><span style="color:#F97583">Group</span><span style="color:#E1E4E8">=econumo</span></span>
+<span class="line"><span style="color:#F97583">WorkingDirectory</span><span style="color:#E1E4E8">=/var/lib/econumo</span></span>
+<span class="line"><span style="color:#F97583">EnvironmentFile</span><span style="color:#E1E4E8">=/etc/econumo/env</span></span>
+<span class="line"><span style="color:#F97583">ExecStart</span><span style="color:#E1E4E8">=/opt/econumo/econumo serve</span></span>
+<span class="line"><span style="color:#F97583">Restart</span><span style="color:#E1E4E8">=on-failure</span></span>
+<span class="line"><span style="color:#F97583">RestartSec</span><span style="color:#E1E4E8">=5</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Hardening: the process only ever writes its database directory.</span></span>
+<span class="line"><span style="color:#F97583">NoNewPrivileges</span><span style="color:#E1E4E8">=yes</span></span>
+<span class="line"><span style="color:#F97583">ProtectSystem</span><span style="color:#E1E4E8">=strict</span></span>
+<span class="line"><span style="color:#F97583">ProtectHome</span><span style="color:#E1E4E8">=yes</span></span>
+<span class="line"><span style="color:#F97583">PrivateTmp</span><span style="color:#E1E4E8">=yes</span></span>
+<span class="line"><span style="color:#F97583">ReadWritePaths</span><span style="color:#E1E4E8">=/var/lib/econumo</span></span>
+<span class="line"><span style="color:#F97583">UMask</span><span style="color:#E1E4E8">=0077</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">[Install]</span></span>
+<span class="line"><span style="color:#F97583">WantedBy</span><span style="color:#E1E4E8">=multi-user.target</span></span></code></pre>
+<p>and start it:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> systemctl</span><span style="color:#9ECBFF"> daemon-reload</span><span style="color:#E1E4E8"> &amp;&amp; </span><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> systemctl</span><span style="color:#9ECBFF"> enable</span><span style="color:#79B8FF"> --now</span><span style="color:#9ECBFF"> econumo</span></span></code></pre>
+<p>The binary also reads a <code>.env</code> file from its working directory if one exists,
+but variables already set in the environment always win.</p>
+<hr/>
+<h2 id="create-the-first-user">Create the first user <a class="anchor" href="#create-the-first-user">#</a></h2>
+<p>Open the app and sign up — registration is on by default. Once everyone in
+your household has an account, set <code>ECONUMO_ALLOW_REGISTRATION=false</code> and
+apply it with <code>docker compose up -d</code>.</p>
+<p>You can also create users from the command line, with registration turned
+off:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> compose</span><span style="color:#9ECBFF"> exec</span><span style="color:#9ECBFF"> econumo</span><span style="color:#9ECBFF"> /app/econumo</span><span style="color:#9ECBFF"> user:create</span><span style="color:#9ECBFF"> &quot;Name&quot;</span><span style="color:#9ECBFF"> user@example.com</span><span style="color:#9ECBFF"> password</span></span></code></pre>
+<p>See <a href="/docs/self-hosting/cli-commands/">CLI commands</a> for this and the other
+management commands.</p>
+<hr/>
+<h2 id="https-and-a-reverse-proxy">HTTPS and a reverse proxy <a class="anchor" href="#https-and-a-reverse-proxy">#</a></h2>
+<p>Econumo speaks plain HTTP. To reach it from outside your network, put it
+behind a reverse proxy that terminates TLS (Caddy, nginx, Traefik, a
+Cloudflare Tunnel, …) and forwards requests to port <code>8181</code>.</p>
+<p>Then tell Econumo its public address:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dotenv"><code><span class="line"><span style="color:#FFAB70">ECONUMO_URL</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">https://money.example.com</span></span></code></pre>
+<p><code>ECONUMO_URL</code> adds a link to every email, and it is required for
+<a href="/docs/self-hosting/single-sign-on/">single sign-on</a> and for connecting AI
+apps such as Claude to the built-in
+<a href="/docs/user-guide/user-profile/#connected-apps">MCP server</a> by signing in.
+For MCP it must be an <code>https</code> origin with no path (plain <code>http</code> is accepted
+only for <code>localhost</code>).</p>
+<p>Some features need the app to be opened over HTTPS (or on <code>localhost</code>):
+connecting a bank through <a href="/docs/user-guide/simplefin/">SimpleFIN</a>, for
+example, because the browser only encrypts the credentials on a secure page.</p>
+<p>Behind a proxy, also see
+<a href="/docs/self-hosting/configuration/#reverse-proxy-and-rate-limits">Reverse proxy and rate limits</a>.</p>
+<hr/>
+<h2 id="upgrading">Upgrading <a class="anchor" href="#upgrading">#</a></h2>
+<p>Back up first (see <a href="/docs/self-hosting/backups/">Backups</a>), then:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6A737D"># Docker</span></span>
+<span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> compose</span><span style="color:#9ECBFF"> pull</span><span style="color:#E1E4E8"> &amp;&amp; </span><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> compose</span><span style="color:#9ECBFF"> up</span><span style="color:#79B8FF"> -d</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Single binary: replace the file, then restart</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -m</span><span style="color:#79B8FF"> 0755</span><span style="color:#9ECBFF"> econumo-linux-amd64</span><span style="color:#9ECBFF"> /opt/econumo/econumo</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> systemctl</span><span style="color:#9ECBFF"> restart</span><span style="color:#9ECBFF"> econumo</span></span></code></pre>
+<p>Database migrations run automatically on start. <code>/app/econumo version</code> (or
+<code>/opt/econumo/econumo version</code>) prints the installed version, and the server
+checks once a day for a newer release and shows it in <strong>Settings</strong> (set
+<code>ECONUMO_CHECK_UPDATES=false</code> to turn that off). Release notes are on
+<a href="https://github.com/econumo/econumo/releases">GitHub Releases</a> and on
+<a href="/releases/">econumo.com</a>.</p>
+<h3 id="upgrading-from-v0x">Upgrading from v0.x <a class="anchor" href="#upgrading-from-v0x">#</a></h3>
+<p>v1 is a full rewrite — the PHP backend became the Go binary and the Vue.js
+frontend became a React app — but it reuses your database in place: accounts,
+passwords and data keep working. The image name, the <code>.env</code> variables and the
+volumes changed, so follow the
+<a href="https://github.com/econumo/econumo/blob/main/docs/migration-v0-to-v1.md">migration guide</a>
+step by step.</p> </article>  <footer class="book-footer"> <div class="flex flex-wrap justify-between"></div> </footer> <label for="menu-control" class="book-menu-overlay"></label> </div> </main> </div> </div>  <script defer src="/scripts/top-bar.js"></script> <script defer src="/scripts/navigation.js"></script><script defer src="/scripts/mobile.js"></script><script defer src="/scripts/book.js"></script> <script defer src="/scripts/search.js"></script> </body> </html>

@@ -23,5 +23,6 @@ financial management features for those who prioritize privacy and control over 
 API and the web app and runs on SQLite by default (PostgreSQL is also supported). Users share accounts and budgets by
 [connecting with an invitation](/docs/user-guide/shared-access/) and choosing an access level per item.
 
-To get started with **Econumo Self-Hosted**, please follow the instructions on
-the [GitHub repository](https://github.com/econumo/econumo).
+To get started with **Econumo Self-Hosted**, follow the
+[installation guide](/docs/self-hosting/installation/); the source code is on
+[GitHub](https://github.com/econumo/econumo).
