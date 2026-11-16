@@ -185,7 +185,7 @@ ECONUMO_URL=https://money.example.com
 `ECONUMO_URL` adds a link to every email, and it is required for
 [single sign-on](/docs/self-hosting/single-sign-on/) and for connecting AI
 apps such as Claude to the built-in
-[MCP server](/docs/user-guide/user-profile/#connected-apps) by signing in.
+[MCP server](/docs/user-guide/ai-assistants/) by signing in.
 For MCP it must be an `https` origin with no path (plain `http` is accepted
 only for `localhost`).
 

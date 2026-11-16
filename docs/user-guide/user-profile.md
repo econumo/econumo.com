@@ -231,38 +231,21 @@ one without breaking the others.
 
 The same tokens also authenticate Econumo's built-in MCP server. Claude and
 Codex no longer need one — they sign in through the browser, see
-[Connected apps](/docs/user-guide/user-profile/#connected-apps) — but a token
+[AI assistants (MCP)](/docs/user-guide/ai-assistants/) — but a token
 still works for any MCP client that can't.
 
 ---
 ## Connected apps
 
-Econumo has a built-in MCP server, so an AI assistant such as Claude or Codex
-can check your balances and budgets or log transactions for you, straight from
-a chat. Connecting one takes only your Econumo address — there is no token to
-create or paste.
-
-Open **Security → Connected apps**. The page shows the address to use — for
-Econumo, `https://app.econumo.com/mcp` — with a **Copy** button beside it:
+**Security → Connected apps** shows the address of Econumo's built-in MCP
+server — for Econumo, `https://app.econumo.com/mcp` — with a **Copy** button,
+and lists every AI assistant you have allowed to use your account, with when it
+was connected and when it was last used. **Revoke** signs an app out right
+away.
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
-1. In Claude (on the web, desktop or mobile), Claude Code or Codex, add a
-   custom connector — an MCP server — with that address.
-2. The app opens Econumo in your browser. Sign in if you are asked to.
-3. Econumo asks you to **Allow** the app access to your account. An app you
-   allow can read and change all of your Econumo data.
-
-Every app you have allowed is listed on the same page, with when it was
-connected and when it was last used. **Revoke** signs an app out right away.
-
-**Note**
-On a self-hosted server, connecting by address needs `ECONUMO_URL` set to the
-server's public **https** address, with no path. Without it, Connected apps
-reads *"Connecting AI apps isn't available on this server"* and the MCP server
-accepts [API tokens](/docs/user-guide/user-profile/#api-tokens) only. Claude
-on the web, desktop and mobile connects from Anthropic's servers, so for those
-the server must be reachable from the internet; Claude Code and Codex only need
-to reach it from your computer.
+To connect Claude, Claude Code or Codex step by step, see
+[AI assistants (MCP)](/docs/user-guide/ai-assistants/).

@@ -93,6 +93,10 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [App lock](/docs/user-guide/user-profile/#app-lock)
   - [API tokens](/docs/user-guide/user-profile/#api-tokens)
   - [Connected apps](/docs/user-guide/user-profile/#connected-apps)
+- [AI assistants (MCP)](/docs/user-guide/ai-assistants/)
+  - [Claude (web, desktop and mobile)](/docs/user-guide/ai-assistants/#claude-web-desktop-and-mobile)
+  - [Claude Code](/docs/user-guide/ai-assistants/#claude-code)
+  - [Codex](/docs/user-guide/ai-assistants/#codex)
 - [Import data](/docs/user-guide/import-data/)
   - [CSV Import & Export](/docs/user-guide/csv-import-export/)
   - [Apple Wallet](/docs/user-guide/apple-wallet/)
@@ -198,7 +202,7 @@ tap a step to jump to it.
    your income and expenses. You can adjust them later.
 5. **Connect** — **Connect your accounts** so transactions come in on their
    own: set up [Apple Wallet](/docs/user-guide/apple-wallet/) or
-   [SimpleFIN](/docs/user-guide/simplefin/), or copy the MCP address for an AI
+   [SimpleFIN](/docs/user-guide/simplefin/), or copy the [MCP address](/docs/user-guide/ai-assistants/) for an AI
    assistant such as Claude or ChatGPT.
 
 When your browser can install Econumo, an extra step offers to add it to your

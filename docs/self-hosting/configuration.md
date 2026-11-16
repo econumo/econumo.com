@@ -148,7 +148,7 @@ In v1.7.3 and earlier, SimpleFIN is **off** by default. Set
 
 ### AI apps (MCP)
 
-Econumo has a built-in [MCP server](/docs/user-guide/user-profile/#connected-apps)
+Econumo has a built-in [MCP server](/docs/user-guide/ai-assistants/)
 at `<ECONUMO_URL>/mcp`. Users connect Claude, Claude Code or Codex to it by
 signing in through the browser. This works only when `ECONUMO_URL` is set to an
 `https` origin with no path. Without it, `/mcp` accepts only

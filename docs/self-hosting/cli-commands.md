@@ -129,7 +129,7 @@ docker compose exec econumo /app/econumo token:purge [days]
 ```
 
 The next release adds `app:*` commands for the OAuth apps that AI clients
-use to connect to the [MCP server](/docs/user-guide/user-profile/#connected-apps).
+use to connect to the [MCP server](/docs/user-guide/ai-assistants/).
 Clients such as Claude and Codex register themselves, so you only need these
 commands to inspect, disconnect or remove apps:
 

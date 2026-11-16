@@ -180,6 +180,10 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [App lock](/docs/user-guide/user-profile/#app-lock)
   - [API tokens](/docs/user-guide/user-profile/#api-tokens)
   - [Connected apps](/docs/user-guide/user-profile/#connected-apps)
+- [AI assistants (MCP)](/docs/user-guide/ai-assistants/)
+  - [Claude (web, desktop and mobile)](/docs/user-guide/ai-assistants/#claude-web-desktop-and-mobile)
+  - [Claude Code](/docs/user-guide/ai-assistants/#claude-code)
+  - [Codex](/docs/user-guide/ai-assistants/#codex)
 - [Import data](/docs/user-guide/import-data/)
   - [CSV Import & Export](/docs/user-guide/csv-import-export/)
   - [Apple Wallet](/docs/user-guide/apple-wallet/)
@@ -285,7 +289,7 @@ tap a step to jump to it.
    your income and expenses. You can adjust them later.
 5. **Connect** — **Connect your accounts** so transactions come in on their
    own: set up [Apple Wallet](/docs/user-guide/apple-wallet/) or
-   [SimpleFIN](/docs/user-guide/simplefin/), or copy the MCP address for an AI
+   [SimpleFIN](/docs/user-guide/simplefin/), or copy the [MCP address](/docs/user-guide/ai-assistants/) for an AI
    assistant such as Claude or ChatGPT.
 
 When your browser can install Econumo, an extra step offers to add it to your
@@ -2528,41 +2532,167 @@ one without breaking the others.
 
 The same tokens also authenticate Econumo's built-in MCP server. Claude and
 Codex no longer need one — they sign in through the browser, see
-[Connected apps](/docs/user-guide/user-profile/#connected-apps) — but a token
+[AI assistants (MCP)](/docs/user-guide/ai-assistants/) — but a token
 still works for any MCP client that can't.
 
 ---
 ## Connected apps
 
-Econumo has a built-in MCP server, so an AI assistant such as Claude or Codex
-can check your balances and budgets or log transactions for you, straight from
-a chat. Connecting one takes only your Econumo address — there is no token to
-create or paste.
-
-Open **Security → Connected apps**. The page shows the address to use — for
-Econumo, `https://app.econumo.com/mcp` — with a **Copy** button beside it:
+**Security → Connected apps** shows the address of Econumo's built-in MCP
+server — for Econumo, `https://app.econumo.com/mcp` — with a **Copy** button,
+and lists every AI assistant you have allowed to use your account, with when it
+was connected and when it was last used. **Revoke** signs an app out right
+away.
 
 <ScreenshotSet>
 
 </ScreenshotSet>
 
-1. In Claude (on the web, desktop or mobile), Claude Code or Codex, add a
-   custom connector — an MCP server — with that address.
-2. The app opens Econumo in your browser. Sign in if you are asked to.
-3. Econumo asks you to **Allow** the app access to your account. An app you
-   allow can read and change all of your Econumo data.
+To connect Claude, Claude Code or Codex step by step, see
+[AI assistants (MCP)](/docs/user-guide/ai-assistants/).
 
-Every app you have allowed is listed on the same page, with when it was
-connected and when it was last used. **Revoke** signs an app out right away.
+---
+
+# AI assistants (MCP)
+
+URL: https://econumo.com/docs/user-guide/ai-assistants/
+
+# AI assistants (MCP)
+
+Econumo has a built-in [MCP](https://modelcontextprotocol.io) server. Connect
+an AI assistant such as Claude, Claude Code or Codex to it, and the assistant
+can check your balances and budgets, look up transactions, and log new ones for
+you, straight from a chat.
+
+You connect with your Econumo address only. You don't create or paste a token:
+the assistant opens Econumo in your browser, you sign in, and you press
+**Allow**.
+
+## In this section
+
+- [Your MCP address](/docs/user-guide/ai-assistants/#your-mcp-address)
+- [Claude (web, desktop and mobile)](/docs/user-guide/ai-assistants/#claude-web-desktop-and-mobile)
+- [Claude Code](/docs/user-guide/ai-assistants/#claude-code)
+- [Codex](/docs/user-guide/ai-assistants/#codex)
+- [Other MCP clients](/docs/user-guide/ai-assistants/#other-mcp-clients)
+- [Managing connected apps](/docs/user-guide/ai-assistants/#managing-connected-apps)
+- [Troubleshooting](/docs/user-guide/ai-assistants/#troubleshooting)
+
+---
+## Your MCP address
+
+The address is your Econumo address followed by `/mcp`. For
+[app.econumo.com](https://app.econumo.com) it is:
+
+```text
+https://app.econumo.com/mcp
+```
+
+You can also copy it in Econumo: open **Settings → Personal settings**, choose
+**Connected apps** in the Security section, and press **Copy** next to the
+address.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+An app you allow can read and change all of your Econumo data. It never sees
+your password, and its access works only for the MCP server, not for the rest
+of the Econumo API.
+
+---
+## Claude (web, desktop and mobile)
+
+1. In Claude, open **Settings → Connectors** and choose **Add custom
+   connector**.
+2. Paste your MCP address and add the connector.
+3. Press **Connect**. Econumo opens in your browser. Sign in if you are asked
+   to, check the app's name, and press **Allow**.
+
+The connector then works in Claude on every device where you use the same
+Claude account.
+
+---
+## Claude Code
+
+Add the server from a terminal:
+
+```sh
+claude mcp add --transport http econumo https://app.econumo.com/mcp
+```
+
+Then start Claude Code, run `/mcp`, pick `econumo` and choose
+**Authenticate**. Econumo opens in your browser. Sign in if you are asked to
+and press **Allow**.
+
+---
+## Codex
+
+```sh
+codex mcp add econumo --url https://app.econumo.com/mcp
+codex mcp login econumo
+```
+
+`codex mcp login` opens Econumo in your browser. Sign in if you are asked to
+and press **Allow**. Flags can change between Codex releases;
+`codex mcp add --help` shows the current ones.
+
+---
+## Other MCP clients
+
+Any client that supports MCP's browser sign-in (OAuth) connects the same way:
+give it your MCP address and allow it in Econumo.
+
+A client that can't sign in through the browser can send a personal access
+token instead. Create one in **Settings → Personal settings → API tokens** (see
+[API tokens](/docs/user-guide/user-profile/#api-tokens)) and set the client to
+send the header `Authorization: Bearer <your token>` to your MCP address.
+
+---
+## Managing connected apps
+
+**Settings → Personal settings → Connected apps** lists every app you have allowed,
+with when it was connected and when it was last used. **Revoke** signs an app
+out right away; to use it again, connect it again.
+
+A connection stays signed in while you use it. If an app is not used for 90
+days, it asks you to sign in again.
+
+Resetting your password through the emailed link disconnects every app.
+Changing your password from Settings keeps them connected.
 
 **Note**
 On a self-hosted server, connecting by address needs `ECONUMO_URL` set to the
-server's public **https** address, with no path. Without it, Connected apps
-reads *"Connecting AI apps isn't available on this server"* and the MCP server
-accepts [API tokens](/docs/user-guide/user-profile/#api-tokens) only. Claude
-on the web, desktop and mobile connects from Anthropic's servers, so for those
-the server must be reachable from the internet; Claude Code and Codex only need
-to reach it from your computer.
+server's public **https** address, with no path (see
+[Configuration](/docs/self-hosting/configuration/#ai-apps-mcp)). Without it,
+Connected apps reads *"Connecting AI apps isn't available on this server"* and
+the MCP server accepts [API tokens](/docs/user-guide/user-profile/#api-tokens)
+only. Claude on the web, desktop and mobile connects from Anthropic's servers,
+so for those the server must be reachable from the internet; Claude Code and
+Codex only need to reach it from your computer.
+
+---
+## Troubleshooting
+
+- **The client never opens a browser, or says the server doesn't support
+  authorization.** Check the address ends in `/mcp` and has no typo. On a
+  self-hosted server, check `ECONUMO_URL` as described above, and that a
+  reverse proxy passes `/.well-known/*`, `/oauth/*` and `/mcp` through to
+  Econumo, not only `/api`.
+- **"This app sent an invalid request"** on the approval page. Go back to the
+  app and start connecting again.
+- **"This app's registration has expired or is unknown"** on the approval
+  page. Make the app register again:
+  - Claude: remove the Econumo connector and add it again.
+  - Claude Code: run `/mcp`, pick `econumo`, choose **Clear authentication**,
+    then **Authenticate**.
+  - Codex: run `codex mcp logout econumo`, then `codex mcp login econumo`.
+- **"This app is connected to a different Econumo account".** Someone else
+  already connected this copy of the app. Add Econumo in your own Claude, Claude
+  Code or Codex instead.
+- **You can't press Allow.** A read-only account (for example, after a trial
+  ends) can't connect an AI assistant.
 
 ---
 
@@ -3377,7 +3507,7 @@ ECONUMO_URL=https://money.example.com
 `ECONUMO_URL` adds a link to every email, and it is required for
 [single sign-on](/docs/self-hosting/single-sign-on/) and for connecting AI
 apps such as Claude to the built-in
-[MCP server](/docs/user-guide/user-profile/#connected-apps) by signing in.
+[MCP server](/docs/user-guide/ai-assistants/) by signing in.
 For MCP it must be an `https` origin with no path (plain `http` is accepted
 only for `localhost`).
 
@@ -3572,7 +3702,7 @@ In v1.7.3 and earlier, SimpleFIN is **off** by default. Set
 
 ### AI apps (MCP)
 
-Econumo has a built-in [MCP server](/docs/user-guide/user-profile/#connected-apps)
+Econumo has a built-in [MCP server](/docs/user-guide/ai-assistants/)
 at `<ECONUMO_URL>/mcp`. Users connect Claude, Claude Code or Codex to it by
 signing in through the browser. This works only when `ECONUMO_URL` is set to an
 `https` origin with no path. Without it, `/mcp` accepts only
@@ -4266,7 +4396,7 @@ docker compose exec econumo /app/econumo token:purge [days]
 ```
 
 The next release adds `app:*` commands for the OAuth apps that AI clients
-use to connect to the [MCP server](/docs/user-guide/user-profile/#connected-apps).
+use to connect to the [MCP server](/docs/user-guide/ai-assistants/).
 Clients such as Claude and Codex register themselves, so you only need these
 commands to inspect, disconnect or remove apps:
 
