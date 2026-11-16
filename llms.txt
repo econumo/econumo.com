@@ -175,6 +175,7 @@
 
 ## Releases
 
+- [v1.8.0](https://econumo.com/releases/v1.8.0.md): v1.8.0 — track loans as budget debts with payoff dates and interest, and sync your bank transactions through SimpleFIN.
 - [v1.7.2](https://econumo.com/releases/v1.7.2.md): v1.7.2 — a release for self-hosters only: fixes signing in on SQLite instances upgraded from v1.5.x and adds commands to backfill missing exchange rates.
 - [v1.7.3](https://econumo.com/releases/v1.7.3.md): v1.7.3 — a release for self-hosters only: instances on v1.3.x or older can upgrade again, and every release is now tested against real upgrades.
 - [v1.7.1](https://econumo.com/releases/v1.7.1.md): v1.7.1 — pickers open in a searchable bottom sheet on phones, forms stay put above the iOS keyboard, and recurring payments show up in search.

@@ -53,13 +53,25 @@ from its **Connect** step, too.
 
 ## Mapping bank accounts
 
-After the first sync, **Accounts** lists the bank accounts SimpleFIN reports.
-An account marked **Needs mapping** has transactions waiting for you:
+Once you connect, the page lists the bank accounts SimpleFIN reports under
+**Needs mapping**. After a sync, each one shows how many transactions wait for
+you (*"57 to review"*); they also wait in the
+[Inbox](/docs/user-guide/inbox/#imported-transactions).
 
-- **Map to account** — pick the Econumo account its transactions go to. The
-  waiting transactions are imported right away (*"12 imported, 3 matched,
-  0 skipped"*).
-- **Ignore** — for a bank account you don't want in Econumo.
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+For each bank account:
+
+- **Map** — pick the Econumo account its transactions go to, then press
+  **Map**. The waiting transactions are imported right away.
+- **Ignore** — for a bank account you don't want in Econumo. It moves to
+  **Accounts** as *Ignored*, and you can still **Map** it later.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 A mapped account can be **Remap**ped to another Econumo account or **Unmap**ped.
 After unmapping, its new transactions wait for review until you map it again.
@@ -77,6 +89,10 @@ the sidebar. The page shows when you last synced and from which date
 transactions are fetched (*"Syncs transactions since …"*); press **Change** to
 fetch from an earlier or later date.
 
+<ScreenshotSet>
+
+</ScreenshotSet>
+
 Imported transactions are classified by your
 [import rules](/docs/user-guide/import-rules/). Anything Econumo can't place —
 a bank account that isn't mapped yet, a currency without an exchange rate —
@@ -85,6 +101,10 @@ waits in the [Inbox](/docs/user-guide/inbox/#imported-transactions).
 **Import history** lists every sync with what it imported, matched, updated,
 queued or skipped. Open a run to see its transactions; one you deleted by
 mistake can be imported again from there.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 ---
 

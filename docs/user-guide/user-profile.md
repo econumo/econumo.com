@@ -196,6 +196,10 @@ this device — useful on a shared tablet or a phone you hand to your kids.
 
 </ScreenshotSet>
 
+<ScreenshotSet>
+
+</ScreenshotSet>
+
 **Note**
 The lock protects Econumo on this device only, and it doesn't encrypt the data
 stored on the device. If you forget the PIN or pattern, choose **Forgot PIN?**

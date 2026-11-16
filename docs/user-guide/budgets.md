@@ -69,6 +69,10 @@ month is named after the month it starts in: with day 25, *November* covers
 25 November to 24 December. The months bar and the
 [Plan view](/docs/user-guide/plan/) show each month's dates under its name.
 
+<ScreenshotSet>
+
+</ScreenshotSet>
+
 The start day belongs to the budget, so everyone sharing it sees the same
 months. You can change it later in
 [Budget settings](/docs/user-guide/budgets/#update-budget-details) — your plans
