@@ -45,12 +45,20 @@ budget** (**Set plan** on a savings row). See
 
 Rows are the elements of your budget, in the structure you gave it, under the
 same **Income**, **Savings** and **Expenses** sections as the budget view.
+[Same-name tags](/docs/user-guide/budgets/#tag-and-envelope-breakdown) from
+different budget partners group into one row here too, such as **Italy 2026 ·
+2 tags** — expand it to see each tag on its own.
 
 Each cell shows the amount actually spent or earned on the left, in small grey
 type, next to the amount you planned. An actual figure that overshoots the
-plan is shown in red. A blank cell means nothing is planned for that month and
-nothing happened. On a savings row, the small figure is the account's balance
-at the end of that month.
+plan is shown in red. On a savings row, the small figure is the account's
+balance at the end of that month.
+
+A blank cell means no plan is set for that month and nothing happened. A plan
+of exactly zero is different from no plan at all: type `0` into a cell to
+keep it visible — handy for a category, tag or envelope you haven't used yet
+but want to see in the sheet — and it still turns red once a recurring
+payment comes due against it.
 
 Click an actual figure to list that month's transactions behind it.
 
@@ -67,8 +75,8 @@ The sheet works like a spreadsheet:
 2. Type the amount, or press **F2** to edit the amount already there.
 3. Press **Enter** to save, or **Escape** to leave the cell as it was.
 
-**Delete** clears a cell's plan, and you can paste an amount copied from
-elsewhere.
+**Delete** clears a cell's plan entirely — the cell goes blank, not to zero —
+and you can paste an amount copied from elsewhere.
 
 <ScreenshotSet>
 
@@ -86,7 +94,8 @@ the projection at the foot of the sheet worth reading. A selected cell with a
 Most plans repeat: the same rent, the same phone bill, month after month. When
 a cell is selected, a small square appears at its bottom-right corner —
 **Copy budget to the following months**. Drag it to the right to repeat that
-amount across the months it covers.
+amount across the months it covers. Dragging or copying a blank cell clears
+the months it covers instead of writing a zero into them.
 
 ---
 

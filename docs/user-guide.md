@@ -26,6 +26,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Shared access](/docs/user-guide/accounts/#shared-access)
 - [Transactions](/docs/user-guide/transactions/)
   - [Adding transactions](/docs/user-guide/transactions/#adding-transactions)
+  - [Reordering transactions](/docs/user-guide/transactions/#reordering-transactions)
   - [Editing a transaction](/docs/user-guide/transactions/#editing-a-transaction)
   - [Deleting a transaction](/docs/user-guide/transactions/#deleting-a-transaction)
 - [Recurring Transactions](/docs/user-guide/recurring-transactions/)
@@ -248,7 +249,16 @@ On desktop and tablet, open Settings from the bottom of the sidebar; on mobile,
 from the bottom of the home screen. The card with your name at the top opens
 your [Personal settings](/docs/user-guide/user-profile/), **Log out** sits
 right under it, and the **API** link at the very bottom opens the
-[API reference](/docs/api/) for your instance.
+[API reference](/docs/api/) for your instance. Econumo can also install
+itself as an app on your phone or computer — Settings offers an **Install the
+app** row, and a banner may invite you to do the same.
+
+**Note**
+Transactions are kept on your device so accounts you've already seen load
+instantly, and only accounts that changed are downloaded again. After an
+upgrade to a new version (such as v1.8), a card at the bottom of the sidebar
+links to its release notes; dismissing it on one device dismisses it
+everywhere.
 
 <ScreenshotSet>
 

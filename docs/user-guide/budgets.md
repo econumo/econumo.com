@@ -172,6 +172,23 @@ press **Set budget**:
 
 </ScreenshotSet>
 
+From the current month on, setting an expense row's amount shows a **Coming
+up** list: the recurring payments still due that month, plus any of the row's
+transactions already dated later in the month, each converted to the row's
+currency. The list ends with **Already spent** (if you've already spent something)
+and a **Total** line. Tap or click the list to put that total into the amount
+field — adjust it if you like, then save.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The same list appears in the [Plan](/docs/user-guide/plan/) grid's cell
+editor. **Spent**, **Actual** and **Available** always count only real
+transactions — Coming up is a hint, not a figure of its own — but for an
+expense row, a plan below what's already spent plus what's still due shows in
+red.
+
 On a phone the budget is a single-month view. Each row shows **Budget** and
 **Spent**, with a thin progress bar under it that turns red once spending runs
 past the budget. Tap a row's figures to open its sheet: the month's figures,
@@ -239,11 +256,14 @@ when you are finished.
 The menus offer:
 
 - **Income** and **Expenses** section headers — **Create folder**, **New
-  envelope**, **New category**.
-- A **folder** — **New envelope**, **New category**, **Edit** (rename), and
-  **Delete folder**.
+  envelope**, **New category**, and, on the Expenses section, **New tag**.
+- A **folder** — **New envelope**, **New category**, **New tag** on an
+  expense folder, **Edit** (rename), and **Delete folder**.
 - A **category, tag or envelope** — **Edit**, **Change currency**, **Move to
   folder…**, **Archive**, **Merge into…** and **Delete**.
+
+**Note**
+Creating a tag this way places it at the top of that section or folder.
 
 An action you can't take right now is greyed out and says why — a folder that
 still holds items reads **Delete folder (not empty)**, and an item you don't
@@ -279,11 +299,29 @@ and available for that element are converted automatically.
 #### Tag and envelope breakdown
 
 Tags and envelopes aggregate several categories. Expand one by clicking its
-name to see where the money actually went:
+name to see where the money actually went.
+
+In a shared budget, you and your partner often keep your own tag with the
+same name — in the screenshots, both John and Megan tag their Italy trip
+spending `Italy 2026`. Same-name tags show as a single line, such as
+**Italy 2026 · 2 tags**, with the combined **Budget**, **Spent** and
+**Available**. Expand it to see each person's own tag, with their name next
+to it:
 
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+Expand a tag itself to see the categories its spending went to:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+Grouping is display only: each tag keeps its own limit, and nothing is
+merged. The same grouping and expansion works in the
+[Plan](/docs/user-guide/plan/) grid.
 
 #### Spending details
 

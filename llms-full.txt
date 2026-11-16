@@ -113,6 +113,7 @@ layout, where lists open full-screen and actions live in bottom sheets.
   - [Shared access](/docs/user-guide/accounts/#shared-access)
 - [Transactions](/docs/user-guide/transactions/)
   - [Adding transactions](/docs/user-guide/transactions/#adding-transactions)
+  - [Reordering transactions](/docs/user-guide/transactions/#reordering-transactions)
   - [Editing a transaction](/docs/user-guide/transactions/#editing-a-transaction)
   - [Deleting a transaction](/docs/user-guide/transactions/#deleting-a-transaction)
 - [Recurring Transactions](/docs/user-guide/recurring-transactions/)
@@ -335,7 +336,16 @@ On desktop and tablet, open Settings from the bottom of the sidebar; on mobile,
 from the bottom of the home screen. The card with your name at the top opens
 your [Personal settings](/docs/user-guide/user-profile/), **Log out** sits
 right under it, and the **API** link at the very bottom opens the
-[API reference](/docs/api/) for your instance.
+[API reference](/docs/api/) for your instance. Econumo can also install
+itself as an app on your phone or computer — Settings offers an **Install the
+app** row, and a banner may invite you to do the same.
+
+**Note**
+Transactions are kept on your device so accounts you've already seen load
+instantly, and only accounts that changed are downloaded again. After an
+upgrade to a new version (such as v1.8), a card at the bottom of the sidebar
+links to its release notes; dismissing it on one device dismisses it
+everywhere.
 
 <ScreenshotSet>
 
@@ -502,6 +512,10 @@ transactions you enter. Open any account to see its transaction list, search
 it, and add new records. To find a transaction across all your accounts at
 once, use [Search](/docs/user-guide/search/) (**Ctrl+K** / **⌘K**).
 
+On an account page, drag the marker along the timeline above the list to
+scroll through its history — the date shows as you drag — or click the marker
+to jump straight to a month and year.
+
 <ScreenshotSet>
 
 </ScreenshotSet>
@@ -518,6 +532,7 @@ The search field filters the transaction list as you type:
   - [Adding expenses](/docs/user-guide/transactions/#adding-expenses)
   - [Adding transfers](/docs/user-guide/transactions/#adding-transfers)
   - [Adding income](/docs/user-guide/transactions/#adding-income)
+- [Reordering transactions](/docs/user-guide/transactions/#reordering-transactions)
 - [Editing a transaction](/docs/user-guide/transactions/#editing-a-transaction)
 - [Deleting a transaction](/docs/user-guide/transactions/#deleting-a-transaction)
 
@@ -575,6 +590,12 @@ the category field to search your categories or create a new one: type a name
 that does not exist yet and press "Enter" (or "Search"/"Submit" on your mobile
 keyboard). The name must be 3–64 characters long.
 
+On desktop and tablet, the category field opens an inline dropdown under
+itself: the first match is highlighted as you type, the arrow keys move the
+highlight, and Enter picks it. On a phone it opens as a sheet instead, with
+the category list above a search field pinned right above the keyboard, so
+typing never pushes the list or the keyboard around.
+
 **Note**
 Leave a transaction uncategorized and it still counts toward your budget: it
 shows up there as a read-only **Uncategorized** element instead of being left
@@ -588,7 +609,14 @@ out of the totals. See [Budgeting](/docs/user-guide/budgets/#budgeting).
 
 You can specify a recipient for each transaction — the name of a person or a
 company where you spent the money. Like categories, recipients can be created
-right from the dialog.
+right from the dialog, and the field behaves the same way: an inline dropdown
+on desktop and tablet, a sheet on a phone.
+
+**Note**
+Every searchable picker in the app opens as a phone sheet the same way —
+accounts, the currency field in the account, budget, envelope and profile
+forms, a budget's **Accounts** and **Savings accounts** lists, and **Merge
+into…**.
 
 **Tags**
 
@@ -619,6 +647,11 @@ Transfers move money between your accounts without affecting the budget:
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+**Note**
+**Transfer** is greyed out in the transaction dialog unless you have at least
+two visible accounts you can add transactions to — accounts in a hidden folder
+don't count. Editing an existing transfer still works.
 
 **From/To**
 
@@ -651,6 +684,18 @@ received the money from.
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+---
+
+## Reordering transactions
+
+Put a day's transactions in the same order as your bank statement. On
+desktop, hover a row and drag it by the grip that appears in place of its
+icon. On a phone or tablet, press and hold a row, then drag it.
+
+Dropping a row into another day moves it to that day and keeps its time. On a
+transfer, each account keeps its own order, so reordering one side never
+moves the other.
 
 ---
 
@@ -824,8 +869,8 @@ Before you type, the search lists your most recent transactions, newest first:
 ## Finding things
 
 Start typing and the results group by kind — **Accounts**, **Categories**,
-**Payees**, **Tags**, **Labels** (reporting tags) and **Transactions** — with
-the best matches first.
+**Payees**, **Tags**, **Labels** (reporting tags), **Recurring** and
+**Transactions** — with the best matches first.
 
 You don't have to spell things exactly: missing letters are forgiven, so
 *grcries* still finds **Groceries**, along with the transactions filed under
@@ -838,6 +883,15 @@ displayed.
 
 The recent list leaves out transactions dated in the future, but a search
 still finds them.
+
+Search also finds your [recurring transactions](/docs/user-guide/recurring-transactions/),
+under their own **Recurring** group — the next one due first, with its
+schedule and next payment date. Searching for a payee, category, or tag also
+surfaces the recurring payments that use it.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 **Note**
 The same matcher drives every picker you can type into — the category, payee,
@@ -853,6 +907,11 @@ search window. Results also carry a three-dots menu with the actions that fit
 them — for a category, **Edit**, **Archive**, **Merge into…** and **Delete**,
 the same as in [Settings → Categories](/docs/user-guide/classifications/) — so
 you can tidy up a duplicate the moment you spot it.
+
+Click a **Recurring** result to open it: **Post** enters that payment now, the
+button beside it skips it, and the **Recurring transaction** row opens the
+schedule for editing — the same actions as the
+[Recurring transactions](/docs/user-guide/recurring-transactions/) list.
 
 ---
 
@@ -1287,6 +1346,23 @@ press **Set budget**:
 
 </ScreenshotSet>
 
+From the current month on, setting an expense row's amount shows a **Coming
+up** list: the recurring payments still due that month, plus any of the row's
+transactions already dated later in the month, each converted to the row's
+currency. The list ends with **Already spent** (if you've already spent something)
+and a **Total** line. Tap or click the list to put that total into the amount
+field — adjust it if you like, then save.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+The same list appears in the [Plan](/docs/user-guide/plan/) grid's cell
+editor. **Spent**, **Actual** and **Available** always count only real
+transactions — Coming up is a hint, not a figure of its own — but for an
+expense row, a plan below what's already spent plus what's still due shows in
+red.
+
 On a phone the budget is a single-month view. Each row shows **Budget** and
 **Spent**, with a thin progress bar under it that turns red once spending runs
 past the budget. Tap a row's figures to open its sheet: the month's figures,
@@ -1354,11 +1430,14 @@ when you are finished.
 The menus offer:
 
 - **Income** and **Expenses** section headers — **Create folder**, **New
-  envelope**, **New category**.
-- A **folder** — **New envelope**, **New category**, **Edit** (rename), and
-  **Delete folder**.
+  envelope**, **New category**, and, on the Expenses section, **New tag**.
+- A **folder** — **New envelope**, **New category**, **New tag** on an
+  expense folder, **Edit** (rename), and **Delete folder**.
 - A **category, tag or envelope** — **Edit**, **Change currency**, **Move to
   folder…**, **Archive**, **Merge into…** and **Delete**.
+
+**Note**
+Creating a tag this way places it at the top of that section or folder.
 
 An action you can't take right now is greyed out and says why — a folder that
 still holds items reads **Delete folder (not empty)**, and an item you don't
@@ -1394,11 +1473,29 @@ and available for that element are converted automatically.
 #### Tag and envelope breakdown
 
 Tags and envelopes aggregate several categories. Expand one by clicking its
-name to see where the money actually went:
+name to see where the money actually went.
+
+In a shared budget, you and your partner often keep your own tag with the
+same name — in the screenshots, both John and Megan tag their Italy trip
+spending `Italy 2026`. Same-name tags show as a single line, such as
+**Italy 2026 · 2 tags**, with the combined **Budget**, **Spent** and
+**Available**. Expand it to see each person's own tag, with their name next
+to it:
 
 <ScreenshotSet>
 
 </ScreenshotSet>
+
+Expand a tag itself to see the categories its spending went to:
+
+<ScreenshotSet>
+
+</ScreenshotSet>
+
+**Note**
+Grouping is display only: each tag keeps its own limit, and nothing is
+merged. The same grouping and expansion works in the
+[Plan](/docs/user-guide/plan/) grid.
 
 #### Spending details
 
@@ -1592,12 +1689,20 @@ budget** (**Set plan** on a savings row). See
 
 Rows are the elements of your budget, in the structure you gave it, under the
 same **Income**, **Savings** and **Expenses** sections as the budget view.
+[Same-name tags](/docs/user-guide/budgets/#tag-and-envelope-breakdown) from
+different budget partners group into one row here too, such as **Italy 2026 ·
+2 tags** — expand it to see each tag on its own.
 
 Each cell shows the amount actually spent or earned on the left, in small grey
 type, next to the amount you planned. An actual figure that overshoots the
-plan is shown in red. A blank cell means nothing is planned for that month and
-nothing happened. On a savings row, the small figure is the account's balance
-at the end of that month.
+plan is shown in red. On a savings row, the small figure is the account's
+balance at the end of that month.
+
+A blank cell means no plan is set for that month and nothing happened. A plan
+of exactly zero is different from no plan at all: type `0` into a cell to
+keep it visible — handy for a category, tag or envelope you haven't used yet
+but want to see in the sheet — and it still turns red once a recurring
+payment comes due against it.
 
 Click an actual figure to list that month's transactions behind it.
 
@@ -1614,8 +1719,8 @@ The sheet works like a spreadsheet:
 2. Type the amount, or press **F2** to edit the amount already there.
 3. Press **Enter** to save, or **Escape** to leave the cell as it was.
 
-**Delete** clears a cell's plan, and you can paste an amount copied from
-elsewhere.
+**Delete** clears a cell's plan entirely — the cell goes blank, not to zero —
+and you can paste an amount copied from elsewhere.
 
 <ScreenshotSet>
 
@@ -1633,7 +1738,8 @@ the projection at the foot of the sheet worth reading. A selected cell with a
 Most plans repeat: the same rent, the same phone bill, month after month. When
 a cell is selected, a small square appears at its bottom-right corner —
 **Copy budget to the following months**. Drag it to the right to repeat that
-amount across the months it covers.
+amount across the months it covers. Dragging or copying a blank cell clears
+the months it covers instead of writing a zero into them.
 
 ---
 

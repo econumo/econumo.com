@@ -23,8 +23,8 @@ Before you type, the search lists your most recent transactions, newest first:
 ## Finding things
 
 Start typing and the results group by kind — **Accounts**, **Categories**,
-**Payees**, **Tags**, **Labels** (reporting tags) and **Transactions** — with
-the best matches first.
+**Payees**, **Tags**, **Labels** (reporting tags), **Recurring** and
+**Transactions** — with the best matches first.
 
 You don't have to spell things exactly: missing letters are forgiven, so
 *grcries* still finds **Groceries**, along with the transactions filed under
@@ -37,6 +37,15 @@ displayed.
 
 The recent list leaves out transactions dated in the future, but a search
 still finds them.
+
+Search also finds your [recurring transactions](/docs/user-guide/recurring-transactions/),
+under their own **Recurring** group — the next one due first, with its
+schedule and next payment date. Searching for a payee, category, or tag also
+surfaces the recurring payments that use it.
+
+<ScreenshotSet>
+
+</ScreenshotSet>
 
 **Note**
 The same matcher drives every picker you can type into — the category, payee,
@@ -52,3 +61,8 @@ search window. Results also carry a three-dots menu with the actions that fit
 them — for a category, **Edit**, **Archive**, **Merge into…** and **Delete**,
 the same as in [Settings → Categories](/docs/user-guide/classifications/) — so
 you can tidy up a duplicate the moment you spot it.
+
+Click a **Recurring** result to open it: **Post** enters that payment now, the
+button beside it skips it, and the **Recurring transaction** row opens the
+schedule for editing — the same actions as the
+[Recurring transactions](/docs/user-guide/recurring-transactions/) list.
