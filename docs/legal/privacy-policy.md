@@ -14,6 +14,7 @@ We may collect and process the following types of information:
 - **Usage Data:** We automatically collect information about your interactions with our Sites, such as IP address, browser type, pages visited, and the duration of your visit.
 - **Product Analytics:** When you use the App, we collect usage analytics that are linked to your account through a pseudonymous identifier. Section 5 describes exactly what this includes, what it excludes, and how to turn it off.
 - **Cookies and Tracking Technologies:** We may use cookies, web beacons, and other tracking technologies to enhance your experience on our Sites. You can adjust your browser settings to control cookies; however, disabling cookies may limit certain functionalities.
+- **Affiliate Referrals:** If you arrive at econumo.com through a partner's link, or already carry the referral cookie, the page loads a tracking script from Affonso, the service that runs our affiliate program. It records the visit and stores a referral cookie for 30 days so the partner can be credited (see Section 3). The script is not loaded for other visitors, and nothing from Affonso is loaded in the App (app.econumo.com).
 
 ## 2. How We Use Your Information
 
@@ -31,6 +32,7 @@ We do not share personally identifying information publicly or with third partie
 - **For Legal Purposes:** We may disclose your information as required by law or if we believe it is necessary to protect our rights, respond to legal requests, or enforce our policies.
 - **Business Transfers:** If we merge with or are acquired by another company, your information may be transferred as part of the transaction.
 - **Payment Processing:** When you purchase Econumo, the order is processed by [Paddle](https://www.paddle.com/), our third-party payment processor and Merchant of Record. Your payment and billing details (such as name, email address, billing address, and payment card information) are collected and processed by Paddle in accordance with [Paddle's Privacy Policy](https://www.paddle.com/legal/privacy). We do not receive or store your payment card details.
+- **Affiliate Program:** Our affiliate program is run by [Affonso](https://affonso.io/). If you create an Econumo account while the referral cookie from a partner's link is present, we record the referral on your account. Our billing service then shares with Affonso an internal account identifier (not your email address or name) so the partner can be credited, and later the pre-tax amount and currency of that account's purchases and any refunds. Nothing is shared for accounts that did not come through a partner link. Affonso processes this information in accordance with [Affonso's Privacy Policy](https://affonso.io/privacy). We carry out this processing on the basis of our legitimate interest in running our affiliate program.
 
 ## 4. Your Choices
 
@@ -39,7 +41,7 @@ You have the following choices regarding your information:
 - **Access and Correction:** You may request access to the personal information we hold about you and correct any inaccuracies.
 - **Opt-Out:** You may opt out of receiving promotional emails from us by following the unsubscribe link or contacting us directly.
 - **Product Analytics:** You can turn product analytics off at any time from within the App, under **Settings → Personal settings**, in the "Privacy" section. See Section 5 for details.
-- **Cookie Preferences:** You can modify your browser settings to manage cookie preferences.
+- **Cookie Preferences:** You can modify your browser settings to manage cookie preferences. Blocking or clearing cookies for econumo.com removes the affiliate referral cookie, so an account created afterwards is not linked to a partner.
 
 ## 5. Product Analytics
 
@@ -85,4 +87,4 @@ We may update this Privacy Policy from time to time. We will notify you of any m
 If you have any questions about this Privacy Policy or our practices, please contact us at: econumo@gmail.com
 
 ---
-This policy is effective as of 6 September 2026.
+This policy is effective as of 16 November 2026.
