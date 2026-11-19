@@ -71,7 +71,8 @@ better served waiting rather than switching twice.
 | **AI assistant** | ❌ | ✅ | ✅ Optional |
 
 *Figures observed 19 July 2026 from the GitHub API and each project's
-documentation. Maybe's figures are frozen at archive time.*
+documentation. Maybe's figures are frozen at archive time. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 

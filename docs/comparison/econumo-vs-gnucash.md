@@ -47,7 +47,8 @@ three well.
 | **API** | ✅ REST + Swagger | ❌ Python/Scheme bindings only |
 
 *Figures observed 18–19 July 2026 from the GitHub API, gnucash.org and each
-project's documentation.*
+project's documentation. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 

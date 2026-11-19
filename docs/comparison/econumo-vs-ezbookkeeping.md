@@ -47,7 +47,8 @@ excellent at that.
 | **2FA** | — | ✅ TOTP, WebAuthn, OIDC |
 
 *Figures observed 18–19 July 2026 from the GitHub API and each project's official
-documentation.*
+documentation. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 

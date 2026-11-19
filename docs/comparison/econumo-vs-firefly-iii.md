@@ -49,7 +49,8 @@ per-user sharing.
 | **API** | ✅ REST + Swagger | ✅ Extensive REST + webhooks |
 
 *Figures observed 18 July 2026 from the GitHub API, Docker Hub and Firefly III's
-official documentation.*
+official documentation. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 

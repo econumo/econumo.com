@@ -39,7 +39,8 @@ hosted account is a **single $14.99 payment**.
 | **API** | ✅ REST + Swagger, no rate limit | ✅ REST, 200 requests/hour |
 | **Export** | CSV | CSV |
 
-*Figures observed 18–19 July 2026 from ynab.com and Econumo's documentation.*
+*Figures observed 18–19 July 2026 from ynab.com and Econumo's documentation. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 

@@ -44,7 +44,8 @@ want **built-in family sharing** without standing up an identity provider, or wa
 | **REST API** | ✅ OpenAPI / Swagger | ✅ API + CLI |
 
 *Figures observed 19 July 2026 from the GitHub API and each project's official
-documentation.*
+documentation. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 

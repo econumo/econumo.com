@@ -4695,7 +4695,8 @@ want **built-in family sharing** without standing up an identity provider, or wa
 | **REST API** | ✅ OpenAPI / Swagger | ✅ API + CLI |
 
 *Figures observed 19 July 2026 from the GitHub API and each project's official
-documentation.*
+documentation. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 
@@ -5049,7 +5050,8 @@ hosted account is a **single $14.99 payment**.
 | **API** | ✅ REST + Swagger, no rate limit | ✅ REST, 200 requests/hour |
 | **Export** | CSV | CSV |
 
-*Figures observed 18–19 July 2026 from ynab.com and Econumo's documentation.*
+*Figures observed 18–19 July 2026 from ynab.com and Econumo's documentation. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 
@@ -5299,7 +5301,8 @@ per-user sharing.
 | **API** | ✅ REST + Swagger | ✅ Extensive REST + webhooks |
 
 *Figures observed 18 July 2026 from the GitHub API, Docker Hub and Firefly III's
-official documentation.*
+official documentation. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 
@@ -5702,7 +5705,8 @@ better served waiting rather than switching twice.
 | **AI assistant** | ❌ | ✅ | ✅ Optional |
 
 *Figures observed 19 July 2026 from the GitHub API and each project's
-documentation. Maybe's figures are frozen at archive time.*
+documentation. Maybe's figures are frozen at archive time. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 
@@ -5985,7 +5989,8 @@ excellent at that.
 | **2FA** | — | ✅ TOTP, WebAuthn, OIDC |
 
 *Figures observed 18–19 July 2026 from the GitHub API and each project's official
-documentation.*
+documentation. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 
@@ -6235,7 +6240,8 @@ three well.
 | **API** | ✅ REST + Swagger | ❌ Python/Scheme bindings only |
 
 *Figures observed 18–19 July 2026 from the GitHub API, gnucash.org and each
-project's documentation.*
+project's documentation. Econumo's Cloud price ($14.99)
+re-checked 18 November 2026 against its billing portal.*
 
 ---
 
